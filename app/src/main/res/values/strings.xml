@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RealEstateApp</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string-array name="nav_item_activity_titles">
+        <item>Me</item>
+        <item>My Project</item>
+        <item>My Document</item>
+        <item>Gallery</item>
+    </string-array>
+</resources>
