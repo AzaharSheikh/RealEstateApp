@@ -13,4 +13,5 @@
         <item>Gallery</item>
 
     </string-array>
+    <string name="thoughtinteract"><b><font color='black'>thought</font><font color='yellow'>Interact</font></b></string>
 </resources>
