@@ -61,7 +61,7 @@ public class GalleryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
+//hello azahar
         Toast.makeText(getActivity(),"My gallery Here",Toast.LENGTH_LONG).show();
         return inflater.inflate(R.layout.content_me, container, false);
 
