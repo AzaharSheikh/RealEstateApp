@@ -6,9 +6,11 @@
 
     <string name="action_settings">Settings</string>
     <string-array name="nav_item_activity_titles">
+
         <item>Me</item>
         <item>My Project</item>
         <item>My Document</item>
         <item>Gallery</item>
+
     </string-array>
 </resources>
