@@ -24,7 +24,7 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/name_edit" />
+        android:id="@+id/edt_username" />
 
 
     <TextView
@@ -34,7 +34,7 @@
         android:textSize="15dp"
         android:textColor="@color/black"
         android:padding="5dp"
-        android:id="@+id/addr_text" />
+        android:id="@+id/user_address" />
 
 
     <EditText
@@ -42,7 +42,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
         android:ems="10"
-        android:id="@+id/addr_edit" />
+        android:id="@+id/edt_user_address" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
         android:layout_height="wrap_content"
         android:inputType="textMultiLine"
         android:ems="10"
-        android:id="@+id/job_edit" />
+        android:id="@+id/edt_job_dec" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -74,7 +74,7 @@
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/moedit" />
+        android:id="@+id/edt_mobile" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,7 +90,7 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/id_edit" />
+        android:id="@+id/edt_email" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/password_edit" />
+        android:id="@+id/edt_password" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -121,7 +121,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:id="@+id/confirmpassword_edit" />
+        android:id="@+id/edt_comfirm_pass" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -130,6 +130,7 @@
         >
         <Button
             android:layout_width="wrap_content"
+            android:id="@+id/btn_register_submit"
             android:layout_height="35dp"
             android:text="Submit"
             android:background="@color/white"

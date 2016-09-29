@@ -15,6 +15,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:id="@+id/edt_username"
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:layout_margin="5dp"
@@ -28,8 +29,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <EditText
+                android:id="@+id/edt_password"
                 android:layout_width="match_parent"
-                android:inputType="numberPassword"
+
                 android:padding="10dp"
                 android:maxLength="8"
                 android:layout_margin="5dp"
@@ -48,14 +50,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/gray"
-                android:textColor="@color/red"/>
+                android:textColor="@color/red"
+                android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/btn_register"
                 android:text="Register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@color/gray"
-                android:textColor="@color/red" />
+                android:textColor="@color/red"
+                android:layout_margin="5dp"/>
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
