@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@drawable/registerbackground"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
         android:textSize="15dp"
         android:textColor="@color/black"
-        android:padding="15dp"
+        android:padding="5dp"
         android:id="@+id/name_text" />
 
     <EditText
@@ -24,7 +33,7 @@
         android:text="Address"
         android:textSize="15dp"
         android:textColor="@color/black"
-        android:padding="15dp"
+        android:padding="5dp"
         android:id="@+id/addr_text" />
 
 
@@ -41,7 +50,7 @@
         android:text="Job Discription"
         android:textSize="15dp"
         android:textColor="@color/black"
-        android:padding="15dp"
+        android:padding="5dp"
         android:id="@+id/job_text" />
 
     <EditText
@@ -57,7 +66,7 @@
         android:text="Mobile"
         android:textSize="15dp"
         android:textColor="@color/black"
-        android:padding="15dp"
+        android:padding="5dp"
         android:id="@+id/mo_text" />
 
     <EditText
@@ -73,7 +82,7 @@
         android:text="Email_id"
         android:textSize="15dp"
         android:textColor="@color/black"
-        android:padding="15dp"
+        android:padding="5dp"
         android:id="@+id/id_text" />
 
     <EditText
@@ -89,7 +98,7 @@
         android:text="Password"
         android:textSize="15dp"
         android:textColor="@color/black"
-        android:padding="15dp"
+        android:padding="5dp"
         android:id="@+id/password_text" />
 
     <EditText
@@ -99,4 +108,39 @@
         android:ems="10"
         android:id="@+id/password_edit" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:textSize="15dp"
+        android:textColor="@color/black"
+        android:padding="5dp"
+        android:id="@+id/password_text" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:id="@+id/confirmpassword_edit" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="Submit"
+            android:background="@color/white"
+            android:textColor="@color/black"
+
+
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
 </LinearLayout>
