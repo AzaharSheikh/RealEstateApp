@@ -28,7 +28,8 @@ import java.util.Map;
 /**
  * Created by AzaharSheikh on 28-09-2016.
  */
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity  implements View.OnClickListener{
+
     Button btn_login,btn_register;
     EditText edt_username,edt_password;
     ProgressDialog pDialog;
@@ -126,6 +127,10 @@ public class LoginActivity extends AppCompatActivity {
                         error.getMessage(), Toast.LENGTH_LONG).show();
                 hideDialog();
             }
+
+            private void hideDialog() {
+
+            }
         }) {
 
             @Override
@@ -140,9 +145,11 @@ public class LoginActivity extends AppCompatActivity {
 
         };
 
+
         // Adding request to request queue
         AppController.getInstance().addToRequestQueue(strReq, tag_string_req);
     }
+
     private void showDialog() {
         if (!pDialog.isShowing())
             pDialog.show();
@@ -152,4 +159,16 @@ public class LoginActivity extends AppCompatActivity {
         if (pDialog.isShowing())
             pDialog.dismiss();
     }
-}
+
+
+
+    @Override
+    public void onClick(View v) {
+        userLogin();
+    }
+
+    private void userLogin() {
+
+    }
+};
+

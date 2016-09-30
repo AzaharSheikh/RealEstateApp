@@ -7,6 +7,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.R;
@@ -19,10 +20,14 @@ public class MyProfileFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    String str_user_name= "Azahar";
+
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    TextView txt_name;
+    TextView txt_project_name;
 
     private OnFragmentInteractionListener mListener;
 
@@ -61,9 +66,14 @@ public class MyProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View rootView = inflater.inflate(R.layout.user_profile, container, false);
+        txt_name=(TextView)rootView.findViewById(R.id.txt_name);
+        txt_name.setText(str_user_name);
+
+
 
         Toast.makeText(getActivity(),"My Profile Here",Toast.LENGTH_LONG).show();
-        return inflater.inflate(R.layout.content_me, container, false);
+        return rootView;
 
     }
 

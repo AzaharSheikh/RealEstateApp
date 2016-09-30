@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registerbackground">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/images"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Azahar"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/red"
+        android:padding="5dp"
+        android:id="@+id/txt_name" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/txt_location"
+                    android:text="From :"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_location"
+                    android:text="Mumbai"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+
+                    />
+            </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_project_name"
+                android:text="Project Name : "
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="left"
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:layout_weight="4"
+                />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="6"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_project_name"
+                android:text="Real Estate"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="left"
+                android:textSize="16dp"
+                android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/txt_project_name"
+                    android:text="Email : "
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_project_name"
+                    android:text="Azahar.s@thoughtinteract.com"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/txt_project_name"
+                    android:text="Phone : "
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_project_name"
+                    android:text="1234567899"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/txt_project_name"
+                    android:text="Skype : "
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_project_name"
+                    android:text="abc123"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/txt_project_name"
+                    android:text="Address : "
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_project_name"
+                    android:text="Dadar,Mumbai"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
