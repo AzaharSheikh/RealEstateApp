@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.toolbox.NetworkImageView;
+import com.thoughtinterac.realestateapp.Activities.MapActivity;
 import com.thoughtinterac.realestateapp.Model.PlaceModel;
 import com.thoughtinterac.realestateapp.R;
 
@@ -58,6 +60,7 @@ public class PlaceCustomAdapter extends BaseAdapter {
         TextView txt_place_distance = (TextView) convertView.findViewById(R.id.txt_place_distance);
         TextView txt_place_address = (TextView) convertView.findViewById(R.id.txt_place_address);
         TextView txt_place_type = (TextView) convertView.findViewById(R.id.txt_place_type);
+        LinearLayout li_main=(LinearLayout)convertView.findViewById(R.id.li_main);
         final PlaceModel m = placeItems.get(position);
         /*Button btn_site_visit=(Button)convertView.findViewById(R.id.btn_site_visit);
         // getting movie data for the row
@@ -80,6 +83,20 @@ public class PlaceCustomAdapter extends BaseAdapter {
 
 
         // title
+        li_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                Toast.makeText(activity,m.getPlace_title(),Toast.LENGTH_LONG).show();
+
+                Intent i = new Intent(activity, MapActivity.class);
+                bundle.putString("lat", m.getLat());
+                bundle.putString("lng", m.getLng());
+                bundle.putString("place_title", m.getPlace_title());
+                i.putExtras(bundle);
+                activity.startActivity(i);
+            }
+        });
         txt_place_name.setText(m.getPlace_title());
         txt_place_distance.setText(m.getPlace_distance());
         txt_place_address.setText(m.getPlace_address());

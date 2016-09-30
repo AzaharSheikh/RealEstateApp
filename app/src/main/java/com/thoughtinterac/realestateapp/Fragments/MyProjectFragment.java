@@ -199,8 +199,10 @@ public class MyProjectFragment extends Fragment {
                                 place.setPlace_id(place_id);
                                 place.setPlace_title(place_title);
                                 place.setPlace_address(place_address);
-                                place.setPlace_distance(Utility.distFrom(lat,lng,Double.parseDouble(strLat),Double.parseDouble(strLng))+"KM");
+                                place.setPlace_distance(Utility.distFrom(lat,lng,Double.parseDouble(strLat),Double.parseDouble(strLng))+" KM");
                                 place.setPlace_type(place_type);
+                                place.setLat(strLat);
+                                place.setLng(strLng);
                                 placeList.add(place);
                             }
                             adapter = new PlaceCustomAdapter(getActivity(), placeList);

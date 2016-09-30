@@ -10,6 +10,26 @@ public class PlaceModel {
     private String  place_address;
     private String  place_distance;
     private String  place_type;
+    private String  lat;
+    private String  lng;
+    public String getLng() {
+        return lng;
+    }
+
+    public void setLng(String lng) {
+        this.lng = lng;
+    }
+
+
+    public String getLat() {
+        return lat;
+    }
+
+    public void setLat(String lat) {
+        this.lat = lat;
+    }
+
+
     public String getPlace_id() {
         return place_id;
     }
