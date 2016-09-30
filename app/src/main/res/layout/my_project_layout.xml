@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RadioGroup
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/rg_myproject"
+    android:gravity="center"
+    android:orientation="horizontal" >
+    <RadioButton
+        android:id="@+id/rbt_project_details"
+        android:layout_weight="1"
+       android:text="Details"
+        android:gravity="center"
+        android:background="@drawable/rbtn_selector"
+        android:button="@null"
+        android:checked="true"
+        android:textColor="@drawable/rbtn_textcolor_selector"
+        android:padding="5dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+    <RadioButton
+        android:id="@+id/rbt_photos_list"
+        android:layout_width="0dp"
+        android:padding="5dp"
+        android:background="@drawable/rbtn_selector"
+        android:textColor="@drawable/rbtn_textcolor_selector"
+        android:text="Photos"
+        android:button="@null"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_height="wrap_content" />
+    <RadioButton
+        android:id="@+id/rbt_map"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:background="@drawable/rbtn_selector"
+        android:textColor="@drawable/rbtn_textcolor_selector"
+        android:text="Map"
+        android:button="@null"
+        android:gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+</RadioGroup>
+</LinearLayout>
