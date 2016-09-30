@@ -1,25 +1,30 @@
 package com.thoughtinterac.realestateapp.Fragments;
 
 import android.app.ProgressDialog;
-import android.content.ContentValues;
 import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.renderscript.ScriptGroup;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.thoughtinterac.realestateapp.CustomAdapter.PlaceCustomAdapter;
+import com.thoughtinterac.realestateapp.Model.PlaceModel;
 import com.thoughtinterac.realestateapp.R;
+import com.thoughtinterac.realestateapp.Util.Utility;
 import com.thoughtinterac.realestateapp.Util.makeServiceCall;
 
 import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by AzaharSheikh on 28-09-2016.
@@ -30,6 +35,7 @@ public class MyProjectFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -37,6 +43,12 @@ public class MyProjectFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     String data;
    ProgressDialog pDialog;
+
+    private ListView listView;
+    private PlaceCustomAdapter adapter;
+    double lat =19.077065;
+    double lng=72.998993;
+
 
     public MyProjectFragment() {
         // Required empty public constructor
@@ -75,6 +87,7 @@ public class MyProjectFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.my_project_layout, container, false);
         rg_myproject = (RadioGroup) rootView.findViewById(R.id.rg_myproject);
+        listView = (ListView) rootView.findViewById(R.id.list);
        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -88,8 +101,7 @@ public class MyProjectFragment extends Fragment {
                        break;
                    case R.id.rbt_map:
                        Toast.makeText(getActivity(), "Map details checked", Toast.LENGTH_SHORT).show();
-                       double lat =19.077065;
-                       double lng=72.998993;
+
                        getPlaceListAsync(lat,lng);
 
                        break;
@@ -167,8 +179,38 @@ public class MyProjectFragment extends Fragment {
             if(data != null && !data.equalsIgnoreCase(""))
             {
                 try {
-                    JSONArray json = new JSONArray(data);
-
+                    JSONObject json = new JSONObject(data);
+                    String status = json.getString("status");
+                    if(status.equalsIgnoreCase("OK"))
+                    {
+                        Toast.makeText(getActivity(),"Status  OK",Toast.LENGTH_SHORT).show();
+                        JSONArray jsonArray = json.getJSONArray("results");
+                       // String array = jsonArray.toString();
+                         List<PlaceModel> placeList = new ArrayList<PlaceModel>();
+                        if(jsonArray!=null) {
+                            for (int i = 0; i < jsonArray.length(); i++) {
+                                PlaceModel place = new PlaceModel();
+                                String place_title = jsonArray.getJSONObject(i).getString("name");
+                                String place_id = jsonArray.getJSONObject(i).getString("place_id");
+                                String place_address = jsonArray.getJSONObject(i).getString("vicinity");
+                                String place_type = jsonArray.getJSONObject(i).getString("place_id");
+                                String strLat =jsonArray.getJSONObject(i).getJSONObject("geometry").getJSONObject("location").getString("lat").toString();
+                                String strLng =jsonArray.getJSONObject(i).getJSONObject("geometry").getJSONObject("location").getString("lng").toString();
+                                place.setPlace_id(place_id);
+                                place.setPlace_title(place_title);
+                                place.setPlace_address(place_address);
+                                place.setPlace_distance(Utility.distFrom(lat,lng,Double.parseDouble(strLat),Double.parseDouble(strLng))+"KM");
+                                place.setPlace_type(place_type);
+                                placeList.add(place);
+                            }
+                            adapter = new PlaceCustomAdapter(getActivity(), placeList);
+                            listView.setAdapter(adapter);
+                        }
+                    }
+                    else
+                    {
+                        Toast.makeText(getActivity(),"Status Not OK",Toast.LENGTH_SHORT).show();
+                    }
                     /*for(int i =0; i<json.length();i++)
                     {
                         if(json.getJSONObject(i).has("product_id")) {
@@ -182,11 +224,11 @@ public class MyProjectFragment extends Fragment {
                             product.setTitle(product_title);
                             product.setP_details(product_details);
                             product.setP_address(p_address);
-                            productList.add(product);
+                            placeList.add(product);
                         }
 
                     }
-                    adapter = new ProductCustomListAdapter(getActivity(), productList);
+                    adapter = new ProductCustomListAdapter(getActivity(), placeList);
                     listView.setAdapter(adapter);*/
                 } catch (Exception e) {
                     e.printStackTrace();
