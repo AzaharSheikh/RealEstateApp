@@ -18,6 +18,7 @@ import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.ListView;
 
+import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Fragments.GalleryFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyDocFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     // index to identify current nav menu item
     public static int navItemIndex = 0;
     Toolbar toolbar;
+    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +68,17 @@ public class MainActivity extends AppCompatActivity {
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navHeader = navigationView.getHeaderView(0);
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
+        Bundle bundle = getIntent().getExtras();
 
+        if(bundle!=null)
+        {
+             str_user_name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
+            str_user_address = bundle.getString(DatabaseHandler.KEY_USER_ADDRESS);
+             str_user_job = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
+           str_user_mobile = bundle.getString(DatabaseHandler.KEY_USER_MOBILE);
+           str_user_email = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
+
+        }
 
         // initializing navigation menu
         setUpNavigationView();

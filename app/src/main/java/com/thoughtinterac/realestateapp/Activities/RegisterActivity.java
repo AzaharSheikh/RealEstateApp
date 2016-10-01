@@ -1,7 +1,9 @@
 package com.thoughtinterac.realestateapp.Activities;
 
 import android.app.ProgressDialog;
+import android.content.ContentValues;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -16,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.thoughtinterac.realestateapp.Application.AppController;
+import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.AppConfig;
 
@@ -62,12 +65,40 @@ public class RegisterActivity extends AppCompatActivity{
                     {
                         pDialog = new ProgressDialog(RegisterActivity.this);
                         pDialog.setCancelable(false);
-                        RegisterAsync(str_edt_username,str_user_address,str_job_dec,str_mobile,str__email,str_password);
+                       //RegisterAsync(str_edt_username,str_user_address,str_job_dec,str_mobile,str__email,str_password);
+                        LocalRegisterDb(str_edt_username,str_user_address,str_job_dec,str_mobile,str__email,str_password);
+
                     }
                 }
             }
         });
 
+    }
+
+    private void LocalRegisterDb(final String str_edt_username, final String str_user_address, final String str_job_dec, final String str_mobile, final String str__email, final String str_password) {
+
+        DatabaseHandler handler= new DatabaseHandler(RegisterActivity.this);
+        SQLiteDatabase db = handler.getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put(DatabaseHandler.KEY_USER_NAME,str_edt_username);
+        values.put(DatabaseHandler.KEY_USER_ADDRESS,str_user_address);
+        values.put(DatabaseHandler.KEY_USER_JOB_DESC,str_job_dec);
+        values.put(DatabaseHandler.KEY_USER_MOBILE,str_mobile);
+        values.put(DatabaseHandler.KEY_USER_EMAIL,str__email);
+        values.put(DatabaseHandler.KEY_USER_PASSWORD,str_password);
+        boolean b = db.insert(DatabaseHandler.TABLE_REGISTER,null,values)>0;
+        if(b)
+        {
+            Toast.makeText(RegisterActivity.this,"User created successfully",Toast.LENGTH_SHORT).show();
+            Intent i = new Intent(RegisterActivity.this,LoginActivity.class);
+            startActivity(i);
+            finish();
+
+
+        }else
+        {
+            Toast.makeText(RegisterActivity.this,"Plsease try again, with another email",Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void RegisterAsync(final String str_edt_username, final String str_user_address, final String str_job_dec, final String str_mobile, final String str__email, final String str_password)

@@ -48,6 +48,7 @@ public class MyProjectFragment extends Fragment {
     private PlaceCustomAdapter adapter;
     double lat =19.077065;
     double lng=72.998993;
+    int flag=0;
 
 
     public MyProjectFragment() {
@@ -87,22 +88,28 @@ public class MyProjectFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.my_project_layout, container, false);
         rg_myproject = (RadioGroup) rootView.findViewById(R.id.rg_myproject);
-        listView = (ListView) rootView.findViewById(R.id.list);
+        listView = (ListView) rootView.findViewById(R.id.list_place);
+        listView.setVisibility(View.GONE);
        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(RadioGroup group, int checkedId) {
                switch (checkedId)
                {
                    case R.id.rbt_project_details:
-                       Toast.makeText(getActivity(), "project details checked", Toast.LENGTH_SHORT).show();
+                       //Toast.makeText(getActivity(), "project details checked", Toast.LENGTH_SHORT).show();
+                       listView.setVisibility(View.GONE);
                        break;
                    case R.id.rbt_photos_list:
-                       Toast.makeText(getActivity(), "Photos details checked", Toast.LENGTH_SHORT).show();
+                       //Toast.makeText(getActivity(), "Photos details checked", Toast.LENGTH_SHORT).show();
+                       listView.setVisibility(View.GONE);
                        break;
                    case R.id.rbt_map:
-                       Toast.makeText(getActivity(), "Map details checked", Toast.LENGTH_SHORT).show();
-
-                       getPlaceListAsync(lat,lng);
+                       //Toast.makeText(getActivity(), "Map details checked", Toast.LENGTH_SHORT).show();
+                       listView.setVisibility(View.VISIBLE);
+                       if(flag==0) {
+                           getPlaceListAsync(lat, lng);
+                           flag=1;
+                       }
 
                        break;
                }
@@ -200,18 +207,19 @@ public class MyProjectFragment extends Fragment {
                                 place.setPlace_title(place_title);
                                 place.setPlace_address(place_address);
                                 place.setPlace_distance(Utility.distFrom(lat,lng,Double.parseDouble(strLat),Double.parseDouble(strLng))+" KM");
-                                place.setPlace_type(place_type);
+                                place.setPlace_type(jsonArray.getJSONObject(i).getJSONArray("types").getString(0));
                                 place.setLat(strLat);
                                 place.setLng(strLng);
                                 placeList.add(place);
                             }
                             adapter = new PlaceCustomAdapter(getActivity(), placeList);
                             listView.setAdapter(adapter);
+
                         }
                     }
                     else
                     {
-                        Toast.makeText(getActivity(),"Status Not OK",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity(),status,Toast.LENGTH_SHORT).show();
                     }
                     /*for(int i =0; i<json.length();i++)
                     {

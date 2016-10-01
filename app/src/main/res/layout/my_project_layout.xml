@@ -15,7 +15,7 @@
     <RadioButton
         android:id="@+id/rbt_project_details"
         android:layout_weight="1"
-       android:text="Details"
+       android:text="Overview"
         android:gravity="center"
         android:background="@drawable/rbtn_selector"
         android:button="@null"
@@ -41,7 +41,7 @@
         android:padding="5dp"
         android:background="@drawable/rbtn_selector"
         android:textColor="@drawable/rbtn_textcolor_selector"
-        android:text="Map"
+        android:text="Near By"
         android:button="@null"
         android:gravity="center"
         android:layout_width="0dp"
@@ -50,10 +50,18 @@
 </RadioGroup>
     <ListView
         android:layout_width="match_parent"
-        android:id="@+id/list"
+        android:id="@+id/list_place"
+        android:visibility="gone"
         android:layout_height="match_parent"
 
         >
 
     </ListView>
+    <LinearLayout
+        android:id="@+id/my_project_photos"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+    </LinearLayout>
 </LinearLayout>

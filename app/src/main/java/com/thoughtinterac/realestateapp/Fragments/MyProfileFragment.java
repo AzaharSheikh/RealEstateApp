@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.thoughtinterac.realestateapp.Activities.MainActivity;
 import com.thoughtinterac.realestateapp.R;
 
 /**
@@ -26,8 +27,8 @@ public class MyProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    TextView txt_name;
-    TextView txt_project_name;
+    TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address;
+
 
     private OnFragmentInteractionListener mListener;
 
@@ -68,7 +69,17 @@ public class MyProfileFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.user_profile, container, false);
         txt_name=(TextView)rootView.findViewById(R.id.txt_name);
-        txt_name.setText(str_user_name);
+        txt_project_name=(TextView)rootView.findViewById(R.id.txt_project_name);
+        txt_email=(TextView)rootView.findViewById(R.id.txt_email);
+        txt_mobile=(TextView)rootView.findViewById(R.id.txt_mobile);
+        txt_address=(TextView)rootView.findViewById(R.id.txt_address);
+
+
+        txt_name.setText(MainActivity.str_user_name);
+        txt_project_name.setText(MainActivity.str_user_job);
+        txt_email.setText(MainActivity.str_user_email);
+        txt_mobile.setText(MainActivity.str_user_mobile);
+        txt_address.setText(MainActivity.str_user_address);
 
 
 

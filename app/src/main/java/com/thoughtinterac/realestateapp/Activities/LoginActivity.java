@@ -2,6 +2,8 @@ package com.thoughtinterac.realestateapp.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -16,6 +20,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.thoughtinterac.realestateapp.Application.AppController;
+import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.AppConfig;
 
@@ -33,12 +38,15 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     Button btn_login,btn_register;
     EditText edt_username,edt_password;
     ProgressDialog pDialog;
+    private RadioGroup rg_member;
+    private RadioButton rbtn_member;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
         btn_login=(Button)findViewById(R.id.btn_login);
         btn_register=(Button)findViewById(R.id.btn_register);
+        rg_member = (RadioGroup) findViewById(R.id.rg_member);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,11 +55,21 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
 //                finish();
                 edt_username=(EditText)findViewById(R.id.edt_username);
                 edt_password=(EditText)findViewById(R.id.edt_password);
+                int selectedId = rg_member.getCheckedRadioButtonId();
+                rbtn_member = (RadioButton) findViewById(selectedId);
+                String member = rbtn_member.getText().toString();
                 String str_username =   edt_username.getText().toString().trim();
                 String str_password =   edt_password.getText().toString().trim();
                 pDialog = new ProgressDialog(LoginActivity.this);
                 pDialog.setCancelable(false);
-                loginAsync(str_username,str_password);
+                //loginAsync(str_username,str_password);
+                if(member.equalsIgnoreCase("user")) {
+                    local_login(str_username, str_password);
+                }else
+                {
+                Intent i = new Intent(LoginActivity.this,BuilderMainPage.class);
+                    startActivity(i);
+                }
             }
         });
         btn_register.setOnClickListener(new View.OnClickListener() {
@@ -59,10 +77,47 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
             public void onClick(View v) {
                 Intent i = new Intent(LoginActivity.this,RegisterActivity.class);
                 startActivity(i);
-                finish();
+
             }
         });
 
+    }
+
+    private void local_login(String str_username, String str_password) {
+        DatabaseHandler handler= new DatabaseHandler(LoginActivity.this);
+        SQLiteDatabase db = handler.getWritableDatabase();
+        String[] colmn = new String[] { DatabaseHandler.KEY_USER_NAME,DatabaseHandler.KEY_USER_ADDRESS,DatabaseHandler.KEY_USER_JOB_DESC,DatabaseHandler.KEY_USER_MOBILE,DatabaseHandler.KEY_USER_EMAIL,DatabaseHandler.KEY_USER_PASSWORD };
+        Cursor cursor = db.query(DatabaseHandler.TABLE_REGISTER, colmn,DatabaseHandler.KEY_USER_EMAIL + " = '"+str_username+"'"+" AND "+DatabaseHandler.KEY_USER_PASSWORD+" = '"+str_password+"'", null, null, null, null);
+        if(cursor!=null) {
+            String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
+        if(cursor.getCount() >0)
+        {
+            while(cursor.moveToNext())
+            {
+                str_user_name= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_NAME));
+                str_user_address= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_ADDRESS));
+                str_user_job= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_JOB_DESC));
+                str_user_mobile= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_MOBILE));
+                str_user_email= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_EMAIL));
+            }
+
+            Bundle bundle = new Bundle();
+            bundle.putString(DatabaseHandler.KEY_USER_NAME, str_user_name);
+            bundle.putString(DatabaseHandler.KEY_USER_ADDRESS,str_user_address);
+            bundle.putString(DatabaseHandler.KEY_USER_JOB_DESC, str_user_job);
+            bundle.putString(DatabaseHandler.KEY_USER_MOBILE, str_user_mobile);
+            bundle.putString(DatabaseHandler.KEY_USER_EMAIL, str_user_email);
+
+            Intent intent = new Intent(LoginActivity.this,
+                    MainActivity.class);
+            intent.putExtras(bundle);
+            startActivity(intent);
+            finish();
+        }else
+        {
+            Toast.makeText(LoginActivity.this,"Plsease try again, email or password wrong",Toast.LENGTH_SHORT).show();
+        }
+        }
     }
 
     private void loginAsync(final String str_username, final String str_password) {
