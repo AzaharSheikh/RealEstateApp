@@ -10,12 +10,15 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.CustomAdapter.PlaceCustomAdapter;
 import com.thoughtinterac.realestateapp.Model.PlaceModel;
+
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.Utility;
 import com.thoughtinterac.realestateapp.Util.makeServiceCall;
@@ -43,12 +46,13 @@ public class MyProjectFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     String data;
    ProgressDialog pDialog;
-
+ScrollView li_my_project_photos;
     private ListView listView;
     private PlaceCustomAdapter adapter;
     double lat =19.077065;
     double lng=72.998993;
     int flag=0;
+    LinearLayout li_overview;
 
 
     public MyProjectFragment() {
@@ -90,6 +94,9 @@ public class MyProjectFragment extends Fragment {
         rg_myproject = (RadioGroup) rootView.findViewById(R.id.rg_myproject);
         listView = (ListView) rootView.findViewById(R.id.list_place);
         listView.setVisibility(View.GONE);
+        li_overview=(LinearLayout)rootView.findViewById(R.id.li_overview);
+        li_my_project_photos=(ScrollView)rootView.findViewById(R.id.li_my_project_photos);
+        li_my_project_photos.setVisibility(View.GONE);
        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -98,14 +105,20 @@ public class MyProjectFragment extends Fragment {
                    case R.id.rbt_project_details:
                        //Toast.makeText(getActivity(), "project details checked", Toast.LENGTH_SHORT).show();
                        listView.setVisibility(View.GONE);
+                       li_overview.setVisibility(View.VISIBLE);
+                       li_my_project_photos.setVisibility(View.GONE);
                        break;
                    case R.id.rbt_photos_list:
                        //Toast.makeText(getActivity(), "Photos details checked", Toast.LENGTH_SHORT).show();
                        listView.setVisibility(View.GONE);
+                       li_overview.setVisibility(View.GONE);
+                       li_my_project_photos.setVisibility(View.VISIBLE);
                        break;
                    case R.id.rbt_map:
                        //Toast.makeText(getActivity(), "Map details checked", Toast.LENGTH_SHORT).show();
                        listView.setVisibility(View.VISIBLE);
+                       li_overview.setVisibility(View.GONE);
+                       li_my_project_photos.setVisibility(View.GONE);
                        if(flag==0) {
                            getPlaceListAsync(lat, lng);
                            flag=1;
