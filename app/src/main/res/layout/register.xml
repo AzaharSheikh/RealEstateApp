@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/registerbackground"
+    android:background="@color/black"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -17,13 +17,15 @@
         android:layout_height="wrap_content"
         android:text="Name"
         android:textSize="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:padding="5dp"
         android:id="@+id/name_text" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/gold"
+
         android:id="@+id/edt_username" />
 
 
@@ -32,7 +34,7 @@
         android:layout_height="wrap_content"
         android:text="Address"
         android:textSize="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:padding="5dp"
         android:id="@+id/user_address" />
 
@@ -49,7 +51,7 @@
         android:layout_height="wrap_content"
         android:text="Job Discription"
         android:textSize="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:padding="5dp"
         android:id="@+id/job_text" />
 
@@ -65,7 +67,7 @@
         android:layout_height="wrap_content"
         android:text="Mobile"
         android:textSize="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:padding="5dp"
         android:id="@+id/mo_text" />
 
@@ -82,7 +84,7 @@
         android:layout_height="wrap_content"
         android:text="Email_id"
         android:textSize="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:padding="5dp"
         android:id="@+id/id_text" />
 
@@ -98,7 +100,7 @@
         android:layout_height="wrap_content"
         android:text="Password"
         android:textSize="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:padding="5dp"
         android:id="@+id/password_text" />
 
@@ -114,7 +116,7 @@
         android:layout_height="wrap_content"
         android:text="Confirm Password"
         android:textSize="15dp"
-        android:textColor="@color/black"
+        android:textColor="@color/gold"
         android:padding="5dp"
         android:id="@+id/password_text" />
 
