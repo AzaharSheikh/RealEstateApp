@@ -7,9 +7,19 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.thoughtinterac.realestateapp.CustomAdapter.GalleryImagesAdapter;
+import com.thoughtinterac.realestateapp.CustomAdapter.PlaceCustomAdapter;
+import com.thoughtinterac.realestateapp.Model.GalleryImagesModel;
+import com.thoughtinterac.realestateapp.Model.PlaceModel;
 import com.thoughtinterac.realestateapp.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by AzaharSheikh on 28-09-2016.
@@ -23,6 +33,7 @@ public class GalleryFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private GalleryImagesAdapter adapter;
 
     private OnFragmentInteractionListener mListener;
 
@@ -60,10 +71,21 @@ public class GalleryFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-//hello azahar
-        Toast.makeText(getActivity(),"My gallery Here",Toast.LENGTH_LONG).show();
-        return inflater.inflate(R.layout.content_me, container, false);
+        View rootView=inflater.inflate(R.layout.gallery_layout, container, false);
+        //Toast.makeText(getActivity(),"My gallery Here",Toast.LENGTH_LONG).show();
+        List<GalleryImagesModel> imageList = new ArrayList<GalleryImagesModel>();
+        for(int i =0 ; i<10;i++)
+        {
+            GalleryImagesModel image = new GalleryImagesModel();
+            image.setImg_name("Image"+(i+1));
+            image.setImage_id(R.drawable.drawer_back);
+            imageList.add(image);
+        }
+        GridView gridview = (GridView) rootView.findViewById(R.id.grid_gallery);
+        adapter= new GalleryImagesAdapter(getActivity(),imageList);
+        gridview.setAdapter(adapter);
+        return rootView;
+
 
     }
 
@@ -105,4 +127,5 @@ public class GalleryFragment extends Fragment {
         // TODO: Update argument type and name
         void onFragmentInteraction(Uri uri);
     }
+
 }
