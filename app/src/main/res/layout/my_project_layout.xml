@@ -60,7 +60,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:id="@+id/li_my_project_photos"
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_height="match_parent">
         <LinearLayout
             android:id="@+id/my_project_photos"
