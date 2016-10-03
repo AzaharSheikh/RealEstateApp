@@ -7,11 +7,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.GridView;
+import android.widget.ListView;
 import android.widget.Toast;
 
+import com.thoughtinterac.realestateapp.CustomAdapter.GalleryImagesAdapter;
+import com.thoughtinterac.realestateapp.CustomAdapter.MyDocListAdapter;
+import com.thoughtinterac.realestateapp.Model.DocListModel;
+import com.thoughtinterac.realestateapp.Model.GalleryImagesModel;
 import com.thoughtinterac.realestateapp.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by AzaharSheikh on 28-09-2016.
@@ -21,12 +28,14 @@ public class MyDocFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    ArrayList<String> docList,docStatusList;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private MyDocListAdapter adapter;
 
     public MyDocFragment() {
         // Required empty public constructor
@@ -65,8 +74,9 @@ public class MyDocFragment extends Fragment {
         // Inflate the layout for this fragment
         View rootView= inflater.inflate(R.layout.my_doc_layout, container, false);
         //Toast.makeText(getActivity(),"My doc Here",Toast.LENGTH_LONG).show();
-        ArrayList<String> docList= new ArrayList();
-        ArrayList<String> docStatusList= new ArrayList();
+        List<DocListModel> docListMain = new ArrayList<DocListModel>();
+        docList= new ArrayList();
+        docStatusList= new ArrayList();
         docList.add("PAN");
         docList.add("AADHAR");
         docList.add("RC");
@@ -75,6 +85,18 @@ public class MyDocFragment extends Fragment {
         docStatusList.add("true");
         docStatusList.add("false");
         docStatusList.add("true");
+        for(int i =0 ; i<docList.size();i++)
+        {
+            DocListModel list = new DocListModel();
+            list.setDoc_name(docList.get(i).toString());
+            list.setDoc_status(docStatusList.get(i).toString());
+            docListMain.add(list);
+        }
+        ListView listView = (ListView) rootView.findViewById(R.id.doc_list);
+        ViewGroup header = (ViewGroup)inflater.inflate(R.layout.my_doc_list_header, listView, false);
+        adapter= new MyDocListAdapter(getActivity(),docListMain);
+        listView.addHeaderView(header, null, false);
+        listView.setAdapter(adapter);
         return rootView;
 
     }
