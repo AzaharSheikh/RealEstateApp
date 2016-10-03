@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Fragments.GalleryFragment;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        img_share=(ImageView)findViewById(R.id.img_share);
         mHandler = new Handler();
 
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -69,7 +70,12 @@ public class MainActivity extends AppCompatActivity {
         navHeader = navigationView.getHeaderView(0);
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
         Bundle bundle = getIntent().getExtras();
-
+        img_share.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,MyProjectFragment.link,Toast.LENGTH_SHORT).show();
+            }
+        });
         if(bundle!=null)
         {
              str_user_name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
@@ -151,20 +157,24 @@ public class MainActivity extends AppCompatActivity {
         switch (navItemIndex) {
             case 0:
                 // homeFragment
+                img_share.setVisibility(View.GONE);
                 MyProfileFragment myProfileFragment = new MyProfileFragment();
                 return myProfileFragment;
             case 1:
                 // aboutFragment fragment
+                img_share.setVisibility(View.VISIBLE);
                 MyProjectFragment myProjectFragment = new MyProjectFragment();
                 return myProjectFragment;
 
             case 2:
                 // offersFragment fragment
+                img_share.setVisibility(View.GONE);
                 MyDocFragment myDocFragment = new MyDocFragment();
                 return myDocFragment;
 
             case 3:
                 // cafeFragment
+                img_share.setVisibility(View.GONE);
                 GalleryFragment galleryFragment = new GalleryFragment();
                 return galleryFragment;
 

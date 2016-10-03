@@ -10,6 +10,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
@@ -37,7 +38,7 @@ public class MyProjectFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    public static final String link = "link here";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -53,6 +54,7 @@ ScrollView li_my_project_photos;
     double lng=72.998993;
     int flag=0;
     LinearLayout li_overview;
+    ImageView img_share;
 
 
     public MyProjectFragment() {
@@ -97,6 +99,7 @@ ScrollView li_my_project_photos;
         li_overview=(LinearLayout)rootView.findViewById(R.id.li_overview);
         li_my_project_photos=(ScrollView)rootView.findViewById(R.id.li_my_project_photos);
         li_my_project_photos.setVisibility(View.GONE);
+
        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(RadioGroup group, int checkedId) {
