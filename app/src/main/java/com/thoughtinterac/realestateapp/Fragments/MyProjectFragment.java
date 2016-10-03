@@ -38,7 +38,7 @@ public class MyProjectFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    public static final String link = "link here";
+    public static  String link="" ;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -99,7 +99,7 @@ ScrollView li_my_project_photos;
         li_overview=(LinearLayout)rootView.findViewById(R.id.li_overview);
         li_my_project_photos=(ScrollView)rootView.findViewById(R.id.li_my_project_photos);
         li_my_project_photos.setVisibility(View.GONE);
-
+        link = "http://www.gemini-properties.com/";
        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(RadioGroup group, int checkedId) {

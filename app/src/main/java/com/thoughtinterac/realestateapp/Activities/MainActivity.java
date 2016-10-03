@@ -1,6 +1,7 @@
 package com.thoughtinterac.realestateapp.Activities;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -74,6 +75,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this,MyProjectFragment.link,Toast.LENGTH_SHORT).show();
+                String message = MyProjectFragment.link;
+                Intent share = new Intent(Intent.ACTION_SEND);
+                share.setType("text/plain");
+                share.putExtra(Intent.EXTRA_TEXT, message);
+                startActivity(Intent.createChooser(share, "Share Via"));
             }
         });
         if(bundle!=null)
