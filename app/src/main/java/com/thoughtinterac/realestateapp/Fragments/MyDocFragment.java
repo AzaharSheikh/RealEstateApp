@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.R;
 
+import java.util.ArrayList;
+
 /**
  * Created by AzaharSheikh on 28-09-2016.
  */
@@ -61,9 +63,19 @@ public class MyDocFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        Toast.makeText(getActivity(),"My doc Here",Toast.LENGTH_LONG).show();
-        return inflater.inflate(R.layout.content_me, container, false);
+        View rootView= inflater.inflate(R.layout.my_doc_layout, container, false);
+        //Toast.makeText(getActivity(),"My doc Here",Toast.LENGTH_LONG).show();
+        ArrayList<String> docList= new ArrayList();
+        ArrayList<String> docStatusList= new ArrayList();
+        docList.add("PAN");
+        docList.add("AADHAR");
+        docList.add("RC");
+        docList.add("NOC");
+        docStatusList.add("true");
+        docStatusList.add("true");
+        docStatusList.add("false");
+        docStatusList.add("true");
+        return rootView;
 
     }
 

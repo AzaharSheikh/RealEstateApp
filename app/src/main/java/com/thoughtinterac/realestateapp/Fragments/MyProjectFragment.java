@@ -110,18 +110,21 @@ ScrollView li_my_project_photos;
                        listView.setVisibility(View.GONE);
                        li_overview.setVisibility(View.VISIBLE);
                        li_my_project_photos.setVisibility(View.GONE);
+                       link = "http://www.gemini-properties.com/";
                        break;
                    case R.id.rbt_photos_list:
                        //Toast.makeText(getActivity(), "Photos details checked", Toast.LENGTH_SHORT).show();
                        listView.setVisibility(View.GONE);
                        li_overview.setVisibility(View.GONE);
                        li_my_project_photos.setVisibility(View.VISIBLE);
+                       link = "http://www.gemini-properties.com/images";
                        break;
                    case R.id.rbt_map:
                        //Toast.makeText(getActivity(), "Map details checked", Toast.LENGTH_SHORT).show();
                        listView.setVisibility(View.VISIBLE);
                        li_overview.setVisibility(View.GONE);
                        li_my_project_photos.setVisibility(View.GONE);
+                       link = "http://www.gemini-properties.com/places";
                        if(flag==0) {
                            getPlaceListAsync(lat, lng);
                            flag=1;

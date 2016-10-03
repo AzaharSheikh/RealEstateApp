@@ -74,11 +74,18 @@ public class GalleryFragment extends Fragment {
         View rootView=inflater.inflate(R.layout.gallery_layout, container, false);
         //Toast.makeText(getActivity(),"My gallery Here",Toast.LENGTH_LONG).show();
         List<GalleryImagesModel> imageList = new ArrayList<GalleryImagesModel>();
-        for(int i =0 ; i<10;i++)
+        Integer[] mThumbIds = {
+                R.drawable.drawer_back, R.drawable.drawer_back,
+                R.drawable.drawer_back, R.drawable.drawer_back,
+                R.drawable.drawer_back, R.drawable.drawer_back,
+                R.drawable.drawer_back, R.drawable.drawer_back,
+                R.drawable.drawer_back, R.drawable.drawer_back
+        };
+        for(int i =0 ; i<mThumbIds.length;i++)
         {
             GalleryImagesModel image = new GalleryImagesModel();
             image.setImg_name("Image"+(i+1));
-            image.setImage_id(R.drawable.drawer_back);
+            image.setImage_id(mThumbIds[i]);
             imageList.add(image);
         }
         GridView gridview = (GridView) rootView.findViewById(R.id.grid_gallery);
