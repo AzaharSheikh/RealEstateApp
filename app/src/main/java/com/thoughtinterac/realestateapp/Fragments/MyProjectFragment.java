@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.CustomAdapter.PlaceCustomAdapter;
@@ -43,7 +44,7 @@ public class MyProjectFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    private RadioGroup rg_myproject;
+    private RadioGroup rg_myproject,rg_flat_type;
     private OnFragmentInteractionListener mListener;
     String data;
    ProgressDialog pDialog;
@@ -54,7 +55,8 @@ ScrollView li_my_project_photos;
     double lng=72.998993;
     int flag=0;
     LinearLayout li_overview;
-    ImageView img_share;
+    View rootView;
+    TextView txt_value_area_sq_ft,txt_value_flat_available,txt_value_construction_stage,txt_value_extra_feature,txt_value_price;
 
 
     public MyProjectFragment() {
@@ -92,14 +94,46 @@ ScrollView li_my_project_photos;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.my_project_layout, container, false);
+        rootView = inflater.inflate(R.layout.my_project_layout, container, false);
         rg_myproject = (RadioGroup) rootView.findViewById(R.id.rg_myproject);
+        rg_flat_type = (RadioGroup) rootView.findViewById(R.id.rg_flat_type);
         listView = (ListView) rootView.findViewById(R.id.list_place);
         listView.setVisibility(View.GONE);
         li_overview=(LinearLayout)rootView.findViewById(R.id.li_overview);
         li_my_project_photos=(ScrollView)rootView.findViewById(R.id.li_my_project_photos);
         li_my_project_photos.setVisibility(View.GONE);
         link = "http://www.gemini-properties.com/";
+        initWidgets();
+        rg_flat_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId)
+                {
+                    case R.id.rbt_one_bhk_details:
+                        txt_value_area_sq_ft.setText("550");
+                        txt_value_flat_available.setText("10");
+                        txt_value_construction_stage.setText("50%");
+                        txt_value_extra_feature.setText("Intent");
+                        txt_value_price.setText("50 Lac");
+                        break;
+                    case R.id.rbt_two_bhk_list:
+                        txt_value_area_sq_ft.setText("1550");
+                        txt_value_flat_available.setText("5");
+                        txt_value_construction_stage.setText("60%");
+                        txt_value_extra_feature.setText("Intent");
+                        txt_value_price.setText("90 Lac");
+                        break;
+                    case R.id.rbt_three_bhk:
+
+                        txt_value_area_sq_ft.setText("2550");
+                        txt_value_flat_available.setText("7");
+                        txt_value_construction_stage.setText("40%");
+                        txt_value_extra_feature.setText("Intent");
+                        txt_value_price.setText("2 Cr");
+                        break;
+                }
+            }
+        });
        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -136,6 +170,19 @@ ScrollView li_my_project_photos;
        });
         return rootView;
 
+    }
+
+    private void initWidgets() {
+        txt_value_area_sq_ft=(TextView)rootView.findViewById(R.id.txt_value_area_sq_ft);
+        txt_value_flat_available=(TextView)rootView.findViewById(R.id.txt_value_flat_available);
+        txt_value_construction_stage=(TextView)rootView.findViewById(R.id.txt_value_construction_stage);
+        txt_value_extra_feature=(TextView)rootView.findViewById(R.id.txt_value_extra_feature);
+        txt_value_price=(TextView)rootView.findViewById(R.id.txt_value_price);
+        txt_value_area_sq_ft.setText("550");
+        txt_value_flat_available.setText("10");
+        txt_value_construction_stage.setText("50%");
+        txt_value_extra_feature.setText("Intent");
+        txt_value_price.setText("50 Lac");
     }
 
     private void getPlaceListAsync(final double lat,final double lng) {
