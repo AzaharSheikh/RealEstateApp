@@ -207,185 +207,179 @@ Metro Station"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_bhk"
-                    android:text="Flats per Cost"
+                    android:text="Types of flats"
                     android:textColor="@color/gold"
                     android:textSize="16dp"
                     android:padding="5dp"
                     android:textStyle="bold|italic"
                     />
-            </LinearLayout>
 
-            <LinearLayout
+            </LinearLayout>
+            <RadioGroup
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="1  BHK  : "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
+                android:layout_margin="5dp"
+                android:layout_marginTop="10dp"
+                android:id="@+id/rg_flat_type"
+                android:gravity="center"
+                android:orientation="horizontal" >
+                <RadioButton
+                    android:id="@+id/rbt_one_bhk_details"
+                    android:layout_weight="1"
+                    android:text="1 BHK"
+                    android:gravity="center"
+                    android:background="@drawable/rbtn_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
                     android:padding="5dp"
-                    />
-                <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="30 Lacks"
-                    android:textColor="@color/gold"
-                    android:layout_gravity="right"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rbt_two_bhk_list"
+                    android:layout_width="0dp"
                     android:padding="5dp"
-                    />
+                    android:background="@drawable/rbtn_selector"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:text="2 BHK"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content" />
+                <RadioButton
+                    android:id="@+id/rbt_three_bhk"
+                    android:layout_weight="1"
+                    android:padding="5dp"
+                    android:background="@drawable/rbtn_selector"
+                    android:textColor="@drawable/rbtn_textcolor_selector"
+                    android:text="3 BHK"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
 
-            </LinearLayout>
+            </RadioGroup>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_margin="5dp"
+                android:background="@drawable/layout_border"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_margin="5dp"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_weight="7.5"
+                        android:textColor="@color/gold"
+                        android:id="@+id/txt_view_area_sq_ft"
+                        android:text="Floor Area in sq. ft :"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="500"
+                            android:id="@+id/txt_value_area_sq_ft"
+                            android:layout_weight="2.5"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7.5"
+                            android:textColor="@color/gold"
+                            android:id="@+id/txt_view_flat_available"
+                            android:text="No. of flats available :"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="500"
+                            android:layout_weight="2.5"
+                            android:id="@+id/txt_value_flat_available"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7.5"
+                            android:id="@+id/txt_view_construction_stage"
+                            android:textColor="@color/gold"
+                            android:text="Construction Stage :"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="50%"
+                            android:layout_weight="2.5"
+                            android:id="@+id/txt_value_construction_stage"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7.5"
+                            android:id="@+id/txt_view_amenities"
+                            android:textColor="@color/gold"
+                            android:text="Amenities :"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="2  BHK  : "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="70 Lacks"
-                    android:textColor="@color/gold"
-                    android:layout_gravity="right"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
+                            android:layout_weight="2.5"
+                            android:id="@+id/txt_value_amenities"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7.5"
+                            android:id="@+id/txt_view_extra_feature"
+                            android:textColor="@color/gold"
+                            android:text="Extra Features :"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="2.5"
+                            android:id="@+id/txt_value_extra_feature"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="7.5"
+                            android:id="@+id/txt_view_price"
+                            android:textColor="@color/gold"
+                            android:text="@string/PriceRs"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:text="50 Lac"
+                            android:layout_weight="2.5"
+                            android:id="@+id/txt_value_price"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="3  BHK  : "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="1.2Cr"
-                    android:textColor="@color/gold"
-                    android:layout_gravity="right"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="No Of Flor : "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="15"
-                    android:textColor="@color/gold"
-                    android:layout_gravity="right"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="Mode Of Pay: "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="Constrution Stage: "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_bhk"
-                    android:text="Aminities: "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:layout_weight="4"
-                    android:padding="5dp"
-                    />
-            </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
