@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite">
+
+
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Details"
+                android:textColor="@color/gold"
+                android:textSize="20dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loan Taken From :"
+                android:textColor="@color/gold"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rate Of Interest :"
+                android:textColor="@color/gold"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Years Of Interest :"
+                android:textColor="@color/gold"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Loan Amount :"
+                android:textColor="@color/gold"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Installments :"
+                android:textColor="@color/gold"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="First Yr :"
+            android:textColor="@color/gold"
+            android:textSize="15dp"
+            android:padding="10dp"
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Second Yr :"
+                android:textColor="@color/gold"
+                android:textSize="15dp"
+                android:padding="10dp"
+                />
+        </LinearLayout>
+</LinearLayout>
