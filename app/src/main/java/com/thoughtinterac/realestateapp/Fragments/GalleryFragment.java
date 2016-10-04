@@ -75,11 +75,10 @@ public class GalleryFragment extends Fragment {
         //Toast.makeText(getActivity(),"My gallery Here",Toast.LENGTH_LONG).show();
         List<GalleryImagesModel> imageList = new ArrayList<GalleryImagesModel>();
         Integer[] mThumbIds = {
-                R.drawable.drawer_back, R.drawable.drawer_back,
-                R.drawable.drawer_back, R.drawable.drawer_back,
-                R.drawable.drawer_back, R.drawable.drawer_back,
-                R.drawable.drawer_back, R.drawable.drawer_back,
-                R.drawable.drawer_back, R.drawable.drawer_back
+                R.drawable.gallary1, R.drawable.gallary2,
+                R.drawable.gallary3, R.drawable.gallary4,
+                R.drawable.gallary5, R.drawable.gallary6
+
         };
         for(int i =0 ; i<mThumbIds.length;i++)
         {

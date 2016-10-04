@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@drawable/login"
+    android:background="@color/offwhite"
     android:focusableInTouchMode="true"
     android:layout_height="match_parent">
     <LinearLayout
@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:padding="10dp"
                 android:layout_margin="5dp"
-                android:textColor="@color/black"
+                android:textColor="@color/gold"
                 android:textColorHint="@color/black"
                 android:hint="email id"
                 android:layout_height="wrap_content" />
@@ -70,22 +70,22 @@
                 android:text="Login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/gray"
-                android:textColor="@color/red"
+                android:background="@color/gold"
+                android:textColor="@color/white"
                 android:layout_margin="5dp"/>
             <Button
                 android:id="@+id/btn_register"
                 android:text="Register"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@color/gray"
-                android:textColor="@color/red"
+                android:background="@color/gold"
+                android:textColor="@color/white"
                 android:layout_margin="5dp"/>
         </LinearLayout>
         <TextView
             android:layout_width="match_parent"
             android:gravity="center"
-            android:textColor="@color/red"
+            android:textColor="@color/gold"
             android:padding="10dp"
             android:textStyle="bold"
             android:text="Forgot Password"
