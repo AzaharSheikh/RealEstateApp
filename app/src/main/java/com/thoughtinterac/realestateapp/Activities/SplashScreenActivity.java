@@ -30,7 +30,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 } finally {
-                    Intent i = new Intent(SplashScreenActivity.this, LoginActivity.class);
+                    Intent i = new Intent(SplashScreenActivity.this, PreLogin.class);
                     startActivity(i);
                     finish();
                 }
