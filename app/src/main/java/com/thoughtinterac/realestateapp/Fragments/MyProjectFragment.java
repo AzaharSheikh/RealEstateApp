@@ -1,5 +1,6 @@
 package com.thoughtinterac.realestateapp.Fragments;
 
+import android.app.Dialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
@@ -56,7 +57,7 @@ ScrollView li_my_project_photos;
     int flag=0;
     LinearLayout li_overview;
     View rootView;
-    TextView txt_value_area_sq_ft,txt_value_flat_available,txt_value_construction_stage,txt_value_extra_feature,txt_value_price;
+    TextView txt_value_area_sq_ft,txt_value_flat_available,txt_value_construction_stage,txt_value_extra_feature,txt_value_amenities,txt_value_price;
 
 
     public MyProjectFragment() {
@@ -113,6 +114,7 @@ ScrollView li_my_project_photos;
                         txt_value_area_sq_ft.setText("550");
                         txt_value_flat_available.setText("10");
                         txt_value_construction_stage.setText("50%");
+                        txt_value_amenities.setText("Click Here");
                         txt_value_extra_feature.setText("Intent");
                         txt_value_price.setText("50 Lac");
                         break;
@@ -120,6 +122,7 @@ ScrollView li_my_project_photos;
                         txt_value_area_sq_ft.setText("1550");
                         txt_value_flat_available.setText("5");
                         txt_value_construction_stage.setText("60%");
+                        txt_value_amenities.setText("Click Here");
                         txt_value_extra_feature.setText("Intent");
                         txt_value_price.setText("90 Lac");
                         break;
@@ -128,6 +131,7 @@ ScrollView li_my_project_photos;
                         txt_value_area_sq_ft.setText("2550");
                         txt_value_flat_available.setText("7");
                         txt_value_construction_stage.setText("40%");
+                        txt_value_amenities.setText("Click Here");
                         txt_value_extra_feature.setText("Intent");
                         txt_value_price.setText("2 Cr");
                         break;
@@ -177,12 +181,23 @@ ScrollView li_my_project_photos;
         txt_value_flat_available=(TextView)rootView.findViewById(R.id.txt_value_flat_available);
         txt_value_construction_stage=(TextView)rootView.findViewById(R.id.txt_value_construction_stage);
         txt_value_extra_feature=(TextView)rootView.findViewById(R.id.txt_value_extra_feature);
+        txt_value_amenities=(TextView)rootView.findViewById(R.id.txt_value_amenities);
         txt_value_price=(TextView)rootView.findViewById(R.id.txt_value_price);
         txt_value_area_sq_ft.setText("550");
         txt_value_flat_available.setText("10");
+        txt_value_amenities.setText("Click Here");
         txt_value_construction_stage.setText("50%");
         txt_value_extra_feature.setText("Intent");
         txt_value_price.setText("50 Lac");
+        txt_value_amenities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.amenities_layout);
+                dialog.setTitle("Amenities");
+                dialog.show();
+            }
+        });
     }
 
     private void getPlaceListAsync(final double lat,final double lng) {
