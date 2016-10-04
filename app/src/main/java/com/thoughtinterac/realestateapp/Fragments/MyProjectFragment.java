@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -113,26 +114,26 @@ ScrollView li_my_project_photos;
                     case R.id.rbt_one_bhk_details:
                         txt_value_area_sq_ft.setText("550");
                         txt_value_flat_available.setText("10");
-                        txt_value_construction_stage.setText("50%");
+                        txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");
-                        txt_value_extra_feature.setText("Intent");
+                        txt_value_extra_feature.setText("Click Here");
                         txt_value_price.setText("50 Lac");
                         break;
                     case R.id.rbt_two_bhk_list:
                         txt_value_area_sq_ft.setText("1550");
                         txt_value_flat_available.setText("5");
-                        txt_value_construction_stage.setText("60%");
+                        txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");
-                        txt_value_extra_feature.setText("Intent");
+                        txt_value_extra_feature.setText("Click Here");
                         txt_value_price.setText("90 Lac");
                         break;
                     case R.id.rbt_three_bhk:
 
                         txt_value_area_sq_ft.setText("2550");
                         txt_value_flat_available.setText("7");
-                        txt_value_construction_stage.setText("40%");
+                        txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");
-                        txt_value_extra_feature.setText("Intent");
+                        txt_value_extra_feature.setText("Click Here");
                         txt_value_price.setText("2 Cr");
                         break;
                 }
@@ -186,8 +187,8 @@ ScrollView li_my_project_photos;
         txt_value_area_sq_ft.setText("550");
         txt_value_flat_available.setText("10");
         txt_value_amenities.setText("Click Here");
-        txt_value_construction_stage.setText("50%");
-        txt_value_extra_feature.setText("Intent");
+        txt_value_construction_stage.setText("Click Here");
+        txt_value_extra_feature.setText("Click Here");
         txt_value_price.setText("50 Lac");
         txt_value_amenities.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -196,6 +197,16 @@ ScrollView li_my_project_photos;
                 dialog.setContentView(R.layout.amenities_layout);
                 dialog.setTitle("Amenities");
                 dialog.show();
+            }
+        });
+        txt_value_construction_stage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final AlertDialog diag = new AlertDialog.Builder(getActivity())
+                        .setView(R.layout.consteuctions_image_layout)
+                        .create();
+
+                diag.show();
             }
         });
     }
