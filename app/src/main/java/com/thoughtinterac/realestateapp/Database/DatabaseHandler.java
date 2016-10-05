@@ -4,6 +4,9 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import com.thoughtinterac.realestateapp.Activities.LoginActivity;
+import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
+
 /**
  * Created by AzaharSheikh on 01-10-2016.
  */
