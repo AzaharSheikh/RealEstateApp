@@ -196,7 +196,18 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
-            </LinearLayout>
 
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_login"
+                android:text="save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/gold"
+                android:textColor="@color/white"
+                android:layout_gravity="center"
+
+                />
         </LinearLayout>
 </LinearLayout>
