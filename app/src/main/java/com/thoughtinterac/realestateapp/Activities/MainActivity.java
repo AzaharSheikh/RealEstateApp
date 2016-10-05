@@ -22,6 +22,7 @@ import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Fragments.GalleryFragment;
+import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyDocFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProjectFragment;
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_MYPROJECT = "MyProject";
     private static final String TAG_MYDOC = "MyDoc";
     private static final String TAG_GALLERY = "Gallery";
-    private static final String TAG_CONTACT_US = "Contact Us";
+    private static final String TAG_BANK_DETAILS = "BankDetails";
     public static String CURRENT_TAG = TAG_ME;
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
@@ -162,27 +163,32 @@ public class MainActivity extends AppCompatActivity {
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
-                // homeFragment
+
                 img_share.setVisibility(View.GONE);
                 MyProfileFragment myProfileFragment = new MyProfileFragment();
                 return myProfileFragment;
             case 1:
-                // aboutFragment fragment
+
                 img_share.setVisibility(View.VISIBLE);
                 MyProjectFragment myProjectFragment = new MyProjectFragment();
                 return myProjectFragment;
 
             case 2:
-                // offersFragment fragment
+
                 img_share.setVisibility(View.GONE);
                 MyDocFragment myDocFragment = new MyDocFragment();
                 return myDocFragment;
 
             case 3:
-                // cafeFragment
+
                 img_share.setVisibility(View.GONE);
                 GalleryFragment galleryFragment = new GalleryFragment();
                 return galleryFragment;
+            case 4:
+
+                img_share.setVisibility(View.GONE);
+                MyBankDetailsFragment MyBankDetails = new MyBankDetailsFragment();
+                return MyBankDetails;
 
             default:
                 return new MyProjectFragment();
@@ -224,7 +230,10 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 3;
                         CURRENT_TAG = TAG_GALLERY;
                         break;
-
+                    case R.id.my_bank_details:
+                        navItemIndex = 4;
+                        CURRENT_TAG = TAG_BANK_DETAILS;
+                        break;
 
                     default:
                         navItemIndex = 0;

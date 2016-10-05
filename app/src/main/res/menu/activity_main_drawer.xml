@@ -18,6 +18,10 @@
             android:id="@+id/my_gallery"
             android:icon="@mipmap/picture"
             android:title="Gallery" />
+        <item
+            android:id="@+id/my_bank_details"
+            android:icon="@mipmap/picture"
+            android:title="My Bank Details" />
     </group>
 
 

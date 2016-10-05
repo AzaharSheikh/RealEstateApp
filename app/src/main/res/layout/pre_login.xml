@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/img_realeter"
-            android:src="@drawable/login_user"
+            android:src="@drawable/login_realator"
             android:adjustViewBounds="true"
             android:padding="10dp"
             android:layout_marginLeft="10dp"/>

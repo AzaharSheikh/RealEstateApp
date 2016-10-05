@@ -193,10 +193,11 @@ ScrollView li_my_project_photos;
         txt_value_amenities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final Dialog dialog = new Dialog(getActivity());
-                dialog.setContentView(R.layout.amenities_layout);
-                dialog.setTitle("Amenities");
-                dialog.show();
+                final AlertDialog diag = new AlertDialog.Builder(getActivity())
+                        .setView(R.layout.amenities_layout)
+                        .create();
+
+                diag.show();
             }
         });
         txt_value_construction_stage.setOnClickListener(new View.OnClickListener() {

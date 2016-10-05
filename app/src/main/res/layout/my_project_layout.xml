@@ -53,7 +53,7 @@
         android:id="@+id/list_place"
         android:visibility="gone"
         android:layout_height="match_parent"
-        android:background="@color/black"
+        android:background="@color/offwhite"
         >
 
     </ListView>
@@ -66,7 +66,7 @@
             android:id="@+id/my_project_photos"
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:background="@color/black"
+            android:background="@color/offwhite"
             android:layout_height="match_parent">
             <TextView
                 android:layout_width="match_parent"

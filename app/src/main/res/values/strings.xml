@@ -12,6 +12,7 @@
         <item>My Project</item>
         <item>My Document</item>
         <item>Gallery</item>
+        <item>My Bank Details</item>
 
     </string-array>
     <string name="thoughtinteract"><b><font color='black'>thought</font><font color='yellow'>Interact</font></b></string>
