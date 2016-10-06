@@ -22,6 +22,18 @@
             android:id="@+id/my_bank_details"
             android:icon="@mipmap/picture"
             android:title="My Bank Details" />
+        <item
+            android:id="@+id/contact"
+            android:icon="@mipmap/picture"
+            android:title="Contact" />
+        <item
+            android:id="@+id/terms_n_condition"
+            android:icon="@mipmap/picture"
+            android:title="Terms &amp; Condition" />
+        <item
+            android:id="@+id/privacy_policy"
+            android:icon="@mipmap/picture"
+            android:title="Privacy Policy" />
     </group>
 
 

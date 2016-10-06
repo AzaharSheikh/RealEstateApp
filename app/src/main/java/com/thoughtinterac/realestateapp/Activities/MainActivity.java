@@ -21,11 +21,14 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
+import com.thoughtinterac.realestateapp.Fragments.ContactFragment;
 import com.thoughtinterac.realestateapp.Fragments.GalleryFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyDocFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProjectFragment;
+import com.thoughtinterac.realestateapp.Fragments.PrivacyPolicyFragment;
+import com.thoughtinterac.realestateapp.Fragments.TermNConditionFragment;
 import com.thoughtinterac.realestateapp.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -46,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_MYDOC = "MyDoc";
     private static final String TAG_GALLERY = "Gallery";
     private static final String TAG_BANK_DETAILS = "BankDetails";
+    private static final String TAG_CONTACT_US = "ContactUs";
+    private static final String TAG_T_N_C = "TnC";
+    private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
     public static String CURRENT_TAG = TAG_ME;
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
@@ -189,6 +195,23 @@ public class MainActivity extends AppCompatActivity {
                 img_share.setVisibility(View.GONE);
                 MyBankDetailsFragment MyBankDetails = new MyBankDetailsFragment();
                 return MyBankDetails;
+            case 5:
+
+                img_share.setVisibility(View.GONE);
+                ContactFragment contactFragment = new ContactFragment();
+                return contactFragment;
+            case 6:
+
+                img_share.setVisibility(View.GONE);
+                TermNConditionFragment termNConditionFragment = new TermNConditionFragment();
+                return termNConditionFragment;
+            case 7:
+
+                img_share.setVisibility(View.GONE);
+                PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
+                return privacyPolicyFragment;
+
+
 
             default:
                 return new MyProjectFragment();
@@ -233,6 +256,18 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.my_bank_details:
                         navItemIndex = 4;
                         CURRENT_TAG = TAG_BANK_DETAILS;
+                        break;
+                    case R.id.contact:
+                        navItemIndex = 5;
+                        CURRENT_TAG = TAG_CONTACT_US;
+                        break;
+                    case R.id.terms_n_condition:
+                        navItemIndex = 6;
+                        CURRENT_TAG = TAG_T_N_C;
+                        break;
+                    case R.id.privacy_policy:
+                        navItemIndex = 7;
+                        CURRENT_TAG = TAG_PRIVACY_POLICY;
                         break;
 
                     default:

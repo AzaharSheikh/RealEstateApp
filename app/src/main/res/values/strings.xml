@@ -13,6 +13,9 @@
         <item>My Document</item>
         <item>Gallery</item>
         <item>My Bank Details</item>
+        <item>Contact</item>
+        <item>Terms &amp; Conditions</item>
+        <item>Privacy Policy</item>
 
     </string-array>
     <string name="thoughtinteract"><b><font color='black'>thought</font><font color='yellow'>Interact</font></b></string>
