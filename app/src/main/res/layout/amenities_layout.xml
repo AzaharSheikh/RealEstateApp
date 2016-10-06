@@ -14,7 +14,7 @@
             android:src="@drawable/back_arrow"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_weight="8"
             android:layout_width="0dp"
             android:textSize="20dp"
@@ -46,10 +46,11 @@
         android:src="@drawable/amenities1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gold"
             android:text="Infinity\nswimming pool"
             android:layout_height="wrap_content" />
         <ImageView
@@ -59,10 +60,11 @@
             android:src="@drawable/amenities2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gold"
             android:text="Outdoor and\nIndoor Gym"
             android:layout_height="wrap_content" />
         <ImageView
@@ -72,10 +74,11 @@
             android:src="@drawable/amenities3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gold"
             android:text="Children’s play area /\nkids pool"
             android:layout_height="wrap_content" />
         <ImageView
@@ -85,10 +88,11 @@
             android:src="@drawable/amenities4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gold"
             android:text="Basket Ball\ncourt"
             android:layout_height="wrap_content" />
         <ImageView
@@ -98,10 +102,11 @@
             android:src="@drawable/amenities5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gold"
             android:text="Open relaxation\narea"
             android:layout_height="wrap_content" />
         <ImageView
@@ -111,10 +116,11 @@
             android:src="@drawable/amenities6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gold"
             android:text="Retail outlets on\nthe ground floor"
             android:layout_height="wrap_content" />
         <ImageView
@@ -124,10 +130,11 @@
             android:src="@drawable/amenities7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <TextView
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:gravity="center"
+            android:textColor="@color/gold"
             android:text="Concierge services"
             android:layout_height="wrap_content" />
     </LinearLayout>

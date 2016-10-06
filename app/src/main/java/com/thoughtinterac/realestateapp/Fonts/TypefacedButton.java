@@ -14,7 +14,7 @@ public class TypefacedButton extends Button {
     public TypefacedButton(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/LatoBlack.ttf");
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/LatoRegular.ttf");
         setTypeface(typeface);
     }
 }

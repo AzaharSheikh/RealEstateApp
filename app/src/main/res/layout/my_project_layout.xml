@@ -160,7 +160,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <TextView
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_location"
@@ -186,7 +186,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="horizontal">
-                <TextView
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_location"
@@ -203,7 +203,7 @@ Metro Station"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
-                <TextView
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_bhk"
@@ -272,14 +272,14 @@ Metro Station"
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
-                    <TextView
+                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                         android:layout_weight="7.5"
                         android:textColor="@color/gold"
                         android:id="@+id/txt_view_area_sq_ft"
                         android:text="Floor Area in sq. ft :"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content" />
-                        <TextView
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:text="500"
                             android:id="@+id/txt_value_area_sq_ft"
                             android:layout_weight="2.5"
@@ -314,6 +314,7 @@ Metro Station"
                             android:textColor="@color/gold"
                             android:text="Construction Stage :"
                             android:layout_width="0dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <TextView
                             android:text="50%"
@@ -332,6 +333,7 @@ Metro Station"
                             android:textColor="@color/gold"
                             android:text="Amenities :"
                             android:layout_width="0dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <TextView
 
@@ -350,6 +352,7 @@ Metro Station"
                             android:textColor="@color/gold"
                             android:text="Extra Features :"
                             android:layout_width="0dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <TextView
                             android:layout_weight="2.5"
