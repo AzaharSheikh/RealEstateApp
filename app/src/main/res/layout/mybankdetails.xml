@@ -10,7 +10,7 @@
             android:layout_height="match_parent">
 
 
-            <TextView
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Details"
@@ -21,7 +21,7 @@
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
-    <TextView
+    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
         android:layout_width="0dp"
         android:layout_weight="1"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:textSize="15dp"
         android:padding="10dp"
         />
-    <EditText
+    <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
         android:layout_weight="1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:orientation="horizontal"
             android:layout_height="wrap_content">
-            <TextView
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -49,7 +49,7 @@
                 android:textSize="15dp"
                 android:padding="10dp"
                 />
-            <EditText
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
                android:layout_width="match_parent"
                android:orientation="horizontal"
                android:layout_height="wrap_content">
-               <TextView
+               <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                    android:layout_weight="1"
                    android:layout_width="0dp"
                    android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
                    android:textSize="15dp"
                    android:padding="10dp"
                    />
-               <EditText
+               <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                    android:layout_weight="1"
                    android:layout_width="0dp"
                    android:layout_height="match_parent"
@@ -80,7 +80,7 @@
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
 
-            <TextView
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -89,7 +89,7 @@
                 android:textSize="15dp"
                 android:padding="10dp"
                 />
-                <EditText
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -100,7 +100,7 @@
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
 
-            <TextView
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -110,7 +110,7 @@
                android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 />
-                <TextView
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:gravity="center"
@@ -120,7 +120,7 @@
                     android:textSize="15dp"
                     android:padding="3dp"
                     />
-                <TextView
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -130,7 +130,7 @@
                     android:textSize="15dp"
                     android:padding="3dp"
                     />
-                <TextView
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -147,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
-                <TextView
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -158,17 +158,17 @@
                     android:paddingTop="10dp"
                     android:paddingLeft="10dp"
                     />
-                <EditText
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/fisrt_principal_edt"/>
-                <EditText
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/fisrt_interest_edt"/>
-                <EditText
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -180,7 +180,7 @@
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content">
-                <TextView
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -191,17 +191,17 @@
                     android:paddingTop="10dp"
                     android:paddingLeft="10dp"
                     />
-                <EditText
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/sec_principal_edt"/>
-                <EditText
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/sec_interest_edt"/>
-                <EditText
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
@@ -210,7 +210,7 @@
 
 
             </LinearLayout>
-            <Button
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
                 android:id="@+id/btn_save"
                 android:text="save"
                 android:layout_width="wrap_content"
