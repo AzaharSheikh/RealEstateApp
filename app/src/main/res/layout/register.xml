@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-    <TextView
+    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
@@ -31,7 +31,7 @@
        />
 
 
-    <TextView
+    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Address"
@@ -51,7 +51,7 @@
         android:ems="10"
         android:id="@+id/edt_user_address" />
 
-    <TextView
+    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Job Discription"

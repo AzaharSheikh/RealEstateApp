@@ -193,21 +193,33 @@ ScrollView li_my_project_photos;
         txt_value_amenities.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog diag = new AlertDialog.Builder(getActivity())
-                        .setView(R.layout.amenities_layout)
-                        .create();
-
-                diag.show();
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.amenities_layout);
+                ImageView img_back= (ImageView) dialog.findViewById(R.id.img_back);
+                if(img_back!=null) {
+                    img_back.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+                }
+                dialog.show();
             }
         });
         txt_value_construction_stage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final AlertDialog diag = new AlertDialog.Builder(getActivity())
-                        .setView(R.layout.consteuctions_image_layout)
-                        .create();
-
-                diag.show();
+                final Dialog dialog = new Dialog(getActivity());
+                dialog.setContentView(R.layout.consteuctions_image_layout);
+                ImageView img_back= (ImageView) dialog.findViewById(R.id.img_back);
+                img_back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
             }
         });
     }
