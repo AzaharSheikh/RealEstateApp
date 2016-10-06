@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AlertDialog;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -225,7 +224,7 @@ ScrollView li_my_project_photos;
     }
 
     private void getPlaceListAsync(final double lat,final double lng) {
-        new fetchListDataAsync(lat,lng).execute("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng+"&radius=5000&type=restaurant&name=cruise&key="+getResources().getString(R.string.api_key));
+        new fetchPlaceListDataAsync(lat,lng).execute("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+lat+","+lng+"&radius=5000&type=restaurant&name=cruise&key="+getResources().getString(R.string.api_key));
     }
 
     // TODO: Rename method, update argument and hook method into UI event
@@ -257,8 +256,8 @@ ScrollView li_my_project_photos;
         void onFragmentInteraction(Uri uri);
     }
 
-    private class fetchListDataAsync extends AsyncTask<String, Void, String> {
-        public fetchListDataAsync(double lat, double lng) {
+    private class fetchPlaceListDataAsync extends AsyncTask<String, Void, String> {
+        public fetchPlaceListDataAsync(double lat, double lng) {
         }
 
 

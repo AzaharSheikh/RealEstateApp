@@ -311,7 +311,7 @@ public class MainActivity extends AppCompatActivity {
         actionBarDrawerToggle.syncState();
     }
     private void fetchListData() {
-        //new fetchListDataAsync().execute("http://172.17.11.18:80/brewawebonlinePHP/product_list.php");
+        //new fetchPlaceListDataAsync().execute("http://172.17.11.18:80/brewawebonlinePHP/product_list.php");
     }
 
 
