@@ -13,7 +13,7 @@ public class TypefacedTextView extends TextView {
     public TypefacedTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/LatoBlack.ttf");
+        Typeface typeface = Typeface.createFromAsset(context.getAssets(), "fonts/LatoRegular.ttf");
         setTypeface(typeface);
     }
 }

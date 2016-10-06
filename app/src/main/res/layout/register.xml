@@ -152,7 +152,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         >
-        <Button
+
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
             android:layout_width="wrap_content"
             android:id="@+id/btn_register_submit"
           android:layout_margin="10dp"
