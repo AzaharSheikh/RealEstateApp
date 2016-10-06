@@ -83,7 +83,7 @@ public class MyProfileFragment extends Fragment {
 
 
 
-        Toast.makeText(getActivity(),"My Profile Here",Toast.LENGTH_LONG).show();
+        //Toast.makeText(getActivity(),"My Profile Here",Toast.LENGTH_LONG).show();
         return rootView;
 
     }

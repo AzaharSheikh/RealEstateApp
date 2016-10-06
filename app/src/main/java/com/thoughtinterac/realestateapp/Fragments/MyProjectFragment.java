@@ -49,7 +49,7 @@ public class MyProjectFragment extends Fragment {
     private OnFragmentInteractionListener mListener;
     String data;
    ProgressDialog pDialog;
-ScrollView li_my_project_photos;
+    LinearLayout li_my_project_photos;
     private ListView listView;
     private PlaceCustomAdapter adapter;
     double lat =19.077065;
@@ -101,7 +101,7 @@ ScrollView li_my_project_photos;
         listView = (ListView) rootView.findViewById(R.id.list_place);
         listView.setVisibility(View.GONE);
         li_overview=(LinearLayout)rootView.findViewById(R.id.li_overview);
-        li_my_project_photos=(ScrollView)rootView.findViewById(R.id.li_my_project_photos);
+        li_my_project_photos=(LinearLayout)rootView.findViewById(R.id.li_my_project_photos);
         li_my_project_photos.setVisibility(View.GONE);
         link = "http://www.gemini-properties.com/";
         initWidgets();

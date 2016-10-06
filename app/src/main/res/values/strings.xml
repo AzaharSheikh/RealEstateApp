@@ -20,4 +20,7 @@
     </string-array>
     <string name="thoughtinteract"><b><font color='black'>thought</font><font color='yellow'>Interact</font></b></string>
     <string name="PriceRs">Price \u20B9 :</string>
+
+    <string name="facebook_app_id">1095526427168525</string>
+    <string name="fb_login_protocol_scheme">fb1095526427168525</string>
 </resources>

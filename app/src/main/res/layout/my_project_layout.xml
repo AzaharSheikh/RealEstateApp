@@ -57,87 +57,183 @@
         >
 
     </ListView>
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/li_my_project_photos"
-        android:visibility="gone"
+        android:orientation="vertical"
         android:layout_height="match_parent">
         <LinearLayout
-            android:id="@+id/my_project_photos"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <ListView
+                    android:id="@+id/list_photo"
+                    android:layout_weight="8"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp">
+
+                </ListView>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/photo_camera"
+                    android:layout_weight="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:background="@color/offwhite"
             android:layout_height="match_parent">
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_margin="2dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_location"
-                android:text="Overview Of the Project"
-                android:textColor="@color/gold"
-                android:textSize="16dp"
-                android:padding="5dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/overview_image"
-                android:adjustViewBounds="true"
-                />
-             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:weightSum="10"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:id="@+id/txt_location"
+                        android:text="Users Images"
+                        android:background="@color/gold"
+                        android:textColor="@color/offwhite"
+                        android:textSize="16dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+                     <GridView
+                        android:id="@+id/list_photo"
+                        android:layout_weight="7"
+                         android:numColumns="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                    </GridView>
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:src="@drawable/photo_camera"
+                        android:adjustViewBounds="true"
+                        android:layout_weight="2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_margin="2dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_location"
-                android:text="living room"
-                android:textColor="@color/gold"
-                android:textSize="16dp"
-                android:padding="5dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/hall"
-                android:adjustViewBounds="true"
-                />
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_location"
-                android:text="Study Room"
-                android:textColor="@color/gold"
-                android:textSize="16dp"
-                android:padding="5dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/studyroom1"
-                android:adjustViewBounds="true"
-                />
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_location"
-                android:text="kids Room"
-                android:textColor="@color/gold"
-                android:textSize="16dp"
-                android:padding="5dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                />
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/kidsroom1"
-                android:adjustViewBounds="true"
-                />
+                android:layout_height="0dp">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_location"
+                    android:text="Realtor Images"
+                    android:layout_margin="5dp"
+                    android:background="@color/gold"
+                    android:textColor="@color/offwhite"
+                    android:textSize="16dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    />
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:id="@+id/li_my_project_photos"
+                    android:visibility="visible"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="vertical"
+                        android:weightSum="10"
+                        android:layout_height="wrap_content">
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_location"
+                            android:text="Overview Of the Project"
+                            android:textColor="@color/gold"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/overview_image"
+                            android:adjustViewBounds="true"
+                            />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_location"
+                            android:text="living room"
+                            android:textColor="@color/gold"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/hall"
+                            android:adjustViewBounds="true"
+                            />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_location"
+                            android:text="Study Room"
+                            android:textColor="@color/gold"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/studyroom1"
+                            android:adjustViewBounds="true"
+                            />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_location"
+                            android:text="kids Room"
+                            android:textColor="@color/gold"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            />
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/kidsroom1"
+                            android:adjustViewBounds="true"
+                            />
+
+                    </LinearLayout>
+                </ScrollView>
+
+            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"

@@ -19,6 +19,16 @@ import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.facebook.AccessToken;
+import com.facebook.AccessTokenTracker;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookCallback;
+import com.facebook.FacebookException;
+import com.facebook.FacebookSdk;
+import com.facebook.Profile;
+import com.facebook.ProfileTracker;
+import com.facebook.login.LoginResult;
+import com.facebook.login.widget.LoginButton;
 import com.thoughtinterac.realestateapp.Application.AppController;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.R;
@@ -40,13 +50,58 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     ProgressDialog pDialog;
     private RadioGroup rg_member;
     private RadioButton rbtn_member;
+    private CallbackManager callbackManager;
+    private AccessTokenTracker accessTokenTracker;
+    private ProfileTracker profileTracker;
+    private FacebookCallback<LoginResult> callback = new FacebookCallback<LoginResult>() {
+        @Override
+        public void onSuccess(LoginResult loginResult) {
+            AccessToken accessToken = loginResult.getAccessToken();
+            Profile profile = Profile.getCurrentProfile();
+            displayMessage(profile);
+        }
+
+        @Override
+        public void onCancel() {
+
+        }
+
+        @Override
+        public void onError(FacebookException e) {
+
+        }
+    };
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.login_activity);
+
+
+        callbackManager = CallbackManager.Factory.create();
+
+        accessTokenTracker= new AccessTokenTracker() {
+            @Override
+            protected void onCurrentAccessTokenChanged(AccessToken oldToken, AccessToken newToken) {
+
+            }
+        };
+
+        profileTracker = new ProfileTracker() {
+            @Override
+            protected void onCurrentProfileChanged(Profile oldProfile, Profile newProfile) {
+                displayMessage(newProfile);
+            }
+        };
+
+        accessTokenTracker.startTracking();
+        profileTracker.startTracking();
         btn_login=(Button)findViewById(R.id.btn_login);
         btn_register=(Button)findViewById(R.id.btn_register);
         rg_member = (RadioGroup) findViewById(R.id.rg_member);
+        LoginButton loginButton = (LoginButton)findViewById(R.id.login_button);
+        loginButton.setReadPermissions("user_friends");
+        loginButton.registerCallback(callbackManager, callback);
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -82,7 +137,11 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         });
 
     }
-
+    private void displayMessage(Profile profile){
+        if(profile != null){
+            profile.getName();
+        }
+    }
     private void local_login(String str_username, String str_password) {
         DatabaseHandler handler= new DatabaseHandler(LoginActivity.this);
         SQLiteDatabase db = handler.getWritableDatabase();
@@ -215,7 +274,19 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
             pDialog.dismiss();
     }
 
+    @Override
+    public void onStop() {
+        super.onStop();
+        accessTokenTracker.stopTracking();
+        profileTracker.stopTracking();
+    }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+        Profile profile = Profile.getCurrentProfile();
+        displayMessage(profile);
+    }
 
     @Override
     public void onClick(View v) {

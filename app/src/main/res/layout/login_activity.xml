@@ -92,6 +92,10 @@
             android:textStyle="bold"
             android:text="Forgot Password ?"
             android:layout_height="wrap_content" />
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
 
