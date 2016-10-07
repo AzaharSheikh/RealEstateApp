@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -65,9 +66,16 @@ public class MyDocListAdapter extends BaseAdapter {
             img_status.setImageResource(R.mipmap.verified);
         }else
         {
-            img_status.setImageResource(R.mipmap.unverified);
+            img_status.setImageResource(R.mipmap.question);
         }
-
+        doc_name.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast toast = Toast.makeText(activity,m.getDoc_deatils(), Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
+        });
 
 
         return convertView;

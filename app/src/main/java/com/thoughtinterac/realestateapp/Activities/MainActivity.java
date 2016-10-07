@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     public static int navItemIndex = 0;
     Toolbar toolbar;
     public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
-
+    boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -321,8 +321,25 @@ public class MainActivity extends AppCompatActivity {
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            //super.onBackPressed();
         }
+
+            if (doubleBackToExitPressedOnce) {
+                super.onBackPressed();
+                return;
+            }
+
+            this.doubleBackToExitPressedOnce = true;
+            Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce=false;
+                }
+            }, 2000);
+
     }
 
     @Override

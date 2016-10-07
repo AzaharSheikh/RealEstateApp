@@ -7,6 +7,16 @@ public class DocListModel
 {
     String doc_name;
     String doc_status;
+    String doc_deatils;
+
+    public String getDoc_deatils() {
+        return doc_deatils;
+    }
+
+    public void setDoc_deatils(String doc_deatils) {
+        this.doc_deatils = doc_deatils;
+    }
+
     public String getDoc_name() {
         return doc_name;
     }

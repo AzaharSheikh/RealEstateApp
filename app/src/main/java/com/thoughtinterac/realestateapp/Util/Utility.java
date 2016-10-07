@@ -8,6 +8,7 @@ import java.text.DecimalFormat;
  */
 public class Utility {
 
+    public  static String bank_share_pref="s_pref_bank_details";
     public static float distFrom(double lat1, double lng1, double lat2, double lng2) {
         double earthRadius = 6371000; //meters
         double dLat = Math.toRadians(lat2-lat1);

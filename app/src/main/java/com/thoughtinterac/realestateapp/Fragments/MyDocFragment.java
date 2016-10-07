@@ -7,14 +7,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import com.thoughtinterac.realestateapp.CustomAdapter.GalleryImagesAdapter;
 import com.thoughtinterac.realestateapp.CustomAdapter.MyDocListAdapter;
 import com.thoughtinterac.realestateapp.Model.DocListModel;
-import com.thoughtinterac.realestateapp.Model.GalleryImagesModel;
 import com.thoughtinterac.realestateapp.R;
 
 import java.util.ArrayList;
@@ -28,7 +24,7 @@ public class MyDocFragment extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    ArrayList<String> docList,docStatusList;
+    ArrayList<String> docList,docStatusList, docDetails;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -77,6 +73,7 @@ public class MyDocFragment extends Fragment {
         List<DocListModel> docListMain = new ArrayList<DocListModel>();
         docList= new ArrayList();
         docStatusList= new ArrayList();
+        docDetails = new ArrayList();
         docList.add("PAN");
         docList.add("AADHAR");
         docList.add("RC");
@@ -85,11 +82,16 @@ public class MyDocFragment extends Fragment {
         docStatusList.add("true");
         docStatusList.add("false");
         docStatusList.add("true");
+        docDetails.add("HSJADJSAN2672482482");
+        docDetails.add("ADHARC CARD Number");
+        docDetails.add("Rc no.12212123");
+        docDetails.add("Noc staus ");
         for(int i =0 ; i<docList.size();i++)
         {
             DocListModel list = new DocListModel();
             list.setDoc_name(docList.get(i).toString());
             list.setDoc_status(docStatusList.get(i).toString());
+            list.setDoc_deatils(docDetails.get(i).toString());
             docListMain.add(list);
         }
         ListView listView = (ListView) rootView.findViewById(R.id.doc_list);
