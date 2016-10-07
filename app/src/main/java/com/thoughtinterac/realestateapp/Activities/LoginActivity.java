@@ -59,6 +59,10 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
             AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
             displayMessage(profile);
+            Log.d("username",profile.getName());
+            Log.d("fname",profile.getFirstName());
+            Log.d("lname",profile.getLastName());
+
         }
 
         @Override
@@ -69,6 +73,9 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         @Override
         public void onError(FacebookException e) {
 
+            Log.d("username","err");
+            Log.d("fname","err");
+            Log.d("lname","err");
         }
     };
     @Override
@@ -139,7 +146,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     }
     private void displayMessage(Profile profile){
         if(profile != null){
-            profile.getName();
+            String name = profile.getName();
+            //
         }
     }
     private void local_login(String str_username, String str_password) {

@@ -48,6 +48,7 @@
                 android:textColor="@color/gold"
                 android:textSize="15dp"
                 android:padding="10dp"
+
                 />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                 android:layout_weight="1"
