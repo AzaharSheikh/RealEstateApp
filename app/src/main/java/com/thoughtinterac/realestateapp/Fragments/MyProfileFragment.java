@@ -7,9 +7,12 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.squareup.picasso.Picasso;
+import com.thoughtinterac.realestateapp.Activities.LoginActivity;
 import com.thoughtinterac.realestateapp.Activities.MainActivity;
 import com.thoughtinterac.realestateapp.R;
 
@@ -73,7 +76,8 @@ public class MyProfileFragment extends Fragment {
         txt_email=(TextView)rootView.findViewById(R.id.txt_email);
         txt_mobile=(TextView)rootView.findViewById(R.id.txt_mobile);
         txt_address=(TextView)rootView.findViewById(R.id.txt_address);
-
+        ImageView iv_profile_pic=(ImageView)rootView.findViewById(R.id.iv_profile_pic);
+        Picasso.with(getActivity()).load(LoginActivity.imageurl).into(iv_profile_pic);
 
         txt_name.setText(MainActivity.str_user_name);
         txt_project_name.setText(MainActivity.str_user_job);

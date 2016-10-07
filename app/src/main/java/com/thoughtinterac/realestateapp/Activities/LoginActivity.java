@@ -25,11 +25,16 @@ import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
+import com.facebook.GraphRequest;
+import com.facebook.GraphResponse;
+import com.facebook.LoggingBehavior;
 import com.facebook.Profile;
 import com.facebook.ProfileTracker;
+import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.thoughtinterac.realestateapp.Application.AppController;
+import com.thoughtinterac.realestateapp.BuildConfig;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.AppConfig;
@@ -37,6 +42,7 @@ import com.thoughtinterac.realestateapp.Util.AppConfig;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -50,58 +56,24 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     ProgressDialog pDialog;
     private RadioGroup rg_member;
     private RadioButton rbtn_member;
-    private CallbackManager callbackManager;
-    private AccessTokenTracker accessTokenTracker;
-    private ProfileTracker profileTracker;
-    private FacebookCallback<LoginResult> callback = new FacebookCallback<LoginResult>() {
-        @Override
-        public void onSuccess(LoginResult loginResult) {
-            AccessToken accessToken = loginResult.getAccessToken();
-            Profile profile = Profile.getCurrentProfile();
-            displayMessage(profile);
-        }
+    LoginButton loginButton;
+    CallbackManager callbackManager;
+    AccessTokenTracker accessTokenTracker;
+    public static String imageurl;
 
-        @Override
-        public void onCancel() {
 
-        }
-
-        @Override
-        public void onError(FacebookException e) {
-
-        }
-    };
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.login_activity);
-
-
-        callbackManager = CallbackManager.Factory.create();
-
-        accessTokenTracker= new AccessTokenTracker() {
-            @Override
-            protected void onCurrentAccessTokenChanged(AccessToken oldToken, AccessToken newToken) {
-
-            }
-        };
-
-        profileTracker = new ProfileTracker() {
-            @Override
-            protected void onCurrentProfileChanged(Profile oldProfile, Profile newProfile) {
-                displayMessage(newProfile);
-            }
-        };
-
-        accessTokenTracker.startTracking();
-        profileTracker.startTracking();
         btn_login=(Button)findViewById(R.id.btn_login);
+        loginButton = (LoginButton) findViewById(R.id.login_button);
         btn_register=(Button)findViewById(R.id.btn_register);
         rg_member = (RadioGroup) findViewById(R.id.rg_member);
-        LoginButton loginButton = (LoginButton)findViewById(R.id.login_button);
-        loginButton.setReadPermissions("user_friends");
-        loginButton.registerCallback(callbackManager, callback);
+        loginButton.setReadPermissions(Arrays.asList("public_profile, email, user_birthday, user_friends"));
+        callbackManager = CallbackManager.Factory.create();
+
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,13 +107,96 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
 
             }
         });
+        loginButton.registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
+            @Override
+            public void onSuccess(LoginResult loginResult) {
+
+
+                GraphRequest request = GraphRequest.newMeRequest(
+                        loginResult.getAccessToken(),
+                        new GraphRequest.GraphJSONObjectCallback() {
+                            @Override
+                            public void onCompleted(JSONObject object, GraphResponse response) {
+                                String email="",birthday="",id="",name="";
+
+                                try {
+                                   email = object.getString("email");
+                                     birthday = object.getString("birthday");
+                                     id = object.getString("id");
+                                     name = object.getString("name");
+                                    /*tv_profile_name.setText(name);
+
+
+                                    String imageurl = "https://graph.facebook.com/" + id + "/picture?type=large";
+
+                                    Picasso.with(MainActivity.this).load(imageurl).into(iv_profile_pic);*/
+                                    imageurl = "https://graph.facebook.com/" + id + "/picture?type=large";
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString(DatabaseHandler.KEY_USER_NAME, name);
+                                    bundle.putString(DatabaseHandler.KEY_USER_ADDRESS,id);
+                                    bundle.putString(DatabaseHandler.KEY_USER_JOB_DESC, birthday);
+                                    bundle.putString(DatabaseHandler.KEY_USER_MOBILE, email);
+                                    bundle.putString(DatabaseHandler.KEY_USER_EMAIL, email);
+
+                                    Intent intent = new Intent(LoginActivity.this,
+                                            MainActivity.class);
+                                    intent.putExtras(bundle);
+                                    startActivity(intent);
+                                    finish();
+                                } catch (JSONException e) {
+                                    e.printStackTrace();
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString(DatabaseHandler.KEY_USER_NAME, name);
+                                    bundle.putString(DatabaseHandler.KEY_USER_ADDRESS,id);
+                                    bundle.putString(DatabaseHandler.KEY_USER_JOB_DESC, birthday);
+                                    bundle.putString(DatabaseHandler.KEY_USER_MOBILE, email);
+                                    bundle.putString(DatabaseHandler.KEY_USER_EMAIL, email);
+
+                                    Intent intent = new Intent(LoginActivity.this,
+                                            MainActivity.class);
+                                    intent.putExtras(bundle);
+                                    startActivity(intent);
+                                    finish();
+                                }
+
+                            }
+                        });
+
+
+                Bundle parameters = new Bundle();
+                parameters.putString("fields", "id,name,email,gender, birthday");
+                request.setParameters(parameters);
+                request.executeAsync();
+
+
+/**
+ * AccessTokenTracker to manage logout
+ */
+                accessTokenTracker = new AccessTokenTracker() {
+                    @Override
+                    protected void onCurrentAccessTokenChanged(AccessToken oldAccessToken,
+                                                               AccessToken currentAccessToken) {
+                        if (currentAccessToken == null) {
+                            /*tv_profile_name.setText("");
+                            iv_profile_pic.setImageResource(R.drawable.maleicon);*/
+                        }
+                    }
+                };
+            }
+
+            @Override
+            public void onCancel() {
+
+            }
+
+            @Override
+            public void onError(FacebookException error) {
+
+            }
+        });
 
     }
-    private void displayMessage(Profile profile){
-        if(profile != null){
-            profile.getName();
-        }
-    }
+
     private void local_login(String str_username, String str_password) {
         DatabaseHandler handler= new DatabaseHandler(LoginActivity.this);
         SQLiteDatabase db = handler.getWritableDatabase();
@@ -277,15 +332,13 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     @Override
     public void onStop() {
         super.onStop();
-        accessTokenTracker.stopTracking();
-        profileTracker.stopTracking();
+
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        Profile profile = Profile.getCurrentProfile();
-        displayMessage(profile);
+
     }
 
     @Override
@@ -296,5 +349,13 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     private void userLogin() {
 
     }
-};
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+       // callbackManager.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
+
+
+    }
+}
 
