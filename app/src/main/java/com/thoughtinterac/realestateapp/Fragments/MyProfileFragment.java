@@ -77,7 +77,9 @@ public class MyProfileFragment extends Fragment {
         txt_mobile=(TextView)rootView.findViewById(R.id.txt_mobile);
         txt_address=(TextView)rootView.findViewById(R.id.txt_address);
         ImageView iv_profile_pic=(ImageView)rootView.findViewById(R.id.iv_profile_pic);
-        Picasso.with(getActivity()).load(LoginActivity.imageurl).into(iv_profile_pic);
+        if(LoginActivity.imageurl!=null) {
+            Picasso.with(getActivity()).load(LoginActivity.imageurl).into(iv_profile_pic);
+        }
 
         txt_name.setText(MainActivity.str_user_name);
         txt_project_name.setText(MainActivity.str_user_job);
