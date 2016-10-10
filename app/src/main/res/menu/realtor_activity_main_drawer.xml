@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_my_profile"
+            android:icon="@mipmap/document"
+            android:title="@string/my_profile" />
+        <item
+            android:id="@+id/nav_new_project"
+            android:icon="@mipmap/document"
+            android:title="@string/new_project" />
+        <item
+            android:id="@+id/nav_user_list"
+            android:icon="@mipmap/document"
+            android:title="@string/user_list" />
+
+
+    </group>
+
+
+</menu>

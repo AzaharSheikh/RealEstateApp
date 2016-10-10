@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     CallbackManager callbackManager;
     AccessTokenTracker accessTokenTracker;
     public static String imageurl;
-
+    String login_name;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,6 +74,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         loginButton.setReadPermissions(Arrays.asList("public_profile, email, user_birthday, user_friends"));
         callbackManager = CallbackManager.Factory.create();
 
+        Bundle bundle = getIntent().getExtras();
+         login_name = bundle.getString("login_name");
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -90,7 +92,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 pDialog = new ProgressDialog(LoginActivity.this);
                 pDialog.setCancelable(false);
                 //loginAsync(str_username,str_password);
-                if(member.equalsIgnoreCase("user")) {
+                if(login_name.equalsIgnoreCase("user")) {
                     local_login(str_username, str_password);
                 }else
                 {
