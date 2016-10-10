@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@color/offwhite"
+    android:layout_height="match_parent">
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:contentInsetLeft="10dp"
+        android:contentInsetRight="10dp"
+        android:contentInsetStart="10dp"
+        android:minHeight="?attr/actionBarSize"
+        android:padding="0dp"
+        app:contentInsetLeft="0dp"
+        app:contentInsetRight="0dp"
+        app:contentInsetStart="0dp"
+      >
+<TextView
+    android:id="@+id/txt_user_name"
+    android:layout_width="match_parent"
+    android:textStyle="bold"
+    android:gravity="center"
+    android:text="Azahar"
+    android:layout_height="match_parent" />
+    </android.support.v7.widget.Toolbar>
+<Button
+    android:layout_width="match_parent"
+    android:text="View User Details"
+    android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="View User Document Details"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_width="match_parent"
+        android:text="Send User Reminders"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
