@@ -35,18 +35,22 @@ public class UserListFragment extends Fragment {
         userName.add("Azahar S.");
         userName.add("Ashwini B.");
         userName.add("Krishna G.");
-        userName.add("Dadoos A.");
+        userName.add("Dadoos B.");
+        userName.add("Anuradha R.");
         projectName.add("Gemini Mumbai");
         projectName.add("Ma Doc Vashi");
         projectName.add("Arihant Panvel");
         projectName.add("Gemini Vashi");
+        projectName.add("Gemini Thane");
         userAddress.add("Airoli, Navi Mumbai");
         userAddress.add("Sandapa, Navi Mumbai");
         userAddress.add("Gujrat,");
         userAddress.add("Nerul, Navi Mumbai");
+        userAddress.add("Kharegoan,Thane");
         projectDate.add("10-Mar-2016");
         projectDate.add("20-Apr-2016");
         projectDate.add("10-Feb-2016");
+        projectDate.add("20-Feb-2016 ");
         projectDate.add("20-Feb-2016 ");
         List<UserModel> userListMain = new ArrayList<UserModel>();
         for(int i =0 ; i<userName.size();i++)

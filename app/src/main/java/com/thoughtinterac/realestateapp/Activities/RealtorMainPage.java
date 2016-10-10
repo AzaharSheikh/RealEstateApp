@@ -196,6 +196,7 @@ public class RealtorMainPage extends AppCompatActivity
 
                     default:
                         navItemIndex = 0;
+                        CURRENT_TAG = TAG_MY_PROFILE;
                 }
 
                 //Checking if the item is in checked state or not, if not make it in checked state
