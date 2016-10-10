@@ -72,7 +72,6 @@ public class UserListCustomAdapter extends BaseAdapter {
         lv_main.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                // TODO Auto-generated method stub
                 Bundle bundle = new Bundle();
                 bundle.putString(DatabaseHandler.KEY_USER_NAME, m.getUserName());
                 //Toast.makeText(activity,"Long Press "+m.getUserName(),Toast.LENGTH_SHORT).show();
@@ -80,6 +79,17 @@ public class UserListCustomAdapter extends BaseAdapter {
                 i.putExtras(bundle);
                 activity.startActivity(i);
                 return true;
+            }
+        });
+        lv_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString(DatabaseHandler.KEY_USER_NAME, m.getUserName());
+                //Toast.makeText(activity,"Long Press "+m.getUserName(),Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(activity, Single_User_Task_Popup.class);
+                i.putExtras(bundle);
+                activity.startActivity(i);
             }
         });
         return convertView;

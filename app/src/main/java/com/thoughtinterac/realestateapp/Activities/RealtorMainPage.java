@@ -1,5 +1,8 @@
 package com.thoughtinterac.realestateapp.Activities;
 
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -9,14 +12,19 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
@@ -51,6 +59,9 @@ public class RealtorMainPage extends AppCompatActivity
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
+
+    static RelativeLayout notifCount;
+    static int mNotifCount = 10;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -281,14 +292,66 @@ public class RealtorMainPage extends AppCompatActivity
         // Inflate the menu; this adds items to the action bar if it is present.
 
         // show menu only when home fragment is selected
-        if (navItemIndex == 0) {
+        /*if (navItemIndex == 0) {
             getMenuInflater().inflate(R.menu.main, menu);
         }
 
         // when fragment is notifications, load the menu created for notifications
         if (navItemIndex == 3) {
             getMenuInflater().inflate(R.menu.notifications, menu);
-        }
+        }*/
+        /*getMenuInflater().inflate(R.menu.notification_main, menu);
+        MenuItem item = menu.findItem(R.id.badge);
+        MenuItemCompat.setActionView(item, R.layout.feed_update_count);
+        //notifCount = (RelativeLayout) MenuItemCompat.getActionView(item);
+
+        //inflater.inflate(R.menu.main, menu);
+
+        *//*View count = menu.findItem(R.id.badge).getActionView();
+        notifCount = (Button) count.findViewById(R.id.notif_count);*//*
+        //notifCount.setText(String.valueOf(mNotifCount));
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.feed_update_count, null);
+        TextView notifCount = (TextView)view.findViewById(R.id.txt_notif_count);
+
+        notifCount.setText(String.valueOf(mNotifCount));
+        return super.onCreateOptionsMenu(menu);*/
+        getMenuInflater().inflate(R.menu.notification_main, menu);
+
+        MenuItem menuItem = menu.findItem(R.id.badge);
+        menuItem.setIcon(buildCounterDrawable(2,  R.drawable.ic_menu_gallery));
+
         return true;
+
     }
+    private Drawable buildCounterDrawable(int count, int backgroundImageId) {
+        LayoutInflater inflater = LayoutInflater.from(this);
+        View view = inflater.inflate(R.layout.feed_update_count, null);
+        view.setBackgroundResource(backgroundImageId);
+
+        if (count == 0) {
+            //View counterTextPanel = view.findViewById(R.id.counterValuePanel);
+            //counterTextPanel.setVisibility(View.GONE);
+        } else {
+            TextView textView = (TextView) view.findViewById(R.id.txt_notif_count);
+            textView.setText("" + count);
+        }
+
+        view.measure(
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
+                View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
+        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+
+        view.setDrawingCacheEnabled(true);
+        view.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
+        Bitmap bitmap = Bitmap.createBitmap(view.getDrawingCache());
+        view.setDrawingCacheEnabled(false);
+
+        return new BitmapDrawable(getResources(), bitmap);
+    }
+    private void setNotifCount(int count){
+        mNotifCount = count;
+        invalidateOptionsMenu();
+    }
+
 }

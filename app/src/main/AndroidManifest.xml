@@ -105,7 +105,7 @@
         <activity
             android:name=".Activities.Single_User_Task_Popup"
             android:label="@string/app_name"
-            android:theme="@style/Theme.AppCompat.Dialog"
+            android:theme="@style/myDialog"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
