@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="fill_horizontal"
+        android:layout_height="wrap_content">
+        />
+
+    <RadioButton
+        android:id="@+id/rbt_project_details"
+        android:layout_weight="1"
+        android:text="Overview"
+        android:gravity="center"
+        android:background="@drawable/rbtn_selector"
+        android:button="@null"
+        android:checked="true"
+        android:textColor="@drawable/rbtn_textcolor_selector"
+        android:padding="5dp"
+        android:layout_height="wrap_content"
+        android:layout_width="1dp" />
+        <RadioButton
+            android:id="@+id/rbt_photos_list"
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:background="@drawable/rbtn_selector"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:text="Photos"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txt_location"
+                android:text="Gemini Splendor"
+                android:textColor="@color/gold"
+                android:textSize="16dp"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/overview_image"
+            android:adjustViewBounds="true" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_location"
+            android:text="A luxury community experience at an
+affordable price near upcoming
+Metro Station"
+            android:textColor="@color/gold"
+            android:textSize="16dp"
+            android:padding="5dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_bhk"
+            android:text="Types of flats"
+            android:textColor="@color/gold"
+            android:textSize="16dp"
+            android:padding="5dp"
+            android:textStyle="bold|italic"
+            />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="10dp"
+        android:id="@+id/rg_flat_type"
+        android:gravity="center"
+        android:orientation="horizontal" >
+        <RadioButton
+            android:id="@+id/rbt_one_bhk_details"
+            android:layout_weight="1"
+            android:text="1 BHK"
+            android:gravity="center"
+            android:background="@drawable/rbtn_selector"
+            android:button="@null"
+            android:checked="true"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:padding="5dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rbt_two_bhk_list"
+            android:layout_width="0dp"
+            android:padding="5dp"
+            android:background="@drawable/rbtn_selector"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:text="2 BHK"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+        <RadioButton
+            android:id="@+id/rbt_three_bhk"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:background="@drawable/rbtn_selector"
+            android:textColor="@drawable/rbtn_textcolor_selector"
+            android:text="3 BHK"
+            android:button="@null"
+            android:gravity="center"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        android:background="@drawable/layout_border"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_weight="7.5"
+                    android:textColor="@color/gold"
+                    android:id="@+id/txt_view_area_sq_ft"
+                    android:text="Floor Area in sq. ft :"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gold"
+                    android:background="@drawable/layout_border"
+                    android:padding="5dp"
+                    android:layout_weight="2.5"
+                    android:id="@+id/edt_username"
+                    />
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_weight="7.5"
+                    android:textColor="@color/gold"
+                    android:id="@+id/txt_view_flat_available"
+                    android:text="No. of flats available :"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gold"
+                    android:background="@drawable/layout_border"
+                    android:padding="5dp"
+                    android:layout_weight="2.5"
+                    android:id="@+id/edt_username"
+                    />
+                </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_weight="7.5"
+                    android:id="@+id/txt_view_construction_stage"
+                    android:textColor="@color/gold"
+                    android:text="Construction Stage :"
+                    android:layout_width="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:text="Update"
+                    android:layout_weight="2.5"
+                    android:id="@+id/txt_value_construction_stage"
+                    android:textColor="@color/gold"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_weight="7.5"
+                    android:id="@+id/txt_view_amenities"
+                    android:textColor="@color/gold"
+                    android:text="Amenities :"
+                    android:layout_width="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:text="Update"
+                    android:layout_weight="2.5"
+                    android:id="@+id/txt_value_amenities"
+                    android:textColor="@color/gold"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_weight="7.5"
+                    android:id="@+id/txt_view_extra_feature"
+                    android:textColor="@color/gold"
+                    android:text="Extra Features :"
+                    android:layout_width="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_weight="2.5"
+                    android:text="Update"
+                    android:id="@+id/txt_value_extra_feature"
+                    android:textColor="@color/gold"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_weight="7.5"
+                    android:id="@+id/txt_view_price"
+                    android:textColor="@color/gold"
+                    android:text="@string/PriceRs"
+                    android:layout_width="0dp"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:text="Update"
+                    android:layout_weight="2.5"
+                    android:id="@+id/txt_value_price"
+                    android:textColor="@color/gold"
+                    android:layout_width="0dp"
+                    android:paddingTop="5dp"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                >
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btn_register_submit"
+                    android:layout_margin="10dp"
+                    android:padding="5dp"
+                    android:layout_height="35dp"
+                    android:text="Submit"
+                    android:background="@color/gold"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    </LinearLayout>
