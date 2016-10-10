@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/offwhite">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:textStyle="bold|italic"
+                android:text="Documents"
+                android:textColor="@color/gold"
+                android:layout_height="wrap_content" />
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:textStyle="bold|italic"
+                android:text="Status"
+                android:textColor="@color/gold"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -10,6 +10,14 @@
         android:layout_height="wrap_content">
         />
 
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rg_myproject"
+            android:gravity="center"
+            android:orientation="horizontal" >
     <RadioButton
         android:id="@+id/rbt_project_details"
         android:layout_weight="1"
@@ -33,7 +41,9 @@
             android:gravity="center"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
+    </RadioGroup>
     </LinearLayout>
+
 
     <ScrollView
         android:layout_width="match_parent"
@@ -94,11 +104,14 @@
             android:textColorHint="@color/black"
             android:layout_height="wrap_content" />
 
+
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_width="match_parent"
@@ -111,22 +124,20 @@
             android:gravity="left"
             android:textStyle="bold"
             />
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/gold"
+            android:textColorHint="@color/black"
+            android:layout_height="wrap_content" />
 
     </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_location"
-                    android:text="A luxury community experience at an
-affordable price near upcoming
-Metro Station"
-                    android:textColor="@color/gold"
-                    android:textSize="16dp"
-                    android:padding="5dp"
-                    />
+
             </LinearLayout>
 
     <LinearLayout
