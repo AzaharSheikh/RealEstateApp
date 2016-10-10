@@ -20,12 +20,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.Fragments.RealtorMyProfileFragment;
+import com.thoughtinterac.realestateapp.Fragments.UserListFragment;
 import com.thoughtinterac.realestateapp.R;
 
 /**
  * Created by AzaharSheikh on 01-10-2016.
  */
-public class BuilderMainPage extends AppCompatActivity
+public class RealtorMainPage extends AppCompatActivity
 {
     private NavigationView navigationView;
     private DrawerLayout drawer;
@@ -151,11 +152,11 @@ public class BuilderMainPage extends AppCompatActivity
                 RealtorMyProfileFragment realtorMyProfileFragment = new RealtorMyProfileFragment();
                 return realtorMyProfileFragment;
             case 1:
-                RealtorMyProfileFragment realtorMyProfileFragment2 = new RealtorMyProfileFragment();
-                return realtorMyProfileFragment2;
+                UserListFragment userListFragment1 = new UserListFragment();
+                return userListFragment1;
             case 2:
-                RealtorMyProfileFragment realtorMyProfileFragment3 = new RealtorMyProfileFragment();
-                return realtorMyProfileFragment3;
+                UserListFragment userListFragment = new UserListFragment();
+                return userListFragment;
 
             default:
                 return new RealtorMyProfileFragment();
@@ -235,7 +236,7 @@ public class BuilderMainPage extends AppCompatActivity
     }
     // show or hide the fab
     private void toggleFab() {
-        if (navItemIndex == 0)
+        if (navItemIndex == 2)
             fab.show();
         else
             fab.hide();

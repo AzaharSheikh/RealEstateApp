@@ -81,7 +81,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Activities.BuilderMainPage"
+            android:name=".Activities.RealtorMainPage"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
              >

@@ -27,14 +27,9 @@ import com.facebook.FacebookException;
 import com.facebook.FacebookSdk;
 import com.facebook.GraphRequest;
 import com.facebook.GraphResponse;
-import com.facebook.LoggingBehavior;
-import com.facebook.Profile;
-import com.facebook.ProfileTracker;
-import com.facebook.appevents.AppEventsLogger;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 import com.thoughtinterac.realestateapp.Application.AppController;
-import com.thoughtinterac.realestateapp.BuildConfig;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.AppConfig;
@@ -96,7 +91,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                     local_login(str_username, str_password);
                 }else
                 {
-                Intent i = new Intent(LoginActivity.this,BuilderMainPage.class);
+                Intent i = new Intent(LoginActivity.this,RealtorMainPage.class);
                     startActivity(i);
                 }
             }
