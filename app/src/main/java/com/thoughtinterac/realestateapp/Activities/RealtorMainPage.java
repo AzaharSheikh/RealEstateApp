@@ -19,6 +19,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
+import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.RealtorMyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.UserListFragment;
 import com.thoughtinterac.realestateapp.R;
@@ -44,7 +46,7 @@ public class RealtorMainPage extends AppCompatActivity
     public static String CURRENT_TAG = TAG_MY_PROFILE;
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
-
+    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
@@ -56,11 +58,19 @@ public class RealtorMainPage extends AppCompatActivity
         setSupportActionBar(toolbar);
 
         mHandler = new Handler();
-
+        Bundle bundle = getIntent().getExtras();
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         fab = (FloatingActionButton) findViewById(R.id.fab);
+        if(bundle!=null)
+        {
+            str_user_name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
+            str_user_address = bundle.getString(DatabaseHandler.KEY_USER_ADDRESS);
+            str_user_job = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
+            str_user_mobile = bundle.getString(DatabaseHandler.KEY_USER_MOBILE);
+            str_user_email = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
 
+        }
         // Navigation view header
         navHeader = navigationView.getHeaderView(0);
         txtName = (TextView) navHeader.findViewById(R.id.name);
@@ -149,8 +159,8 @@ public class RealtorMainPage extends AppCompatActivity
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
-                RealtorMyProfileFragment realtorMyProfileFragment = new RealtorMyProfileFragment();
-                return realtorMyProfileFragment;
+                MyProfileFragment myProfileFragment = new MyProfileFragment();
+                return myProfileFragment;
             case 1:
                 UserListFragment userListFragment1 = new UserListFragment();
                 return userListFragment1;
