@@ -21,6 +21,7 @@ import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
+import com.thoughtinterac.realestateapp.Fragments.New_Project_Fragment;
 import com.thoughtinterac.realestateapp.Fragments.RealtorMyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.UserListFragment;
 import com.thoughtinterac.realestateapp.R;
@@ -162,8 +163,8 @@ public class RealtorMainPage extends AppCompatActivity
                 MyProfileFragment myProfileFragment = new MyProfileFragment();
                 return myProfileFragment;
             case 1:
-                UserListFragment userListFragment1 = new UserListFragment();
-                return userListFragment1;
+                New_Project_Fragment new_Project_Fragment = new New_Project_Fragment();
+                return new_Project_Fragment;
             case 2:
                 UserListFragment userListFragment = new UserListFragment();
                 return userListFragment;
