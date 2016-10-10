@@ -13,7 +13,7 @@
     <RadioButton
         android:id="@+id/rbt_project_details"
         android:layout_weight="1"
-        android:text="Overview"
+        android:text="New Project"
         android:gravity="center"
         android:background="@drawable/rbtn_selector"
         android:button="@null"
@@ -34,48 +34,100 @@
             android:layout_weight="1"
             android:layout_height="wrap_content" />
     </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/li_my_project_photos"
+        android:visibility="visible"
+        android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
+            android:orientation="vertical"
             android:layout_height="wrap_content">
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/txt_location"
-                android:text="Gemini Splendor"
-                android:textColor="@color/gold"
-                android:textSize="16dp"
-                android:padding="5dp"
-                android:gravity="center"
-                android:textStyle="bold"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/project_name"
+                    android:text="Project Name"
+                    android:textColor="@color/gold"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+                    android:gravity="left"
+                    android:textStyle="bold"
+                    />
                 />
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+                    android:id="@+id/edt_username"
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_margin="5dp"
+                    android:textColor="@color/gold"
+                    android:textColorHint="@color/black"
+                    android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <ImageView
-            android:layout_width="match_parent"
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/overview_image"
-            android:adjustViewBounds="true" />
+            android:id="@+id/project_location"
+            android:text="Project Location"
+            android:textColor="@color/gold"
+            android:textSize="16dp"
+            android:padding="5dp"
+            android:gravity="left"
+            android:textStyle="bold"
+            />
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+            android:id="@+id/edt_username"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_margin="5dp"
+            android:textColor="@color/gold"
+            android:textColorHint="@color/black"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
+
         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txt_location"
-            android:text="A luxury community experience at an
-affordable price near upcoming
-Metro Station"
+            android:id="@+id/txt_Project_Description"
+            android:text="Project Description"
             android:textColor="@color/gold"
             android:textSize="16dp"
             android:padding="5dp"
+            android:gravity="left"
+            android:textStyle="bold"
             />
+
     </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_location"
+                    android:text="A luxury community experience at an
+affordable price near upcoming
+Metro Station"
+                    android:textColor="@color/gold"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+                    />
+            </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -270,16 +322,16 @@ Metro Station"
                     android:paddingLeft="0dp"
                     android:paddingTop="5dp"
                     android:layout_height="wrap_content" />
-                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                    android:text="Update"
-                    android:layout_weight="2.5"
-                    android:id="@+id/txt_value_price"
-                    android:textColor="@color/gold"
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_width="0dp"
-                    android:paddingTop="5dp"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gold"
+                    android:background="@drawable/layout_border"
+                    android:padding="5dp"
+                    android:layout_weight="2.5"
+                    android:id="@+id/edt_username"
+                    />
             </LinearLayout>
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -292,10 +344,12 @@ Metro Station"
                     android:layout_margin="10dp"
                     android:padding="5dp"
                     android:layout_height="35dp"
-                    android:text="Submit"
+                    android:text="Save"
                     android:background="@color/gold"
                     android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
     </LinearLayout>
