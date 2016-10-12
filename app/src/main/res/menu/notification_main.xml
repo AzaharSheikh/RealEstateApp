@@ -7,7 +7,14 @@
         android:orderInCategory="100"
         app:showAsAction="never" />
     <item
-        android:id="@+id/badge"
+        android:id="@+id/new_user_reg"
+        android:actionLayout="@layout/feed_update_count"
+        android:icon="@drawable/shape_notification"
+        android:title="@string/action_settings"
+        app:showAsAction="always">
+        </item>
+    <item
+        android:id="@+id/user_alert"
         android:actionLayout="@layout/feed_update_count"
         android:icon="@drawable/shape_notification"
         android:title="@string/action_settings"

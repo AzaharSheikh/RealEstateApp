@@ -318,8 +318,10 @@ public class RealtorMainPage extends AppCompatActivity
         return super.onCreateOptionsMenu(menu);*/
         getMenuInflater().inflate(R.menu.notification_main, menu);
 
-        MenuItem menuItem = menu.findItem(R.id.badge);
-        menuItem.setIcon(buildCounterDrawable(2,  R.drawable.ic_menu_gallery));
+        MenuItem menuItem = menu.findItem(R.id.new_user_reg);
+        MenuItem menuItem2 = menu.findItem(R.id.user_alert);
+        menuItem.setIcon(buildCounterDrawable(2,  R.drawable.my_document));
+        menuItem2.setIcon(buildCounterDrawable(115,  R.drawable.my_document));
 
         return true;
 
@@ -340,7 +342,7 @@ public class RealtorMainPage extends AppCompatActivity
         view.measure(
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED),
                 View.MeasureSpec.makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));
-        view.layout(0, 0, view.getMeasuredWidth(), view.getMeasuredHeight());
+        view.layout(0,0 , view.getMeasuredWidth(), view.getMeasuredHeight());
 
         view.setDrawingCacheEnabled(true);
         view.setDrawingCacheQuality(View.DRAWING_CACHE_QUALITY_HIGH);
