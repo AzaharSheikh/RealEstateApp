@@ -84,11 +84,11 @@ public class RealtorMainPage extends AppCompatActivity
 
         }
         // Navigation view header
-        navHeader = navigationView.getHeaderView(0);
-        txtName = (TextView) navHeader.findViewById(R.id.name);
-        txtWebsite = (TextView) navHeader.findViewById(R.id.website);
-        imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
-        imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
+//        navHeader = navigationView.getHeaderView(0);
+//        txtName = (TextView) navHeader.findViewById(R.id.name);
+//        txtWebsite = (TextView) navHeader.findViewById(R.id.website);
+//        imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
+//        imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
 
         // load toolbar titles from string resources
         activityTitles = getResources().getStringArray(R.array.realtor_nav_item_activity_titles);
@@ -115,8 +115,8 @@ public class RealtorMainPage extends AppCompatActivity
     }
     private void loadNavHeader() {
         // name, website
-        txtName.setText("Azahar");
-        txtWebsite.setText("www.thoughtiteract.com");
+//        txtName.setText("Azahar");
+//        txtWebsite.setText("www.thoughtiteract.com");
 // showing dot next to notifications label
         navigationView.getMenu().getItem(2).setActionView(R.layout.menu_dot);
     }
@@ -320,8 +320,8 @@ public class RealtorMainPage extends AppCompatActivity
 
         MenuItem menuItem = menu.findItem(R.id.new_user_reg);
         MenuItem menuItem2 = menu.findItem(R.id.user_alert);
-        menuItem.setIcon(buildCounterDrawable(2,  R.drawable.my_document));
-        menuItem2.setIcon(buildCounterDrawable(115,  R.drawable.my_document));
+        menuItem.setIcon(buildCounterDrawable(2,  R.drawable.alert1));
+        menuItem2.setIcon(buildCounterDrawable(115,  R.drawable.alert2));
 
         return true;
 

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
+    android:background="@drawable/dashbd_bgp"
     >
     <ScrollView
         android:layout_width="match_parent"
@@ -12,13 +12,24 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Fields are Mandatory"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_gravity="right"
+            android:id="@+id/name_text" />
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name"
+        android:text="Name(Full Name)"
         android:textSize="15dp"
         android:textColor="@color/gold"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/name_text" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -27,6 +38,8 @@
         android:textColor="@color/gold"
         android:background="@drawable/layout_border"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/edt_username"
        />
 
@@ -38,6 +51,7 @@
         android:textSize="15dp"
         android:textColor="@color/gold"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/user_address" />
 
 
@@ -49,6 +63,8 @@
         android:background="@drawable/layout_border"
         android:padding="5dp"
         android:ems="10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/edt_user_address" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -58,6 +74,7 @@
         android:textSize="15dp"
         android:textColor="@color/gold"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/job_text" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -68,6 +85,8 @@
         android:background="@drawable/layout_border"
         android:padding="5dp"
         android:ems="10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/edt_job_dec" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -77,6 +96,7 @@
         android:textSize="15dp"
         android:textColor="@color/gold"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/mo_text" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -88,6 +108,8 @@
         android:background="@drawable/layout_border"
         android:padding="5dp"
         android:ems="10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/edt_mobile" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -97,6 +119,7 @@
         android:textSize="15dp"
         android:textColor="@color/gold"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/id_text" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -107,6 +130,8 @@
         android:textColor="@color/gold"
         android:inputType="textEmailAddress"
         android:ems="10"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/edt_email" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -116,6 +141,7 @@
         android:textSize="15dp"
         android:textColor="@color/gold"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/password_text" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -126,6 +152,8 @@
         android:padding="5dp"
         android:textColor="@color/gold"
         android:maxLength="15"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/edt_password" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -135,6 +163,7 @@
         android:textSize="15dp"
         android:textColor="@color/gold"
         android:padding="5dp"
+        android:layout_marginLeft="15dp"
         android:id="@+id/password_text" />
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -145,6 +174,8 @@
         android:padding="5dp"
         android:textColor="@color/gold"
         android:inputType="textPassword"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:id="@+id/edt_comfirm_pass" />
 
     <LinearLayout

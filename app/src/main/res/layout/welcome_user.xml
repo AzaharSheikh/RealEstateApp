@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashbd_bgp"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome User"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="@color/gold"
+                android:padding="15dp"
+                android:layout_gravity="center"
+                android:id="@+id/name_text" />
+            </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PROJECT NAME"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/gold"
+                android:padding="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="left"
+                android:id="@+id/name_text" />
+            </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gemini Splendor"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="left"
+            android:id="@+id/name_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vision, it’s the indefinable quality that separates the good companies from the great companies. Gemini Group has for over 30 years truly demonstrated and delivered on its visionary future for all the businesses it’s been involved with. From the energy sector to the infrastructure sector, across UAE and India; the group has consistently exhibited excellence. Now, the group hopes to bring this confidence and expertise to Gemini Property Developers – the real estate arm of the group."
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/name_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOCATION DETAILS"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+           android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="left"
+            android:id="@+id/name_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Unit no. 609-610, Sobha Sapphire, Business Bay, P.O.Box: 114536, Dubai, UAE
+
+Tel: +971 4 439 2235/36
+Fax: +971 4 439 2238
+Email - info@gemini-properties.com
+
+
+Office No-902, 9th floor, Maithili's Signet, Sec-30, Opposite Inorbit Mall, Vashi-Navi Mumbai-400705
+
+Tel: +91 22 41279915
+Mobile: +91 9892491434
+Email - info@gemini-properties.com"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="left"
+            android:id="@+id/name_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MY PROJECT"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_gravity="left"
+            android:id="@+id/name_text" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 BHK Apartment
+           1048 sq.ft.gross area
+            selling price 650,000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="left"
+            android:id="@+id/name_text" />
+    </LinearLayout>
+    </ScrollView>
+        </LinearLayout>
+
+
