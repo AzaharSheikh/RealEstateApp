@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_T_N_C = "TnC";
     private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
     public static String CURRENT_TAG = TAG_ME;
+
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
 
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     // index to identify current nav menu item
     public static int navItemIndex = 0;
     Toolbar toolbar;
-    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
+    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="";
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -96,6 +97,9 @@ public class MainActivity extends AppCompatActivity {
              str_user_job = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
            str_user_mobile = bundle.getString(DatabaseHandler.KEY_USER_MOBILE);
            str_user_email = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
+            str_user_pan = bundle.getString(DatabaseHandler.KEY_PAN_NUMBER);
+            str_user_bank = bundle.getString(DatabaseHandler.KEY_BANK_DETAILS);
+
 
         }
 

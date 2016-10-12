@@ -70,7 +70,12 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         callbackManager = CallbackManager.Factory.create();
 
         Bundle bundle = getIntent().getExtras();
-         login_name = bundle.getString("login_name");
+        if(bundle!=null) {
+            login_name = bundle.getString("login_name");
+        }else
+        {
+            login_name="user";
+        }
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -99,7 +104,10 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle b = new Bundle();
                 Intent i = new Intent(LoginActivity.this,RegisterActivity.class);
+                b.putString("login_name",login_name);
+                i.putExtras(b);
                 startActivity(i);
 
             }
@@ -134,6 +142,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                                     bundle.putString(DatabaseHandler.KEY_USER_JOB_DESC, birthday);
                                     bundle.putString(DatabaseHandler.KEY_USER_MOBILE, email);
                                     bundle.putString(DatabaseHandler.KEY_USER_EMAIL, email);
+                                    bundle.putString(DatabaseHandler.KEY_PAN_NUMBER, email);
+                                    bundle.putString(DatabaseHandler.KEY_BANK_DETAILS, email);
 
                                     Intent intent = new Intent(LoginActivity.this,
                                             MainActivity.class);
@@ -148,6 +158,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                                     bundle.putString(DatabaseHandler.KEY_USER_JOB_DESC, birthday);
                                     bundle.putString(DatabaseHandler.KEY_USER_MOBILE, email);
                                     bundle.putString(DatabaseHandler.KEY_USER_EMAIL, email);
+                                    bundle.putString(DatabaseHandler.KEY_PAN_NUMBER, email);
+                                    bundle.putString(DatabaseHandler.KEY_BANK_DETAILS, email);
 
                                     Intent intent = new Intent(LoginActivity.this,
                                             MainActivity.class);
@@ -197,10 +209,10 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     private void local_login(String str_username, String str_password) {
         DatabaseHandler handler= new DatabaseHandler(LoginActivity.this);
         SQLiteDatabase db = handler.getWritableDatabase();
-        String[] colmn = new String[] { DatabaseHandler.KEY_USER_NAME,DatabaseHandler.KEY_USER_ADDRESS,DatabaseHandler.KEY_USER_JOB_DESC,DatabaseHandler.KEY_USER_MOBILE,DatabaseHandler.KEY_USER_EMAIL,DatabaseHandler.KEY_USER_PASSWORD };
+        String[] colmn = new String[] { DatabaseHandler.KEY_USER_NAME,DatabaseHandler.KEY_USER_ADDRESS,DatabaseHandler.KEY_USER_JOB_DESC,DatabaseHandler.KEY_USER_MOBILE,DatabaseHandler.KEY_USER_EMAIL,DatabaseHandler.KEY_USER_PASSWORD,DatabaseHandler.KEY_PAN_NUMBER,DatabaseHandler.KEY_BANK_DETAILS};
         Cursor cursor = db.query(DatabaseHandler.TABLE_REGISTER, colmn,DatabaseHandler.KEY_USER_EMAIL + " = '"+str_username+"'"+" AND "+DatabaseHandler.KEY_USER_PASSWORD+" = '"+str_password+"'", null, null, null, null);
         if(cursor!=null) {
-            String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
+            String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="";
         if(cursor.getCount() >0)
         {
             while(cursor.moveToNext())
@@ -210,6 +222,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 str_user_job= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_JOB_DESC));
                 str_user_mobile= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_MOBILE));
                 str_user_email= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_EMAIL));
+                str_user_pan= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_PAN_NUMBER));
+                str_user_bank= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_BANK_DETAILS));
             }
 
             Bundle bundle = new Bundle();
@@ -218,6 +232,8 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
             bundle.putString(DatabaseHandler.KEY_USER_JOB_DESC, str_user_job);
             bundle.putString(DatabaseHandler.KEY_USER_MOBILE, str_user_mobile);
             bundle.putString(DatabaseHandler.KEY_USER_EMAIL, str_user_email);
+            bundle.putString(DatabaseHandler.KEY_PAN_NUMBER, str_user_pan);
+            bundle.putString(DatabaseHandler.KEY_BANK_DETAILS, str_user_bank);
 
             Intent intent = new Intent(LoginActivity.this,
                     MainActivity.class);

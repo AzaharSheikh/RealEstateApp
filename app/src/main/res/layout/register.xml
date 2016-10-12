@@ -178,7 +178,52 @@
         android:layout_marginRight="15dp"
         android:id="@+id/edt_comfirm_pass" />
 
-    <LinearLayout
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PAN Number"
+            android:textSize="15dp"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/pan_text" />
+
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:background="@drawable/layout_border"
+            android:padding="5dp"
+            android:textColor="@color/gold"
+            android:inputType="textPassword"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/edt_pan" />
+
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bank Details"
+            android:textSize="15dp"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/bank_details_text" />
+
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLength="15"
+            android:background="@drawable/layout_border"
+            android:padding="5dp"
+            android:textColor="@color/gold"
+
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:id="@+id/edt_bank_details" />
+
+
+        <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

@@ -11,64 +11,23 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
         <ImageView
             android:id="@+id/iv_profile_pic"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/user"
-
+            android:layout_gravity="center"
             />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Azahar"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:textColor="@color/gold"
-        android:padding="5dp"
-        android:id="@+id/txt_name" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:id="@+id/txt_location"
-                    android:text="From :"
-                    android:textColor="@color/gold"
-                    android:textSize="16dp"
-                    android:padding="5dp"
-
-                    />
-
-                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                    android:layout_width="0dp"
-                    android:layout_weight="6"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_location"
-                    android:text="Mumbai"
-                    android:textColor="@color/gold"
-                    android:textSize="16dp"
-                    android:padding="5dp"
-
-                    />
-            </LinearLayout>
 
 
-    </LinearLayout>
 
-    </LinearLayout>
+
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -80,6 +39,18 @@
                 android:orientation="horizontal"
                 >
 
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/txt_name"
+                    android:layout_height="wrap_content"
+                    android:text="User Name "
+                    android:textColor="@color/gold"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -169,36 +140,7 @@
                     android:padding="5dp" />
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                >
 
-                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:id="@+id/txt_project_name"
-                    android:text="Skype : "
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:padding="5dp"
-                    android:textStyle="bold"
-                    />
-
-                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                    android:layout_width="0dp"
-                    android:layout_weight="6"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txt_skype"
-                    android:text="abc123"
-                    android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="16dp"
-                    android:padding="5dp" />
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -230,8 +172,77 @@
                     android:layout_gravity="left"
                     android:textSize="16dp"
                     android:padding="5dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/txt_pan_view"
+                    android:text="PAN Number : "
+                    android:textColor="@color/gold"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_pan"
+                    android:text="Dadar,Mumbai"
+                    android:textColor="@color/gold"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4"
+                    android:id="@+id/txt_bank_view"
+                    android:text="Bank Name : "
+                    android:textColor="@color/gold"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+
+                    />
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="0dp"
+                    android:layout_weight="6"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txt_bank"
+                    android:text="Dadar,Mumbai"
+                    android:textColor="@color/gold"
+                    android:layout_gravity="left"
+                    android:textSize="16dp"
+                    android:padding="5dp" />
+
+
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
+    </LinearLayout>

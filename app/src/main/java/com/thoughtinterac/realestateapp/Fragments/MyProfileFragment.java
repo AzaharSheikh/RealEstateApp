@@ -30,7 +30,7 @@ public class MyProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address;
+    TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address,txt_pan,txt_bank;
 
 
     private OnFragmentInteractionListener mListener;
@@ -70,12 +70,14 @@ public class MyProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.welcome_user, container, false);
-        /*txt_name = (TextView) rootView.findViewById(R.id.txt_name);
+        View rootView = inflater.inflate(R.layout.user_profile, container, false);
+        txt_name = (TextView) rootView.findViewById(R.id.txt_name);
         txt_project_name=(TextView)rootView.findViewById(R.id.txt_project_name);
         txt_email=(TextView)rootView.findViewById(R.id.txt_email);
         txt_mobile=(TextView)rootView.findViewById(R.id.txt_mobile);
         txt_address=(TextView)rootView.findViewById(R.id.txt_address);
+        txt_pan=(TextView)rootView.findViewById(R.id.txt_pan);
+        txt_bank=(TextView)rootView.findViewById(R.id.txt_bank);
         ImageView iv_profile_pic=(ImageView)rootView.findViewById(R.id.iv_profile_pic);
         if(LoginActivity.imageurl!=null) {
             Picasso.with(getActivity()).load(LoginActivity.imageurl).into(iv_profile_pic);
@@ -85,7 +87,9 @@ public class MyProfileFragment extends Fragment {
         txt_project_name.setText(MainActivity.str_user_job);
         txt_email.setText(MainActivity.str_user_email);
         txt_mobile.setText(MainActivity.str_user_mobile);
-        txt_address.setText(MainActivity.str_user_address);*/
+        txt_address.setText(MainActivity.str_user_address);
+        txt_pan.setText(MainActivity.str_user_pan);
+        txt_bank.setText(MainActivity.str_user_address);
 
 
 

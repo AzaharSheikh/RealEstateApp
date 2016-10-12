@@ -13,7 +13,7 @@ import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 public class DatabaseHandler extends SQLiteOpenHelper {
     // All Static variables
     // Database Version
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 4;
 
     // Database Name
     public static final String DATABASE_NAME = "real_estate_db";
@@ -27,6 +27,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String KEY_USER_MOBILE = "user_mobile";
     public static final String KEY_USER_EMAIL = "user_email";
     public static final String KEY_USER_PASSWORD = "user_password";
+    public static final String KEY_PAN_NUMBER="pan_number";
+    public static final String KEY_BANK_DETAILS="bank_details";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -37,7 +39,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         String CREATE_REGISTER_TABLE = "CREATE TABLE " + TABLE_REGISTER + "("
                 + KEY_USER_ID + " INTEGER PRIMARY KEY ," + KEY_USER_NAME + " TEXT,"
-                + KEY_USER_ADDRESS + " TEXT," + KEY_USER_JOB_DESC+" TEXT, "+KEY_USER_MOBILE+" TEXT, " +KEY_USER_EMAIL+" TEXT NOT NULL UNIQUE , " +KEY_USER_PASSWORD+" TEXT " +")";
+                + KEY_USER_ADDRESS + " TEXT," + KEY_USER_JOB_DESC+" TEXT, "+KEY_USER_MOBILE+" TEXT, " +KEY_USER_EMAIL+" TEXT NOT NULL UNIQUE , " +KEY_USER_PASSWORD+" TEXT ," +KEY_PAN_NUMBER+" TEXT, "+KEY_BANK_DETAILS+" TEXT "+")";
         db.execSQL(CREATE_REGISTER_TABLE);
     }
 

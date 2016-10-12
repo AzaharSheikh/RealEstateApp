@@ -33,13 +33,22 @@ import java.util.Map;
  */
 public class RegisterActivity extends AppCompatActivity{
     Button btn_register_submit;
-    EditText edt_username,edt_user_address,edt_job_dec,edt_mobile,edt_email,edt_password,edt_comfirm_pass;
+    EditText edt_username,edt_user_address,edt_job_dec,edt_mobile,edt_email,edt_password,edt_comfirm_pass,edt_pan,edt_bank_details;
     private ProgressDialog pDialog;
+    String login_name;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
-        init();
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null) {
+            login_name = bundle.getString("login_name");
+        }else
+        {
+            return;
+        }
+
+            init();
         btn_register_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,6 +60,8 @@ public class RegisterActivity extends AppCompatActivity{
                 String str__email = edt_email.getText().toString().trim();
                 String str_password = edt_password.getText().toString().trim();
                 String str_confirm_password = edt_comfirm_pass.getText().toString().trim();
+                String str_pan = edt_pan.getText().toString().trim();
+                String str_bank = edt_bank_details.getText().toString().trim();
                 if(str_edt_username.equalsIgnoreCase("") || str_user_address.equalsIgnoreCase("")|| str_job_dec.equalsIgnoreCase("")|| str_mobile.equalsIgnoreCase("")|| str__email.equalsIgnoreCase("") || str_password.equalsIgnoreCase("") || str_confirm_password.equalsIgnoreCase(""))
                 {
                     Toast.makeText(RegisterActivity.this,"some field missing",Toast.LENGTH_SHORT).show();
@@ -66,7 +77,7 @@ public class RegisterActivity extends AppCompatActivity{
                         pDialog = new ProgressDialog(RegisterActivity.this);
                         pDialog.setCancelable(false);
                        //RegisterAsync(str_edt_username,str_user_address,str_job_dec,str_mobile,str__email,str_password);
-                        LocalRegisterDb(str_edt_username,str_user_address,str_job_dec,str_mobile,str__email,str_password);
+                        LocalRegisterDb(str_edt_username,str_user_address,str_job_dec,str_mobile,str__email,str_password,str_pan,str_bank);
 
                     }
                 }
@@ -75,7 +86,7 @@ public class RegisterActivity extends AppCompatActivity{
 
     }
 
-    private void LocalRegisterDb(final String str_edt_username, final String str_user_address, final String str_job_dec, final String str_mobile, final String str__email, final String str_password) {
+    private void LocalRegisterDb(final String str_edt_username, final String str_user_address, final String str_job_dec, final String str_mobile, final String str__email, final String str_password, String str_pan, String str_bank) {
 
         DatabaseHandler handler= new DatabaseHandler(RegisterActivity.this);
         SQLiteDatabase db = handler.getWritableDatabase();
@@ -86,13 +97,17 @@ public class RegisterActivity extends AppCompatActivity{
         values.put(DatabaseHandler.KEY_USER_MOBILE,str_mobile);
         values.put(DatabaseHandler.KEY_USER_EMAIL,str__email);
         values.put(DatabaseHandler.KEY_USER_PASSWORD,str_password);
+        values.put(DatabaseHandler.KEY_USER_EMAIL,str_pan);
+        values.put(DatabaseHandler.KEY_USER_PASSWORD,str_bank);
         boolean b = db.insert(DatabaseHandler.TABLE_REGISTER,null,values)>0;
         if(b)
         {
             Toast.makeText(RegisterActivity.this,"User created successfully",Toast.LENGTH_SHORT).show();
+            Bundle bundle = new Bundle();
             Intent i = new Intent(RegisterActivity.this,LoginActivity.class);
+            bundle.putString("login_name",login_name);
+            i.putExtras(bundle);
             startActivity(i);
-            finish();
 
 
         }else
@@ -203,6 +218,8 @@ public class RegisterActivity extends AppCompatActivity{
         edt_email=(EditText)findViewById(R.id.edt_email);
         edt_password=(EditText)findViewById(R.id.edt_password);
         edt_comfirm_pass=(EditText)findViewById(R.id.edt_comfirm_pass);
+        edt_pan=(EditText)findViewById(R.id.edt_pan);
+        edt_bank_details=(EditText)findViewById(R.id.edt_bank_details);
 
     }
 }

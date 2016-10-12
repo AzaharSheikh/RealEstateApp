@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:orientation="vertical"
         android:padding="10dp"
-        android:layout_margin="20dp"
+        android:layout_margin="40dp"
         android:layout_height="wrap_content">
         <RadioGroup
             android:layout_width="match_parent"
@@ -31,10 +31,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content" />
         </RadioGroup>
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/username_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
 
             <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                 android:id="@+id/edt_username"
@@ -42,14 +39,12 @@
                 android:padding="10dp"
                 android:layout_margin="5dp"
                 android:textColor="@color/gold"
-                android:textColorHint="@color/black"
+                android:textColorHint="@color/gold"
                 android:hint="Email Id"
+                android:background="@drawable/layout_border"
                 android:layout_height="wrap_content" />
-        </android.support.design.widget.TextInputLayout>
-        <android.support.design.widget.TextInputLayout
-            android:id="@+id/password_layout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+
+
             <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                 android:id="@+id/edt_password"
                 android:layout_width="match_parent"
@@ -57,41 +52,55 @@
                 android:padding="10dp"
                 android:maxLength="15"
                 android:layout_margin="5dp"
-                android:textColor="@color/black"
-                android:textColorHint="@color/black"
+                android:textColor="@color/gold"
+                android:textColorHint="@color/gold"
                 android:hint="Password"
+                android:background="@drawable/layout_border"
                 android:layout_height="wrap_content" />
-        </android.support.design.widget.TextInputLayout>
-
-        <LinearLayout
-            android:layout_gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
-                android:id="@+id/btn_login"
-                android:text="Login"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/gold"
-                android:textColor="@color/white"
-                android:layout_margin="5dp"/>
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
-                android:id="@+id/btn_register"
-                android:text="Register"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@color/gold"
-                android:textColor="@color/white"
-                android:layout_margin="5dp"/>
-        </LinearLayout>
         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_width="match_parent"
-            android:gravity="center"
+
             android:textColor="@color/gold"
             android:padding="10dp"
             android:textStyle="bold"
             android:text="Forgot Password ?"
             android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
+                android:id="@+id/btn_login"
+                android:text="Login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rd_corner_bt"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"/>
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
+                android:id="@+id/btn_register"
+                android:text="Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rd_corner_bt"
+                android:textColor="@color/white"
+                android:layout_margin="5dp"/>
+
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/gold"
+
+                android:textStyle="bold"
+                android:text="OR"
+                android:padding="5dp"
+
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
         <com.facebook.login.widget.LoginButton
             android:id="@+id/login_button"
             android:layout_width="match_parent"
