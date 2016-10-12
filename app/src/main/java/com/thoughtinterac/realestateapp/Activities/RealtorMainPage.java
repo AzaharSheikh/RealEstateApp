@@ -96,7 +96,7 @@ public class RealtorMainPage extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "New Project", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "Search Here", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
@@ -262,7 +262,7 @@ public class RealtorMainPage extends AppCompatActivity
         if (navItemIndex == 2)
             fab.show();
         else
-            fab.hide();
+            fab.show();
     }
     @Override
     public void onBackPressed() {
