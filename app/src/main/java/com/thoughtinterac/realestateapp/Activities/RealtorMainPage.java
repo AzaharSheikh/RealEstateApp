@@ -337,6 +337,10 @@ public class RealtorMainPage extends AppCompatActivity
         } else {
             TextView textView = (TextView) view.findViewById(R.id.txt_notif_count);
             textView.setText("" + count);
+        }if(count > 99)
+        {
+            TextView textView = (TextView) view.findViewById(R.id.txt_notif_count);
+            textView.setText("99+");
         }
 
         view.measure(
