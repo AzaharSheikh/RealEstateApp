@@ -113,6 +113,14 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".Activities.SearchProjectActivity"
+            android:label="@string/app_name"
+            android:theme="@style/TitleBarTheme"
+
+            >
+
+        </activity>
+        <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
             android:label="@string/app_name"

@@ -10,6 +10,8 @@
         <EditText
             android:layout_width="match_parent"
             android:padding="7dp"
+            android:gravity="center"
+            android:hint="Search Here"
             android:background="@drawable/layout_border"
             android:drawableRight="@drawable/search_icon"
             android:layout_height="wrap_content" />

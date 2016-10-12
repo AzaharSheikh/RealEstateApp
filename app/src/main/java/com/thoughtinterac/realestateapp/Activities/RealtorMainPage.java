@@ -1,5 +1,6 @@
 package com.thoughtinterac.realestateapp.Activities;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
@@ -96,8 +97,8 @@ public class RealtorMainPage extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Search Here", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent i = new Intent(RealtorMainPage.this,SearchProjectActivity.class);
+                startActivity(i);
             }
         });
 

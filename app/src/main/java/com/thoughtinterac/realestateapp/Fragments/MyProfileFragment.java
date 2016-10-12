@@ -70,8 +70,8 @@ public class MyProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View rootView = inflater.inflate(R.layout.user_profile, container, false);
-        txt_name=(TextView)rootView.findViewById(R.id.txt_name);
+        View rootView = inflater.inflate(R.layout.welcome_user, container, false);
+        /*txt_name = (TextView) rootView.findViewById(R.id.txt_name);
         txt_project_name=(TextView)rootView.findViewById(R.id.txt_project_name);
         txt_email=(TextView)rootView.findViewById(R.id.txt_email);
         txt_mobile=(TextView)rootView.findViewById(R.id.txt_mobile);
@@ -85,7 +85,7 @@ public class MyProfileFragment extends Fragment {
         txt_project_name.setText(MainActivity.str_user_job);
         txt_email.setText(MainActivity.str_user_email);
         txt_mobile.setText(MainActivity.str_user_mobile);
-        txt_address.setText(MainActivity.str_user_address);
+        txt_address.setText(MainActivity.str_user_address);*/
 
 
 
