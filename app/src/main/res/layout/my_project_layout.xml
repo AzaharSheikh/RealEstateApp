@@ -285,7 +285,7 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txt_location"
+
                     android:text="A luxury community experience at an
 affordable price near upcoming
 Metro Station"

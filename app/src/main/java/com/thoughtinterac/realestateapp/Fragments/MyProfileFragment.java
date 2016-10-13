@@ -89,7 +89,7 @@ public class MyProfileFragment extends Fragment {
         txt_mobile.setText(MainActivity.str_user_mobile);
         txt_address.setText(MainActivity.str_user_address);
         txt_pan.setText(MainActivity.str_user_pan);
-        txt_bank.setText(MainActivity.str_user_address);
+        txt_bank.setText(MainActivity.str_user_bank);
 
 
 

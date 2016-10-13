@@ -37,6 +37,7 @@
                 android:id="@+id/edt_username"
                 android:layout_width="match_parent"
                 android:padding="10dp"
+
                 android:layout_margin="5dp"
                 android:textColor="@color/gold"
                 android:textColorHint="@color/gold"
@@ -50,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:inputType="textPassword"
                 android:padding="10dp"
-                android:maxLength="15"
+
                 android:layout_margin="5dp"
                 android:textColor="@color/gold"
                 android:textColorHint="@color/gold"

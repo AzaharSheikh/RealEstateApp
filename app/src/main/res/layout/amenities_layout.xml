@@ -54,7 +54,7 @@
             android:text="Infinity\nswimming pool"
             android:layout_height="wrap_content" />
         <ImageView
-            android:id="@+id/img_amemities"
+            android:id="@+id/img_amemities2"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
             android:src="@drawable/amenities2"
@@ -68,7 +68,7 @@
             android:text="Outdoor and\nIndoor Gym"
             android:layout_height="wrap_content" />
         <ImageView
-            android:id="@+id/img_amemities"
+            android:id="@+id/img_amemities3"
             android:layout_margin="5dp"
             android:adjustViewBounds="true"
             android:src="@drawable/amenities3"
@@ -82,7 +82,7 @@
             android:text="Children’s play area /\nkids pool"
             android:layout_height="wrap_content" />
         <ImageView
-            android:id="@+id/img_amemities"
+            android:id="@+id/img_amemities4"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
             android:src="@drawable/amenities4"
@@ -96,7 +96,7 @@
             android:text="Basket Ball\ncourt"
             android:layout_height="wrap_content" />
         <ImageView
-            android:id="@+id/img_amemities"
+            android:id="@+id/img_amemities5"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
             android:src="@drawable/amenities5"
@@ -110,7 +110,7 @@
             android:text="Open relaxation\narea"
             android:layout_height="wrap_content" />
         <ImageView
-            android:id="@+id/img_amemities"
+            android:id="@+id/img_amemities6"
             android:layout_margin="5dp"
             android:adjustViewBounds="true"
             android:src="@drawable/amenities6"
@@ -124,7 +124,7 @@
             android:text="Retail outlets on\nthe ground floor"
             android:layout_height="wrap_content" />
         <ImageView
-            android:id="@+id/img_amemities"
+            android:id="@+id/img_amemities7"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
             android:src="@drawable/amenities7"
