@@ -41,9 +41,11 @@
             android:gravity="center"
             android:layout_weight="1"
             android:layout_height="wrap_content" />
-    </RadioGroup>
-    </LinearLayout>
 
+    </RadioGroup>
+
+
+</LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -361,6 +363,48 @@
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
+
     </LinearLayout>
     </ScrollView>
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_margin="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="10"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:id="@+id/txt_location"
+                android:text="Users Images"
+                android:background="@color/gold"
+                android:textColor="@color/offwhite"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+            <GridView
+                android:id="@+id/list_photo"
+                android:layout_weight="7"
+                android:numColumns="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+            </GridView>
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/photo_camera"
+                android:adjustViewBounds="true"
+                android:layout_weight="2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp" />
+
+        </LinearLayout>
     </LinearLayout>
+</LinearLayout>

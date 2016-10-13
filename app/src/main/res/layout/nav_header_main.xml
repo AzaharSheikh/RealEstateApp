@@ -9,10 +9,7 @@
 
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
     android:orientation="vertical"
-
     >
-
-
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
