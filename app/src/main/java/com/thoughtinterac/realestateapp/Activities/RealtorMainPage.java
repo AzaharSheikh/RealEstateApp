@@ -60,7 +60,7 @@ public class RealtorMainPage extends AppCompatActivity
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
-
+    public static int flag=0;
     static RelativeLayout notifCount;
     static int mNotifCount = 10;
     @Override
@@ -119,7 +119,7 @@ public class RealtorMainPage extends AppCompatActivity
 //        txtName.setText("Azahar");
 //        txtWebsite.setText("www.thoughtiteract.com");
 // showing dot next to notifications label
-        navigationView.getMenu().getItem(2).setActionView(R.layout.menu_dot);
+        //navigationView.getMenu().getItem(2).setActionView(R.layout.menu_dot);
     }
     private void loadHomeFragment() {
         // selecting appropriate nav menu item
@@ -172,12 +172,16 @@ public class RealtorMainPage extends AppCompatActivity
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
+
                 MyProfileFragment myProfileFragment = new MyProfileFragment();
+                //flag=1;
                 return myProfileFragment;
             case 1:
+                flag=1;
                 New_Project_Fragment new_Project_Fragment = new New_Project_Fragment();
                 return new_Project_Fragment;
             case 2:
+                flag=1;
                 UserListFragment userListFragment = new UserListFragment();
                 return userListFragment;
 
@@ -186,7 +190,13 @@ public class RealtorMainPage extends AppCompatActivity
         }
     }
     private void setToolbarTitle() {
-        getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+        if(flag!=0) {
+            getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+            flag=1;
+        }else
+        {
+            getSupportActionBar().setTitle("Welcome");
+        }
     }
 
     private void selectNavMenu() {

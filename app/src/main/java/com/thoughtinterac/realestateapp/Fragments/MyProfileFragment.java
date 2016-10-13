@@ -8,12 +8,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 import com.thoughtinterac.realestateapp.Activities.LoginActivity;
 import com.thoughtinterac.realestateapp.Activities.MainActivity;
+import com.thoughtinterac.realestateapp.Activities.RealtorMainPage;
 import com.thoughtinterac.realestateapp.R;
 
 /**
@@ -31,7 +33,7 @@ public class MyProfileFragment extends Fragment {
     private String mParam1;
     private String mParam2;
     TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address,txt_pan,txt_bank;
-
+ScrollView sc_welcome_layout;
 
     private OnFragmentInteractionListener mListener;
 
@@ -79,6 +81,17 @@ public class MyProfileFragment extends Fragment {
         txt_pan=(TextView)rootView.findViewById(R.id.txt_pan);
         txt_bank=(TextView)rootView.findViewById(R.id.txt_bank);
         ImageView iv_profile_pic=(ImageView)rootView.findViewById(R.id.iv_profile_pic);
+        sc_welcome_layout=(ScrollView)rootView.findViewById(R.id.sc_welcome_layout);
+        try{
+            if(RealtorMainPage.flag==0)
+            {
+                sc_welcome_layout.setVisibility(View.VISIBLE);
+            }else
+            {
+                sc_welcome_layout.setVisibility(View.GONE);
+            }
+
+        }catch(Exception e){}
         if(LoginActivity.imageurl!=null) {
             Picasso.with(getActivity()).load(LoginActivity.imageurl).into(iv_profile_pic);
         }
