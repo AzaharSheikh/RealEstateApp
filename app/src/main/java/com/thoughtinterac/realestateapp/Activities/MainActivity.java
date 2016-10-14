@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawer;
     private View navHeader;
     // tags used to attach the fragments
+    private static final String TAG_HOME = "Home";
     private static final String TAG_ME = "Me";
     private static final String TAG_MYPROJECT = "MyProject";
     private static final String TAG_MYDOC = "MyDoc";
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_CONTACT_US = "ContactUs";
     private static final String TAG_T_N_C = "TnC";
     private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
-    public static String CURRENT_TAG = TAG_ME;
+    public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
@@ -108,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             navItemIndex = 0;
-            CURRENT_TAG = TAG_ME;
+            CURRENT_TAG = TAG_HOME;
             loadHomeFragment();
         }
 
@@ -175,41 +176,46 @@ public class MainActivity extends AppCompatActivity {
             case 0:
 
                 img_share.setVisibility(View.GONE);
+                MyProfileFragment myProfileFragment1 = new MyProfileFragment();
+                return myProfileFragment1;
+            case 1:
+
+                img_share.setVisibility(View.GONE);
                 MyProfileFragment myProfileFragment = new MyProfileFragment();
                 return myProfileFragment;
-            case 1:
+            case 2:
 
                 img_share.setVisibility(View.VISIBLE);
                 MyProjectFragment myProjectFragment = new MyProjectFragment();
                 return myProjectFragment;
 
-            case 2:
+            case 3:
 
                 img_share.setVisibility(View.GONE);
                 MyDocFragment myDocFragment = new MyDocFragment();
                 return myDocFragment;
 
-            case 3:
+            case 4:
 
                 img_share.setVisibility(View.GONE);
                 GalleryFragment galleryFragment = new GalleryFragment();
                 return galleryFragment;
-            case 4:
+            case 5:
 
                 img_share.setVisibility(View.GONE);
                 MyBankDetailsFragment MyBankDetails = new MyBankDetailsFragment();
                 return MyBankDetails;
-            case 5:
+            case 6:
 
                 img_share.setVisibility(View.GONE);
                 ContactFragment contactFragment = new ContactFragment();
                 return contactFragment;
-            case 6:
+            case 7:
 
                 img_share.setVisibility(View.GONE);
                 TermNConditionFragment termNConditionFragment = new TermNConditionFragment();
                 return termNConditionFragment;
-            case 7:
+            case 8:
 
                 img_share.setVisibility(View.GONE);
                 PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
@@ -241,42 +247,46 @@ public class MainActivity extends AppCompatActivity {
                 //Check to see which item was being clicked and perform appropriate action
                 switch (menuItem.getItemId()) {
                     //Replacing the main content with ContentFragment Which is our Inbox View;
-                    case R.id.my_profile:
+                    case R.id.my_home:
                         navItemIndex = 0;
+                        CURRENT_TAG = TAG_HOME;
+                        break;
+                    case R.id.my_profile:
+                        navItemIndex = 1;
                         CURRENT_TAG = TAG_ME;
                         break;
                     case R.id.my_project:
-                        navItemIndex = 1;
+                        navItemIndex = 2;
                         CURRENT_TAG = TAG_MYPROJECT;
                         break;
                     case R.id.my_document:
-                        navItemIndex = 2;
+                        navItemIndex = 3;
                         CURRENT_TAG = TAG_MYDOC;
                         break;
                     case R.id.my_gallery:
-                        navItemIndex = 3;
+                        navItemIndex = 4;
                         CURRENT_TAG = TAG_GALLERY;
                         break;
                     case R.id.my_bank_details:
-                        navItemIndex = 4;
+                        navItemIndex = 5;
                         CURRENT_TAG = TAG_BANK_DETAILS;
                         break;
                     case R.id.contact:
-                        navItemIndex = 5;
+                        navItemIndex = 6;
                         CURRENT_TAG = TAG_CONTACT_US;
                         break;
                     case R.id.terms_n_condition:
-                        navItemIndex = 6;
+                        navItemIndex = 7;
                         CURRENT_TAG = TAG_T_N_C;
                         break;
                     case R.id.privacy_policy:
-                        navItemIndex = 7;
+                        navItemIndex = 8;
                         CURRENT_TAG = TAG_PRIVACY_POLICY;
                         break;
 
                     default:
                         navItemIndex = 0;
-                        CURRENT_TAG = TAG_ME;
+                        CURRENT_TAG = TAG_HOME;
                 }
 
                 //Checking if the item is in checked state or not, if not make it in checked state

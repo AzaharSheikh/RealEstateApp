@@ -7,7 +7,7 @@
     <string name="action_settings">Settings</string>
     <string name="api_key">AIzaSyCgwpFm6hqqnWNpXboHprqe2ukH-_ePkOQ</string>
     <string-array name="nav_item_activity_titles">
-
+        <item>Gemini Splender</item>
         <item>Me</item>
         <item>My Project</item>
         <item>My Document</item>
