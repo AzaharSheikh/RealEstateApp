@@ -120,6 +120,24 @@
             android:theme="@style/TitleBarTheme">
 
         </activity>
+        <activity
+            android:label="Gemini Splendor"
+            android:name=".Activities.Contact_Activity">
+
+
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.DEFAULT" />
+        </intent-filter>
+        </activity>
+        <activity
+            android:label="Gemini Splendor"
+            android:name=".Activities.Quick_Enqiry">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
 
 
         <activity

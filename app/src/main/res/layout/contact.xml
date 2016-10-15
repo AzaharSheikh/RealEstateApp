@@ -98,7 +98,7 @@ Dubai, UAE.
 
 
     <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btn1"
         android:text="Quick Enquiry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

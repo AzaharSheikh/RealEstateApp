@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
 
                 img_share.setVisibility(View.GONE);
                 //LogoutFragment logoutFragment = new LogoutFragment();
-                Intent i= new Intent(MainActivity.this,PreLogin.class);
+                Intent i= new Intent(MainActivity.this,LoginActivity.class);
                 startActivity(i);
                 finish();
 
