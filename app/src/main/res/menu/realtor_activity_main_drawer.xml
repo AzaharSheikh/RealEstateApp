@@ -14,6 +14,10 @@
             android:id="@+id/nav_user_list"
             android:icon="@mipmap/document"
             android:title="@string/user_list" />
+        <item
+            android:id="@+id/nav_realator_logout"
+            android:icon="@mipmap/document"
+            android:title="@string/realator_logout" />
 
 
     </group>

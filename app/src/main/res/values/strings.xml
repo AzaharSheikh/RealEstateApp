@@ -17,6 +17,7 @@
         <item>Terms &amp; Conditions</item>
         <item>Privacy Policy</item>
         <item>Logout</item>
+        <item>Realator_Logout</item>
 
     </string-array>
     <string-array name="realtor_nav_item_activity_titles">
@@ -28,6 +29,7 @@
     <string name="PriceRs">Price \u20B9 :</string>
     <string name="action_clear_all">Clear All</string>
     <string name="action_logout">Logout</string>
+    <string name="realator_logout">Logout</string>
     <string name="my_profile">My Profile</string>
     <string name="new_project">New project</string>
     <string name="user_list">User List</string>

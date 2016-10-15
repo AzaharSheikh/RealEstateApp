@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_T_N_C = "TnC";
     private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
     private static final String TAG_LOGOUT="Logout";
+    private static final String TAG_REALATOR_LOGOUT="RealatorLogout";
     public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
@@ -234,6 +235,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
 
 
+
             default:
                 return new MyProjectFragment();
         }
@@ -298,6 +300,10 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.logout:
                         navItemIndex = 9;
                         CURRENT_TAG = TAG_LOGOUT;
+                        break;
+                    case R.id.realator_logout:
+                        navItemIndex = 10;
+                        CURRENT_TAG = TAG_REALATOR_LOGOUT;
                         break;
                     default:
                         navItemIndex = 0;

@@ -55,6 +55,7 @@ public class RealtorMainPage extends AppCompatActivity
     private static final String TAG_NEW_PROJECT = "New_Project";
     private static final String TAG_USER_LIST = "User_List";
     public static String CURRENT_TAG = TAG_MY_PROFILE;
+    private static final String TAG_REALATOR_LOGOUT="Realator_Logout";
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
     public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
@@ -228,7 +229,17 @@ public class RealtorMainPage extends AppCompatActivity
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_USER_LIST;
                         break;
+                    case R.id.realator_logout:
+                        navItemIndex = 3;
+                        CURRENT_TAG = TAG_REALATOR_LOGOUT;
+                        break;
+                    case 10:
 
+
+                        //LogoutFragment logoutFragment = new LogoutFragment();
+                        Intent j= new Intent(RealtorMainPage.this,LoginActivity.class);
+                        startActivity(j);
+                        finish();
                     default:
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_MY_PROFILE;
