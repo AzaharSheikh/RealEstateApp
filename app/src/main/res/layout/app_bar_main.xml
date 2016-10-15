@@ -54,21 +54,19 @@
                 <TextView xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/hotlist_hot"
                     android:layout_width="wrap_content"
-                    android:layout_margin="3dp"
                     android:minWidth="17sp"
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textColor="#ffffffff"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="22"
-                    android:layout_alignTop="@id/hotlist_bell"
-                    android:layout_alignRight="@id/hotlist_bell"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginTop="3dp"
+                    android:text="1"
                     android:paddingBottom="1dp"
                     android:paddingRight="4dp"
                     android:paddingLeft="4dp"
-                    android:background="@drawable/circle"/>
+                    android:background="@drawable/circle"
+                    android:layout_centerVertical="true"
+                    android:layout_alignRight="@+id/hotlist_bell"
+                    android:layout_alignEnd="@+id/hotlist_bell" />
             </RelativeLayout>
         </android.support.v7.widget.Toolbar>
 

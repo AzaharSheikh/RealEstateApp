@@ -23,6 +23,8 @@ import java.util.zip.Inflater;
  */
 
 public class New_Project_Fragment extends Fragment {
+    RadioGroup rg_flat_type;
+    LinearLayout li_one_bhk,li_two_bhk,li_three_bhk;
     public New_Project_Fragment() {
     }
 
@@ -31,6 +33,34 @@ public class New_Project_Fragment extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.builder_new_project, container, false);
+            rg_flat_type=(RadioGroup) rootView.findViewById(R.id.rg_flat_type);
+            li_one_bhk=(LinearLayout)rootView.findViewById(R.id.li_one_bhk);
+            li_two_bhk=(LinearLayout)rootView.findViewById(R.id.li_two_bhk);
+            li_three_bhk=(LinearLayout)rootView.findViewById(R.id.li_three_bhk);
+            rg_flat_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId)
+                    {
+                        case R.id.rbt_one_bhk_details:
+                            li_two_bhk.setVisibility(View.GONE);
+                            li_three_bhk.setVisibility(View.GONE);
+                            li_one_bhk.setVisibility(View.VISIBLE);
+                            break;
+                        case R.id.rbt_two_bhk_list:
+                            li_three_bhk.setVisibility(View.GONE);
+                            li_one_bhk.setVisibility(View.GONE);
+                            li_two_bhk.setVisibility(View.VISIBLE);
+                            break;
+                        case R.id.rbt_three_bhk:
+                            li_two_bhk.setVisibility(View.GONE);
+                            li_one_bhk.setVisibility(View.GONE);
+                            li_three_bhk.setVisibility(View.VISIBLE);
+                            break;
+                    }
+                }
+            });
+
             return rootView;
         }
 
