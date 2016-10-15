@@ -96,7 +96,7 @@
                     android:id="@+id/img_user"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/installment"
+                    android:src="@drawable/status"
                     android:padding="5dp"
                     />
                 <ImageView
