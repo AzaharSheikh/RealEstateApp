@@ -18,6 +18,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -193,12 +194,14 @@ public class RealtorMainPage extends AppCompatActivity
     }
     private void setToolbarTitle() {
         if(flag!=0) {
-            getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+           // getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+            getSupportActionBar().setTitle(Html.fromHtml("<small>"+activityTitles[navItemIndex]+"</small>"));
             flag=1;
         }else
         {
-            getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+            //getSupportActionBar().setTitle(activityTitles[navItemIndex]);
             //getSupportActionBar().setTitle("Welcome");
+            getSupportActionBar().setTitle(Html.fromHtml("<small>"+activityTitles[navItemIndex]+"</small>"));
         }
     }
 
@@ -337,12 +340,12 @@ public class RealtorMainPage extends AppCompatActivity
 
         notifCount.setText(String.valueOf(mNotifCount));
         return super.onCreateOptionsMenu(menu);*/
-        getMenuInflater().inflate(R.menu.notification_main, menu);
+        //getMenuInflater().inflate(R.menu.notification_main, menu);
 
-        MenuItem menuItem = menu.findItem(R.id.new_user_reg);
+        /*MenuItem menuItem = menu.findItem(R.id.new_user_reg);
         MenuItem menuItem2 = menu.findItem(R.id.user_alert);
         menuItem.setIcon(buildCounterDrawable(2,  R.drawable.alert1));
-        menuItem2.setIcon(buildCounterDrawable(115,  R.drawable.alert2));
+        menuItem2.setIcon(buildCounterDrawable(115,  R.drawable.alert2));*/
 
         return true;
 
