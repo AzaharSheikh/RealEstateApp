@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_T_N_C = "TnC";
     private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
     private static final String TAG_LOGOUT="Logout";
-    private static final String TAG_REALATOR_LOGOUT="RealatorLogout";
+
     public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
 
                 img_share.setVisibility(View.GONE);
                 //LogoutFragment logoutFragment = new LogoutFragment();
-                Intent i= new Intent(MainActivity.this,LoginActivity.class);
+                Intent i= new Intent(MainActivity.this,PreLogin.class);
                 startActivity(i);
                 finish();
 
@@ -301,10 +301,7 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 9;
                         CURRENT_TAG = TAG_LOGOUT;
                         break;
-                    case R.id.realator_logout:
-                        navItemIndex = 10;
-                        CURRENT_TAG = TAG_REALATOR_LOGOUT;
-                        break;
+
                     default:
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;

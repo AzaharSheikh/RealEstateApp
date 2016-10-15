@@ -42,10 +42,7 @@
             android:id="@+id/logout"
             android:icon="@mipmap/picture"
             android:title="logout" />
-        <item
-            android:id="@+id/realator_logout"
-            android:icon="@mipmap/picture"
-            android:title="realator_logout" />
+
     </group>
 
 

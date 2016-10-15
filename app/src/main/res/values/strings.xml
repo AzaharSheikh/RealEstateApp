@@ -17,13 +17,14 @@
         <item>Terms &amp; Conditions</item>
         <item>Privacy Policy</item>
         <item>Logout</item>
-        <item>Realator_Logout</item>
+
 
     </string-array>
     <string-array name="realtor_nav_item_activity_titles">
         <item>Gemini</item>
         <item>New Project</item>
         <item>User List</item>
+        <item>Realator_Logout</item>
     </string-array>
     <string name="thoughtinteract"><b><font color='black'>thought</font><font color='yellow'>Interact</font></b></string>
     <string name="PriceRs">Price \u20B9 :</string>

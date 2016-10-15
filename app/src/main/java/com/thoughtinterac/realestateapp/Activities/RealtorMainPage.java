@@ -232,12 +232,9 @@ public class RealtorMainPage extends AppCompatActivity
                     case R.id.realator_logout:
                         navItemIndex = 3;
                         CURRENT_TAG = TAG_REALATOR_LOGOUT;
-                        break;
-                    case 10:
-
 
                         //LogoutFragment logoutFragment = new LogoutFragment();
-                        Intent j= new Intent(RealtorMainPage.this,LoginActivity.class);
+                        Intent j= new Intent(RealtorMainPage.this,PreLogin.class);
                         startActivity(j);
                         finish();
                     default:
