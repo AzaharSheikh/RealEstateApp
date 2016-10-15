@@ -31,6 +31,7 @@ import android.widget.TextView;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.New_Project_Fragment;
+import com.thoughtinterac.realestateapp.Fragments.Realator_Profile_Fragment;
 import com.thoughtinterac.realestateapp.Fragments.RealtorMyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.UserListFragment;
 import com.thoughtinterac.realestateapp.R;
@@ -173,9 +174,9 @@ public class RealtorMainPage extends AppCompatActivity
         switch (navItemIndex) {
             case 0:
 
-                MyProfileFragment myProfileFragment = new MyProfileFragment();
+                Realator_Profile_Fragment realator_Profile_Fragment = new Realator_Profile_Fragment();
                 //flag=1;
-                return myProfileFragment;
+                return realator_Profile_Fragment;
             case 1:
                 flag=1;
                 New_Project_Fragment new_Project_Fragment = new New_Project_Fragment();
@@ -195,7 +196,8 @@ public class RealtorMainPage extends AppCompatActivity
             flag=1;
         }else
         {
-            getSupportActionBar().setTitle("Welcome");
+            getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+            //getSupportActionBar().setTitle("Welcome");
         }
     }
 

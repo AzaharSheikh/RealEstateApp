@@ -16,10 +16,11 @@
         <item>Contact</item>
         <item>Terms &amp; Conditions</item>
         <item>Privacy Policy</item>
+        <item>Logout</item>
 
     </string-array>
     <string-array name="realtor_nav_item_activity_titles">
-        <item>My Profile</item>
+        <item>Gemini</item>
         <item>New Project</item>
         <item>User List</item>
     </string-array>

@@ -41,7 +41,7 @@
             android:name=".Activities.LoginActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar"
+
             >
 
         </activity>
@@ -96,7 +96,7 @@
         </activity>
         <activity
             android:name=".Activities.Custom_CameraActivity"
-            android:label="@string/app_name"
+            android:label="Gemini Splendor"
             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -105,7 +105,7 @@
         </activity>
         <activity
             android:name=".Activities.Single_User_Task_Popup"
-            android:label="@string/app_name"
+            android:label="Gemini Splendor"
             android:theme="@style/myDialog"
             >
             <intent-filter>
@@ -115,12 +115,12 @@
         </activity>
         <activity
             android:name=".Activities.SearchProjectActivity"
-            android:label="@string/app_name"
-            android:theme="@style/TitleBarTheme"
-
-            >
+            android:label="Gemini Spplendor"
+            android:theme="@style/TitleBarTheme">
 
         </activity>
+
+
         <activity
             android:name="com.facebook.FacebookActivity"
             android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"

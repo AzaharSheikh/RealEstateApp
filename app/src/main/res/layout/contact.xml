@@ -95,76 +95,11 @@ Dubai, UAE.
         android:paddingTop="20dp"
         android:textColor="@color/gold" />
 
-    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Fill in your details"
-
-        android:textSize="16dp"
-
-        android:paddingTop="20dp"
-        android:textColor="@color/gold" />
 
 
-    <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/gold"
-        android:background="@drawable/layout_border"
-        android:padding="10dp"
-        android:textSize="12dp"
-        android:layout_margin="5dp"
-        android:hint="Name"
-        />
-
-
-    <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/gold"
-        android:background="@drawable/layout_border"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:hint="Email Id"
-        android:textSize="12dp"
-       />
-
-
-    <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/gold"
-        android:background="@drawable/layout_border"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:hint="Mobile"
-        android:textSize="12dp"
-        />
-
-    <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/gold"
-        android:background="@drawable/layout_border"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:hint="Address"
-        android:textSize="12dp"
-        />
-
-    <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@color/gold"
-        android:background="@drawable/layout_border"
-        android:padding="10dp"
-        android:layout_margin="5dp"
-        android:textSize="12dp"
-        android:hint="Fill Your Message"
-        />
     <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
         android:id="@+id/btn_login"
-        android:text="Submit"
+        android:text="Quick Enquiry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/rd_corner_bt"

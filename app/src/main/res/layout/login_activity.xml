@@ -37,7 +37,6 @@
                 android:id="@+id/edt_username"
                 android:layout_width="match_parent"
                 android:padding="10dp"
-
                 android:layout_margin="5dp"
                 android:textColor="@color/gold"
                 android:textColorHint="@color/gold"
@@ -51,7 +50,6 @@
                 android:layout_width="match_parent"
                 android:inputType="textPassword"
                 android:padding="10dp"
-
                 android:layout_margin="5dp"
                 android:textColor="@color/gold"
                 android:textColorHint="@color/gold"
@@ -60,7 +58,6 @@
                 android:layout_height="wrap_content" />
         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_width="match_parent"
-
             android:textColor="@color/gold"
             android:padding="10dp"
             android:textStyle="bold"
@@ -93,11 +90,9 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:textColor="@color/gold"
-
                 android:textStyle="bold"
                 android:text="OR"
                 android:padding="5dp"
-
                 android:layout_height="wrap_content" />
 
         </LinearLayout>

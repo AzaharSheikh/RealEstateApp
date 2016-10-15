@@ -12,7 +12,7 @@
             android:title="Me" />
         <item
             android:id="@+id/my_project"
-            android:icon="@mipmap/myproject"
+            android:icon="@mipmap/myproject32"
             android:title="My Project" />
         <item
             android:id="@+id/my_document"
@@ -38,6 +38,10 @@
             android:id="@+id/privacy_policy"
             android:icon="@mipmap/picture"
             android:title="Privacy Policy" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@mipmap/picture"
+            android:title="logout" />
     </group>
 
 

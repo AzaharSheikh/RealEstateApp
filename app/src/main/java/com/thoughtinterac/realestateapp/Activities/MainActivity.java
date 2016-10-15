@@ -23,12 +23,14 @@ import android.widget.Toast;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Fragments.ContactFragment;
 import com.thoughtinterac.realestateapp.Fragments.GalleryFragment;
+import com.thoughtinterac.realestateapp.Fragments.LogoutFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyDocFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProjectFragment;
 import com.thoughtinterac.realestateapp.Fragments.PrivacyPolicyFragment;
 import com.thoughtinterac.realestateapp.Fragments.TermNConditionFragment;
+import com.thoughtinterac.realestateapp.Fragments.User_Welcome_Page;
 import com.thoughtinterac.realestateapp.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -53,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_CONTACT_US = "ContactUs";
     private static final String TAG_T_N_C = "TnC";
     private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
+    private static final String TAG_LOGOUT="Logout";
     public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
@@ -176,7 +179,7 @@ public class MainActivity extends AppCompatActivity {
             case 0:
 
                 img_share.setVisibility(View.GONE);
-                MyProfileFragment myProfileFragment1 = new MyProfileFragment();
+                User_Welcome_Page myProfileFragment1 = new User_Welcome_Page();
                 return myProfileFragment1;
             case 1:
 
@@ -221,6 +224,13 @@ public class MainActivity extends AppCompatActivity {
                 PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
                 return privacyPolicyFragment;
 
+            case 9:
+
+                img_share.setVisibility(View.GONE);
+                //LogoutFragment logoutFragment = new LogoutFragment();
+                Intent i= new Intent(MainActivity.this,LoginActivity.class);
+                startActivity(i);
+                finish();
 
 
             default:
@@ -283,7 +293,10 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 8;
                         CURRENT_TAG = TAG_PRIVACY_POLICY;
                         break;
-
+                    case R.id.logout:
+                        navItemIndex = 9;
+                        CURRENT_TAG = TAG_LOGOUT;
+                        break;
                     default:
                         navItemIndex = 0;
                         CURRENT_TAG = TAG_HOME;
