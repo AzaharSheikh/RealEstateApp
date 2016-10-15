@@ -33,15 +33,25 @@
                     android:id="@+id/txt_view_name_text" />
 
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ash"
+                android:gravity="center_vertical"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:background="@color/black"
+                android:paddingLeft="5dp"
+                android:id="@+id/name_text" />
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Ash"
+                    android:text="!"
                     android:gravity="center_vertical"
                     android:textStyle="bold"
                     android:textColor="@color/white"
                     android:background="@color/black"
-                    android:padding="5dp"
-                    android:id="@+id/name_text" />
+
+                     />
 
 
             </LinearLayout>
