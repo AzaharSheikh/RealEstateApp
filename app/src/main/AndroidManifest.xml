@@ -121,6 +121,13 @@
 
         </activity>
         <activity
+            android:name=".Activities.UserProfileUpdateActivity"
+            android:label="Update"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
+        <activity
             android:label="Gemini Splendor"
             android:name=".Activities.Contact_Activity">
 

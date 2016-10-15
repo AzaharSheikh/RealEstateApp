@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.Html;
@@ -62,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
-
+    FloatingActionButton fab_edit_user;
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
@@ -77,14 +78,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         img_share=(ImageView)findViewById(R.id.img_share);
         mHandler = new Handler();
-
+        fab_edit_user=(FloatingActionButton)findViewById(R.id.fab_edit_user);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         navigationView = (NavigationView) findViewById(R.id.nav_view);
         navHeader = navigationView.getHeaderView(0);
         activityTitles = getResources().getStringArray(R.array.nav_item_activity_titles);
         Bundle bundle = getIntent().getExtras();
+        fab_edit_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity.this,UserProfileUpdateActivity.class);
+                startActivity(i);
+            }
+        });
         img_share.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -179,55 +188,55 @@ public class MainActivity extends AppCompatActivity {
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 User_Welcome_Page myProfileFragment1 = new User_Welcome_Page();
                 return myProfileFragment1;
             case 1:
-
+                fab_edit_user.setVisibility(View.VISIBLE);
                 img_share.setVisibility(View.GONE);
                 MyProfileFragment myProfileFragment = new MyProfileFragment();
                 return myProfileFragment;
             case 2:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.VISIBLE);
                 MyProjectFragment myProjectFragment = new MyProjectFragment();
                 return myProjectFragment;
 
             case 3:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 MyDocFragment myDocFragment = new MyDocFragment();
                 return myDocFragment;
 
             case 4:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 GalleryFragment galleryFragment = new GalleryFragment();
                 return galleryFragment;
             case 5:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 MyBankDetailsFragment MyBankDetails = new MyBankDetailsFragment();
                 return MyBankDetails;
             case 6:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 ContactFragment contactFragment = new ContactFragment();
                 return contactFragment;
             case 7:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 TermNConditionFragment termNConditionFragment = new TermNConditionFragment();
                 return termNConditionFragment;
             case 8:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
                 return privacyPolicyFragment;
 
             case 9:
-
+                fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 //LogoutFragment logoutFragment = new LogoutFragment();
                 Intent i= new Intent(MainActivity.this,LoginActivity.class);
