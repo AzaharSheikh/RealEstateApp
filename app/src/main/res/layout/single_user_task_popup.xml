@@ -32,16 +32,18 @@
 
     <Button
     android:layout_width="match_parent"
+        android:id="@+id/btn_view_user_details"
         android:textColor="@color/gold"
         android:drawableRight="@drawable/pen"
         android:layout_margin="5dp"
         android:padding="3dp"
         android:background="@color/offwhite"
-    android:text="View User Details"
-    android:layout_height="wrap_content" />
+        android:text="View User Details"
+        android:layout_height="wrap_content" />
 
     <Button
         android:layout_width="match_parent"
+        android:id="@+id/btn_realtor_view_user_document"
         android:background="@color/offwhite"
         android:textColor="@color/gold"
         android:padding="3dp"
@@ -52,6 +54,7 @@
 
     <Button
         android:layout_width="match_parent"
+        android:id="@+id/btn_send_reminder"
         android:background="@color/offwhite"
         android:drawableRight="@drawable/pen"
         android:textColor="@color/gold"

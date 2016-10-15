@@ -89,11 +89,14 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 String member = rbtn_member.getText().toString();
                 String str_username =   edt_username.getText().toString().trim();
                 String str_password =   edt_password.getText().toString().trim();
+
                 pDialog = new ProgressDialog(LoginActivity.this);
                 pDialog.setCancelable(false);
                 //loginAsync(str_username,str_password);
                 if(login_name.equalsIgnoreCase("user")) {
                     local_login(str_username, str_password);
+                    edt_username.setText("");
+                    edt_password.setText("");
                 }else
                 {
                 Intent i = new Intent(LoginActivity.this,RealtorMainPage.class);

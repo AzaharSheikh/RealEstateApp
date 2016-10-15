@@ -128,6 +128,27 @@
 
         </activity>
         <activity
+            android:name=".Activities.SendUserReminder"
+            android:label="Reminder"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
+        <activity
+            android:name=".Activities.ViewUserDetails"
+            android:label="User Details"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
+        <activity
+            android:name=".Activities.RealtorViewUserDocumentDetails"
+            android:label="User Document Details"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
+        <activity
             android:label="Gemini Splendor"
             android:name=".Activities.Contact_Activity">
 
