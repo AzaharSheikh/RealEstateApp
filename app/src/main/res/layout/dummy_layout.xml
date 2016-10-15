@@ -9,120 +9,118 @@
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_weight="4.5"
-        android:weightSum="10"
         android:orientation="vertical"
+        android:layout_weight="4"
         android:layout_height="0dp">
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
-            android:layout_width="match_parent"
-            android:id="@+id/btn_register_submit"
-            android:layout_weight="2"
-            android:layout_margin="2dp"
-            android:layout_height="0dp"
-            android:text="User List"
-            android:drawableRight="@drawable/pen"
-            android:background="@color/gold"
-            android:textColor="@color/white"/>
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-
-            android:text="Gemini Splendor"
-            android:textSize="20dp"
             android:layout_weight="1"
+            android:orientation="horizontal"
             android:background="@color/black"
-            android:textStyle="bold"
-            android:textColor="@color/gold"
-            android:layout_gravity="left"
-            android:id="@+id/name_text" />
+            >
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/gold"
+                android:background="@color/black"
+                android:padding="5dp"
+                android:id="@+id/name_text" />
+
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ash"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/gold"
+                android:background="@color/black"
+                android:padding="5dp"
+                android:id="@+id/name_text" />
+
+
+        </LinearLayout>
         <ImageView
+            android:layout_weight="4"
             android:id="@+id/iv_profile_pic"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
             android:background="@drawable/nav_back"
-            android:layout_weight="7"
-            android:layout_gravity="center"
+            android:layout_height="0dp"
             android:adjustViewBounds="true"
             />
+
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:weightSum="10"
-        android:layout_weight="5.5"
         android:orientation="vertical"
+        android:weightSum="10"
+        android:background="@color/gold"
+        android:layout_weight="6"
         android:layout_height="0dp">
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:text="Located in Sobha Hartland, within MBR City and right next to Dubai’s most ambitious development ‘Meydan one’, Gemini Splendor features 134 residences"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            android:layout_weight="2.5"
-            android:textColor="@color/gold"
-            android:padding="5dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="5dp"
-            android:id="@+id/name_text" />
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="0dp"
-            android:text="LOCATION DETAILS"
-            android:textStyle="bold"
-            android:textColor="@color/gold"
-            android:padding="5dp"
-            android:id="@+id/name_text" />
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-            android:layout_width="match_parent"
-            android:layout_weight="2"
-            android:layout_height="0dp"
-            android:text="Gemini Property Developers,609/610, Sobha Sapphire,Business Bay,Dubai, UAE.For Information on Gemini Splendor Call Toll free 800 12 12 12"
-            android:textStyle="bold"
-            android:textSize="12dp"
-            android:textColor="@color/gold"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="left"
-            android:id="@+id/name_text" />
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="MY PROJECT"
-            android:textStyle="bold"
-            android:textColor="@color/gold"
-            android:padding="5dp"
-            android:layout_gravity="left"
-            android:id="@+id/name_text" />
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:text="1 BHK Apartment 1048 sq.ft.gross area selling price 650,000"
-            android:textSize="12dp"
-            android:textStyle="bold"
-            android:textColor="@color/gold"
-            android:padding="5dp"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="left"
-            android:id="@+id/name_text" />
         <TextView
             android:layout_width="match_parent"
-            android:text="BANK OFFERING LOANS"
-            android:layout_weight="1"
-            android:textColor="@color/gold"
-            android:textSize="15dp"
-            android:textStyle="bold"
-            android:padding="5dp"
-            android:layout_height="0dp" />
-        <ImageView
-            android:id="@+id/iv_profile_pic"
-            android:layout_weight="1.5"
-            android:layout_width="wrap_content"
+            android:layout_weight="2"
+            android:text="With two international schools, retail stores, hotels and spa, parks and entertainment centres, Sobha Hartland is and will be one of the most sought after living and property "
             android:layout_height="0dp"
-            android:background="@drawable/bank_logos"
+            android:id="@+id/txt_project_desc" />
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/black"
+            android:layout_weight="0.5"
+            android:layout_height="0dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:id="@+id/li_overview"
+            android:layout_weight="3"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:background="@color/gold"
+            >
 
-            android:layout_gravity="center"
-            />
+            <ImageView
+                android:layout_width="160dp"
+                android:id="@+id/img_user"
+                android:layout_height="wrap_content"
+                android:src="@drawable/installment"
+                android:padding="5dp"
+                />
+            <ImageView
+                android:layout_width="160dp"
+                android:id="@+id/img_user"
+                android:layout_height="wrap_content"
+                android:src="@drawable/installment"
+                android:padding="5dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="4.5"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:layout_height="0dp"
+            >
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/img_user"
+                android:background="@drawable/tollfree"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:padding="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:text="\u00a9 2012-2016 GEMINI GROUP"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
     </LinearLayout>
+
 </LinearLayout>
 </LinearLayout>
