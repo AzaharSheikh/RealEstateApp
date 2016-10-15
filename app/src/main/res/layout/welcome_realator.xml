@@ -61,7 +61,7 @@
                 android:textColor="@color/gold"
                 android:padding="5dp"
                 android:layout_gravity="left"
-                android:layout_marginLeft="5dp"
+
                 android:id="@+id/name_text" />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
@@ -78,19 +78,20 @@
                 android:layout_height="0dp"
                 android:text="Gemini Property Developers,609/610, Sobha Sapphire,Business Bay,Dubai, UAE.For Information on Gemini Splendor Call Toll free 800 12 12 12"
                 android:textStyle="bold"
+                android:padding="5dp"
                 android:textSize="12dp"
                 android:textColor="@color/gold"
-                android:layout_marginLeft="10dp"
+
                 android:layout_gravity="left"
                 android:id="@+id/name_text" />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:padding="5dp"
                 android:text="MY PROJECT"
                 android:textStyle="bold"
                 android:textColor="@color/gold"
-                android:padding="5dp"
                 android:layout_gravity="left"
                 android:id="@+id/name_text" />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -102,7 +103,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/gold"
                 android:padding="5dp"
-                android:layout_marginLeft="10dp"
+
                 android:layout_gravity="left"
                 android:id="@+id/name_text" />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
