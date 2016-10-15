@@ -28,9 +28,7 @@
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-
                 android:text="Gemini Splendor"
-
                 android:layout_weight="1"
                 android:background="@color/black"
                 android:textStyle="bold"
