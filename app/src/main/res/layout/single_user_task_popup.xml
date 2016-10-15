@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@color/offwhite"
+    android:background="@color/gold"
     android:layout_height="match_parent">
     <android.support.v7.widget.Toolbar
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -21,6 +21,8 @@
       >
 <TextView
     android:id="@+id/txt_user_name"
+    android:background="@color/gold"
+    android:textColor="@color/offwhite"
     android:layout_width="match_parent"
     android:textStyle="bold"
     android:gravity="center"
@@ -30,16 +32,31 @@
 
     <Button
     android:layout_width="match_parent"
+        android:textColor="@color/gold"
+        android:drawableRight="@drawable/pen"
+        android:layout_margin="5dp"
+        android:padding="3dp"
+        android:background="@color/offwhite"
     android:text="View User Details"
     android:layout_height="wrap_content" />
 
     <Button
         android:layout_width="match_parent"
+        android:background="@color/offwhite"
+        android:textColor="@color/gold"
+        android:padding="3dp"
+        android:drawableRight="@drawable/pen"
+        android:layout_margin="5dp"
         android:text="View User Document Details"
         android:layout_height="wrap_content" />
 
     <Button
         android:layout_width="match_parent"
+        android:background="@color/offwhite"
+        android:drawableRight="@drawable/pen"
+        android:textColor="@color/gold"
+        android:padding="3dp"
+        android:layout_margin="5dp"
         android:text="Send User Reminders"
         android:layout_height="wrap_content" />
 
