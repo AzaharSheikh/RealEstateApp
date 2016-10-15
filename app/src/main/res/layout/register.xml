@@ -60,7 +60,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
-        android:maxLength="16"
+
         android:textColor="@color/gold"
         android:background="@drawable/layout_border"
         android:padding="5dp"
@@ -86,7 +86,7 @@
         android:textColor="@color/gold"
         android:background="@drawable/layout_border"
         android:padding="5dp"
-        android:maxLength="16"
+
         android:ems="10"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
@@ -130,7 +130,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/layout_border"
         android:padding="5dp"
-        android:maxLength="16"
+
         android:textColor="@color/gold"
         android:inputType="textEmailAddress"
         android:ems="10"
@@ -218,7 +218,7 @@
         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLength="15"
+
             android:background="@drawable/layout_border"
             android:padding="5dp"
             android:textColor="@color/gold"
