@@ -5,7 +5,7 @@
         <item
             android:id="@+id/nav_my_profile"
             android:icon="@mipmap/document"
-            android:title="@string/my_profile" />
+            android:title="@string/realtor_home" />
         <item
             android:id="@+id/nav_new_project"
             android:icon="@mipmap/document"

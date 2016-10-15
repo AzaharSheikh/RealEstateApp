@@ -21,7 +21,7 @@
 
     </string-array>
     <string-array name="realtor_nav_item_activity_titles">
-        <item>Gemini</item>
+        <item>Gemini Splender</item>
         <item>New Project</item>
         <item>User List</item>
         <item>Realator_Logout</item>
@@ -32,6 +32,7 @@
     <string name="action_logout">Logout</string>
     <string name="realator_logout">Logout</string>
     <string name="my_profile">My Profile</string>
+    <string name="realtor_home">Home</string>
     <string name="new_project">New project</string>
     <string name="user_list">User List</string>
     <string name="action_mark_all_read">Mark All as Read</string>
