@@ -4,15 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_my_profile"
-            android:icon="@mipmap/document"
+            android:icon="@mipmap/home"
             android:title="@string/realtor_home" />
         <item
             android:id="@+id/nav_new_project"
-            android:icon="@mipmap/document"
+            android:icon="@mipmap/myproject"
             android:title="@string/new_project" />
         <item
             android:id="@+id/nav_user_list"
-            android:icon="@mipmap/document"
+            android:icon="@mipmap/me"
             android:title="@string/user_list" />
         <item
             android:id="@+id/realator_logout"

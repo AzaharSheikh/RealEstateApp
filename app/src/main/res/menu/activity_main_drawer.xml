@@ -4,15 +4,15 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/my_home"
-            android:icon="@mipmap/user"
+            android:icon="@mipmap/home"
             android:title="Home" />
         <item
             android:id="@+id/my_profile"
-            android:icon="@mipmap/user"
+            android:icon="@mipmap/me"
             android:title="Me" />
         <item
             android:id="@+id/my_project"
-            android:icon="@mipmap/myproject32"
+            android:icon="@mipmap/myproject"
             android:title="My Project" />
         <item
             android:id="@+id/my_document"
@@ -20,23 +20,23 @@
             android:title="My Document" />
         <item
             android:id="@+id/my_gallery"
-            android:icon="@mipmap/picture"
+            android:icon="@mipmap/gallery"
             android:title="Gallery" />
         <item
             android:id="@+id/my_bank_details"
-            android:icon="@mipmap/picture"
+            android:icon="@mipmap/bank"
             android:title="My Bank Details" />
         <item
             android:id="@+id/contact"
-            android:icon="@mipmap/picture"
+            android:icon="@mipmap/contact"
             android:title="Contact" />
         <item
             android:id="@+id/terms_n_condition"
-            android:icon="@mipmap/picture"
+            android:icon="@mipmap/terms_n_condition"
             android:title="Terms &amp; Condition" />
         <item
             android:id="@+id/privacy_policy"
-            android:icon="@mipmap/picture"
+            android:icon="@mipmap/privacy"
             android:title="Privacy Policy" />
         <item
             android:id="@+id/logout"
@@ -44,6 +44,4 @@
             android:title="logout" />
 
     </group>
-
-
 </menu>
