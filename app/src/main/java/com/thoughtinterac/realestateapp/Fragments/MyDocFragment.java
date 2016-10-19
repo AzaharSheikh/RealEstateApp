@@ -95,6 +95,7 @@ public class MyDocFragment extends Fragment {
             docListMain.add(list);
         }
         ListView listView = (ListView) rootView.findViewById(R.id.doc_list);
+        listView.setDivider(null);
         ViewGroup header = (ViewGroup)inflater.inflate(R.layout.my_doc_list_header, listView, false);
         adapter= new MyDocListAdapter(getActivity(),docListMain);
         listView.addHeaderView(header, null, false);

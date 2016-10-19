@@ -47,7 +47,7 @@
             android:layout_weight="4"
             android:id="@+id/iv_profile_pic"
             android:layout_width="match_parent"
-            android:background="@drawable/nav_back"
+            android:background="@drawable/nav_back2"
             android:layout_height="0dp"
             android:adjustViewBounds="true"
             />

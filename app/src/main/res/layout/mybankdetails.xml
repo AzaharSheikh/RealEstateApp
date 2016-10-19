@@ -99,7 +99,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_border"
+                android:layout_marginTop="20dp"
+              >
 
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_weight="1"
@@ -111,6 +114,10 @@
                android:paddingTop="10dp"
                 android:paddingLeft="10dp"
                 />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -121,6 +128,10 @@
                     android:textSize="15dp"
                     android:padding="3dp"
                     />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -131,6 +142,10 @@
                     android:textSize="15dp"
                     android:padding="3dp"
                     />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="fill_parent"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -142,12 +157,14 @@
                     android:padding="3dp"
                     />
 
+
                 </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_border">
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -159,16 +176,29 @@
                     android:paddingTop="10dp"
                     android:paddingLeft="10dp"
                     />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/fisrt_principal_edt"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/gold" />
+
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/fisrt_interest_edt"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -180,7 +210,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:background="@drawable/table_border">
+
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -192,16 +224,28 @@
                     android:paddingTop="10dp"
                     android:paddingLeft="10dp"
                     />
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/sec_principal_edt"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:id="@+id/sec_interest_edt"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="30dp"
+                    android:background="@color/gold" />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
@@ -219,7 +263,7 @@
                 android:background="@color/gold"
                 android:textColor="@color/white"
                 android:layout_gravity="center"
-
+                android:layout_marginTop="20dp"
                 />
         </LinearLayout>
 </LinearLayout>

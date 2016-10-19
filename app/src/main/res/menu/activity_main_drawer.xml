@@ -40,7 +40,7 @@
             android:title="Privacy Policy" />
         <item
             android:id="@+id/logout"
-            android:icon="@mipmap/picture"
+            android:icon="@mipmap/logout"
             android:title="logout" />
 
     </group>

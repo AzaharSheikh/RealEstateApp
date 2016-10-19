@@ -12,11 +12,11 @@
             android:title="@string/new_project" />
         <item
             android:id="@+id/nav_user_list"
-            android:icon="@mipmap/me"
+            android:icon="@mipmap/userlist"
             android:title="@string/user_list" />
         <item
             android:id="@+id/realator_logout"
-            android:icon="@mipmap/document"
+            android:icon="@mipmap/logout"
             android:title="@string/realator_logout" />
 
 
