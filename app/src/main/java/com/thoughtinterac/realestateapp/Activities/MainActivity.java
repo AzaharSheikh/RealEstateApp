@@ -31,6 +31,7 @@ import com.thoughtinterac.realestateapp.Fragments.MyDocFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProjectFragment;
 import com.thoughtinterac.realestateapp.Fragments.PrivacyPolicyFragment;
+import com.thoughtinterac.realestateapp.Fragments.ProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.TermNConditionFragment;
 import com.thoughtinterac.realestateapp.Fragments.User_Welcome_Page;
 import com.thoughtinterac.realestateapp.R;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_T_N_C = "TnC";
     private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
     private static final String TAG_LOGOUT="Logout";
-
+    private static final String TAG_PROJECT_LIST = "ProjectList";
     public static String CURRENT_TAG = TAG_HOME;
 
     // toolbar titles respected to selected nav menu item
@@ -244,8 +245,13 @@ public class MainActivity extends AppCompatActivity {
                 img_share.setVisibility(View.GONE);
                 PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
                 return privacyPolicyFragment;
-
             case 9:
+                fab_edit_user.setVisibility(View.GONE);
+                img_share.setVisibility(View.GONE);
+                ProjectListFragment ProjectList = new ProjectListFragment();
+               return ProjectList;
+
+            case 10:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 //LogoutFragment logoutFragment = new LogoutFragment();
@@ -316,8 +322,12 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 8;
                         CURRENT_TAG = TAG_PRIVACY_POLICY;
                         break;
-                    case R.id.logout:
+                    case R.id.project_list:
                         navItemIndex = 9;
+                        CURRENT_TAG = TAG_PROJECT_LIST;
+                        break;
+                    case R.id.logout:
+                        navItemIndex = 10;
                         CURRENT_TAG = TAG_LOGOUT;
                         break;
 

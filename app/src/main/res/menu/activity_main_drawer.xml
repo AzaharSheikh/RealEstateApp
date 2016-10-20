@@ -38,10 +38,15 @@
             android:id="@+id/privacy_policy"
             android:icon="@mipmap/privacy"
             android:title="Privacy Policy" />
+
+        <item
+            android:id="@+id/project_list"
+            android:icon="@mipmap/logout"
+            android:title="Project list" />
         <item
             android:id="@+id/logout"
             android:icon="@mipmap/logout"
-            android:title="logout" />
+            android:title="Logout" />
 
     </group>
 </menu>
