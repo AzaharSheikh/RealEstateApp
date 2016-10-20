@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="2dp"
+        android:weightSum="10"
+        android:layout_height="wrap_content">
+        <CheckBox
+            android:id="@+id/chk_instl_status"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:id="@+id/txt_instl_name"
+            android:layout_margin="1dp"
+            android:gravity="center_vertical"
+            android:layout_weight="3"
+            android:text="Aggrement"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/edt_instl_percentage"
+            android:inputType="number"
+            android:gravity="right"
+            android:layout_weight="1.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:text="%"
+            android:layout_height="match_parent" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="@string/Rupee"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:layout_height="match_parent" />
+        <EditText
+            android:id="@+id/edt_amount"
+            android:gravity="right"
+            android:inputType="number"
+            android:layout_weight="3.5"
+            android:layout_width="0dp"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</LinearLayout>

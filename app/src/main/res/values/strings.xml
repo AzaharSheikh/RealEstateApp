@@ -28,6 +28,7 @@
     </string-array>
     <string name="thoughtinteract"><b><font color='black'>thought</font><font color='yellow'>Interact</font></b></string>
     <string name="PriceRs">Price \u20B9 :</string>
+    <string name="Rupee">\u20B9</string>
     <string name="action_clear_all">Clear All</string>
     <string name="action_logout">Logout</string>
     <string name="realator_logout">Logout</string>
