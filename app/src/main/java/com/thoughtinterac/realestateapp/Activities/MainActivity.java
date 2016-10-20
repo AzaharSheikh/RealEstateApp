@@ -90,7 +90,17 @@ public class MainActivity extends AppCompatActivity {
         fab_edit_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Bundle bundle1 = new Bundle();
+                bundle1.putString(DatabaseHandler.KEY_USER_NAME, str_user_name);
+                bundle1.putString(DatabaseHandler.KEY_USER_ADDRESS,str_user_address);
+                bundle1.putString(DatabaseHandler.KEY_USER_JOB_DESC, str_user_job);
+                bundle1.putString(DatabaseHandler.KEY_USER_MOBILE, str_user_mobile);
+                bundle1.putString(DatabaseHandler.KEY_USER_EMAIL, str_user_email);
+                bundle1.putString(DatabaseHandler.KEY_PAN_NUMBER, str_user_pan);
+                bundle1.putString(DatabaseHandler.KEY_BANK_DETAILS, str_user_bank);
                 Intent i = new Intent(MainActivity.this,UserProfileUpdateActivity.class);
+                i.putExtra("KEY_USER_NAME", str_user_name);
+                i.putExtras(bundle1);
                 startActivity(i);
             }
         });
@@ -107,11 +117,11 @@ public class MainActivity extends AppCompatActivity {
         });
         if(bundle!=null)
         {
-             str_user_name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
+            str_user_name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
             str_user_address = bundle.getString(DatabaseHandler.KEY_USER_ADDRESS);
-             str_user_job = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
-           str_user_mobile = bundle.getString(DatabaseHandler.KEY_USER_MOBILE);
-           str_user_email = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
+            str_user_job = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
+            str_user_mobile = bundle.getString(DatabaseHandler.KEY_USER_MOBILE);
+            str_user_email = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
             str_user_pan = bundle.getString(DatabaseHandler.KEY_PAN_NUMBER);
             str_user_bank = bundle.getString(DatabaseHandler.KEY_BANK_DETAILS);
 

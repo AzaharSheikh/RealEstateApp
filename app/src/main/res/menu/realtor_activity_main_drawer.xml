@@ -12,7 +12,7 @@
             android:title="@string/new_project" />
         <item
             android:id="@+id/nav_user_list"
-            android:icon="@mipmap/userlist"
+            android:icon="@mipmap/userlist1"
             android:title="@string/user_list" />
         <item
             android:id="@+id/realator_logout"
