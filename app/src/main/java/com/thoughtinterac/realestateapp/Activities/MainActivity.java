@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity {
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 //LogoutFragment logoutFragment = new LogoutFragment();
-                Intent i= new Intent(MainActivity.this,LoginActivity.class);
+                Intent i= new Intent(MainActivity.this,PreLogin.class);
                 startActivity(i);
                 finish();
 

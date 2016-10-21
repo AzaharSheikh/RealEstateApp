@@ -11,79 +11,90 @@
         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fill in your details"
+            android:text="Fill your Query"
             android:textSize="16dp"
             android:paddingTop="20dp"
             android:textColor="@color/gold" />
 
 
+        <!--<com.thoughtinterac.realestateapp.Fonts.TypefacedEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/gold"-->
+            <!--android:background="@drawable/layout_border"-->
+            <!--android:padding="10dp"-->
+            <!--android:textSize="12dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:hint="Name"-->
+            <!--/>-->
+
+
+        <!--<com.thoughtinterac.realestateapp.Fonts.TypefacedEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/gold"-->
+            <!--android:background="@drawable/layout_border"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:hint="Email Id"-->
+            <!--android:textSize="12dp"-->
+            <!--/>-->
+
+
+        <!--<com.thoughtinterac.realestateapp.Fonts.TypefacedEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/gold"-->
+            <!--android:background="@drawable/layout_border"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:hint="Mobile"-->
+            <!--android:textSize="12dp"-->
+            <!--/>-->
+
+        <!--<com.thoughtinterac.realestateapp.Fonts.TypefacedEditText-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textColor="@color/gold"-->
+            <!--android:background="@drawable/layout_border"-->
+            <!--android:padding="10dp"-->
+            <!--android:layout_margin="5dp"-->
+            <!--android:hint="Address"-->
+            <!--android:textSize="12dp"-->
+            <!--/>-->
+
         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:textColor="@color/gold"
             android:background="@drawable/layout_border"
             android:padding="10dp"
+            android:layout_margin="15dp"
             android:textSize="12dp"
-            android:layout_margin="5dp"
-            android:hint="Name"
-            />
-
-
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/gold"
-            android:background="@drawable/layout_border"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:hint="Email Id"
-            android:textSize="12dp"
-            />
-
-
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/gold"
-            android:background="@drawable/layout_border"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:hint="Mobile"
-            android:textSize="12dp"
-            />
-
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/gold"
-            android:background="@drawable/layout_border"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:hint="Address"
-            android:textSize="12dp"
-            />
-
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/gold"
-            android:background="@drawable/layout_border"
-            android:padding="10dp"
-            android:layout_margin="5dp"
-            android:textSize="12dp"
+            android:inputType="textMultiLine"
             android:hint="Fill Your Message"
             />
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
-            android:id="@+id/btn_login"
-            android:text="Submit"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/rd_corner_bt"
-            android:textColor="@color/white"
-            android:textSize="12dp"
-            android:padding="5dp"
-            android:layout_margin="10dp"
-            />
+            android:layout_gravity="center"
+            >
+
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
+                android:layout_width="wrap_content"
+                android:id="@+id/btn_enquiry_submit"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:layout_height="35dp"
+                android:text="Submit"
+                android:background="@color/gold"
+                android:textColor="@color/white"
+
+
+                />
+
+
+        </LinearLayout>
 
 </LinearLayout>
 </LinearLayout>

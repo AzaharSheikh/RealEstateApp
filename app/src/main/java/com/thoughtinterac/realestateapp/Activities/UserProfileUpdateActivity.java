@@ -84,11 +84,11 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
            String name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
            edt_username.setText(name);
            String str_user_address  = bundle.getString(DatabaseHandler.KEY_USER_ADDRESS);
-           edt_user_address.setText(name);
+           edt_user_address.setText(str_user_address);
            String str_job_dec  = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
-           edt_mobile.setText(name);
+           edt_mobile.setText(str_job_dec);
            String str__email  = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
-           edt_email.setText(name);
+           edt_email.setText(str__email);
        }
 
     }
