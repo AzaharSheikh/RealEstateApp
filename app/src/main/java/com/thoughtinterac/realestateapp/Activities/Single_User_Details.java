@@ -82,6 +82,7 @@ public class Single_User_Details extends AppCompatActivity {
             user_instl_stage_status.add("true");
             user_instl_percentage.add("10");
             user_instl_amount.add("5000");
+
             user_email.add("Azr");
             user_instl_stage_name.add("Pulm");
             user_instl_stage_status.add("true");
@@ -157,6 +158,8 @@ public class Single_User_Details extends AppCompatActivity {
                    boolean insert_status = db.insert(DatabaseHandler.TABLE_USER_INSTALLMENT, null, contentValues) > 0;
                    Log.d("insert_status",insert_status+"");
                }
+                setTotalAmount();
+                setTotalPercentage();
             }
         });
 
