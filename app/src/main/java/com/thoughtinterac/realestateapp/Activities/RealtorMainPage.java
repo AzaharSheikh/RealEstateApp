@@ -200,7 +200,7 @@ public class RealtorMainPage extends AppCompatActivity
     }
     private void setToolbarTitle() {
         if(flag!=0) {
-           // getSupportActionBar().setTitle(activityTitles[navItemIndex]);
+            // getSupportActionBar().setTitle(activityTitles[navItemIndex]);
             getSupportActionBar().setTitle(Html.fromHtml("<small>"+activityTitles[navItemIndex]+"</small>"));
             flag=1;
         }else

@@ -30,6 +30,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String KEY_PAN_NUMBER="pan_number";
     public static final String KEY_BANK_DETAILS="bank_details";
     public static final String KEY_PROJECT_NAME="project_name";
+    public static final String KEY_REALATOR_NAME="realator_name";
     // user installment info table
     public static final String TABLE_USER_INSTALLMENT = "user_installment_tb";
     public static final String KEY_USER_INST_STAGE_NAME = "user_inst_stage_name";
@@ -81,8 +82,6 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 +   KEY_bhk3_NoofFloor+" TEXT  , "
                 +   KEY_bhk3_price+" TEXT "
                 +")";
-
-
 
 
 

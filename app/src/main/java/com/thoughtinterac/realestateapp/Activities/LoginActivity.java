@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -56,6 +57,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     AccessTokenTracker accessTokenTracker;
     public static String imageurl;
     String login_name;
+    TextView txt_forgot_password;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -69,6 +71,15 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         loginButton.setReadPermissions(Arrays.asList("public_profile, email, user_birthday, user_friends"));
         callbackManager = CallbackManager.Factory.create();
 
+        txt_forgot_password=(TextView)findViewById(R.id.txt_forgot_password);
+        txt_forgot_password.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(LoginActivity.this, Forgot_Password_Login.class);
+                startActivity(myIntent);
+            }
+        });
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null) {
             login_name = bundle.getString("login_name");

@@ -156,6 +156,20 @@
 
         </activity>
         <activity
+            android:name=".Activities.UserListActivity"
+            android:label="User List"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
+        <activity
+            android:name=".Activities.Forgot_Password_Login"
+            android:label="Forgot Password"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
+        <activity
             android:label="Gemini Splendor"
             android:name=".Activities.Contact_Activity">
 

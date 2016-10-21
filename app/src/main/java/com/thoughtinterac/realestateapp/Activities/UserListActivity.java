@@ -2,6 +2,7 @@ package com.thoughtinterac.realestateapp.Activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -29,22 +30,26 @@ public class UserListActivity extends AppCompatActivity {
         projectName= new ArrayList();
         userAddress = new ArrayList();
         projectDate = new ArrayList();
-        userName.add("PAN");
-        userName.add("AADHAR");
-        userName.add("RC");
-        userName.add("NOC");
-        projectName.add("true");
-        projectName.add("true");
-        projectName.add("false");
-        projectName.add("true");
-        userAddress.add("HSJADJSAN2672482482");
-        userAddress.add("ADHARC CARD Number");
-        userAddress.add("Rc no.12212123");
-        userAddress.add("Noc staus ");
-        projectDate.add("HSJADJSAN2672482482");
-        projectDate.add("ADHARC CARD Number");
-        projectDate.add("Rc no.12212123");
-        projectDate.add("Noc staus ");
+        userName.add("Azahar S.");
+        userName.add("Ashwini B.");
+        userName.add("Krishna G.");
+        userName.add("Dadoos B.");
+        userName.add("Anuradha R.");
+        projectName.add("Gemini Mumbai");
+        projectName.add("Ma Doc Vashi");
+        projectName.add("Arihant Panvel");
+        projectName.add("Gemini Vashi");
+        projectName.add("Gemini Thane");
+        userAddress.add("Airoli, Navi Mumbai");
+        userAddress.add("Sandapa, Navi Mumbai");
+        userAddress.add("Gujrat,");
+        userAddress.add("Nerul, Navi Mumbai");
+        userAddress.add("Kharegoan,Thane");
+        projectDate.add("10-Mar-2016");
+        projectDate.add("20-Apr-2016");
+        projectDate.add("10-Feb-2016");
+        projectDate.add("20-Feb-2016 ");
+        projectDate.add("20-Feb-2016 ");
         List<UserModel> userListMain = new ArrayList<UserModel>();
         for(int i =0 ; i<userName.size();i++)
         {
@@ -55,10 +60,13 @@ public class UserListActivity extends AppCompatActivity {
             list.setDate(projectDate.get(i).toString());
             userListMain.add(list);
         }
-        ListView listView = (ListView)findViewById(R.id.doc_list);
+        ListView listView = (ListView)findViewById(R.id.user_list_view);
 
         adapter= new UserListCustomAdapter(UserListActivity.this,userListMain);
 
         listView.setAdapter(adapter);
     }
-}
+
+    }
+
+

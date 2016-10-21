@@ -63,6 +63,7 @@
             android:padding="10dp"
             android:textStyle="bold"
             android:text="Forgot Password ?"
+            android:id="@+id/txt_forgot_password"
             android:layout_height="wrap_content" />
 
         <LinearLayout
