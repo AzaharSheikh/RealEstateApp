@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.animation.Animation;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_LOGOUT="Logout";
     private static final String TAG_PROJECT_LIST = "ProjectList";
     public static String CURRENT_TAG = TAG_HOME;
-
+    TextView txtName,txtWebsite;
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
     FloatingActionButton fab_edit_user;
@@ -128,8 +129,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         }
-
+        navHeader = navigationView.getHeaderView(0);
+        txtName = (TextView) navHeader.findViewById(R.id.name);
+        txtWebsite = (TextView) navHeader.findViewById(R.id.website);
         // initializing navigation menu
+        loadNavHeader();
         setUpNavigationView();
 
         if (savedInstanceState == null) {
@@ -147,6 +151,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void loadNavHeader() {
+        // name, website
+        txtName.setText(str_user_name);
+        txtWebsite.setText(str_user_email);
+// showing dot next to notifications label
+        //navigationView.getMenu().getItem(2).setActionView(R.layout.menu_dot);
+    }
 
     private void loadHomeFragment() {
         // selecting appropriate nav menu item

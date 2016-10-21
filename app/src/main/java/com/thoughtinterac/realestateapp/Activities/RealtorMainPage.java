@@ -88,9 +88,9 @@ public class RealtorMainPage extends AppCompatActivity
 
         }
         // Navigation view header
-//        navHeader = navigationView.getHeaderView(0);
-//        txtName = (TextView) navHeader.findViewById(R.id.name);
-//        txtWebsite = (TextView) navHeader.findViewById(R.id.website);
+        navHeader = navigationView.getHeaderView(0);
+        txtName = (TextView) navHeader.findViewById(R.id.name);
+        txtWebsite = (TextView) navHeader.findViewById(R.id.website);
 //        imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
 //        imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
 
@@ -119,8 +119,8 @@ public class RealtorMainPage extends AppCompatActivity
     }
     private void loadNavHeader() {
         // name, website
-//        txtName.setText("Azahar");
-//        txtWebsite.setText("www.thoughtiteract.com");
+        txtName.setText(str_user_name);
+        txtWebsite.setText(str_user_email);
 // showing dot next to notifications label
         //navigationView.getMenu().getItem(2).setActionView(R.layout.menu_dot);
     }

@@ -93,15 +93,15 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 pDialog = new ProgressDialog(LoginActivity.this);
                 pDialog.setCancelable(false);
                 //loginAsync(str_username,str_password);
-                if(login_name.equalsIgnoreCase("user")) {
-                    local_login(str_username, str_password);
+                local_login(str_username, str_password);
+               /* if(login_name.equalsIgnoreCase("user")) {
+
                     edt_username.setText("");
                     edt_password.setText("");
                 }else
                 {
-                Intent i = new Intent(LoginActivity.this,RealtorMainPage.class);
-                    startActivity(i);
-                }
+
+                }*/
             }
         });
         btn_register.setOnClickListener(new View.OnClickListener() {
@@ -238,11 +238,20 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
             bundle.putString(DatabaseHandler.KEY_PAN_NUMBER, str_user_pan);
             bundle.putString(DatabaseHandler.KEY_BANK_DETAILS, str_user_bank);
 
-            Intent intent = new Intent(LoginActivity.this,
-                    MainActivity.class);
-            intent.putExtras(bundle);
-            startActivity(intent);
-            finish();
+            if(login_name.equalsIgnoreCase("user")) {
+                Intent intent = new Intent(LoginActivity.this,
+                        MainActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+                finish();
+            }
+            else
+            {
+                Intent i = new Intent(LoginActivity.this,RealtorMainPage.class);
+                i.putExtras(bundle);
+                startActivity(i);
+                finish();
+            }
         }else
         {
             Toast.makeText(LoginActivity.this,"Plsease try again, email or password wrong",Toast.LENGTH_SHORT).show();
