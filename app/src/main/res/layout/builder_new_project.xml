@@ -76,7 +76,7 @@
                 />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="5.5"
-                    android:id="@+id/edt_username"
+                    android:id="@+id/edt_project_name"
                     android:layout_width="0dp"
                     android:padding="10dp"
                     android:layout_margin="5dp"
@@ -248,7 +248,7 @@
                     android:background="@drawable/layout_border"
                     android:padding="5dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_username_floor_area"
+                    android:id="@+id/edt_1bhk_floor_area"
                     />
     </LinearLayout>
             <LinearLayout
@@ -270,7 +270,7 @@
                     android:padding="5dp"
                     android:layout_margin="2dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_username_flat_available"
+                    android:id="@+id/edt_1bhk_flat_available"
                     />
                 </LinearLayout>
 
@@ -360,7 +360,7 @@
                     android:padding="5dp"
                     android:layout_margin="2dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_price"
+                    android:id="@+id/edt_1bhk_price"
                     />
             </LinearLayout>
             <LinearLayout
@@ -413,7 +413,7 @@
                     android:background="@drawable/layout_border"
                     android:padding="5dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_username_floor_area"
+                    android:id="@+id/edt_2bhk_floor_area"
                     />
             </LinearLayout>
             <LinearLayout
@@ -435,7 +435,7 @@
                     android:padding="5dp"
                     android:layout_margin="2dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_username_flat_available"
+                    android:id="@+id/edt_2bhk_flat_available"
                     />
             </LinearLayout>
 
@@ -525,7 +525,7 @@
                     android:padding="5dp"
                     android:layout_margin="2dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_price"
+                    android:id="@+id/edt_2bhk_price"
                     />
             </LinearLayout>
             <LinearLayout
@@ -578,7 +578,7 @@
                     android:background="@drawable/layout_border"
                     android:padding="5dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_username_floor_area"
+                    android:id="@+id/edt_3bhk_floor_area"
                     />
             </LinearLayout>
             <LinearLayout
@@ -600,7 +600,7 @@
                     android:padding="5dp"
                     android:layout_margin="2dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_username_flat_available"
+                    android:id="@+id/edt_3bhk_flat_available"
                     />
             </LinearLayout>
 
@@ -690,7 +690,7 @@
                     android:padding="5dp"
                     android:layout_margin="2dp"
                     android:layout_weight="2.5"
-                    android:id="@+id/edt_price"
+                    android:id="@+id/edt_3bhk_price"
                     />
             </LinearLayout>
             <LinearLayout

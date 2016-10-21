@@ -7,9 +7,6 @@ public class RealtorProjectListModel {
 
     String Project_id;
     String Project_Name;
-
-
-
     String Project_date;
     String Project_Location;
     String ProjectDescription;

@@ -149,6 +149,13 @@
 
         </activity>
         <activity
+            android:name=".Activities.RealtorSingleProjectActivity"
+            android:label="Project Details"
+            android:windowSoftInputMode="stateHidden"
+            >
+
+        </activity>
+        <activity
             android:name=".Activities.Single_User_Details"
             android:label="User Details"
             android:windowSoftInputMode="stateHidden"
@@ -159,6 +166,7 @@
             android:name=".Activities.UserListActivity"
             android:label="User List"
             android:windowSoftInputMode="stateHidden"
+            android:theme="@style/AppTheme.NoActionBar"
             >
 
         </activity>

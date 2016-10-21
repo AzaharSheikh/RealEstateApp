@@ -2,6 +2,7 @@ package com.thoughtinterac.realestateapp.CustomAdapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.thoughtinterac.realestateapp.Activities.RealtorSingleProjectActivity;
 import com.thoughtinterac.realestateapp.Model.RealtorProjectListModel;
 import com.thoughtinterac.realestateapp.R;
 
@@ -69,9 +71,26 @@ public class RealtorProjectListAdapter extends BaseAdapter {
         li_realtor_project_list_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(activity,m.getProject_Name(), Toast.LENGTH_LONG);
+                /*Toast toast = Toast.makeText(activity,m.getProject_Name(), Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
+                toast.show();*/
+                Intent i = new Intent(activity, RealtorSingleProjectActivity.class);
+                i.putExtra("Project_id", m.getProject_id());
+                i.putExtra("Project_Name", m.getProject_Name());
+                i.putExtra("Project_date", m.getProject_date());
+                i.putExtra("Project_Location", m.getProject_Location());
+                i.putExtra("ProjectDescription", m.getProjectDescription());
+                i.putExtra("bhk1_FloorAreaSqFt", m.getBhk1_FloorAreaSqFt());
+                i.putExtra("bhk1_NoofFloor", m.getBhk1_NoofFloor());
+                i.putExtra("bhk1_price", m.getBhk1_price());
+                i.putExtra("bhk2_FloorAreaSqFt", m.getBhk2_FloorAreaSqFt());
+                i.putExtra("bhk2_NoofFloor", m.getBhk2_NoofFloor());
+                i.putExtra("bhk2_price", m.getBhk2_price());
+                i.putExtra("bhk3_FloorAreaSqFt", m.getBhk3_FloorAreaSqFt());
+                i.putExtra("bhk3_NoofFloor", m.getBhk3_NoofFloor());
+                i.putExtra("bhk3_price", m.getBhk3_price());
+
+                activity.startActivity(i);
             }
         });
 
