@@ -34,6 +34,7 @@ import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
 import com.thoughtinterac.realestateapp.Fragments.New_Project_Fragment;
 import com.thoughtinterac.realestateapp.Fragments.Realator_Profile_Fragment;
 import com.thoughtinterac.realestateapp.Fragments.RealtorMyProfileFragment;
+import com.thoughtinterac.realestateapp.Fragments.RealtorProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.UserListFragment;
 import com.thoughtinterac.realestateapp.R;
 
@@ -184,6 +185,10 @@ public class RealtorMainPage extends AppCompatActivity
                 New_Project_Fragment new_Project_Fragment = new New_Project_Fragment();
                 return new_Project_Fragment;
             case 2:
+                flag=1;
+                RealtorProjectListFragment realtorProjectListFragment = new RealtorProjectListFragment();
+                return realtorProjectListFragment;
+            case 3:
                 flag=1;
                 UserListFragment userListFragment = new UserListFragment();
                 return userListFragment;

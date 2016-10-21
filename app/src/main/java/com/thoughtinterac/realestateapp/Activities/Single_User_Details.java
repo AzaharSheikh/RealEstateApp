@@ -33,7 +33,7 @@ public class Single_User_Details extends AppCompatActivity {
     ArrayList <String> user_instl_percentage    ;
     ArrayList <String> user_instl_amount        ;
     LinearLayout li_installation;
-    TextView txt_total_instl_percentage,txt_total_amount;
+    TextView txt_total_instl_percentage, txt_instl_total_amount;
     Button btn_update_installment;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class Single_User_Details extends AppCompatActivity {
         allView = new ArrayList<View>();
         li_installation=(LinearLayout)findViewById(R.id.li_installation);
         txt_total_instl_percentage=(TextView)findViewById(R.id.txt_total_instl_percentage);
-        txt_total_amount=(TextView)findViewById(R.id.txt_total_amount);
+        txt_instl_total_amount =(TextView)findViewById(R.id.txt_total_amount);
         btn_update_installment=(Button)findViewById(R.id.btn_update_installment);
         user_email = new ArrayList<>();
         user_instl_stage_name = new ArrayList<>();
@@ -172,7 +172,7 @@ public class Single_User_Details extends AppCompatActivity {
             float totl = Float.parseFloat(user_instl_amount.get(i));
             totalAmount+=totl;
         }
-        txt_total_amount.setText(totalAmount+"");
+        txt_instl_total_amount.setText(totalAmount+"");
     }
 
     private void setTotalPercentage() {

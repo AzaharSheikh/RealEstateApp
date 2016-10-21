@@ -25,7 +25,8 @@
         <item>Gemini Splender</item>
         <item>New Project</item>
         <item>User List</item>
-        <item>Realator_Logout</item>
+        <item>Project List</item>
+        <item>Logout</item>
     </string-array>
     <string name="thoughtinteract"><b><font color='black'>thought</font><font color='yellow'>Interact</font></b></string>
     <string name="PriceRs">Price \u20B9 :</string>
