@@ -41,7 +41,7 @@
 
         <item
             android:id="@+id/project_list"
-            android:icon="@mipmap/logout"
+            android:icon="@mipmap/myproject"
             android:title="Project list" />
         <item
             android:id="@+id/logout"

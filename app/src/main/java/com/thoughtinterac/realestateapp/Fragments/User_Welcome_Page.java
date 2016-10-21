@@ -1,15 +1,19 @@
 package com.thoughtinterac.realestateapp.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.Activities.MainActivity;
 import com.thoughtinterac.realestateapp.Activities.RealtorMainPage;
+import com.thoughtinterac.realestateapp.Activities.ProjectListActivity;
+import com.thoughtinterac.realestateapp.Activities.UserListActivity;
 import com.thoughtinterac.realestateapp.R;
 
 /**
@@ -30,6 +34,14 @@ public class User_Welcome_Page extends Fragment {
         if(MainActivity.str_user_name.equalsIgnoreCase("")) {
             name_text.setText(RealtorMainPage.str_user_name);
         }
+        ImageView img_userlist = (ImageView)rootView.findViewById(R.id.img_project);
+        img_userlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), ProjectListActivity.class);
+                startActivity(i);
+            }
+        });
         return rootView;
     }
 }

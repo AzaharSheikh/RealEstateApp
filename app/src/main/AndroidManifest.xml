@@ -170,6 +170,14 @@
 
         </activity>
         <activity
+            android:name=".Activities.ProjectListActivity"
+            android:label="Project List"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+
+        </activity>
+        <activity
             android:name=".Activities.Forgot_Password_Login"
             android:label="Forgot Password"
             android:windowSoftInputMode="stateHidden"

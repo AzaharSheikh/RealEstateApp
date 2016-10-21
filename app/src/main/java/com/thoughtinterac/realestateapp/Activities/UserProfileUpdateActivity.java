@@ -56,7 +56,7 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
                 String str_confirm_password = edt_comfirm_pass.getText().toString().trim();
                 String str_pan = edt_pan.getText().toString().trim();
                 String str_bank = edt_bank_details.getText().toString().trim();
-                if (str_edt_username.equalsIgnoreCase("") || str_user_address.equalsIgnoreCase("") || str_job_dec.equalsIgnoreCase("") || str_mobile.equalsIgnoreCase("") || str__email.equalsIgnoreCase("") || str_password.equalsIgnoreCase("") || str_confirm_password.equalsIgnoreCase("")) {
+                if (str_edt_username.equalsIgnoreCase("") || str_user_address.equalsIgnoreCase("") || str_job_dec.equalsIgnoreCase("") || str_mobile.equalsIgnoreCase("") || str__email.equalsIgnoreCase("") || str_password.equalsIgnoreCase("") || str_confirm_password.equalsIgnoreCase("") || str_pan.equalsIgnoreCase("") || str_bank.equalsIgnoreCase("")) {
                     Toast.makeText(UserProfileUpdateActivity.this, "some field missing", Toast.LENGTH_SHORT).show();
                 }
 
@@ -101,7 +101,7 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
            edt_pan.setText(str_pan);
 
            String str_bank  = bundle.getString(DatabaseHandler.KEY_BANK_DETAILS);
-           edt_bank_details.setText(str__email);
+           edt_bank_details.setText(str_bank);
 
 
        }

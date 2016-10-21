@@ -16,7 +16,7 @@
             android:title="@string/user_list" />
         <item
             android:id="@+id/nav_project_list"
-            android:icon="@mipmap/userlist1"
+            android:icon="@mipmap/myproject"
             android:title="@string/project_list" />
         <item
             android:id="@+id/realator_logout"
