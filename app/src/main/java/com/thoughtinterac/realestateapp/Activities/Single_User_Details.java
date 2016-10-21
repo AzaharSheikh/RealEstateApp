@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
@@ -32,15 +33,23 @@ public class Single_User_Details extends AppCompatActivity {
     ArrayList <String> user_instl_stage_status  ;
     ArrayList <String> user_instl_percentage    ;
     ArrayList <String> user_instl_amount        ;
-    LinearLayout li_installation;
+
     TextView txt_total_instl_percentage, txt_instl_total_amount;
     Button btn_update_installment;
+    private RadioGroup rg_myproject;
+    LinearLayout li_project_details,li_installation_main,li_project_status,li_installation;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.single_user_details);
         allView = new ArrayList<View>();
+
+        li_installation_main=(LinearLayout)findViewById(R.id.li_installation_main);
+        li_project_details=(LinearLayout)findViewById(R.id.li_project_details);
+        li_project_status=(LinearLayout)findViewById(R.id.li_project_status);
         li_installation=(LinearLayout)findViewById(R.id.li_installation);
+
+
         txt_total_instl_percentage=(TextView)findViewById(R.id.txt_total_instl_percentage);
         txt_instl_total_amount =(TextView)findViewById(R.id.txt_total_amount);
         btn_update_installment=(Button)findViewById(R.id.btn_update_installment);
@@ -49,6 +58,38 @@ public class Single_User_Details extends AppCompatActivity {
         user_instl_stage_status= new ArrayList<>();
         user_instl_percentage = new ArrayList<>();
         user_instl_amount = new ArrayList<>();
+        rg_myproject = (RadioGroup)findViewById(R.id.rg_myproject);
+        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId)
+                {
+                    case R.id.rbt_project_details:
+                        //Toast.makeText(getActivity(), "project details checked", Toast.LENGTH_SHORT).show();
+                        li_installation_main.setVisibility(View.GONE);
+                        li_project_details.setVisibility(View.VISIBLE);
+                        li_project_status.setVisibility(View.GONE);
+
+                        break;
+                    case R.id.rbt_project_status:
+                        //Toast.makeText(getActivity(), "Photos details checked", Toast.LENGTH_SHORT).show();
+                        li_installation_main.setVisibility(View.GONE);
+                        li_project_details.setVisibility(View.GONE);
+                        li_project_status.setVisibility(View.VISIBLE);
+
+                        break;
+                    case R.id.rbt_project_installment:
+                        //Toast.makeText(getActivity(), "Map details checked", Toast.LENGTH_SHORT).show();
+                        li_installation_main.setVisibility(View.VISIBLE);
+                        li_project_details.setVisibility(View.GONE);
+                        li_project_status.setVisibility(View.GONE);
+
+
+
+                        break;
+                }
+            }
+        });
         DatabaseHandler  handler  = new DatabaseHandler(Single_User_Details.this);
         SQLiteDatabase db = handler.getWritableDatabase();
         String[] restoreInstallationColumn = new String[]{DatabaseHandler.KEY_USER_EMAIL,DatabaseHandler.KEY_USER_INST_STAGE_NAME,DatabaseHandler.KEY_USER_INST_PERCENTAGE,DatabaseHandler.KEY_USER_INST_RUPEES,DatabaseHandler.KEY_USER_INST_STAGE_STATUS};

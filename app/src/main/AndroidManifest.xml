@@ -166,7 +166,6 @@
             android:name=".Activities.UserListActivity"
             android:label="User List"
             android:windowSoftInputMode="stateHidden"
-            android:theme="@style/AppTheme.NoActionBar"
             >
 
         </activity>

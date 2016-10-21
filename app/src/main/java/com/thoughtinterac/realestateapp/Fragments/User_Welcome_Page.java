@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.Activities.MainActivity;
+import com.thoughtinterac.realestateapp.Activities.RealtorMainPage;
 import com.thoughtinterac.realestateapp.R;
 
 /**
@@ -26,6 +27,9 @@ public class User_Welcome_Page extends Fragment {
         View rootView = inflater.inflate(R.layout.welcome_user, container, false);
         name_text=(TextView)rootView.findViewById(R.id.name_text);
         name_text.setText(MainActivity.str_user_name);
+        if(MainActivity.str_user_name.equalsIgnoreCase("")) {
+            name_text.setText(RealtorMainPage.str_user_name);
+        }
         return rootView;
     }
 }

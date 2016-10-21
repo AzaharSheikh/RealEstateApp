@@ -8,101 +8,605 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
-
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
+        android:orientation="vertical"
         android:layout_height="match_parent">
-        <ScrollView
+        <RadioGroup
             android:layout_width="match_parent"
-            android:layout_weight="7"
-            android:layout_height="0dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginTop="10dp"
+            android:id="@+id/rg_myproject"
+            android:gravity="center"
+            android:orientation="horizontal" >
+            <RadioButton
+                android:id="@+id/rbt_project_details"
+                android:layout_weight="1"
+                android:text="DETAILS"
+                android:gravity="center"
+                android:background="@drawable/rbtn_selector"
+                android:button="@null"
+                android:checked="true"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:padding="5dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbt_project_status"
+                android:layout_width="0dp"
+                android:padding="5dp"
+                android:background="@drawable/rbtn_selector"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:text="PROJECT"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+            <RadioButton
+                android:id="@+id/rbt_project_installment"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:background="@drawable/rbtn_selector"
+                android:textColor="@drawable/rbtn_textcolor_selector"
+                android:text="INSTALL"
+                android:button="@null"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
+
+        </RadioGroup>
         <LinearLayout
             android:layout_width="match_parent"
-
-            android:id="@+id/li_installation"
+            android:background="@drawable/layout_border"
             android:orientation="vertical"
-            android:layout_height="wrap_content">
-
-        </LinearLayout>
-        </ScrollView>
+            android:layout_height="match_parent">
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/li_project_details"
             android:orientation="vertical"
-            android:layout_margin="2dp"
-            android:layout_weight="1.5"
-            android:layout_height="0dp">
-            <LinearLayout
-                android:orientation="horizontal"
-                android:weightSum="10"
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@color/gold"
+                    android:visibility="gone"
+                    android:layout_height="80dp" />
+
+                <ImageView
+                    android:id="@+id/iv_profile_pic"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/user"
+                    android:layout_gravity="center"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="match_parent"
+                            android:visibility="gone"
+                            android:id="@+id/txt_name"
+                            android:layout_height="wrap_content"
+                            android:text="User Name "
+                            android:textColor="@color/gold"
+                            android:textSize="26dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_project_name"
+                            android:text="Age : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_email"
+                            android:text="30"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_project_name"
+                            android:text="Address: "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_mobile"
+                            android:text="Krishnakamal Chs, Sector-21, Nerul (East),Mumbai, Maharashtra - 400 706 Tel - (022) 27729529., Navi Mumbai - Nerul, Navi Mumbai - 400706"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_project_name"
+                            android:text="Type of Job : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_address"
+                            android:text="Service"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_pan_view"
+                            android:text="Phone : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_pan"
+                            android:text="8602662666"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_bank_view"
+                            android:text="Email : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_bank"
+                            android:text="abc@gmail.com"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_bank_view"
+                            android:text="PAN Number : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_bank"
+                            android:text="AAB P S 8791"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_bank_view"
+                            android:text="RBank Details : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_bank"
+                            android:text="ICIC, F-472, 2nd Floor, Sector 63, Noida - Uttar Pradesh, India P.O. Box Number : 201301 "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_bank_view"
+                            android:text="Project details : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_bank"
+                            android:text="Gemini Splendor
+At MBR City you can expect to see crystal lagoons, beaches with soft sands, waterparks, parklands stretching as far as the horizon and breathtaking architecture.
+"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_bank_view"
+                            android:text="Location details : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_bank"
+                            android:text="Gemini Property Developers, 609/610,Sapphire, Business Bay, Dubai, UAE."
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="4"
+                            android:id="@+id/txt_bank_view"
+                            android:text="MY PROJECT : "
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp"
+                            android:textStyle="bold"
+
+                            />
+
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_width="0dp"
+                            android:layout_weight="6"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/txt_bank"
+                            android:text="1BR apartment
+1048 sq ft gross area
+Selling Price: 650,000 Amount paid: 351,055"
+                            android:textColor="@color/gold"
+                            android:layout_gravity="left"
+                            android:textSize="16dp"
+                            android:padding="5dp" />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/li_project_status"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_weight="9"
+                    android:layout_width="0dp"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Phase 1\ncompletion of the foundation, basement slab"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content" />
+                <LinearLayout
+                    android:layout_weight="9"
+                    android:layout_width="0dp"
+                    android:padding="5dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:text="Phase 2\ndummy details"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/li_installation_main"
+            android:visibility="gone"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_weight="7"
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/li_installation"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </ScrollView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="2dp"
+                android:layout_weight="1.5"
+                android:layout_height="0dp">
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:weightSum="10"
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_weight="1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/txt_instl_name"
+                        android:layout_margin="1dp"
+                        android:layout_weight="3"
+                        android:gravity="center_vertical"
+                        android:text="Total(A)"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/txt_total_instl_percentage"
+                        android:textStyle="bold"
+                        android:gravity="right|center_vertical"
+                        android:textSize="16dp"
+                        android:text="000.0"
+                        android:layout_weight="1.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:text="%"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:text="@string/Rupee"
+                        android:gravity="center"
+                        android:layout_weight="0.5"
+                        android:layout_height="match_parent" />
+                    <TextView
+                        android:id="@+id/txt_total_amount"
+                        android:text="000000000.0"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:gravity="right|center_vertical"
+                        android:layout_weight="3.5"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1.5"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_height="0dp">
                 <TextView
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/txt_instl_name"
-                    android:layout_margin="1dp"
+                <Button
+                    android:id="@+id/btn_update_installment"
+                    android:text="Update"
                     android:layout_weight="3"
-                    android:gravity="center_vertical"
-                    android:text="Total(A)"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/txt_total_instl_percentage"
-                    android:textStyle="bold"
-                    android:gravity="right|center_vertical"
-                    android:textSize="16dp"
-                    android:text="000.0"
-                    android:layout_weight="1.5"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:gravity="center"
-                    android:layout_weight="0.5"
-                    android:text="%"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:text="@string/Rupee"
-                    android:gravity="center"
-                    android:layout_weight="0.5"
-                    android:layout_height="match_parent" />
-                <TextView
-                    android:id="@+id/txt_total_amount"
-                    android:text="000000000.0"
-                    android:textSize="16dp"
-                    android:textStyle="bold"
-                    android:gravity="right|center_vertical"
-                    android:layout_weight="3.5"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
 
             </LinearLayout>
 
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_weight="1.5"
-            android:weightSum="10"
-            android:orientation="horizontal"
-
-            android:layout_height="0dp">
-            <TextView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="match_parent" />
-            <Button
-                android:id="@+id/btn_update_installment"
-                android:text="Update"
-                android:layout_weight="3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-
         </LinearLayout>
-
     </LinearLayout>
+
+
 </LinearLayout>
 </LinearLayout>
