@@ -38,6 +38,7 @@
     <string name="realtor_home">Home</string>
     <string name="new_project">New project</string>
     <string name="user_list">User List</string>
+    <string name="project_list">Project List</string>
     <string name="action_mark_all_read">Mark All as Read</string>
     <string name="facebook_app_id">1095526427168525</string>
     <string name="fb_login_protocol_scheme">fb1095526427168525</string>

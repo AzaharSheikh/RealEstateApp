@@ -56,6 +56,7 @@ public class RealtorMainPage extends AppCompatActivity
     private static final String TAG_MY_PROFILE = "My_Profile";
     private static final String TAG_NEW_PROJECT = "New_Project";
     private static final String TAG_USER_LIST = "User_List";
+    private static final String TAG_PROJECT_LIST = "Project_List";
     public static String CURRENT_TAG = TAG_MY_PROFILE;
     private static final String TAG_REALATOR_LOGOUT="Realator_Logout";
     // toolbar titles respected to selected nav menu item
@@ -186,12 +187,12 @@ public class RealtorMainPage extends AppCompatActivity
                 return new_Project_Fragment;
             case 2:
                 flag=1;
-                RealtorProjectListFragment realtorProjectListFragment = new RealtorProjectListFragment();
-                return realtorProjectListFragment;
-            case 3:
-                flag=1;
                 UserListFragment userListFragment = new UserListFragment();
                 return userListFragment;
+            case 3:
+                flag=1;
+                RealtorProjectListFragment realtorProjectListFragment = new RealtorProjectListFragment();
+                return realtorProjectListFragment;
 
             default:
                 return new RealtorMyProfileFragment();
@@ -237,8 +238,12 @@ public class RealtorMainPage extends AppCompatActivity
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_USER_LIST;
                         break;
-                    case R.id.realator_logout:
+                    case R.id.nav_project_list:
                         navItemIndex = 3;
+                        CURRENT_TAG = TAG_PROJECT_LIST;
+                        break;
+                    case R.id.realator_logout:
+                        navItemIndex = 4;
                         CURRENT_TAG = TAG_REALATOR_LOGOUT;
 
                         //LogoutFragment logoutFragment = new LogoutFragment();

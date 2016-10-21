@@ -13,7 +13,7 @@ import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 public class DatabaseHandler extends SQLiteOpenHelper {
     // All Static variables
     // Database Version
-    private static final int DATABASE_VERSION = 5;
+    private static final int DATABASE_VERSION = 6;
 
     // Database Name
     public static final String DATABASE_NAME = "real_estate_db";
@@ -36,6 +36,21 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String KEY_USER_INST_PERCENTAGE = "user_inst_percentage";
     public static final String KEY_USER_INST_RUPEES = "user_inst_rupees";
     public static final String KEY_USER_INST_STAGE_STATUS = "user_inst_stage_status";
+    // project list table
+    public static final String TABLE_REALTOR_PROJECT_LIST = "realtor_project_list_tb";
+    public static final String KEY_Project_id = "Project_id";
+    public static final String KEY_Project_Name = "Project_Name";
+    public static final String KEY_Project_Location = "Project_Location";
+    public static final String KEY_ProjectDescription = "ProjectDescription";
+    public static final String KEY_bhk1_FloorAreaSqFt = "bhk1_FloorAreaSqFt";
+    public static final String KEY_bhk1_NoofFloor = "bhk1_NoofFloor";
+    public static final String KEY_bhk1_price = "bhk1_price";
+    public static final String KEY_bhk2_FloorAreaSqFt = "bhk2_FloorAreaSqFt";
+    public static final String KEY_bhk2_NoofFloor = "bhk2_NoofFloor";
+    public static final String KEY_bhk2_price = "bhk2_price";
+    public static final String KEY_bhk3_FloorAreaSqFt = "bhk3_FloorAreaSqFt";
+    public static final String KEY_bhk3_NoofFloor = "bhk3_NoofFloor";
+    public static final String KEY_bhk3_price = "bhk3_price";
 
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -51,6 +66,22 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 + KEY_USER_EMAIL + " TEXT NOT NULL," + KEY_USER_INST_STAGE_NAME + " TEXT,"
                 + KEY_USER_INST_PERCENTAGE + " TEXT, " + KEY_USER_INST_RUPEES+" TEXT, "+KEY_USER_INST_STAGE_STATUS +" TEXT "+")";
 
+        String CREATE_REALTOR_PROJECT_LIST_TABLE = "CREATE TABLE " + TABLE_REALTOR_PROJECT_LIST + "("
+                +   KEY_Project_id + " INTEGER PRIMARY KEY AUTOINCREMENT,"
+                +   KEY_Project_Name + " TEXT,"
+                +   KEY_Project_Location + " TEXT,"
+                +   KEY_ProjectDescription+" TEXT, "
+                +   KEY_bhk1_FloorAreaSqFt+" TEXT, "
+                +   KEY_bhk1_NoofFloor+" TEXT  , "
+                +   KEY_bhk1_price+" TEXT ,"
+                +   KEY_bhk2_FloorAreaSqFt+" TEXT, "
+                +   KEY_bhk2_NoofFloor+" TEXT  , "
+                +   KEY_bhk2_price+" TEXT ,"
+                +   KEY_bhk3_FloorAreaSqFt+" TEXT, "
+                +   KEY_bhk3_NoofFloor+" TEXT  , "
+                +   KEY_bhk3_price+" TEXT "
+                +")";
+
 
 
 
@@ -58,6 +89,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
 
         db.execSQL(CREATE_REGISTER_TABLE);
         db.execSQL(CREATE_INSTALLMENT_TABLE);
+        db.execSQL(CREATE_REALTOR_PROJECT_LIST_TABLE);
     }
 
 
@@ -65,6 +97,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_REGISTER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER_INSTALLMENT);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_REALTOR_PROJECT_LIST);
 
         // Create tables again
         onCreate(db);

@@ -15,6 +15,10 @@
             android:icon="@mipmap/userlist1"
             android:title="@string/user_list" />
         <item
+            android:id="@+id/nav_project_list"
+            android:icon="@mipmap/userlist1"
+            android:title="@string/project_list" />
+        <item
             android:id="@+id/realator_logout"
             android:icon="@mipmap/logout"
             android:title="@string/realator_logout" />
