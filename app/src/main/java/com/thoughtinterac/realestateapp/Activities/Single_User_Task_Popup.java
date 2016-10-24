@@ -53,8 +53,17 @@ public class Single_User_Task_Popup extends AppCompatActivity {
         btn_send_reminder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Single_User_Task_Popup.this,SendUserReminder.class);
-                startActivity(i);
+                //Intent i = new Intent(Single_User_Task_Popup.this,SendUserReminder.class);
+                //startActivity(i);
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{ "shri@gmail.com"});
+                email.putExtra(Intent.EXTRA_SUBJECT, "Alert");
+                email.putExtra(Intent.EXTRA_TEXT, "Please submit document");
+
+//need this to prompts email client only
+                email.setType("message/rfc822");
+
+                startActivity(Intent.createChooser(email, "Choose an Email client :"));
             }
         });
     }

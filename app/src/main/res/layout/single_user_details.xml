@@ -13,8 +13,8 @@
     <ImageView
         android:id="@+id/iv_profile_pic"
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:src="@drawable/user"
         android:layout_gravity="center"
         />
@@ -488,7 +488,7 @@ Selling Price: 650,000 Amount paid: 351,055"
         </LinearLayout>
         <LinearLayout
             android:id="@+id/li_project_status"
-            android:visibility="gone"
+            android:visibility="visible"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
