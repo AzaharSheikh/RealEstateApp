@@ -39,7 +39,7 @@ public class Single_User_Task_Popup extends AppCompatActivity {
         btn_view_user_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(Single_User_Task_Popup.this,ViewUserDetails.class);
+                Intent i = new Intent(Single_User_Task_Popup.this,Single_User_Details.class);
                 startActivity(i);
             }
         });

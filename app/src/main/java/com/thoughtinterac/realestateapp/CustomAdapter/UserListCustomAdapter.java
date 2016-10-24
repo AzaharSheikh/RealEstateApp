@@ -76,7 +76,7 @@ public class UserListCustomAdapter extends BaseAdapter {
                 Bundle bundle = new Bundle();
                 bundle.putString(DatabaseHandler.KEY_USER_NAME, m.getUserName());
                 //Toast.makeText(activity,"Long Press "+m.getUserName(),Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(activity, Single_User_Details.class);
+                Intent i = new Intent(activity, Single_User_Task_Popup.class);
                 i.putExtras(bundle);
                 activity.startActivity(i);
                 return true;
@@ -88,7 +88,7 @@ public class UserListCustomAdapter extends BaseAdapter {
                 Bundle bundle = new Bundle();
                 bundle.putString(DatabaseHandler.KEY_USER_NAME, m.getUserName());
                 //Toast.makeText(activity,"Long Press "+m.getUserName(),Toast.LENGTH_SHORT).show();
-                Intent i = new Intent(activity, Single_User_Details.class);
+                Intent i = new Intent(activity, Single_User_Task_Popup.class);
                 i.putExtras(bundle);
                 activity.startActivity(i);
             }
