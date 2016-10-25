@@ -10,6 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -58,6 +59,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     public static String imageurl;
     String login_name;
     TextView txt_forgot_password;
+    private View view;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -184,6 +186,22 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
 
                             }
                         });
+//
+//                public void onCheckboxClicked(View view) {
+//                    // Is the view now checked?
+//                    boolean checked = ((CheckBox) view).isChecked();
+//
+//                    // Check which checkbox was clicked
+//                    switch(view.getId()) {
+//                        case R.layout.login_activity:
+//                            if (checked)
+//                            // Put some meat on the sandwich
+//                            else
+//
+//                            break;
+//                        // TODO: Veggie sandwich
+//                    }
+//                }
 
 
                 Bundle parameters = new Bundle();
