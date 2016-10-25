@@ -1,7 +1,9 @@
 package com.thoughtinterac.realestateapp.Activities;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -40,6 +42,7 @@ import com.thoughtinterac.realestateapp.Fragments.RealtorProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.TermNConditionFragment;
 import com.thoughtinterac.realestateapp.Fragments.User_Welcome_Page;
 import com.thoughtinterac.realestateapp.R;
+import com.thoughtinterac.realestateapp.Util.Utility;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -270,6 +273,11 @@ public class MainActivity extends AppCompatActivity {
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 //LogoutFragment logoutFragment = new LogoutFragment();
+                SharedPreferences sharedPref = getSharedPreferences(
+                        Utility.remember_me_share_pref, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString(Utility.remember_me_flag, "false");
+                editor.commit();
                 Intent i= new Intent(MainActivity.this,PreLogin.class);
                 startActivity(i);
                 finish();

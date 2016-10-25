@@ -1,7 +1,9 @@
 package com.thoughtinterac.realestateapp.Activities;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -35,6 +37,7 @@ import com.thoughtinterac.realestateapp.Application.AppController;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.AppConfig;
+import com.thoughtinterac.realestateapp.Util.Utility;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -60,6 +63,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     String login_name;
     TextView txt_forgot_password;
     private View view;
+    CheckBox chk_remember;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -72,7 +76,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         rg_member = (RadioGroup) findViewById(R.id.rg_member);
         loginButton.setReadPermissions(Arrays.asList("public_profile, email, user_birthday, user_friends"));
         callbackManager = CallbackManager.Factory.create();
-
+        chk_remember=(CheckBox)findViewById(R.id.chk_remember);
         txt_forgot_password=(TextView)findViewById(R.id.txt_forgot_password);
         txt_forgot_password.setOnClickListener(new View.OnClickListener() {
 
@@ -85,6 +89,10 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null) {
             login_name = bundle.getString("login_name");
+            if(!login_name.equalsIgnoreCase("user"))
+            {
+                chk_remember.setVisibility(View.GONE);
+            }
         }else
         {
             login_name="user";
@@ -280,6 +288,25 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 i.putExtras(bundle);
                 startActivity(i);
                 finish();
+            }
+            if(chk_remember.isChecked())
+            {
+                SharedPreferences sharedPref = getSharedPreferences(
+                        Utility.remember_me_share_pref, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString(Utility.remember_me_flag, "true");
+                editor.putString(Utility.remember_me_email, str_user_email);
+
+                editor.commit();
+            }else
+            {
+                SharedPreferences sharedPref = getSharedPreferences(
+                        Utility.remember_me_share_pref, Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPref.edit();
+                editor.putString(Utility.remember_me_flag, "false");
+                editor.putString(Utility.remember_me_email, "");
+
+                editor.commit();
             }
         }else
         {
