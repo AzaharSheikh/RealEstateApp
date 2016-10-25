@@ -54,6 +54,7 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
         li_one_bhk=(LinearLayout)findViewById(R.id.li_one_bhk);
         li_two_bhk=(LinearLayout)findViewById(R.id.li_two_bhk);
         li_three_bhk=(LinearLayout)findViewById(R.id.li_three_bhk);
+        checkUserFlag();
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             Project_id = extras.getString("Project_id");
@@ -100,6 +101,38 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    private void checkUserFlag() {
+        if(MainActivity.userFlag.equalsIgnoreCase("true"))
+        {
+            edt_project_name.setEnabled(false);
+            edt_project_name.setFocusable(false);
+            edt_project_location.setEnabled(false);
+            edt_project_location.setFocusable(false);
+            edt_Project_Description.setEnabled(false);
+            edt_Project_Description.setFocusable(false);
+            edt_1bhk_floor_area.setEnabled(false);
+            edt_1bhk_floor_area.setFocusable(false);
+            edt_1bhk_flat_available.setEnabled(false);
+            edt_1bhk_flat_available.setFocusable(false);
+            edt_1bhk_price.setEnabled(false);
+            edt_1bhk_price.setFocusable(false);
+            edt_2bhk_floor_area.setEnabled(false);
+            edt_2bhk_floor_area.setFocusable(false);
+            edt_2bhk_flat_available.setEnabled(false);
+            edt_2bhk_flat_available.setFocusable(false);
+            edt_2bhk_price.setEnabled(false);
+            edt_3bhk_floor_area.setEnabled(false);
+            edt_3bhk_flat_available.setEnabled(false);
+            edt_3bhk_price.setEnabled(false);
+
+
+            edt_2bhk_price.setFocusable(false);
+            edt_3bhk_floor_area.setFocusable(false);
+            edt_3bhk_flat_available.setFocusable(false);
+            edt_3bhk_price.setFocusable(false);
+        }
     }
 
     private void setData() {

@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
     Animation zoomOut;
     ImageView img_dashboard,img_share;
     String data;
-
+    public static String userFlag ="true";
+    public static String realtorFlag ="false";
     private ListView listView;
 
     private ProgressDialog pDialog;
@@ -281,6 +282,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent i= new Intent(MainActivity.this,PreLogin.class);
                 startActivity(i);
                 finish();
+                userFlag ="false";
 
 
 
