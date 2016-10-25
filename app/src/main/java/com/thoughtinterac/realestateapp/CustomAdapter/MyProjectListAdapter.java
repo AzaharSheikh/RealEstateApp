@@ -9,13 +9,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.thoughtinterac.realestateapp.Activities.MapActivity;
+import com.thoughtinterac.realestateapp.Activities.UserMyProject;
 import com.thoughtinterac.realestateapp.Model.DocListModel;
+import com.thoughtinterac.realestateapp.Model.MyProjectListModel;
 import com.thoughtinterac.realestateapp.Model.PlaceModel;
 import com.thoughtinterac.realestateapp.R;
 
@@ -28,8 +31,8 @@ public class MyProjectListAdapter extends BaseAdapter {
 
     private Activity activity;
     private LayoutInflater inflater;
-    private List<DocListModel> projectListItems;
-    public MyProjectListAdapter(Activity activity, List<DocListModel> docListItems) {
+    private List<MyProjectListModel> projectListItems;
+    public MyProjectListAdapter(Activity activity, List<MyProjectListModel> projectListItems) {
         this.activity = activity;
         this.projectListItems = projectListItems;
     }
@@ -55,25 +58,27 @@ public class MyProjectListAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.my_project_list, null);
+            convertView = inflater.inflate(R.layout.user_myproject_list, null);
 
-        TextView doc_name = (TextView) convertView.findViewById(R.id.doc_name);
-        ImageView img_status = (ImageView) convertView.findViewById(R.id.img_status);
+        TextView txt_project_name = (TextView) convertView.findViewById(R.id.txt_project_name);
+        TextView txt_project_type = (TextView) convertView.findViewById(R.id.txt_project_type);
+        TextView txt_project_location = (TextView) convertView.findViewById(R.id.txt_project_location);
+        Button btn_view = (Button)convertView.findViewById(R.id.btn_view);
 
-        final DocListModel m = projectListItems.get(position);
-        doc_name.setText(m.getDoc_name());
-        if(m.getDoc_status().equalsIgnoreCase("true")){
-            img_status.setImageResource(R.mipmap.verified);
-        }else
-        {
-            img_status.setImageResource(R.mipmap.question);
-        }
-        doc_name.setOnClickListener(new View.OnClickListener() {
+        final MyProjectListModel m = projectListItems.get(position);
+        txt_project_name.setText(m.getProjectName());
+        txt_project_type.setText(m.getProjectType());
+        txt_project_location.setText(m.getProjectLocation());
+
+        btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast toast = Toast.makeText(activity,m.getDoc_deatils(), Toast.LENGTH_LONG);
+                Intent i = new Intent(activity, UserMyProject.class);
+                i.putExtra("projectType",m.getProjectType());
+                activity.startActivity(i);
+                Toast toast = Toast.makeText(activity,m.getProjectName(), Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
+               // toast.show();
             }
         });
 

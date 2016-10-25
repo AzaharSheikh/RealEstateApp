@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -65,6 +66,29 @@ public class UserMyProject extends AppCompatActivity {
         li_my_project_photos=(LinearLayout)findViewById(R.id.li_my_project_photos);
         li_my_project_photos.setVisibility(View.GONE);
         initWidgets();
+        Bundle extras = getIntent().getExtras();
+        String projectType;
+        if (extras != null) {
+            projectType = extras.getString("projectType");
+            if(projectType.equalsIgnoreCase("2BHK"))
+            {
+                RadioButton rbt_two_bhk_list = (RadioButton)findViewById(R.id.rbt_two_bhk_list);
+                rbt_two_bhk_list.setVisibility(View.VISIBLE);
+                rbt_two_bhk_list.setChecked(true);
+                RadioButton rbt_one_bhk_details = (RadioButton)findViewById(R.id.rbt_one_bhk_details);
+                rbt_one_bhk_details.setVisibility(View.GONE);
+                txt_value_area_sq_ft.setText("1550");
+                txt_value_flat_available.setText("5");
+                txt_value_construction_stage.setText("Click Here");
+                txt_value_amenities.setText("Click Here");
+                txt_value_extra_feature.setText("Click Here");
+                txt_value_price.setText("90 Lac");
+            }else
+            {
+                //1BHK
+
+            }
+        }
         rg_flat_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

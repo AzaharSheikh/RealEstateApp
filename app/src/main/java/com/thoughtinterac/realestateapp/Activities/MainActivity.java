@@ -230,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
             case 2:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.VISIBLE);
-                MyProjectFragment myProjectFragment = new MyProjectFragment();
+                ProjectListFragment myProjectFragment = new ProjectListFragment();
                 return myProjectFragment;
 
             case 3:

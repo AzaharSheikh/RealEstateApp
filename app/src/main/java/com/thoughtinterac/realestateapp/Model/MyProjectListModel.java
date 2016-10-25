@@ -6,26 +6,38 @@ package com.thoughtinterac.realestateapp.Model;
 public class MyProjectListModel
 {
 
-    String project_list;
-    String projDetails;
-
-    public String getDoc_deatils() {
-        return projDetails;
+    public String getProjectDate() {
+        return ProjectDate;
     }
 
-    public void setDoc_deatils(String doc_deatils) {
-        this.projDetails = doc_deatils;
+    public void setProjectDate(String projectDate) {
+        ProjectDate = projectDate;
     }
 
-
-
-    public String getDoc_status() {
-        return project_list;
+    public String getProjectLocation() {
+        return ProjectLocation;
     }
 
-    public void setDoc_status(String doc_status) {
-        this.project_list = doc_status;
+    public void setProjectLocation(String projectLocation) {
+        ProjectLocation = projectLocation;
     }
 
+    public String getProjectName() {
+        return ProjectName;
+    }
+
+    public void setProjectName(String projectName) {
+        ProjectName = projectName;
+    }
+
+    public String getProjectType() {
+        return ProjectType;
+    }
+
+    public void setProjectType(String projectType) {
+        ProjectType = projectType;
+    }
+
+    String ProjectName,ProjectLocation,ProjectDate,ProjectType;
 
 }

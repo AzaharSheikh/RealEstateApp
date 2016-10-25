@@ -186,7 +186,7 @@
         </activity>
         <activity
             android:name=".Activities.UserMyProject"
-            android:label="Forgot Password"
+            android:label="My Project"
             android:windowSoftInputMode="stateHidden"
             >
 
