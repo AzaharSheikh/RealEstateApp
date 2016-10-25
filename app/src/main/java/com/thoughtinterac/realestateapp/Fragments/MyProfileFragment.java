@@ -32,7 +32,7 @@ public class MyProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address,txt_pan,txt_bank;
+    static  TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address,txt_pan,txt_bank;
 ScrollView sc_welcome_layout;
 
     private OnFragmentInteractionListener mListener;
@@ -95,7 +95,17 @@ ScrollView sc_welcome_layout;
         if(LoginActivity.imageurl!=null) {
             Picasso.with(getActivity()).load(LoginActivity.imageurl).into(iv_profile_pic);
         }
+         setData();
 
+
+
+
+        //Toast.makeText(getActivity(),"My Profile Here",Toast.LENGTH_LONG).show();
+        return rootView;
+
+    }
+
+    public static void setData() {
         txt_name.setText(MainActivity.str_user_name);
         txt_project_name.setText(MainActivity.str_user_job);
         txt_email.setText(MainActivity.str_user_email);
@@ -103,12 +113,6 @@ ScrollView sc_welcome_layout;
         txt_address.setText(MainActivity.str_user_address);
         txt_pan.setText(MainActivity.str_user_pan);
         txt_bank.setText(MainActivity.str_user_bank);
-
-
-
-        //Toast.makeText(getActivity(),"My Profile Here",Toast.LENGTH_LONG).show();
-        return rootView;
-
     }
 
     // TODO: Rename method, update argument and hook method into UI event

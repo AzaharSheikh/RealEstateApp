@@ -56,12 +56,15 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
                 String str_confirm_password = edt_comfirm_pass.getText().toString().trim();
                 String str_pan = edt_pan.getText().toString().trim();
                 String str_bank = edt_bank_details.getText().toString().trim();
-                if (str_edt_username.equalsIgnoreCase("") || str_user_address.equalsIgnoreCase("") || str_job_dec.equalsIgnoreCase("") || str_mobile.equalsIgnoreCase("") || str__email.equalsIgnoreCase("") || str_password.equalsIgnoreCase("") || str_confirm_password.equalsIgnoreCase("") || str_pan.equalsIgnoreCase("") || str_bank.equalsIgnoreCase("")) {
+                if (str_edt_username.equalsIgnoreCase("") || str_user_address.equalsIgnoreCase("") || str_job_dec.equalsIgnoreCase("") || str_mobile.equalsIgnoreCase("") || str__email.equalsIgnoreCase("") || str_pan.equalsIgnoreCase("") || str_bank.equalsIgnoreCase("")) {
                     Toast.makeText(UserProfileUpdateActivity.this, "some field missing", Toast.LENGTH_SHORT).show();
+                }else
+                {
+                    LocalRegisterDb(str_edt_username,str_user_address,str_job_dec,str_mobile,str__email,str_pan,str_bank);
                 }
 
                 }
-            private void LocalRegisterDb(final String str_edt_username, final String str_user_address, final String str_job_dec, final String str_mobile, final String str__email, final String str_password, String str_pan, String str_bank) {
+            private void LocalRegisterDb(final String str_edt_username, final String str_user_address, final String str_job_dec, final String str_mobile, final String str__email, String str_pan, String str_bank) {
 
                 DatabaseHandler handler = new DatabaseHandler(UserProfileUpdateActivity.this);
                 SQLiteDatabase db = handler.getWritableDatabase();
@@ -71,9 +74,18 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
                 values.put(DatabaseHandler.KEY_USER_JOB_DESC, str_job_dec);
                 values.put(DatabaseHandler.KEY_USER_MOBILE, str_mobile);
                 values.put(DatabaseHandler.KEY_USER_EMAIL, str__email);
-                values.put(DatabaseHandler.KEY_USER_PASSWORD, str_password);
+                //values.put(DatabaseHandler.KEY_USER_PASSWORD, str_password);
                 values.put(DatabaseHandler.KEY_PAN_NUMBER, str_pan);
                 values.put(DatabaseHandler.KEY_BANK_DETAILS, str_bank);
+                boolean status = db.update(DatabaseHandler.TABLE_REGISTER, values,DatabaseHandler.KEY_USER_EMAIL +" = '"+ str__email + "'", null)>0;
+                if(status)
+                {
+                    Toast.makeText(UserProfileUpdateActivity.this, "Saved Successfully", Toast.LENGTH_SHORT).show();
+                    finish();
+                }else
+                {
+                    Toast.makeText(UserProfileUpdateActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                }
             }
             });
 
@@ -95,6 +107,8 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
 
            String str__email  = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
            edt_email.setText(str__email);
+           edt_email.setEnabled(false);
+           edt_email.setFocusable(false);
 
 
            String str_pan  = bundle.getString(DatabaseHandler.KEY_PAN_NUMBER);

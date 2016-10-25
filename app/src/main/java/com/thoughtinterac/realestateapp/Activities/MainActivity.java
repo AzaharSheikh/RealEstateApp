@@ -2,12 +2,15 @@ package com.thoughtinterac.realestateapp.Activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.text.Html;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -437,7 +440,48 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onResume(){
+        super.onResume();
+        Log.d("MainActivity","onResume Called");
+        fetchUserData();
+        try {
+            MyProfileFragment.setData();
+        }catch (Exception e){}
 
 
+    }
+    public  void fetchUserData() {
+        DatabaseHandler handler = new DatabaseHandler(MainActivity.this);
+        SQLiteDatabase db = handler.getWritableDatabase();
+        String[] colmn = new String[]{DatabaseHandler.KEY_USER_NAME, DatabaseHandler.KEY_USER_ADDRESS, DatabaseHandler.KEY_USER_JOB_DESC, DatabaseHandler.KEY_USER_MOBILE, DatabaseHandler.KEY_USER_EMAIL, DatabaseHandler.KEY_USER_PASSWORD, DatabaseHandler.KEY_PAN_NUMBER, DatabaseHandler.KEY_BANK_DETAILS};
+        Cursor cursor = db.query(DatabaseHandler.TABLE_REGISTER, colmn, DatabaseHandler.KEY_USER_EMAIL + " = '" + str_user_email + "'" , null, null, null, null);
+        if (cursor != null) {
+            String lstr_user_name = "", lstr_user_address = "", lstr_user_job = "", lstr_user_mobile = "", lstr_user_email = "", lstr_user_pan = "", lstr_user_bank = "";
+            if (cursor.getCount() > 0) {
+                while (cursor.moveToNext()) {
+                    lstr_user_name = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_NAME));
+                    lstr_user_address = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_ADDRESS));
+                    lstr_user_job = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_JOB_DESC));
+                    lstr_user_mobile = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_MOBILE));
+                    lstr_user_email = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_EMAIL));
+                    lstr_user_pan = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_PAN_NUMBER));
+                    lstr_user_bank = cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_BANK_DETAILS));
+
+
+                    str_user_name = lstr_user_name;
+                    str_user_address = lstr_user_address;
+                    str_user_job = lstr_user_job;
+                    str_user_mobile = lstr_user_mobile;
+                    str_user_email = lstr_user_email;
+                    str_user_pan = lstr_user_pan;
+                    str_user_bank = lstr_user_bank;
+
+                }
+                cursor.close();
+            }
+        }
+        db.close();
+    }
 
 }
