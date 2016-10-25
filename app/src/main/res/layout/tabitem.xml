@@ -9,9 +9,11 @@
     <LinearLayout
         android:id="@+id/lv_main"
         android:layout_width="match_parent"
+        android:padding="5dp"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <ImageView
+            android:layout_gravity="center"
             android:layout_width="75dp"
             android:src="@drawable/user"
             android:layout_height="75dp" />

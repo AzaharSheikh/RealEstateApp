@@ -1,6 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/offwhite">
 
-</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+        <ImageView
+            android:id="@+id/iv_profile_pic"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/user"
+            android:layout_gravity="center" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                    android:layout_width="match_parent"
+                    android:id="@+id/txt_name"
+                    android:layout_height="wrap_content"
+                    android:text="User Name "
+                    android:textColor="@color/gold"
+                    android:textSize="26dp"
+                    android:padding="5dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="10dp"
+                        android:id="@+id/rg_myproject"
+                        android:gravity="center"
+                        android:orientation="horizontal" >
+                    <RadioButton
+                        android:id="@+id/rbt_project_details"
+                        android:layout_weight="1"
+                        android:text="DETAILS"
+                        android:gravity="center"
+                        android:background="@drawable/rbtn_selector"
+                        android:button="@null"
+                        android:checked="true"
+                        android:textColor="@drawable/rbtn_textcolor_selector"
+                        android:padding="5dp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content" />
+
+           </RadioGroup>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@drawable/layout_border"
+                android:orientation="vertical"
+                android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+
+    </LinearLayout>

@@ -24,6 +24,7 @@
     android:background="@color/gold"
     android:textColor="@color/offwhite"
     android:layout_width="match_parent"
+    android:textSize="22dp"
     android:textStyle="bold"
     android:gravity="center"
     android:text="Azahar"
@@ -38,7 +39,7 @@
         android:layout_margin="5dp"
         android:padding="3dp"
         android:background="@color/offwhite"
-        android:text="View User Details"
+        android:text="Details"
         android:layout_height="wrap_content" />
 
     <Button
@@ -49,7 +50,7 @@
         android:padding="3dp"
         android:drawableRight="@drawable/pen"
         android:layout_margin="5dp"
-        android:text="View User Document Details"
+        android:text="Document Details"
         android:layout_height="wrap_content" />
 
     <Button
@@ -60,7 +61,7 @@
         android:textColor="@color/gold"
         android:padding="3dp"
         android:layout_margin="5dp"
-        android:text="Send User Reminders"
+        android:text="Reminders"
         android:layout_height="wrap_content" />
 
 </LinearLayout>

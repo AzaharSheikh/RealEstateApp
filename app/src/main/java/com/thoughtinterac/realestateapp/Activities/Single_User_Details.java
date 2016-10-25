@@ -34,10 +34,11 @@ public class Single_User_Details extends AppCompatActivity {
     ArrayList <String> user_instl_percentage    ;
     ArrayList <String> user_instl_amount        ;
 
-    TextView txt_total_instl_percentage, txt_instl_total_amount;
+    TextView txt_total_instl_percentage, txt_instl_total_amount,txt_username;
     Button btn_update_installment;
     private RadioGroup rg_myproject;
     LinearLayout li_project_details,li_installation_main,li_project_status,li_installation;
+    String str_user_name;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +53,7 @@ public class Single_User_Details extends AppCompatActivity {
 
         txt_total_instl_percentage=(TextView)findViewById(R.id.txt_total_instl_percentage);
         txt_instl_total_amount =(TextView)findViewById(R.id.txt_total_amount);
+        txt_username=(TextView)findViewById(R.id.txt_username);
         btn_update_installment=(Button)findViewById(R.id.btn_update_installment);
         user_email = new ArrayList<>();
         user_instl_stage_name = new ArrayList<>();
@@ -59,6 +61,13 @@ public class Single_User_Details extends AppCompatActivity {
         user_instl_percentage = new ArrayList<>();
         user_instl_amount = new ArrayList<>();
         rg_myproject = (RadioGroup)findViewById(R.id.rg_myproject);
+
+        Bundle bundle = getIntent().getExtras();
+        if(bundle!=null)
+        {
+            str_user_name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
+            txt_username.setText(str_user_name);
+        }
         rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

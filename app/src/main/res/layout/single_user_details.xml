@@ -26,7 +26,7 @@
 
         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
             android:layout_width="match_parent"
-            android:id="@+id/txt_name"
+            android:id="@+id/txt_username"
             android:layout_height="wrap_content"
             android:text="User Name "
             android:textColor="@color/gold"
@@ -488,7 +488,7 @@ Selling Price: 650,000 Amount paid: 351,055"
         </LinearLayout>
         <LinearLayout
             android:id="@+id/li_project_status"
-            android:visibility="visible"
+            android:visibility="gone"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
@@ -627,11 +627,14 @@ Selling Price: 650,000 Amount paid: 351,055"
                     android:layout_width="0dp"
                     android:layout_height="match_parent" />
                 <Button
+                    android:layout_margin="2dp"
                     android:id="@+id/btn_update_installment"
+                    android:background="@drawable/round_corner_btn"
                     android:text="Update"
+                    android:textColor="@color/white"
                     android:layout_weight="3"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent" />
+                    android:layout_height="30dp" />
 
             </LinearLayout>
 

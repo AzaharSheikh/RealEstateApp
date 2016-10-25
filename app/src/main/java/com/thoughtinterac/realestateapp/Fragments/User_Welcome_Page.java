@@ -14,6 +14,7 @@ import com.thoughtinterac.realestateapp.Activities.MainActivity;
 import com.thoughtinterac.realestateapp.Activities.RealtorMainPage;
 import com.thoughtinterac.realestateapp.Activities.ProjectListActivity;
 import com.thoughtinterac.realestateapp.Activities.UserListActivity;
+import com.thoughtinterac.realestateapp.Activities.UserMyProject;
 import com.thoughtinterac.realestateapp.R;
 
 /**
@@ -38,7 +39,7 @@ public class User_Welcome_Page extends Fragment {
         img_userlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getActivity(), ProjectListActivity.class);
+                Intent i = new Intent(getActivity(), UserMyProject.class);
                 startActivity(i);
             }
         });
