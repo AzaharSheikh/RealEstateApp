@@ -104,7 +104,8 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
     }
 
     private void checkUserFlag() {
-        if(MainActivity.userFlag.equalsIgnoreCase("true"))
+        String userFlag=MainActivity.userFlag;
+        if(userFlag.equalsIgnoreCase("true"))
         {
             edt_project_name.setEnabled(false);
             edt_project_name.setFocusable(false);
