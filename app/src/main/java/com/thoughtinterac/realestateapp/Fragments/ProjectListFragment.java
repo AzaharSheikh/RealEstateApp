@@ -38,7 +38,7 @@ public class ProjectListFragment extends Fragment {
         projectDate.add("20/04/2016");
         projectType.add("1BHK");
 
-        projectName.add("Arihant, 2BHK");
+        projectName.add("Gemini, 2BHK");
         projectLocation.add("Panvel");
         projectDate.add("22/04/2016");
         projectType.add("2BHK");

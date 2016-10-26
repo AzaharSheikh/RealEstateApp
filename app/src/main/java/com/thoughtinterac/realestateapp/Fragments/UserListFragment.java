@@ -38,8 +38,8 @@ public class UserListFragment extends Fragment {
         userName.add("Dadoos B.");
         userName.add("Anuradha R.");
         projectName.add("Gemini Mumbai");
-        projectName.add("Ma Doc Vashi");
-        projectName.add("Arihant Panvel");
+        projectName.add("Gemini Vashi");
+        projectName.add("Gemini Panvel");
         projectName.add("Gemini Vashi");
         projectName.add("Gemini Thane");
         userAddress.add("Airoli, Navi Mumbai");

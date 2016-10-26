@@ -77,7 +77,7 @@ public class MyProjectList_Fragment extends Fragment {
         project_list= new ArrayList();
         projDetails = new ArrayList();
         project_list.add("Gemini Splendor");
-        project_list.add("Asian Star");
+        project_list.add("Gemini Splendor");
         project_img.add("true");
         project_img.add("true");
         project_img.add("false");

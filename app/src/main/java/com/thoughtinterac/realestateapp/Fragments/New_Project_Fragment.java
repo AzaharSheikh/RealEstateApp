@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.CustomAdapter.PlaceCustomAdapter;
@@ -23,8 +24,10 @@ import java.util.zip.Inflater;
  */
 
 public class New_Project_Fragment extends Fragment {
-    RadioGroup rg_flat_type;
-    LinearLayout li_one_bhk,li_two_bhk,li_three_bhk;
+    RadioGroup rg_flat_type,rg_myproject;
+    LinearLayout li_one_bhk,li_two_bhk,li_three_bhk,li_main_photo_list;
+    ScrollView sc_new_project_details;
+
     public New_Project_Fragment() {
     }
 
@@ -33,10 +36,32 @@ public class New_Project_Fragment extends Fragment {
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             final View rootView = inflater.inflate(R.layout.builder_new_project, container, false);
+            rg_myproject=(RadioGroup) rootView.findViewById(R.id.rg_myproject);
+//
             rg_flat_type=(RadioGroup) rootView.findViewById(R.id.rg_flat_type);
             li_one_bhk=(LinearLayout)rootView.findViewById(R.id.li_one_bhk);
             li_two_bhk=(LinearLayout)rootView.findViewById(R.id.li_two_bhk);
             li_three_bhk=(LinearLayout)rootView.findViewById(R.id.li_three_bhk);
+            li_main_photo_list=(LinearLayout)rootView.findViewById(R.id.li_main_photo_list);
+            sc_new_project_details=(ScrollView)rootView.findViewById(R.id.sc_new_project_details);
+            rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+                @Override
+                public void onCheckedChanged(RadioGroup group, int checkedId) {
+                    switch (checkedId)
+                    {
+                        case R.id.rbt_project_details:
+                            sc_new_project_details.setVisibility(View.VISIBLE);
+                            li_main_photo_list.setVisibility(View.GONE);
+                            break;
+                        case R.id.rbt_photos_list:
+                            sc_new_project_details.setVisibility(View.GONE);
+                            li_main_photo_list.setVisibility(View.VISIBLE);
+                            break;
+
+
+                    }
+                }
+            });
             rg_flat_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -57,14 +82,14 @@ public class New_Project_Fragment extends Fragment {
                             li_one_bhk.setVisibility(View.GONE);
                             li_three_bhk.setVisibility(View.VISIBLE);
                             break;
+
                     }
                 }
             });
 
             return rootView;
+
         }
+    }
 
-
-
-
-}
+    

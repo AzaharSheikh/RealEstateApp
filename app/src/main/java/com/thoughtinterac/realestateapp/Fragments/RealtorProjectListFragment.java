@@ -60,8 +60,8 @@ public class RealtorProjectListFragment extends Fragment {
         projectID.add("3");
 
         projectName.add("Gemni");
-        projectName.add("Arihant");
-        projectName.add("MaDoc");
+        projectName.add("Gemni");
+        projectName.add("Gemni");
 
         projectDate.add("1/2/16");
         projectDate.add("2/2/16");
