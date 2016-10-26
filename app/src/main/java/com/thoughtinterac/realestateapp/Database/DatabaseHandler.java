@@ -13,7 +13,7 @@ import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 public class DatabaseHandler extends SQLiteOpenHelper {
     // All Static variables
     // Database Version
-    private static final int DATABASE_VERSION = 6;
+    private static final int DATABASE_VERSION = 7;
 
     // Database Name
     public static final String DATABASE_NAME = "real_estate_db";
@@ -53,6 +53,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String KEY_bhk3_NoofFloor = "bhk3_NoofFloor";
     public static final String KEY_bhk3_price = "bhk3_price";
 
+    //user edit option flag
+
+    public static final String TABLE_USER_EDIT_FLAG = "user_edit_flag";
+    public static final String KEY_id = "_id";
+    public static final String KEY_flag = "_flag";
+
     public DatabaseHandler(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
@@ -84,11 +90,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 +")";
 
 
-
+String CREATE_USER_EDIT_FALG_TABLE = "CREATE TABLE " + TABLE_USER_EDIT_FLAG + "("
+        + KEY_id + " INTEGER PRIMARY KEY AUTOINCREMENT," + KEY_flag + " TEXT DEFAULT 'false'" +")";
 
         db.execSQL(CREATE_REGISTER_TABLE);
         db.execSQL(CREATE_INSTALLMENT_TABLE);
         db.execSQL(CREATE_REALTOR_PROJECT_LIST_TABLE);
+        db.execSQL(CREATE_USER_EDIT_FALG_TABLE);
     }
 
 
@@ -97,6 +105,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_REGISTER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER_INSTALLMENT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_REALTOR_PROJECT_LIST);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER_EDIT_FLAG);
 
         // Create tables again
         onCreate(db);
