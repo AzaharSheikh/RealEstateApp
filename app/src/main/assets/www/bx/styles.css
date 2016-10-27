@@ -1,0 +1,110 @@
+
+
+/** EXAMPLES
+================================================**/
+
+.example-item h1 {
+	font-size: 2.5em;
+	margin-bottom: 30px;
+}
+
+.code-switch {
+	margin-top: 20px;
+	height: 25px;
+}
+
+.code-switch a {
+	display: block;
+	width: 70px;
+	color: #fff;
+	text-align: center;
+	float: left;
+	background: #989898;
+	padding: 5px 0; 
+	font-size: .875em;
+}
+
+.code-switch a.active {
+	background: #5280dd;
+}
+
+.code-switch .js {
+	-moz-border-radius: 5px 0 0 5px;
+	-webkit-border-radius: 5px 0 0 5px;
+	border-radius: 5px 0 0 5px;
+}
+
+.code-switch .html {
+	-moz-border-radius: 0 5px 5px 0;
+	-webkit-border-radius: 0 5px 5px 0;
+	border-radius: 0 5px 5px 0;
+}
+
+.code-wrap .code {
+	display: none;
+}
+
+.code-wrap .code.active {
+	display: block;
+}
+
+.example-item .examples-list {
+	margin-top: 60px;
+}
+
+.examples-list ol {
+	margin-left: 30px;
+}
+
+.examples-list ol li {
+	list-style: decimal;
+	color: #666;
+	margin-bottom: 8px;
+}
+
+.example-item ol li {
+	font-size: .875em;
+}
+
+.example-item .slider a {
+	line-height: 1.5em;
+}
+
+.example-item #bx-pager {    text-align: center;
+    margin-top: -100px;
+    position: absolute;
+    right: 30px;
+}
+
+.example-item #bx-pager a {
+	margin:0 10px;color: rgba(0, 0, 0, 0);
+	float:left;       width: 20%;
+}
+
+.example-item #bx-pager a.active{
+  color: #fff;}
+
+
+
+ .banner-thum{   width: 92px;
+    height: 47px;
+    float: left;
+ }
+.example-item #bx-pager a span {
+     text-align: center;
+    width: 100%;font-size: 12px;
+	 
+}
+.example-item #bx-pager a  img {
+ width: 91%; float: left; 	border: solid #999897 4px; }
+.example-item #bx-pager a:hover img {
+	border: solid #999897 4px; width: 91%; float: left;  
+}
+.example-item #bx-pager a.active img {
+	    border: solid #f3705c 4px;
+    float: left;   
+    width: 91%;
+	    -moz-box-shadow: 0 0 5px #999;
+    -webkit-box-shadow: 0 0 5px #999;
+    box-shadow: 0 0 5px #999;
+} 

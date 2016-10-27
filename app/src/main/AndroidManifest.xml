@@ -47,6 +47,14 @@
 
         </activity>
         <activity
+            android:name=".Activities.CommonPageSingleProjectActivity"
+            android:label="Project"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+
+        </activity>
+        <activity
             android:name=".Activities.RegisterActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="stateHidden"
@@ -59,7 +67,7 @@
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
         <activity
@@ -132,6 +140,16 @@
             android:label="Reminder"
             android:windowSoftInputMode="stateHidden"
             >
+
+        </activity>
+        <activity
+            android:name=".Activities.CommonPageActivity"
+            android:label="Gemini Spplendor"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
         <activity

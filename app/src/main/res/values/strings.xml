@@ -20,6 +20,15 @@
         <item>Logout</item>
 
 
+
+    </string-array>
+    <string-array name="common_page_item_activity_titles">
+    <item>Gemini Splender</item>
+    <item>Project</item>
+    <item>Photos</item>
+    <item>Contact</item>
+    <item>Terms &amp; Conditions</item>
+    <item>Privacy Policy</item>
     </string-array>
     <string-array name="realtor_nav_item_activity_titles">
         <item>Gemini Splender</item>
