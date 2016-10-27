@@ -716,13 +716,16 @@
     </ScrollView>
     <LinearLayout
         android:layout_weight="1"
+        android:orientation="vertical"
         android:id="@+id/li_main_photo_list"
+        android:visibility="gone"
         android:layout_margin="2dp"
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <LinearLayout
             android:layout_width="match_parent"
             android:weightSum="10"
+            android:visibility="gone"
             android:orientation="vertical"
             android:layout_height="wrap_content">
             <GridView
@@ -832,6 +835,84 @@
             </ScrollView>
 
 
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:id="@+id/li_my_project_photos"
+                android:visibility="visible"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="10"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/user_img1"
+                        android:adjustViewBounds="true"
+                        />
+                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_location"
+                        android:text="Image 1"
+                        android:textColor="@color/gold"
+                        android:textSize="16dp"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/user_img2"
+                        android:adjustViewBounds="true"
+                        />
+                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_location"
+                        android:text="Image 2"
+                        android:textColor="@color/gold"
+                        android:textSize="16dp"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/user_img3"
+                        android:adjustViewBounds="true"
+                        />
+                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/txt_location"
+                        android:text="Image 3"
+                        android:textColor="@color/gold"
+                        android:textSize="16dp"
+                        android:padding="5dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/user_img4"
+                        android:adjustViewBounds="true"
+                        />
+
+                </LinearLayout>
+            </ScrollView>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

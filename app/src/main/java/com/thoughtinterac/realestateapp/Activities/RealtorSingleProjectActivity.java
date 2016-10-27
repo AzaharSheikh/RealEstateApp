@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.ScrollView;
 
 import com.thoughtinterac.realestateapp.R;
 
@@ -32,8 +33,10 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
     EditText edt_1bhk_floor_area,edt_1bhk_flat_available,edt_1bhk_price;
     EditText edt_2bhk_floor_area,edt_2bhk_flat_available,edt_2bhk_price;
     EditText edt_3bhk_floor_area,edt_3bhk_flat_available,edt_3bhk_price;
-    RadioGroup rg_flat_type;
+    RadioGroup rg_flat_type,rg_myproject;
     LinearLayout li_one_bhk,li_two_bhk,li_three_bhk;
+    LinearLayout li_main_photo_list;
+    ScrollView sc_new_project_details;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,9 +54,12 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
         edt_3bhk_flat_available= (EditText)findViewById(R.id.edt_3bhk_flat_available) ;
         edt_3bhk_price= (EditText)findViewById(R.id.edt_3bhk_price) ;
         rg_flat_type=(RadioGroup) findViewById(R.id.rg_flat_type);
+        rg_myproject=(RadioGroup) findViewById(R.id.rg_myproject);
         li_one_bhk=(LinearLayout)findViewById(R.id.li_one_bhk);
         li_two_bhk=(LinearLayout)findViewById(R.id.li_two_bhk);
         li_three_bhk=(LinearLayout)findViewById(R.id.li_three_bhk);
+        li_main_photo_list=(LinearLayout)findViewById(R.id.li_main_photo_list);
+        sc_new_project_details=(ScrollView)findViewById(R.id.sc_new_project_details);
         checkUserFlag();
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -78,6 +84,24 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
         {
             return;
         }
+        rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId)
+                {
+                    case R.id.rbt_project_details:
+                        sc_new_project_details.setVisibility(View.VISIBLE);
+                        li_main_photo_list.setVisibility(View.GONE);
+
+                        break;
+                    case R.id.rbt_photos_list:
+                        sc_new_project_details.setVisibility(View.GONE);
+                        li_main_photo_list.setVisibility(View.VISIBLE);
+                        break;
+
+                }
+            }
+        });
         rg_flat_type.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
