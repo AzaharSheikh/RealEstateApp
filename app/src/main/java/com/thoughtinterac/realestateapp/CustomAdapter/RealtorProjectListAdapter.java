@@ -98,3 +98,4 @@ public class RealtorProjectListAdapter extends BaseAdapter {
         return convertView;
     }
 }
+
