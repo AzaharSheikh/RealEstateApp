@@ -1,0 +1,4 @@
+<resources>
+
+    <dimen name="home_webview_height">275dp</dimen>
+</resources>

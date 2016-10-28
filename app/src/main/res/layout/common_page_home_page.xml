@@ -7,14 +7,12 @@
 
 <LinearLayout
     android:orientation="vertical"
-    android:layout_gravity="center"
-    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
  <WebView
      android:id="@+id/webHome"
      android:layout_width="match_parent"
-     android:layout_height="match_parent">
+     android:layout_height="@dimen/home_webview_height">
 
  </WebView>
 
