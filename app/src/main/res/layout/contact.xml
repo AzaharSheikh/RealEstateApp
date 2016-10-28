@@ -18,7 +18,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contact"
-        android:textSize="20dp"
+         android:textSize="@dimen/header"
          android:textStyle="bold"
         android:paddingTop="15dp"
         android:textColor="@color/gold"
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Phone"
-            android:textSize="15dp"
+            android:textSize="@dimen/subheader"
             android:paddingTop="20dp"
             android:textStyle="bold"
             android:textColor="@color/gold" />
@@ -52,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="+97144392235/36"
-        android:textSize="12dp"
+        android:textSize="@dimen/content"
         android:paddingTop="15dp"
         android:layout_marginLeft="40dp"
         android:textColor="@color/gold"
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:text="For Information on Gemini Splendor   Call Toll free 800 12 12 12 or
 email – info@geminigroup.co"
-        android:textSize="12dp"
+        android:textSize="@dimen/content"
         android:paddingTop="15dp"
         android:layout_marginLeft="40dp"
         android:textColor="@color/gold"
@@ -86,10 +86,9 @@ email – info@geminigroup.co"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Developer Name"
-
-            android:textSize="15dp"
-
+            android:textSize="@dimen/subheader"
             android:paddingTop="20dp"
+            android:textStyle="bold"
             android:textColor="@color/gold" />
 
     </LinearLayout>
@@ -103,7 +102,7 @@ Business Bay,
 Dubai, UAE.
  "
         android:id="@+id/textView2"
-        android:textSize="12dp"
+        android:textSize="@dimen/content"
         android:layout_marginLeft="40dp"
         android:paddingTop="20dp"
         android:textColor="@color/gold" />
@@ -115,7 +114,7 @@ Dubai, UAE.
         android:layout_height="wrap_content"
         android:background="@drawable/rd_corner_bt"
         android:textColor="@color/white"
-        android:textSize="12dp"
+        android:textSize="@dimen/buttontext"
        android:layout_margin="40dp"/>
 
 </LinearLayout>

@@ -1,4 +1,8 @@
 <resources>
 
     <dimen name="home_webview_height">175dp</dimen>
+    <dimen name="content">11dp</dimen>
+    <dimen name="header">20dp</dimen>
+    <dimen name="subheader">15dp</dimen>
+    <dimen name="buttontext">12dp</dimen>
 </resources>
