@@ -31,6 +31,7 @@ public class CommonPageHomeFragment extends Fragment {
         webHome.getSettings().setUseWideViewPort(true);
         webHome.getSettings().setBuiltInZoomControls(true);
         webHome.getSettings().setPluginState(WebSettings.PluginState.ON);
+        webHome.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
         //webHome.getSettings().setPluginsEnabled(true);
         webHome.setWebViewClient(new HelloWebViewClient());
         webHome.loadUrl("file:///android_asset/www/index.html");
