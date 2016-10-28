@@ -24,16 +24,16 @@ public class SearchProjectActivity extends Activity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
+        //requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.search_project);
-        getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.custom_theme_layout);
-        img_back = (ImageView) findViewById(R.id.img_back);
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-    });
+       // getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.custom_theme_layout);
+        //img_back = (ImageView) findViewById(R.id.img_back);
+//        img_back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//    });
 
 
 }

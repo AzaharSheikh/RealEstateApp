@@ -131,7 +131,7 @@
         <activity
             android:name=".Activities.SearchProjectActivity"
             android:label="Gemini Spplendor"
-            android:theme="@style/TitleBarTheme">
+            android:windowSoftInputMode="stateHidden">
 
         </activity>
         <activity

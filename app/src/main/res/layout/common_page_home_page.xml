@@ -31,33 +31,39 @@
 <TextView
     android:layout_width="match_parent"
     android:textSize="15dp"
+    android:textColor="@color/gold"
     android:text="Project Name"
     android:textStyle="bold"
     android:layout_height="wrap_content" />
   <TextView
       android:layout_width="match_parent"
       android:text="Gemini Splendor"
+      android:textColor="@color/gold"
       android:textSize="12dp"
       android:layout_height="wrap_content" />
   <TextView
       android:layout_width="match_parent"
-      android:text="Gemini Splendor fsdf  s sdf dsfds dsgfg s gsg fdgdfg drf g ssg sg fdg g dhh dhgdfg  gsr  g dfg srf sd sf sd sgd sdsg"
+      android:textColor="@color/gold"
+      android:text="At MBR City you can expect to see crystal lagoons, beaches with soft sands, waterparks, parklands stretching as far as the horizon and breathtaking architecture."
       android:textSize="12dp"
       android:layout_height="wrap_content" />
   <TextView
       android:layout_width="match_parent"
       android:textSize="15dp"
+      android:textColor="@color/gold"
       android:text="Location Details"
       android:textStyle="bold"
       android:layout_height="wrap_content" />
   <TextView
       android:layout_width="match_parent"
-      android:text="Gemini Splendo dfef we ewdf qewd ewa fewa "
+      android:textColor="@color/gold"
+      android:text="Gemini Property Developers, 609/610, Sobha Sapphire, Dubai "
       android:textSize="12dp"
       android:layout_height="wrap_content" />
   <TextView
       android:layout_width="match_parent"
       android:layout_marginTop="5dp"
+      android:textColor="@color/gold"
       android:textSize="15dp"
       android:text="1BHK/2BHK/3BHK"
       android:textStyle="bold"
@@ -65,6 +71,7 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:orientation="horizontal"
+
       android:layout_height="wrap_content">
    <ImageView
        android:layout_width="90dp"
@@ -91,6 +98,7 @@
   <LinearLayout
       android:layout_width="match_parent"
       android:orientation="horizontal"
+      android:visibility="gone"
       android:layout_height="wrap_content">
    <TextView
        android:layout_width="wrap_content"
@@ -134,6 +142,7 @@
         android:layout_width="match_parent"
         android:gravity="center"
         android:textSize="15dp"
+        android:textColor="@color/gold"
         android:textStyle="bold"
         android:text="Login As"
         android:layout_height="wrap_content" />
@@ -153,6 +162,7 @@
      <TextView
          android:layout_width="wrap_content"
          android:text="OR"
+         android:textColor="@color/gold"
          android:layout_height="wrap_content" />
   <Button
       android:layout_weight="1"

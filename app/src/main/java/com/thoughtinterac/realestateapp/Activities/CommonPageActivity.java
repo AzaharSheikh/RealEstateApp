@@ -162,6 +162,7 @@ public class CommonPageActivity extends AppCompatActivity {
     private Fragment getHomeFragment() {
         switch (navItemIndex) {
             case 0:
+                fab.setVisibility(View.GONE);
                 CommonPageHomeFragment commonPageHomeFragment = new CommonPageHomeFragment();
                 return commonPageHomeFragment;
             case 1:
