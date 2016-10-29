@@ -5,4 +5,5 @@
     <dimen name="header">20dp</dimen>
     <dimen name="subheader">15dp</dimen>
     <dimen name="buttontext">12dp</dimen>
+    <dimen name="edittext">12dp</dimen>
 </resources>
