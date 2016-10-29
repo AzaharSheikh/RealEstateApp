@@ -156,7 +156,7 @@
              android:paddingBottom="5dp"
              android:paddingTop="5dp"
              android:textColor="@color/gold"
-             android:text="Bank Offering Loans"
+             android:text="Loan Available from :"
              android:textStyle="bold"
              android:layout_height="wrap_content" />
          <ImageView
@@ -175,8 +175,9 @@
 <ImageView
     android:layout_weight="1"
     android:text="User"
+    android:padding="3dp"
 android:id="@+id/img_user_login"
-    android:src="@drawable/installmentpaid"
+    android:src="@drawable/inst_login_user"
 
     android:layout_width="0dp"
     android:layout_height="match_parent" />
@@ -191,8 +192,9 @@ android:id="@+id/img_user_login"
   <ImageView
       android:layout_weight="1"
       android:text="Realtor"
+      android:padding="3dp"
       android:id="@+id/img_realtor_login"
-      android:src="@drawable/installmentpaid"
+      android:src="@drawable/inst_login_realtor"
       android:layout_width="0dp"
       android:layout_height="match_parent" />
  </LinearLayout>

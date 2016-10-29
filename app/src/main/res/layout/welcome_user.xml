@@ -72,13 +72,13 @@
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
                 android:layout_weight="2"
-                android:textSize="@dimen/content"
+
                 android:gravity="center_vertical"
                 android:textColor="@color/gold"
                 android:background="@color/offwhite"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="With two international schools, retail stores, hotels and spa, parks and entertainment centres, Sobha Hartland is and will be one of the most sought after living and property "
+                android:text="With two international schools, retail stores, hotels and spa, parks and entertainment centres,  "
                 android:layout_height="0dp"
                 android:id="@+id/txt_project_desc" />
             <TextView
