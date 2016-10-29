@@ -13,6 +13,7 @@ import android.widget.TextView;
 import com.thoughtinterac.realestateapp.Activities.MainActivity;
 import com.thoughtinterac.realestateapp.Activities.RealtorMainPage;
 import com.thoughtinterac.realestateapp.Activities.ProjectListActivity;
+import com.thoughtinterac.realestateapp.Activities.UserInstallmentStatusActivity;
 import com.thoughtinterac.realestateapp.Activities.UserListActivity;
 import com.thoughtinterac.realestateapp.Activities.UserMyProject;
 import com.thoughtinterac.realestateapp.R;
@@ -36,10 +37,18 @@ public class User_Welcome_Page extends Fragment {
             name_text.setText(RealtorMainPage.str_user_name);
         }
         ImageView img_userlist = (ImageView)rootView.findViewById(R.id.img_project);
+        ImageView img_user_installment_paid = (ImageView)rootView.findViewById(R.id.img_user_installment_paid);
         img_userlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), UserMyProject.class);
+                startActivity(i);
+            }
+        });
+        img_user_installment_paid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(getActivity(), UserInstallmentStatusActivity.class);
                 startActivity(i);
             }
         });

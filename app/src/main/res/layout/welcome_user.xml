@@ -110,7 +110,7 @@
                     />
                 <ImageView
                     android:layout_width="0dp"
-                    android:id="@+id/img_user"
+                    android:id="@+id/img_user_installment_paid"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:src="@drawable/installment"

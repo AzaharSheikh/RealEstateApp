@@ -76,7 +76,7 @@ public class MyDocFragment extends Fragment {
         docDetails = new ArrayList();
         docList.add("PAN");
         docList.add("AADHAR");
-        docList.add("RC");
+        docList.add("OC");
         docList.add("NOC");
         docStatusList.add("true");
         docStatusList.add("true");
@@ -84,7 +84,7 @@ public class MyDocFragment extends Fragment {
         docStatusList.add("true");
         docDetails.add("HSJADJSAN2672482482");
         docDetails.add("ADHARC CARD Number");
-        docDetails.add("Rc no.12212123");
+        docDetails.add("OC no.12212123");
         docDetails.add("Noc staus ");
         for(int i =0 ; i<docList.size();i++)
         {

@@ -31,7 +31,6 @@ import android.widget.Toast;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Fragments.ContactFragment;
 import com.thoughtinterac.realestateapp.Fragments.GalleryFragment;
-import com.thoughtinterac.realestateapp.Fragments.LogoutFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyDocFragment;
 import com.thoughtinterac.realestateapp.Fragments.MyProfileFragment;
@@ -40,6 +39,7 @@ import com.thoughtinterac.realestateapp.Fragments.PrivacyPolicyFragment;
 import com.thoughtinterac.realestateapp.Fragments.ProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.RealtorProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.TermNConditionFragment;
+import com.thoughtinterac.realestateapp.Fragments.UserInstallmentStatusFragment;
 import com.thoughtinterac.realestateapp.Fragments.User_Welcome_Page;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.Utility;
@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_PRIVACY_POLICY = "PrivacyPolicy";
     private static final String TAG_LOGOUT="Logout";
     private static final String TAG_PROJECT_LIST = "ProjectList";
+    private static final String TAG_PROJECT_STATUS= "ProjectStatus";
     public static String CURRENT_TAG = TAG_HOME;
     TextView txtName,txtWebsite;
     // toolbar titles respected to selected nav menu item
@@ -238,39 +239,44 @@ public class MainActivity extends AppCompatActivity {
                 img_share.setVisibility(View.GONE);
                 MyDocFragment myDocFragment = new MyDocFragment();
                 return myDocFragment;
-
             case 4:
+                fab_edit_user.setVisibility(View.GONE);
+                img_share.setVisibility(View.GONE);
+                UserInstallmentStatusFragment userProjectStatus = new UserInstallmentStatusFragment();
+                return userProjectStatus;
+
+            case 5:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 GalleryFragment galleryFragment = new GalleryFragment();
                 return galleryFragment;
-            case 5:
+            case 6:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 MyBankDetailsFragment MyBankDetails = new MyBankDetailsFragment();
                 return MyBankDetails;
-            case 6:
+            case 7:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 ContactFragment contactFragment = new ContactFragment();
                 return contactFragment;
-            case 7:
+            case 8:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 TermNConditionFragment termNConditionFragment = new TermNConditionFragment();
                 return termNConditionFragment;
-            case 8:
+            case 9:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 PrivacyPolicyFragment privacyPolicyFragment = new PrivacyPolicyFragment();
                 return privacyPolicyFragment;
-            case 9:
+            case 10:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 RealtorProjectListFragment ProjectList = new RealtorProjectListFragment();
                return ProjectList;
 
-            case 10:
+            case 11:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
                 //LogoutFragment logoutFragment = new LogoutFragment();
@@ -327,32 +333,36 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 3;
                         CURRENT_TAG = TAG_MYDOC;
                         break;
-                    case R.id.my_gallery:
+                    case R.id.my_project_status:
                         navItemIndex = 4;
+                        CURRENT_TAG = TAG_MYDOC;
+                        break;
+                    case R.id.my_gallery:
+                        navItemIndex = 5;
                         CURRENT_TAG = TAG_GALLERY;
                         break;
                     case R.id.my_bank_details:
-                        navItemIndex = 5;
+                        navItemIndex = 6;
                         CURRENT_TAG = TAG_BANK_DETAILS;
                         break;
                     case R.id.contact:
-                        navItemIndex = 6;
+                        navItemIndex = 7;
                         CURRENT_TAG = TAG_CONTACT_US;
                         break;
                     case R.id.terms_n_condition:
-                        navItemIndex = 7;
+                        navItemIndex = 8;
                         CURRENT_TAG = TAG_T_N_C;
                         break;
                     case R.id.privacy_policy:
-                        navItemIndex = 8;
+                        navItemIndex = 9;
                         CURRENT_TAG = TAG_PRIVACY_POLICY;
                         break;
                     case R.id.project_list:
-                        navItemIndex = 9;
+                        navItemIndex = 10;
                         CURRENT_TAG = TAG_PROJECT_LIST;
                         break;
                     case R.id.logout:
-                        navItemIndex = 10;
+                        navItemIndex = 11;
                         CURRENT_TAG = TAG_LOGOUT;
                         break;
 

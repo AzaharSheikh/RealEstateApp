@@ -1,8 +1,11 @@
 package com.thoughtinterac.realestateapp.Fragments;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +13,7 @@ import android.widget.ListView;
 
 import com.thoughtinterac.realestateapp.CustomAdapter.CommonPageProjectListAdapter;
 import com.thoughtinterac.realestateapp.CustomAdapter.RealtorProjectListAdapter;
+import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.Model.RealtorProjectListModel;
 import com.thoughtinterac.realestateapp.R;
 
@@ -104,8 +108,17 @@ public class CommonPageProjectFragment extends Fragment {
         bhk3_NoofFloor.add("6");
         bhk3_price.add("300000");
         List<RealtorProjectListModel> projectListMain = new ArrayList<RealtorProjectListModel>();
+        //
+        DatabaseHandler handler= new DatabaseHandler(getActivity());
+        SQLiteDatabase db = handler.getWritableDatabase();
         for(int i =0 ; i<projectName.size();i++)
         {
+            // delete single row here------
+            boolean status = db.delete(DatabaseHandler.TABLE_REALTOR_PROJECT_LIST, DatabaseHandler.KEY_Project_id + " = '" + projectID.get(i).toString() + "'", null) > 0;
+            if(status)
+            {
+                Log.d("projectDataDelete","true");
+            }
             RealtorProjectListModel list = new RealtorProjectListModel();
             list.setProject_id(projectID.get(i).toString());
             list.setProject_Name(projectName.get(i).toString());
@@ -122,7 +135,31 @@ public class CommonPageProjectFragment extends Fragment {
             list.setBhk3_NoofFloor(bhk3_NoofFloor.get(i).toString());
             list.setBhk3_price(bhk3_price.get(i).toString());
             projectListMain.add(list);
+
+
+            ContentValues values = new ContentValues();
+            values.put(DatabaseHandler.KEY_Project_id,projectID.get(i).toString());
+            values.put(DatabaseHandler.KEY_Project_Name,projectName.get(i).toString());
+            values.put(DatabaseHandler.KEY_Project_Location,projectlocation.get(i).toString());
+            values.put(DatabaseHandler.KEY_ProjectDescription,ProjectDescription.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk1_FloorAreaSqFt,bhk1_FloorAreaSqFt.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk1_NoofFloor,bhk1_NoofFloor.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk1_price,bhk1_price.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk2_FloorAreaSqFt,bhk2_FloorAreaSqFt.get(i).toString());
+
+            values.put(DatabaseHandler.KEY_bhk2_NoofFloor,bhk2_NoofFloor.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk2_price,bhk2_price.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk3_FloorAreaSqFt,bhk3_FloorAreaSqFt.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk3_NoofFloor,bhk3_NoofFloor.get(i).toString());
+            values.put(DatabaseHandler.KEY_bhk3_price,bhk3_price.get(i).toString());
+            boolean b = db.insert(DatabaseHandler.TABLE_REALTOR_PROJECT_LIST,null,values)>0;
+            if(b)
+            {
+                Log.d("projectDataInsert","true");
+            }
         }
+        handler.close();
+        db.close();
         ListView listView = (ListView)rootView.findViewById(R.id.lv_realtor_project_list);
 
         adapter= new CommonPageProjectListAdapter(getActivity(),projectListMain);
