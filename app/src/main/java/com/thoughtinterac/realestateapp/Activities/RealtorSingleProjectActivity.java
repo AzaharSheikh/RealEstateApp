@@ -35,7 +35,7 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
     EditText edt_3bhk_floor_area,edt_3bhk_flat_available,edt_3bhk_price;
     RadioGroup rg_flat_type,rg_myproject;
     LinearLayout li_one_bhk,li_two_bhk,li_three_bhk;
-    LinearLayout li_main_photo_list;
+    LinearLayout li_main_photo_list,li_main_project_status;
     ScrollView sc_new_project_details;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,6 +59,7 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
         li_two_bhk=(LinearLayout)findViewById(R.id.li_two_bhk);
         li_three_bhk=(LinearLayout)findViewById(R.id.li_three_bhk);
         li_main_photo_list=(LinearLayout)findViewById(R.id.li_main_photo_list);
+        li_main_project_status=(LinearLayout)findViewById(R.id.li_main_project_status);
         sc_new_project_details=(ScrollView)findViewById(R.id.sc_new_project_details);
         checkUserFlag();
         Bundle extras = getIntent().getExtras();
@@ -92,11 +93,18 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
                     case R.id.rbt_project_details:
                         sc_new_project_details.setVisibility(View.VISIBLE);
                         li_main_photo_list.setVisibility(View.GONE);
+                        li_main_project_status.setVisibility(View.GONE);
 
+                        break;
+                    case R.id.rbt_project_status:
+                        li_main_project_status.setVisibility(View.VISIBLE);
+                        sc_new_project_details.setVisibility(View.GONE);
+                        li_main_photo_list.setVisibility(View.GONE);
                         break;
                     case R.id.rbt_photos_list:
                         sc_new_project_details.setVisibility(View.GONE);
                         li_main_photo_list.setVisibility(View.VISIBLE);
+                        li_main_project_status.setVisibility(View.GONE);
                         break;
 
                 }
