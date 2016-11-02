@@ -943,11 +943,13 @@
     android:layout_height="wrap_content">
     <TextView
         android:layout_width="wrap_content"
+        android:textColor="@color/gold"
         android:text="TOTAL NUMBER OF FLATS - "
         android:layout_height="wrap_content" />
     <TextView
         android:id="@+id/txt_set_value_no_of_flats"
         android:layout_width="wrap_content"
+        android:textColor="@color/gold"
         android:text="7"
         android:layout_height="wrap_content" />
 </LinearLayout>
@@ -960,11 +962,13 @@
             android:layout_height="wrap_content">
             <TextView
                 android:id="@+id/txt_set_value_no_of_flats"
+                android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:text="1."
                 android:layout_height="wrap_content" />
             <TextView
+                android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:layout_weight="4"
                 android:text="No. of flats sold - "
@@ -972,6 +976,7 @@
             <TextView
                 android:id="@+id/txt_set_value_no_of_flats"
                 android:layout_width="0dp"
+                android:textColor="@color/gold"
                 android:padding="2dp"
                 android:layout_weight="1"
                 android:text="5"
@@ -979,12 +984,14 @@
             <TextView
                 android:id="@+id/txt_set_value_no_of_flats"
                 android:layout_width="0dp"
+                android:textColor="@color/gold"
                 android:layout_weight="1"
                 android:text=""
                 android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/txt_set_value_no_of_flats"
                 android:layout_weight="3"
+                android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:text="View Details"
                 android:layout_height="wrap_content" />
@@ -999,17 +1006,20 @@
             <TextView
                 android:id="@+id/txt_set_value_no_of_flats"
                 android:layout_width="0dp"
+                android:textColor="@color/gold"
                 android:layout_weight="1"
                 android:text="2."
                 android:layout_height="wrap_content" />
             <TextView
                 android:layout_width="0dp"
+                android:textColor="@color/gold"
                 android:layout_weight="4"
                 android:text="No of flats available - "
                 android:layout_height="wrap_content" />
             <TextView
                 android:id="@+id/txt_set_value_no_of_flats"
                 android:layout_width="0dp"
+                android:textColor="@color/gold"
                 android:padding="2dp"
                 android:layout_weight="1"
                 android:text="2"
@@ -1017,12 +1027,14 @@
             <TextView
                 android:id="@+id/txt_set_value_no_of_flats"
                 android:layout_width="0dp"
+                android:textColor="@color/gold"
                 android:layout_weight="1"
                 android:text=""
                 android:layout_height="wrap_content" />
             <TextView
-                android:id="@+id/txt_set_value_no_of_flats"
+                android:id="@+id/txt_set_value_no_of_flats_view_details"
                 android:layout_weight="3"
+                android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:text="View Details"
                 android:layout_height="wrap_content" />

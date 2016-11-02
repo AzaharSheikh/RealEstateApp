@@ -61,6 +61,14 @@
 
         </activity>
         <activity
+            android:name=".Activities.RealtorFlatsAvailableListActivity"
+            android:label="Project Details"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+
+        </activity>
+        <activity
             android:name=".Activities.UserInstallmentStatusActivity"
             android:label="Installment Status"
             android:windowSoftInputMode="stateHidden"
