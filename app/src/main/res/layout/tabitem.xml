@@ -2,6 +2,7 @@
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:paddingTop="0dip" android:layout_gravity="top"
+    android:background="@drawable/dashbd_bgp"
     >
 <LinearLayout
     android:layout_width="match_parent"
