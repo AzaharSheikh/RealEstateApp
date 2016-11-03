@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All Fields are Mandatory"
+            android:textSize="15dp"
+            android:textStyle="italic"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_gravity="right"
+            android:id="@+id/name_text" />
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Flat Availability"
+            android:textSize="15dp"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/flat_avail_text" />
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gold"
+            android:background="@drawable/layout_border"
+            android:padding="5dp"
+            android:inputType="textLongMessage"
+            android:maxLength="20"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Date"
+            android:textSize="15dp"
+            android:textColor="@color/gold"
+            android:padding="5dp"
+            android:layout_marginLeft="15dp"
+            android:id="@+id/date_text" />
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/gold"
+            android:background="@drawable/layout_border"
+            android:padding="5dp"
+            android:inputType="date"
+            android:maxLength="20"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"/>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        >
+
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_register_update"
+            android:layout_margin="10dp"
+            android:padding="5dp"
+            android:layout_height="35dp"
+            android:text="Update"
+            android:background="@color/gold"
+            android:textColor="@color/white"
+
+            />
+
+    </LinearLayout>
+    </LinearLayout>

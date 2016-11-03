@@ -1,5 +1,6 @@
 package com.thoughtinterac.realestateapp.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import com.thoughtinterac.realestateapp.Activities.RealtorMainPage;
+import com.thoughtinterac.realestateapp.Activities.SearchProjectActivity;
 import com.thoughtinterac.realestateapp.CustomAdapter.ProjectListAdapter;
 import com.thoughtinterac.realestateapp.CustomAdapter.RealtorProjectListAdapter;
 import com.thoughtinterac.realestateapp.Model.ProjectModel;

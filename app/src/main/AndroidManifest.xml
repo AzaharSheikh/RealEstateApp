@@ -62,11 +62,34 @@
         </activity>
         <activity
             android:name=".Activities.RealtorFlatsAvailableListActivity"
-            android:label="Project Details"
+            android:label="Available Details"
             android:windowSoftInputMode="stateHidden"
 
             >
 
+        </activity>
+        <activity
+            android:name=".Activities.RealtorSoldFlatsListActivity"
+            android:label="Sold Details"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+        </activity>
+
+        <activity
+            android:name=".Activities.RealatorSingleFlatSoldActivity"
+            android:label="Sold Details"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+        </activity>
+
+        <activity
+            android:name=".Activities.RealatorSingleFlatAvailableActivity"
+            android:label="Available Details"
+            android:windowSoftInputMode="stateHidden"
+
+            >
         </activity>
         <activity
             android:name=".Activities.UserInstallmentStatusActivity"
@@ -207,8 +230,9 @@
             android:label="User List"
             android:windowSoftInputMode="stateHidden"
             >
+            </activity>
 
-        </activity>
+
         <activity
             android:name=".Activities.ProjectListActivity"
             android:label="Project List"

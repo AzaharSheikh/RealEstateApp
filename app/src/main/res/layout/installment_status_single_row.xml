@@ -12,6 +12,7 @@
  <TextView
             android:id="@+id/txtInstallmentStatusId"
             android:layout_weight="1"
+     android:textColor="@color/gold"
             android:text="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
@@ -19,11 +20,13 @@
             android:id="@+id/txtInstallmentStatusMsg"
             android:text="Your Token Amount has Recived on"
             android:layout_weight="6"
+            android:textColor="@color/gold"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/txtInstallmentStatusDate"
             android:text="12-12-2016"
+            android:textColor="@color/gold"
             android:layout_weight="3"
             android:layout_width="0dp"
             android:layout_height="wrap_content" />

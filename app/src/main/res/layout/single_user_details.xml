@@ -510,6 +510,7 @@ Selling Price: 650,000 Amount paid: 351,055"
                     <TextView
                         android:text="Phase 1\ncompletion of the foundation, basement slab"
                         android:layout_width="match_parent"
+                        android:textColor="@color/gold"
                         android:layout_height="match_parent" />
 
                 </LinearLayout>
@@ -533,6 +534,8 @@ Selling Price: 650,000 Amount paid: 351,055"
                     <TextView
                         android:text="Phase 2\ndummy details"
                         android:layout_width="match_parent"
+                        android:textColor="@color/gold"
+
                         android:layout_height="match_parent" />
 
                 </LinearLayout>

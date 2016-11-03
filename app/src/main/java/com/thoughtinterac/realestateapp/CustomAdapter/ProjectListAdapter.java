@@ -3,23 +3,14 @@ package com.thoughtinterac.realestateapp.CustomAdapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.thoughtinterac.realestateapp.Activities.Single_User_Task_Popup;
-import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
-import com.thoughtinterac.realestateapp.Model.DocListModel;
 import com.thoughtinterac.realestateapp.Model.ProjectModel;
-import com.thoughtinterac.realestateapp.Model.UserModel;
 import com.thoughtinterac.realestateapp.R;
 
 import java.util.List;
@@ -57,7 +48,7 @@ public class ProjectListAdapter extends BaseAdapter {
             inflater = (LayoutInflater) activity
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
-            convertView = inflater.inflate(R.layout.single_project_list, null);
+            convertView = inflater.inflate(R.layout.realtor_single_project_list_detail, null);
 
 
         TextView project_name = (TextView) convertView.findViewById(R.id.project_name);

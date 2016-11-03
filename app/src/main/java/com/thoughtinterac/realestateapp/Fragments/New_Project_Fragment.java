@@ -25,7 +25,7 @@ import java.util.zip.Inflater;
 
 public class New_Project_Fragment extends Fragment {
     RadioGroup rg_flat_type,rg_myproject;
-    LinearLayout li_one_bhk,li_two_bhk,li_three_bhk,li_main_photo_list;
+    LinearLayout li_one_bhk,li_two_bhk,li_three_bhk,li_main_photo_list,li_main_project_status;
     ScrollView sc_new_project_details;
 
     public New_Project_Fragment() {
@@ -44,6 +44,7 @@ public class New_Project_Fragment extends Fragment {
             li_three_bhk=(LinearLayout)rootView.findViewById(R.id.li_three_bhk);
             li_main_photo_list=(LinearLayout)rootView.findViewById(R.id.li_main_photo_list);
             sc_new_project_details=(ScrollView)rootView.findViewById(R.id.sc_new_project_details);
+            li_main_project_status=(LinearLayout)rootView.findViewById(R.id.li_main_project_status);
             rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -52,10 +53,17 @@ public class New_Project_Fragment extends Fragment {
                         case R.id.rbt_project_details:
                             sc_new_project_details.setVisibility(View.VISIBLE);
                             li_main_photo_list.setVisibility(View.GONE);
+                            li_main_project_status.setVisibility(View.GONE);
+                            break;
+                        case R.id.rbt_project_status:
+                            li_main_project_status.setVisibility(View.VISIBLE);
+                            sc_new_project_details.setVisibility(View.GONE);
+                            li_main_photo_list.setVisibility(View.GONE);
                             break;
                         case R.id.rbt_photos_list:
                             sc_new_project_details.setVisibility(View.GONE);
                             li_main_photo_list.setVisibility(View.VISIBLE);
+                            li_main_project_status.setVisibility(View.GONE);
                             break;
 
 
@@ -82,7 +90,6 @@ public class New_Project_Fragment extends Fragment {
                             li_one_bhk.setVisibility(View.GONE);
                             li_three_bhk.setVisibility(View.VISIBLE);
                             break;
-
                     }
                 }
             });

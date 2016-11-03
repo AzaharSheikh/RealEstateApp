@@ -247,7 +247,7 @@ public class RealtorMainPage extends AppCompatActivity
                         CURRENT_TAG = TAG_REALATOR_LOGOUT;
 
                         //LogoutFragment logoutFragment = new LogoutFragment();
-                        Intent j= new Intent(RealtorMainPage.this,PreLogin.class);
+                        Intent j= new Intent(RealtorMainPage.this,CommonPageActivity.class);
                         startActivity(j);
                         finish();
                     default:

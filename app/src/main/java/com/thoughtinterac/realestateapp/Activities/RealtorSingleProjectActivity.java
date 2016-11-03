@@ -40,10 +40,11 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
     LinearLayout li_main_photo_list,li_main_project_status;
     ScrollView sc_new_project_details;
     TextView txt_set_value_no_of_flats_view_details;
+    TextView txt_no_of_flats_sold_view_detail;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.builder_new_project);
+        setContentView(R.layout.realtor_single_project_list_detail);
         edt_project_name = (EditText)findViewById(R.id.edt_project_name) ;
         edt_project_location= (EditText)findViewById(R.id.edt_project_location) ;
         edt_Project_Description= (EditText)findViewById(R.id.edt_Project_Description) ;
@@ -65,6 +66,7 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
         li_main_project_status=(LinearLayout)findViewById(R.id.li_main_project_status);
         sc_new_project_details=(ScrollView)findViewById(R.id.sc_new_project_details);
         txt_set_value_no_of_flats_view_details=(TextView)findViewById(R.id.txt_set_value_no_of_flats_view_details);
+        txt_no_of_flats_sold_view_detail=(TextView) findViewById(R.id.txt_no_of_flats_sold_view_detail);
         //checkUserFlag();
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -94,8 +96,23 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent i = new Intent(RealtorSingleProjectActivity.this,RealtorFlatsAvailableListActivity.class);
                 startActivity(i);
+
+
             }
+
         });
+        txt_no_of_flats_sold_view_detail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(RealtorSingleProjectActivity.this,RealtorSoldFlatsListActivity.class);
+                startActivity(i);
+
+
+            }
+
+        });
+
+
         rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {

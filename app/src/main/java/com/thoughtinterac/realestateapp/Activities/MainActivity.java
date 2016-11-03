@@ -285,7 +285,7 @@ public class MainActivity extends AppCompatActivity {
                 SharedPreferences.Editor editor = sharedPref.edit();
                 editor.putString(Utility.remember_me_flag, "false");
                 editor.commit();
-                Intent i= new Intent(MainActivity.this,PreLogin.class);
+                Intent i= new Intent(MainActivity.this,CommonPageActivity.class);
                 startActivity(i);
                 finish();
                 userFlag ="false";

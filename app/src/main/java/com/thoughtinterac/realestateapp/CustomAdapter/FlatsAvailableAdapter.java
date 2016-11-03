@@ -2,12 +2,16 @@ package com.thoughtinterac.realestateapp.CustomAdapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.thoughtinterac.realestateapp.Activities.RealatorSingleFlatAvailableActivity;
+import com.thoughtinterac.realestateapp.Activities.RealatorSingleFlatSoldActivity;
 import com.thoughtinterac.realestateapp.Model.FlatsAvailableModel;
 import com.thoughtinterac.realestateapp.Model.InstallMentStatusModel;
 import com.thoughtinterac.realestateapp.R;
@@ -53,6 +57,7 @@ public class FlatsAvailableAdapter extends BaseAdapter {
         TextView txt_flts_available_msg_id = (TextView) convertView.findViewById(R.id.txt_flts_available_msg_id);
         TextView txt_flts_available_msg_details = (TextView) convertView.findViewById(R.id.txt_flts_available_msg_details);
         TextView txt_flts_available_msg_date = (TextView) convertView.findViewById(R.id.txt_flts_available_msg_date);
+        LinearLayout lv_flt_aval_main_row=(LinearLayout) convertView.findViewById(R.id.lv_flt_aval_main_row);
 
 
         final FlatsAvailableModel m = flatsListItems.get(position);
@@ -60,7 +65,13 @@ public class FlatsAvailableAdapter extends BaseAdapter {
         txt_flts_available_msg_details.setText(m.getMsgDetails());
         txt_flts_available_msg_date.setText(m.getMsgDate());
 
-
+        lv_flt_aval_main_row.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(activity, RealatorSingleFlatAvailableActivity.class);
+                activity.startActivity(i);
+            }
+        });
 
         return convertView;
     }

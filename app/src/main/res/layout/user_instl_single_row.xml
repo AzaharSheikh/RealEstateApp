@@ -19,6 +19,7 @@
             android:gravity="center_vertical"
             android:layout_weight="3"
             android:text="Aggrement"
+            android:textColor="@color/gold"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
         <EditText
@@ -32,11 +33,13 @@
             android:layout_width="wrap_content"
             android:gravity="center"
             android:layout_weight="0.5"
+            android:textColor="@color/gold"
             android:text="%"
             android:layout_height="match_parent" />
         <TextView
             android:layout_width="wrap_content"
             android:text="@string/Rupee"
+            android:textColor="@color/gold"
             android:gravity="center"
             android:layout_weight="0.5"
             android:layout_height="match_parent" />
@@ -46,6 +49,7 @@
             android:inputType="number"
             android:layout_weight="3.5"
             android:layout_width="0dp"
+
             android:layout_height="match_parent" />
 
     </LinearLayout>
