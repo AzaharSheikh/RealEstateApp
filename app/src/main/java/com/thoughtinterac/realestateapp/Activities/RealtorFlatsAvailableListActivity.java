@@ -9,6 +9,7 @@ import com.thoughtinterac.realestateapp.CustomAdapter.FlatsAvailableAdapter;
 import com.thoughtinterac.realestateapp.CustomAdapter.InstallMentStatusAdapter;
 import com.thoughtinterac.realestateapp.Model.FlatsAvailableModel;
 import com.thoughtinterac.realestateapp.Model.InstallMentStatusModel;
+import com.thoughtinterac.realestateapp.Model.SoldFlatsModel;
 import com.thoughtinterac.realestateapp.R;
 
 import java.util.ArrayList;
@@ -19,42 +20,58 @@ import java.util.List;
  */
 public class RealtorFlatsAvailableListActivity extends AppCompatActivity {
     ArrayList<String> msgID, msgDetails, msgDate;
-
+    ArrayList<String> NameoftheAuthor,FlatNo, FlatType,DateofPurchase,OutOfResale,Number;
     FlatsAvailableAdapter adapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.realtor_flats_available);
-        msgID = new ArrayList();
-        msgDetails = new ArrayList();
-        msgDate = new ArrayList();
+        NameoftheAuthor= new ArrayList();
+        FlatNo= new ArrayList();
+        FlatType = new ArrayList();
+        DateofPurchase = new ArrayList();
+        OutOfResale = new ArrayList();
+        Number = new ArrayList();
+
+        Number.add("1");
+        Number.add("2");
 
 
-        msgID.add("1.");
-        msgID.add("2.");
+        NameoftheAuthor.add("Azahar S.");
+        NameoftheAuthor.add("Ashwini B.");
 
 
-        msgDetails.add("1 flat on 2nd floor");
-        msgDetails.add("1 flat on 3rd floor");
+        FlatNo.add("101");
+        FlatNo.add("102");
 
 
-        msgDate.add("01/02/2016");
-        msgDate.add("02/03/2016");
+        FlatType.add("1 BHK");
+        FlatType.add("2 BHK");
 
 
+        DateofPurchase.add("-");
+        DateofPurchase.add("-");
 
-        List<FlatsAvailableModel> flatsListMain = new ArrayList<FlatsAvailableModel>();
-        for(int i = 0; i< msgDetails.size(); i++)
+
+        OutOfResale.add("-");
+        OutOfResale.add("-");
+
+
+        List<SoldFlatsModel> flatListItems = new ArrayList<SoldFlatsModel>();
+        for(int i =0 ; i<NameoftheAuthor.size();i++)
         {
-            FlatsAvailableModel list = new FlatsAvailableModel();
-            list.setMsgId (msgID.get(i).toString());
-            list.setMsgDetails(msgDetails.get(i).toString());
-            list.setMsgDate( msgDate.get(i).toString());
-            flatsListMain.add(list);
+            SoldFlatsModel list = new SoldFlatsModel();
+            list.setNameoftheAuthor(NameoftheAuthor.get(i).toString());
+            list.setFlatNo(FlatNo.get(i).toString());
+            list.setFlatType(FlatType.get(i).toString());
+            list.setDateofPurchase(DateofPurchase.get(i).toString());
+            list.setOutOfResale(OutOfResale.get(i).toString());
+            list.setNumber(Number.get(i).toString());
+            flatListItems.add(list);
         }
         ListView listView = (ListView)findViewById(R.id.realtor_flats_available_listview);
 
-        adapter= new FlatsAvailableAdapter(this,flatsListMain);
+        adapter= new FlatsAvailableAdapter(this,flatListItems);
 
         listView.setAdapter(adapter);
     }

@@ -5,29 +5,59 @@ package com.thoughtinterac.realestateapp.Model;
  */
 public class FlatsAvailableModel {
 
-    String msgId,msgDetails,msgDate;
+    private  String NameoftheAuthor;
+    private  String FlatNo;
+    private  String FlatType;
+    private  String DateofPurchase;
+    private  String OutOfResale;
+    private  String Number;
 
-    public String getMsgDate() {
-        return msgDate;
+
+    public String getNumber() {
+        return Number;
+    }
+    public void setNumber(String number) {
+        Number=number;
     }
 
-    public void setMsgDate(String msgDate) {
-        this.msgDate = msgDate;
+    public String getNameoftheAuthor() {
+        return NameoftheAuthor;
     }
 
-    public String getMsgId() {
-        return msgId;
+    public void setNameoftheAuthor(String nameoftheAuthor) {
+        NameoftheAuthor = nameoftheAuthor;
     }
 
-    public void setMsgId(String msgId) {
-        this.msgId = msgId;
+    public String getFlatNo() {
+        return FlatNo;
     }
 
-    public String getMsgDetails() {
-        return msgDetails;
+    public void setFlatNo(String flatNo) {
+        FlatNo = flatNo;
     }
 
-    public void setMsgDetails(String msgDetails) {
-        this.msgDetails = msgDetails;
+    public String getFlatType() {
+        return FlatType;
     }
+
+    public void setFlatType(String flatType) {
+        FlatType = flatType;
+    }
+
+    public String getDateofPurchase() {
+        return DateofPurchase;
+    }
+
+    public void setDateofPurchase(String dateofPurchase) {
+        DateofPurchase = dateofPurchase;
+    }
+
+    public String getOutOfResale() {
+        return OutOfResale;
+    }
+
+    public void setOutOfResale(String outOfResale) {
+        OutOfResale = outOfResale;
+    }
+
 }

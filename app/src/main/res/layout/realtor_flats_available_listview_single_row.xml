@@ -1,48 +1,190 @@
-<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="0dip" android:layout_gravity="top"
+    android:background="@color/offwhite"
+    >
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <LinearLayout
-            android:orientation="horizontal"
-            android:layout_margin="5dp"
-            android:padding="5dp"
-            android:id="@+id/lv_flt_aval_main_row"
+            android:id="@+id/lv_main"
             android:layout_width="match_parent"
+            android:padding="5dp"
+            android:orientation="horizontal"
             android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/txt_flts_available_msg_id"
-                android:text="1"
-                android:padding="2dp"
-                android:textColor="@color/gold"
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/txt_flts_available_msg_details"
-                android:layout_weight="5"
-                android:padding="5dp"
-                android:textColor="@color/gold"
-                android:text="2 flats Available on 5 th floor"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-            <TextView
-                android:id="@+id/txt_flts_available_msg_date"
-                android:layout_weight="3"
-                android:padding="5dp"
-                android:textStyle="bold"
-                android:textColor="@color/gold"
-                android:text="02/12/2016"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
             <ImageView
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:src="@drawable/pen"
-                android:layout_height="wrap_content" />
+                android:layout_gravity="center"
+                android:layout_width="75dp"
+                android:src="@drawable/user"
+                android:layout_height="75dp"
+                android:visibility="gone"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="5dp"
+                android:weightSum="10"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <LinearLayout
 
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView
+                        android:background="@drawable/bg_circle"
+                        android:layout_height="25dp"
+
+                        android:textColor="@color/offwhite"
+                        android:textStyle="bold"
+                        android:textSize="15dp"
+                        android:layout_marginRight="5dp"
+                        android:id="@+id/txt_flat_list_number"
+                        android:layout_width="25dp"
+                        android:text="1"
+                        android:gravity="center"
+
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_weight="8"
+                    android:layout_width="0dp"
+                    android:orientation="vertical"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:textStyle="bold"
+                            android:layout_width="0dp"
+                            android:text="Author Name :"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:id="@+id/txt_view_author_name2"
+                            android:layout_width="0dp"
+                            android:text="Azahar :"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:textStyle="bold"
+                            android:id="@+id/flat_no1"
+                            android:layout_width="0dp"
+                            android:text="Flat No :"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:id="@+id/flat_no2"
+                            android:layout_width="0dp"
+                            android:text="101"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:text="Flat type:"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:id="@+id/flat_type2"
+                            android:layout_width="0dp"
+                            android:text="1 BHK"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:text="Date of Purchase:"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:id="@+id/date_of_purchase2"
+                            android:layout_width="0dp"
+                            android:text="12/02/2015"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:text="Out Of Resale:"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:id="@+id/Out_of_resale2"
+                            android:layout_width="0dp"
+                            android:text="12/02/2016"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp">
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:textStyle="bold"
+                            android:text="Sq.ft:"
+                            android:layout_height="wrap_content" />
+                        <TextView
+                            android:layout_weight="5"
+                            android:textColor="@color/gold"
+                            android:id="@+id/Out_of_resale2"
+                            android:layout_width="0dp"
+                            android:text="1048"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:src="@drawable/pen"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 

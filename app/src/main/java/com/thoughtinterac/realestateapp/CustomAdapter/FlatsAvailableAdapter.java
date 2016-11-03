@@ -14,6 +14,7 @@ import com.thoughtinterac.realestateapp.Activities.RealatorSingleFlatAvailableAc
 import com.thoughtinterac.realestateapp.Activities.RealatorSingleFlatSoldActivity;
 import com.thoughtinterac.realestateapp.Model.FlatsAvailableModel;
 import com.thoughtinterac.realestateapp.Model.InstallMentStatusModel;
+import com.thoughtinterac.realestateapp.Model.SoldFlatsModel;
 import com.thoughtinterac.realestateapp.R;
 
 import java.util.List;
@@ -22,23 +23,23 @@ import java.util.List;
  * Created by AzaharSheikh on 02-11-2016.
  */
 public class FlatsAvailableAdapter extends BaseAdapter {
-
     private Activity activity;
     private LayoutInflater inflater;
-    private List<FlatsAvailableModel> flatsListItems;
-    public FlatsAvailableAdapter(Activity activity, List<FlatsAvailableModel> flatsListItems) {
+    private List<SoldFlatsModel> flatListItems;
+    public FlatsAvailableAdapter(Activity activity , List<SoldFlatsModel> flatListItems) {
         this.activity = activity;
-        this.flatsListItems = flatsListItems;
+        this.flatListItems = flatListItems;
     }
+
 
     @Override
     public int getCount() {
-        return flatsListItems.size();
+        return flatListItems.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return flatsListItems.get(position);
+        return flatListItems.get(position);
     }
 
     @Override
@@ -53,26 +54,41 @@ public class FlatsAvailableAdapter extends BaseAdapter {
                     .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         if (convertView == null)
             convertView = inflater.inflate(R.layout.realtor_flats_available_listview_single_row, null);
-
-        TextView txt_flts_available_msg_id = (TextView) convertView.findViewById(R.id.txt_flts_available_msg_id);
-        TextView txt_flts_available_msg_details = (TextView) convertView.findViewById(R.id.txt_flts_available_msg_details);
-        TextView txt_flts_available_msg_date = (TextView) convertView.findViewById(R.id.txt_flts_available_msg_date);
-        LinearLayout lv_flt_aval_main_row=(LinearLayout) convertView.findViewById(R.id.lv_flt_aval_main_row);
+        LinearLayout lv_main=(LinearLayout) convertView.findViewById(R.id.lv_main);
 
 
-        final FlatsAvailableModel m = flatsListItems.get(position);
-        txt_flts_available_msg_id.setText(m.getMsgId());
-        txt_flts_available_msg_details.setText(m.getMsgDetails());
-        txt_flts_available_msg_date.setText(m.getMsgDate());
+//        TextView txt_view_author_name1 = (TextView) convertView.findViewById(R.id.txt_view_author_name1);
+        TextView txt_view_author_name2 = (TextView) convertView.findViewById(R.id.txt_view_author_name2);
+        TextView flat_no1 = (TextView) convertView.findViewById(R.id.flat_no1);
+        TextView flat_no2 = (TextView) convertView.findViewById(R.id.flat_no2);
+        TextView flat_type2 = (TextView) convertView.findViewById(R.id.flat_type2);
+        TextView date_of_purchase2 = (TextView) convertView.findViewById(R.id.date_of_purchase2);
+        TextView Out_of_resale2 = (TextView) convertView.findViewById(R.id.Out_of_resale2);
+        TextView txt_flat_list_number = (TextView) convertView.findViewById(R.id.txt_flat_list_number);
 
-        lv_flt_aval_main_row.setOnClickListener(new View.OnClickListener() {
+
+
+        final SoldFlatsModel m = flatListItems.get(position);
+//        txt_view_author_name1.setText(m.getNameoftheAuthor());
+        txt_view_author_name2.setText(m.getNameoftheAuthor());
+//        flat_no1.setText(m.getFlatNo());
+        flat_no2.setText(m.getFlatNo());
+        flat_type2.setText(m.getFlatType());
+        date_of_purchase2.setText(m.getDateofPurchase());
+        Out_of_resale2.setText(m.getOutOfResale());
+        txt_flat_list_number.setText(m.getNumber());
+
+        lv_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i=new Intent(activity, RealatorSingleFlatAvailableActivity.class);
+                Intent i=new Intent(activity, RealatorSingleFlatSoldActivity.class);
                 activity.startActivity(i);
             }
         });
-
         return convertView;
     }
+
+
+
+
 }
