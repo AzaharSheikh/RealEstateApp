@@ -266,6 +266,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 str_user_bank= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_BANK_DETAILS));
             }
             cursor.close();
+            db.close();
             Bundle bundle = new Bundle();
             bundle.putString(DatabaseHandler.KEY_USER_NAME, str_user_name);
             bundle.putString(DatabaseHandler.KEY_USER_ADDRESS,str_user_address);

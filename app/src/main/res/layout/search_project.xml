@@ -10,6 +10,7 @@
         android:layout_margin="20dp"
         android:layout_height="wrap_content">
         <EditText
+            android:id="@+id/edt_search"
             android:layout_width="match_parent"
             android:padding="7dp"
             android:gravity="center|center_vertical|center_horizontal"
@@ -26,7 +27,7 @@
 
 
         <Button
-            android:id="@+id/btn_back"
+            android:id="@+id/btn_search_project"
             android:layout_gravity="center"
             android:layout_marginTop="10dp"
             android:padding="5dp"

@@ -108,6 +108,7 @@ public class RegisterActivity extends AppCompatActivity{
             bundle.putString("login_name",login_name);
             i.putExtras(bundle);
             startActivity(i);
+            finish();
 
 
         }else

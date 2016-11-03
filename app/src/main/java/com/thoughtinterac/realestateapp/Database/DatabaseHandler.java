@@ -3,6 +3,7 @@ package com.thoughtinterac.realestateapp.Database;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import com.thoughtinterac.realestateapp.Activities.LoginActivity;
 import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
@@ -13,7 +14,7 @@ import com.thoughtinterac.realestateapp.Fragments.MyBankDetailsFragment;
 public class DatabaseHandler extends SQLiteOpenHelper {
     // All Static variables
     // Database Version
-    private static final int DATABASE_VERSION = 7;
+    private static final int DATABASE_VERSION = 11;
 
     // Database Name
     public static final String DATABASE_NAME = "real_estate_db";
@@ -39,6 +40,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String KEY_USER_INST_STAGE_STATUS = "user_inst_stage_status";
     // project list table
     public static final String TABLE_REALTOR_PROJECT_LIST = "realtor_project_list_tb";
+    public static final String TABLE_REALTOR_PROJECT_LIST_VERTUAL = "realtor_project_list_tb_vertual";
     public static final String KEY_Project_id = "Project_id";
     public static final String KEY_Project_Name = "Project_Name";
     public static final String KEY_Project_Location = "Project_Location";
@@ -52,6 +54,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public static final String KEY_bhk3_FloorAreaSqFt = "bhk3_FloorAreaSqFt";
     public static final String KEY_bhk3_NoofFloor = "bhk3_NoofFloor";
     public static final String KEY_bhk3_price = "bhk3_price";
+    public static final String KEY_SEARCH_COL = "search_col";
 
     //user edit option flag
 
@@ -69,6 +72,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         String CREATE_REGISTER_TABLE = "CREATE TABLE " + TABLE_REGISTER + "("
                 + KEY_USER_ID + " INTEGER PRIMARY KEY ," + KEY_USER_NAME + " TEXT,"
                 + KEY_USER_ADDRESS + " TEXT," + KEY_USER_JOB_DESC+" TEXT, "+KEY_USER_MOBILE+" TEXT, " +KEY_USER_EMAIL+" TEXT NOT NULL UNIQUE , " +KEY_USER_PASSWORD+" TEXT ," +KEY_PAN_NUMBER+" TEXT, "+KEY_BANK_DETAILS+" TEXT "+")";
+
         String CREATE_INSTALLMENT_TABLE = "CREATE TABLE " + TABLE_USER_INSTALLMENT + "("
                 + KEY_USER_EMAIL + " TEXT NOT NULL," + KEY_USER_INST_STAGE_NAME + " TEXT,"
                 + KEY_USER_INST_PERCENTAGE + " TEXT, " + KEY_USER_INST_RUPEES+" TEXT, "+KEY_USER_INST_STAGE_STATUS +" TEXT "+")";
@@ -86,7 +90,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 +   KEY_bhk2_price+" TEXT ,"
                 +   KEY_bhk3_FloorAreaSqFt+" TEXT, "
                 +   KEY_bhk3_NoofFloor+" TEXT  , "
-                +   KEY_bhk3_price+" TEXT "
+                +   KEY_bhk3_price+" TEXT ,"
+                +   KEY_SEARCH_COL+" TEXT "
+                +")";
+
+
+        String CREATE_REALTOR_PROJECT_LIST_VERTUAL_TABLE= "CREATE VIRTUAL TABLE  " + TABLE_REALTOR_PROJECT_LIST_VERTUAL + " USING FTS4 ("
+                +KEY_Project_id+" , "
+        +KEY_SEARCH_COL
                 +")";
 
 
@@ -97,6 +108,8 @@ String CREATE_USER_EDIT_FALG_TABLE = "CREATE TABLE " + TABLE_USER_EDIT_FLAG + "(
         db.execSQL(CREATE_INSTALLMENT_TABLE);
         db.execSQL(CREATE_REALTOR_PROJECT_LIST_TABLE);
         db.execSQL(CREATE_USER_EDIT_FALG_TABLE);
+        db.execSQL(CREATE_REALTOR_PROJECT_LIST_VERTUAL_TABLE);
+        Log.d("database","Created successfully");
     }
 
 
@@ -105,8 +118,9 @@ String CREATE_USER_EDIT_FALG_TABLE = "CREATE TABLE " + TABLE_USER_EDIT_FLAG + "(
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_REGISTER);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER_INSTALLMENT);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_REALTOR_PROJECT_LIST);
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_REALTOR_PROJECT_LIST_VERTUAL);
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_USER_EDIT_FLAG);
-
+        Log.d("database","drop successfully");
         // Create tables again
         onCreate(db);
     }

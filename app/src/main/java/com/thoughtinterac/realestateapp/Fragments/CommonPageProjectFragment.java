@@ -152,10 +152,25 @@ public class CommonPageProjectFragment extends Fragment {
             values.put(DatabaseHandler.KEY_bhk3_FloorAreaSqFt,bhk3_FloorAreaSqFt.get(i).toString());
             values.put(DatabaseHandler.KEY_bhk3_NoofFloor,bhk3_NoofFloor.get(i).toString());
             values.put(DatabaseHandler.KEY_bhk3_price,bhk3_price.get(i).toString());
+            values.put(DatabaseHandler.KEY_SEARCH_COL,projectName.get(i).toString()+" "+ projectlocation.get(i).toString()+""+ProjectDescription.get(i).toString());
+
             boolean b = db.insert(DatabaseHandler.TABLE_REALTOR_PROJECT_LIST,null,values)>0;
             if(b)
             {
                 Log.d("projectDataInsert","true");
+            }
+            values.clear();
+            values.put(DatabaseHandler.KEY_Project_id,projectID.get(i).toString());
+            values.put(DatabaseHandler.KEY_SEARCH_COL,projectName.get(i).toString()+" "+ projectlocation.get(i).toString()+""+ProjectDescription.get(i).toString());
+            boolean status1 = db.delete(DatabaseHandler.TABLE_REALTOR_PROJECT_LIST_VERTUAL, DatabaseHandler.KEY_Project_id + " = '" + projectID.get(i).toString() + "'", null) > 0;
+            if(status1)
+            {
+                Log.d("ver_projectDataDelete","true");
+            }
+            boolean b1 = db.insert(DatabaseHandler.TABLE_REALTOR_PROJECT_LIST_VERTUAL,null,values)>0;
+            if(b1)
+            {
+                Log.d("ver_projectDataInsert","true");
             }
         }
         handler.close();
