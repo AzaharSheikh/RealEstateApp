@@ -34,6 +34,7 @@ public class MyProfileFragment extends Fragment {
     private String mParam2;
     static  TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address,txt_pan,txt_bank,txt_job_decs;
 ScrollView sc_welcome_layout;
+    ImageView iv_profile_pic;
 
     private OnFragmentInteractionListener mListener;
 
@@ -81,8 +82,17 @@ ScrollView sc_welcome_layout;
         txt_address=(TextView)rootView.findViewById(R.id.txt_address);
         txt_pan=(TextView)rootView.findViewById(R.id.txt_pan);
         txt_bank=(TextView)rootView.findViewById(R.id.txt_bank);
-        ImageView iv_profile_pic=(ImageView)rootView.findViewById(R.id.iv_profile_pic);
+
         sc_welcome_layout=(ScrollView)rootView.findViewById(R.id.sc_welcome_layout);
+        iv_profile_pic = (ImageView)rootView.findViewById(R.id.iv_profile_pic);
+        if(MainActivity.str_male_female.toString().equalsIgnoreCase("Female"))
+        {
+
+            iv_profile_pic.setImageResource(R.drawable.femaledp);
+        }else
+        {
+            iv_profile_pic.setImageResource(R.drawable.user);
+        }
         try{
             if(RealtorMainPage.flag==0)
             {
@@ -115,6 +125,8 @@ ScrollView sc_welcome_layout;
         txt_address.setText(MainActivity.str_user_address);
         txt_pan.setText(MainActivity.str_user_pan);
         txt_bank.setText(MainActivity.str_user_bank);
+
+
     }
 
     // TODO: Rename method, update argument and hook method into UI event
