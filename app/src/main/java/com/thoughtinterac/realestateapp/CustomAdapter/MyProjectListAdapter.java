@@ -63,8 +63,9 @@ public class MyProjectListAdapter extends BaseAdapter {
         TextView txt_project_name = (TextView) convertView.findViewById(R.id.txt_project_name);
         TextView txt_project_type = (TextView) convertView.findViewById(R.id.txt_project_type);
         TextView txt_project_location = (TextView) convertView.findViewById(R.id.txt_project_location);
+        TextView txt_project_id = (TextView) convertView.findViewById(R.id.txt_project_id);
         Button btn_view = (Button)convertView.findViewById(R.id.btn_view);
-
+        txt_project_id.setText((position+1)+".");
         final MyProjectListModel m = projectListItems.get(position);
         txt_project_name.setText(m.getProjectName());
         txt_project_type.setText(m.getProjectType());

@@ -9,8 +9,20 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_margin="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="15dp"
                 >
+                <TextView
+                    android:layout_weight="1"
+                    android:id="@+id/txt_project_id"
+                    android:gravity="center"
+
+                    android:textColor="@color/gold"
+                    android:text="1."
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent" />
                 <ImageView
                     android:id="@+id/iv_profile_pic"
                     android:layout_width="0dp"
@@ -24,7 +36,7 @@
                     android:orientation="vertical"
                     android:padding="5dp"
                     android:gravity="center"
-                    android:layout_weight="5"
+                    android:layout_weight="4"
                     android:layout_height="match_parent">
                     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                         android:layout_width="match_parent"
@@ -32,7 +44,7 @@
                         android:id="@+id/txt_project_name"
                         android:text="Gemini Splendor"
                         android:textSize="16sp"
-
+                        android:layout_marginLeft="5dp"
                         android:textStyle="bold"
                         android:padding="2dp"
                         android:textColor="@color/gold" />
@@ -43,7 +55,7 @@
                         android:layout_height="wrap_content"
                         android:text="Address"
                         android:textSize="14sp"
-
+                        android:layout_marginLeft="5dp"
                         android:padding="2dp"
                         android:textColor="@color/gold" />
                     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -52,7 +64,7 @@
                         android:id="@+id/txt_project_type"
                         android:text="1BHK"
                         android:textSize="14sp"
-
+                        android:layout_marginLeft="5dp"
                         android:padding="2dp"
                         android:textColor="@color/gold" />
                 </LinearLayout>
