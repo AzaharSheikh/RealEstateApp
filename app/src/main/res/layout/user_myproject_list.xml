@@ -31,7 +31,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/txt_project_name"
                         android:text="Gemini Splendor"
-                        android:textSize="12sp"
+                        android:textSize="16sp"
 
                         android:textStyle="bold"
                         android:padding="2dp"
@@ -41,8 +41,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/txt_project_type"
                         android:text="1BHK"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
+                        android:textSize="14sp"
+
                         android:padding="2dp"
                         android:textColor="@color/gold" />
                     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -50,8 +50,8 @@
                         android:id="@+id/txt_project_location"
                         android:layout_height="wrap_content"
                         android:text="Address"
-                        android:textSize="12sp"
-                        android:textStyle="bold"
+                        android:textSize="14sp"
+
                         android:padding="2dp"
                         android:textColor="@color/gold" />
                 </LinearLayout>
@@ -65,7 +65,7 @@
                     android:layout_height="40dp"
                     android:background="@drawable/border_btn"
                     android:textColor="@color/gold"
-                    android:textSize="12dp"
+                    android:textSize="14dp"
                   />
 
               </LinearLayout>

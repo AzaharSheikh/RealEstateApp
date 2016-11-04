@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:background="@drawable/login_bg"
+    android:background="@drawable/login_screen_back"
     android:focusableInTouchMode="true"
     android:layout_height="match_parent">
     <LinearLayout
@@ -65,7 +65,7 @@
             android:layout_height="match_parent">
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
-                android:textColor="@color/red"
+                android:textColor="@color/offwhite"
                 android:padding="5dp"
                 android:textStyle="bold"
                 android:text="Forgot Password ?"
@@ -94,7 +94,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rd_corner_bt"
                 android:textColor="@color/white"
-                android:layout_margin="5dp"/>
+                android:layout_margin="3dp"/>
             <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
                 android:id="@+id/btn_register"
                 android:text="Register"
@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/rd_corner_bt"
                 android:textColor="@color/white"
-                android:layout_margin="5dp"/>
+                android:layout_margin="3dp"/>
 
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="wrap_content"
