@@ -250,7 +250,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         DatabaseHandler handler= new DatabaseHandler(LoginActivity.this);
         SQLiteDatabase db = handler.getWritableDatabase();
         String[] colmn = new String[] { DatabaseHandler.KEY_USER_NAME,DatabaseHandler.KEY_USER_ADDRESS,DatabaseHandler.KEY_USER_JOB_DESC,DatabaseHandler.KEY_USER_MOBILE,DatabaseHandler.KEY_USER_EMAIL,DatabaseHandler.KEY_USER_PASSWORD,DatabaseHandler.KEY_PAN_NUMBER,DatabaseHandler.KEY_BANK_DETAILS};
-        Cursor cursor = db.query(DatabaseHandler.TABLE_REGISTER, colmn,DatabaseHandler.KEY_USER_EMAIL + " = '"+str_username+"'"+" AND "+DatabaseHandler.KEY_USER_PASSWORD+" = '"+str_password+"'", null, null, null, null);
+        Cursor cursor = db.query(DatabaseHandler.TABLE_REGISTER, colmn,DatabaseHandler.KEY_USER_EMAIL + " = '"+str_username+"'"+" AND "+DatabaseHandler.KEY_USER_PASSWORD+" = '"+str_password+"'"+" AND "+DatabaseHandler.KEY_USER_OR_REALTOR+" = '"+login_name+"'", null, null, null, null);
         if(cursor!=null) {
             String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="";
         if(cursor.getCount() >0)

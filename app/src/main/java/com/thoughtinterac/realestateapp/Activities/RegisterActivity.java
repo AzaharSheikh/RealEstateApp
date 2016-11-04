@@ -99,6 +99,8 @@ public class RegisterActivity extends AppCompatActivity{
         values.put(DatabaseHandler.KEY_USER_PASSWORD,str_password);
         values.put(DatabaseHandler.KEY_PAN_NUMBER,str_pan);
         values.put(DatabaseHandler.KEY_BANK_DETAILS,str_bank);
+        values.put(DatabaseHandler.KEY_USER_OR_REALTOR,login_name);
+        values.put(DatabaseHandler.KEY_MALE_OR_FEMALE,"");
         boolean b = db.insert(DatabaseHandler.TABLE_REGISTER,null,values)>0;
         if(b)
         {
