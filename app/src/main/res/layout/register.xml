@@ -59,12 +59,15 @@
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPostalAddress"
-
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:minLines="3"
+        android:gravity="top|left"
         android:textColor="@color/gold"
         android:background="@drawable/layout_border"
         android:padding="5dp"
         android:ems="10"
+        android:scrollbars="vertical"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
         android:id="@+id/edt_user_address" />
