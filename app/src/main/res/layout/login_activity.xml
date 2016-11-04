@@ -92,6 +92,7 @@
             <CheckBox android:id="@+id/chk_remember"
                 android:layout_weight="1"
                 android:layout_width="0dp"
+
                 android:layout_height="wrap_content"
                 android:text="  Remember me"
                 android:textSize="13dp"
