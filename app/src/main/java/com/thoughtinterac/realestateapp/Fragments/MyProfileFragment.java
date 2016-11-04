@@ -32,7 +32,7 @@ public class MyProfileFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-    static  TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address,txt_pan,txt_bank;
+    static  TextView txt_name,txt_project_name,txt_email,txt_mobile,txt_address,txt_pan,txt_bank,txt_job_decs;
 ScrollView sc_welcome_layout;
 
     private OnFragmentInteractionListener mListener;
@@ -74,6 +74,7 @@ ScrollView sc_welcome_layout;
         // Inflate the layout for this fragment
         View rootView = inflater.inflate(R.layout.user_profile, container, false);
         txt_name = (TextView) rootView.findViewById(R.id.txt_name);
+        txt_job_decs=(TextView)rootView.findViewById(R.id.txt_job_decs);
         txt_project_name=(TextView)rootView.findViewById(R.id.txt_project_name);
         txt_email=(TextView)rootView.findViewById(R.id.txt_email);
         txt_mobile=(TextView)rootView.findViewById(R.id.txt_mobile);
@@ -107,7 +108,8 @@ ScrollView sc_welcome_layout;
 
     public static void setData() {
         txt_name.setText(MainActivity.str_user_name);
-        txt_project_name.setText(MainActivity.str_user_job);
+        txt_project_name.setText(MainActivity.str_project_name);
+        txt_job_decs.setText(MainActivity.str_user_job);
         txt_email.setText(MainActivity.str_user_email);
         txt_mobile.setText(MainActivity.str_user_mobile);
         txt_address.setText(MainActivity.str_user_address);

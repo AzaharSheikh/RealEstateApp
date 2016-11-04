@@ -64,6 +64,38 @@
                     android:gravity="center"
                     />
                 </LinearLayout>
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:orientation="horizontal"
+
+         >
+         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+             android:layout_width="0dp"
+             android:layout_height="wrap_content"
+
+             android:text="Project Name : "
+             android:textColor="@color/gold"
+             android:layout_gravity="left"
+             android:textSize="@dimen/content"
+             android:padding="5dp"
+             android:layout_weight="4"
+             android:textStyle="bold"
+             />
+
+         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+             android:layout_width="0dp"
+             android:layout_weight="6"
+             android:layout_height="wrap_content"
+            android:id="@+id/txt_project_name"
+             android:text="Real Estate"
+             android:textColor="@color/gold"
+             android:layout_gravity="left"
+             android:textSize="@dimen/content"
+             android:padding="5dp" />
+     </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -74,7 +106,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
 
-                android:text="Project Name : "
+                android:text="Job Description : "
                 android:textColor="@color/gold"
                 android:layout_gravity="left"
                 android:textSize="@dimen/content"
@@ -87,13 +119,15 @@
                 android:layout_width="0dp"
                 android:layout_weight="6"
                 android:layout_height="wrap_content"
-                android:id="@+id/txt_project_name"
-                android:text="Real Estate"
+                android:id="@+id/txt_job_decs"
+                android:text="Android Deveopler"
                 android:textColor="@color/gold"
                 android:layout_gravity="left"
                 android:textSize="@dimen/content"
                 android:padding="5dp" />
             </LinearLayout>
+
+
 
             <LinearLayout
                 android:layout_width="match_parent"

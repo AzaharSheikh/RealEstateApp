@@ -79,9 +79,9 @@ public class UserMyProject extends AppCompatActivity {
                 rbt_one_bhk_details.setVisibility(View.GONE);
                 txt_value_area_sq_ft.setText("1550");
                 txt_value_flat_available.setText("5");
-                txt_value_construction_stage.setText("Click Here");
-                txt_value_amenities.setText("Click Here");
-                txt_value_extra_feature.setText("Click Here");
+                txt_value_construction_stage.setText("View");
+                txt_value_amenities.setText("View");
+                txt_value_extra_feature.setText("View");
                 txt_value_price.setText("90 Lac");
             }else
             {
@@ -97,26 +97,26 @@ public class UserMyProject extends AppCompatActivity {
                     case R.id.rbt_one_bhk_details:
                         txt_value_area_sq_ft.setText("550");
                         txt_value_flat_available.setText("10");
-                        txt_value_construction_stage.setText("Click Here");
-                        txt_value_amenities.setText("Click Here");
-                        txt_value_extra_feature.setText("Click Here");
+                        txt_value_construction_stage.setText("View");
+                        txt_value_amenities.setText("View");
+                        txt_value_extra_feature.setText("View");
                         txt_value_price.setText("50 Lac");
                         break;
                     case R.id.rbt_two_bhk_list:
                         txt_value_area_sq_ft.setText("1550");
                         txt_value_flat_available.setText("5");
-                        txt_value_construction_stage.setText("Click Here");
-                        txt_value_amenities.setText("Click Here");
-                        txt_value_extra_feature.setText("Click Here");
+                        txt_value_construction_stage.setText("View");
+                        txt_value_amenities.setText("View");
+                        txt_value_extra_feature.setText("View");
                         txt_value_price.setText("90 Lac");
                         break;
                     case R.id.rbt_three_bhk:
 
                         txt_value_area_sq_ft.setText("2550");
                         txt_value_flat_available.setText("7");
-                        txt_value_construction_stage.setText("Click Here");
-                        txt_value_amenities.setText("Click Here");
-                        txt_value_extra_feature.setText("Click Here");
+                        txt_value_construction_stage.setText("View");
+                        txt_value_amenities.setText("View");
+                        txt_value_extra_feature.setText("View");
                         txt_value_price.setText("2 Cr");
                         break;
                 }
@@ -168,9 +168,9 @@ public class UserMyProject extends AppCompatActivity {
         txt_value_price=(TextView)findViewById(R.id.txt_value_price);
         txt_value_area_sq_ft.setText("550");
         txt_value_flat_available.setText("10");
-        txt_value_amenities.setText("Click Here");
-        txt_value_construction_stage.setText("Click Here");
-        txt_value_extra_feature.setText("Click Here");
+        txt_value_amenities.setText("View");
+        txt_value_construction_stage.setText("View");
+        txt_value_extra_feature.setText("View");
         txt_value_price.setText("50 Lac");
         txt_value_amenities.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -491,6 +491,27 @@ Metro Station"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_weight="7.5"
+                            android:id="@+id/txt_view_price"
+                            android:textColor="@color/gold"
+                            android:text="@string/PriceRs"
+                            android:layout_width="0dp"
+                            android:paddingLeft="0dp"
+                            android:paddingTop="5dp"
+                            android:layout_height="wrap_content" />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:text="50 Lac"
+                            android:layout_weight="2.5"
+                            android:id="@+id/txt_value_price"
+                            android:textColor="@color/gold"
+                            android:layout_width="0dp"
+                            android:paddingTop="5dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_weight="7.5"
                             android:id="@+id/txt_view_construction_stage"
                             android:textColor="@color/gold"
                             android:text="Construction Stage :"
@@ -548,27 +569,7 @@ Metro Station"
                             android:paddingTop="5dp"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
-                            android:id="@+id/txt_view_price"
-                            android:textColor="@color/gold"
-                            android:text="@string/PriceRs"
-                            android:layout_width="0dp"
-                            android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:text="50 Lac"
-                            android:layout_weight="2.5"
-                            android:id="@+id/txt_value_price"
-                            android:textColor="@color/gold"
-                            android:layout_width="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
+
                 </LinearLayout>
 
             </LinearLayout>

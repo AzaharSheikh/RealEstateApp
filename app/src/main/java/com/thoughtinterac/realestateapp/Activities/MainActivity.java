@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_LOGOUT="Logout";
     private static final String TAG_PROJECT_LIST = "ProjectList";
     private static final String TAG_PROJECT_STATUS= "ProjectStatus";
+
     public static String CURRENT_TAG = TAG_HOME;
     TextView txtName,txtWebsite;
     // toolbar titles respected to selected nav menu item
@@ -81,7 +82,8 @@ public class MainActivity extends AppCompatActivity {
     // index to identify current nav menu item
     public static int navItemIndex = 0;
     Toolbar toolbar;
-    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="",str_male_female="";
+
+    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="",str_male_female="",str_project_name="";
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -103,6 +105,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Bundle bundle1 = new Bundle();
                 bundle1.putString(DatabaseHandler.KEY_USER_NAME, str_user_name);
+                bundle1.putString(DatabaseHandler.KEY_Project_Name, str_project_name);
                 bundle1.putString(DatabaseHandler.KEY_USER_ADDRESS,str_user_address);
                 bundle1.putString(DatabaseHandler.KEY_USER_JOB_DESC, str_user_job);
                 bundle1.putString(DatabaseHandler.KEY_USER_MOBILE, str_user_mobile);
@@ -130,6 +133,7 @@ public class MainActivity extends AppCompatActivity {
         if(bundle!=null)
         {
             str_user_name = bundle.getString(DatabaseHandler.KEY_USER_NAME);
+            str_project_name = bundle.getString(DatabaseHandler.KEY_Project_Name);
             str_user_address = bundle.getString(DatabaseHandler.KEY_USER_ADDRESS);
             str_user_job = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
             str_user_mobile = bundle.getString(DatabaseHandler.KEY_USER_MOBILE);

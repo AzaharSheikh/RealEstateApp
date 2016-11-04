@@ -205,7 +205,7 @@
                 android:padding="5dp"
                 android:maxLength="16"
                 android:textColor="@color/gold"
-                android:inputType="textPassword"
+
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
                 android:id="@+id/edt_pan" />
