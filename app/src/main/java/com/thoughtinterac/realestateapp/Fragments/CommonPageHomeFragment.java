@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -44,6 +45,7 @@ public class CommonPageHomeFragment extends Fragment {
         webHome.getSettings().setBuiltInZoomControls(true);
         webHome.getSettings().setPluginState(WebSettings.PluginState.ON);
         webHome.getSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);
+        webHome.setBackgroundColor(Color.TRANSPARENT);
         //webHome.getSettings().setPluginsEnabled(true);
         webHome.setWebViewClient(new HelloWebViewClient());
         webHome.loadUrl("file:///android_asset/www/index.html");
