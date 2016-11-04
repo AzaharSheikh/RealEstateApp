@@ -6,23 +6,25 @@
     android:background="@drawable/dashbd_bgp"
     android:focusableInTouchMode="true"
     android:layout_height="match_parent">
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:adjustViewBounds="true"
-        android:src="@drawable/logo"
-        android:layout_height="wrap_content" />
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+
+
     <LinearLayout
 
         android:orientation="vertical"
-        android:padding="10dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:gravity="center"
         android:layout_width="fill_parent"
         android:layout_marginLeft="30dp"
         android:layout_marginRight="30dp"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/logo"
+            android:layout_marginBottom="35dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="wrap_content" />
         <RadioGroup
             android:layout_width="match_parent"
             android:id="@+id/rg_member"
@@ -83,7 +85,7 @@
                 android:textColor="@color/offwhite"
 
                 android:textStyle="bold"
-                android:textSize="12dp"
+                android:textSize="13dp"
                 android:text="Forgot Password ?"
                 android:id="@+id/txt_forgot_password"
                 android:layout_height="wrap_content" />
@@ -91,10 +93,10 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/Remember_me"
-                android:textSize="12dp"
+                android:text="  Remember me"
+                android:textSize="13dp"
                 android:buttonTint="@color/gold"
-
+                android:button="@drawable/checkbox_selector"
                 android:textColor="@color/gold"
                 />
 
@@ -128,7 +130,7 @@
                 android:layout_gravity="center"
                 android:textColor="@color/gold"
                 android:textStyle="bold"
-                android:text="OR"
+                android:text="Or"
                 android:padding="5dp"
                 android:layout_height="wrap_content" />
 
@@ -142,6 +144,6 @@
             />
 
     </LinearLayout>
-    </ScrollView>
+
 
 </LinearLayout>
