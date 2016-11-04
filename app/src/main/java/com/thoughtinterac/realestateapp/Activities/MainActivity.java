@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
     // index to identify current nav menu item
     public static int navItemIndex = 0;
     Toolbar toolbar;
-    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="";
+    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="",str_male_female="";
     boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,6 +109,7 @@ public class MainActivity extends AppCompatActivity {
                 bundle1.putString(DatabaseHandler.KEY_USER_EMAIL, str_user_email);
                 bundle1.putString(DatabaseHandler.KEY_PAN_NUMBER, str_user_pan);
                 bundle1.putString(DatabaseHandler.KEY_BANK_DETAILS, str_user_bank);
+                bundle1.putString(DatabaseHandler.KEY_BANK_DETAILS, str_male_female);
                 Intent i = new Intent(MainActivity.this,UserProfileUpdateActivity.class);
                 i.putExtra("KEY_USER_NAME", str_user_name);
                 i.putExtras(bundle1);
@@ -135,6 +136,7 @@ public class MainActivity extends AppCompatActivity {
             str_user_email = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
             str_user_pan = bundle.getString(DatabaseHandler.KEY_PAN_NUMBER);
             str_user_bank = bundle.getString(DatabaseHandler.KEY_BANK_DETAILS);
+            str_male_female = bundle.getString(DatabaseHandler.KEY_MALE_OR_FEMALE);
 
 
         }

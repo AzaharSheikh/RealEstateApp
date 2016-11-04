@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -36,10 +37,13 @@ public class RegisterActivity extends AppCompatActivity{
     EditText edt_username,edt_user_address,edt_job_dec,edt_mobile,edt_email,edt_password,edt_comfirm_pass,edt_pan,edt_bank_details;
     private ProgressDialog pDialog;
     String login_name;
+    private RadioGroup rg_gender;
+    String gender="Male";
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+        rg_gender = (RadioGroup)findViewById(R.id.rg_gender);
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null) {
             login_name = bundle.getString("login_name");
@@ -49,6 +53,23 @@ public class RegisterActivity extends AppCompatActivity{
         }
 
             init();
+        rg_gender.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId)
+                {
+                    case R.id.rbt_male:
+
+                        gender="Male";
+                        break;
+                    case R.id.rbt_female:
+
+                        gender="Female";
+                        break;
+
+                }
+            }
+        });
         btn_register_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -100,7 +121,7 @@ public class RegisterActivity extends AppCompatActivity{
         values.put(DatabaseHandler.KEY_PAN_NUMBER,str_pan);
         values.put(DatabaseHandler.KEY_BANK_DETAILS,str_bank);
         values.put(DatabaseHandler.KEY_USER_OR_REALTOR,login_name);
-        values.put(DatabaseHandler.KEY_MALE_OR_FEMALE,"");
+        values.put(DatabaseHandler.KEY_MALE_OR_FEMALE,gender);
         boolean b = db.insert(DatabaseHandler.TABLE_REGISTER,null,values)>0;
         if(b)
         {

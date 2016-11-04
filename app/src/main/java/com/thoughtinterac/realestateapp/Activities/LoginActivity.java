@@ -249,10 +249,10 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
     private void local_login(String str_username, String str_password) {
         DatabaseHandler handler= new DatabaseHandler(LoginActivity.this);
         SQLiteDatabase db = handler.getWritableDatabase();
-        String[] colmn = new String[] { DatabaseHandler.KEY_USER_NAME,DatabaseHandler.KEY_USER_ADDRESS,DatabaseHandler.KEY_USER_JOB_DESC,DatabaseHandler.KEY_USER_MOBILE,DatabaseHandler.KEY_USER_EMAIL,DatabaseHandler.KEY_USER_PASSWORD,DatabaseHandler.KEY_PAN_NUMBER,DatabaseHandler.KEY_BANK_DETAILS};
+        String[] colmn = new String[] { DatabaseHandler.KEY_USER_NAME,DatabaseHandler.KEY_USER_ADDRESS,DatabaseHandler.KEY_USER_JOB_DESC,DatabaseHandler.KEY_USER_MOBILE,DatabaseHandler.KEY_USER_EMAIL,DatabaseHandler.KEY_USER_PASSWORD,DatabaseHandler.KEY_PAN_NUMBER,DatabaseHandler.KEY_BANK_DETAILS,DatabaseHandler.KEY_MALE_OR_FEMALE};
         Cursor cursor = db.query(DatabaseHandler.TABLE_REGISTER, colmn,DatabaseHandler.KEY_USER_EMAIL + " = '"+str_username+"'"+" AND "+DatabaseHandler.KEY_USER_PASSWORD+" = '"+str_password+"'"+" AND "+DatabaseHandler.KEY_USER_OR_REALTOR+" = '"+login_name+"'", null, null, null, null);
         if(cursor!=null) {
-            String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="";
+            String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_user_pan="",str_user_bank="",str_male_female="";
         if(cursor.getCount() >0)
         {
             while(cursor.moveToNext())
@@ -264,6 +264,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
                 str_user_email= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_USER_EMAIL));
                 str_user_pan= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_PAN_NUMBER));
                 str_user_bank= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_BANK_DETAILS));
+                str_male_female= cursor.getString(cursor.getColumnIndex(DatabaseHandler.KEY_MALE_OR_FEMALE));
             }
             cursor.close();
             db.close();
@@ -275,6 +276,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
             bundle.putString(DatabaseHandler.KEY_USER_EMAIL, str_user_email);
             bundle.putString(DatabaseHandler.KEY_PAN_NUMBER, str_user_pan);
             bundle.putString(DatabaseHandler.KEY_BANK_DETAILS, str_user_bank);
+            bundle.putString(DatabaseHandler.KEY_MALE_OR_FEMALE, str_male_female);
 
             if(login_name.equalsIgnoreCase("user")) {
                 Intent intent = new Intent(LoginActivity.this,

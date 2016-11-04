@@ -61,7 +61,7 @@ public class RealtorMainPage extends AppCompatActivity
     private static final String TAG_REALATOR_LOGOUT="Realator_Logout";
     // toolbar titles respected to selected nav menu item
     private String[] activityTitles;
-    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="";
+    public static String str_user_name="",str_user_address="",str_user_job="",str_user_mobile="",str_user_email="",str_male_female="";
     // flag to load home fragment when user presses back key
     private boolean shouldLoadHomeFragOnBackPress = true;
     private Handler mHandler;
@@ -87,6 +87,7 @@ public class RealtorMainPage extends AppCompatActivity
             str_user_job = bundle.getString(DatabaseHandler.KEY_USER_JOB_DESC);
             str_user_mobile = bundle.getString(DatabaseHandler.KEY_USER_MOBILE);
             str_user_email = bundle.getString(DatabaseHandler.KEY_USER_EMAIL);
+            str_male_female = bundle.getString(DatabaseHandler.KEY_MALE_OR_FEMALE);
 
         }
         // Navigation view header
