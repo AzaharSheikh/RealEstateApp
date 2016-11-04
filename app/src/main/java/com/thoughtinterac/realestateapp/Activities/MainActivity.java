@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 bundle1.putString(DatabaseHandler.KEY_USER_EMAIL, str_user_email);
                 bundle1.putString(DatabaseHandler.KEY_PAN_NUMBER, str_user_pan);
                 bundle1.putString(DatabaseHandler.KEY_BANK_DETAILS, str_user_bank);
-                bundle1.putString(DatabaseHandler.KEY_BANK_DETAILS, str_male_female);
+                bundle1.putString(DatabaseHandler.KEY_MALE_OR_FEMALE, str_male_female);
                 Intent i = new Intent(MainActivity.this,UserProfileUpdateActivity.class);
                 i.putExtra("KEY_USER_NAME", str_user_name);
                 i.putExtras(bundle1);
