@@ -4,12 +4,15 @@
     android:layout_height="match_parent">
 <LinearLayout
     android:layout_width="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="10dp"
+    android:paddingTop="10dp"
     android:orientation="horizontal"
     android:layout_height="match_parent">
     <LinearLayout
         android:layout_width="0dp"
-
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:layout_height="match_parent">
         <TextView
             android:id="@+id/txt_project_no"
@@ -20,9 +23,44 @@
             android:layout_height="match_parent" />
     </LinearLayout>
     <LinearLayout
-        android:layout_weight="9"
+        android:layout_weight="4"
         android:layout_width="0dp"
-        android:padding="15dp"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/img_project_icon"
+                android:src="@drawable/newproject"
+                android:adjustViewBounds="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/img_new_project_icon"
+                android:adjustViewBounds="true"
+                android:src="@drawable/newcorner"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="5.0"
+        android:layout_width="0dp"
+        android:layout_gravity="center_vertical"
+        android:paddingLeft="15dp"
+
+
         android:id="@+id/li_realtor_project_list_main"
         android:orientation="vertical"
         android:layout_height="wrap_content">
@@ -33,12 +71,14 @@
             <TextView
                 android:layout_weight="3"
                 android:textStyle="bold"
+                android:visibility="gone"
                 android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:text="Project :"
                 android:layout_height="match_parent" />
             <TextView
                 android:layout_weight="7"
+                android:textStyle="bold"
                 android:id="@+id/project_name"
                 android:textColor="@color/gold"
                 android:layout_width="0dp"
@@ -52,6 +92,7 @@
             <TextView
                 android:layout_weight="3"
                 android:textStyle="bold"
+                android:visibility="gone"
                 android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:text="Location :"
@@ -62,19 +103,49 @@
                 android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:text="Project Location"
-                android:layout_height="wrap_content" />
+                android:layout_height="match_parent" />
         </LinearLayout>
 
 
         <TextView
             android:layout_weight="1"
-            android:textStyle="bold"
             android:textColor="@color/gold"
             android:id="@+id/project_date"
             android:layout_width="match_parent"
-            android:text="Date"
+            android:text="1/2/3 BHK"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_weight="1"
+            android:textColor="@color/gold"
+            android:layout_width="match_parent"
+            android:text="1048 sq ft"
+            android:layout_height="0dp" />
+        <TextView
+            android:layout_weight="1"
+            android:visibility="invisible"
+            android:textColor="@color/gold"
+            android:layout_width="match_parent"
+            android:text=""
             android:layout_height="0dp" />
 
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent">
+        <com.thoughtinterac.realestateapp.Fonts.TypefacedButton
+            android:id="@+id/btn_view"
+            android:layout_gravity="center"
+            android:text="View"
+            android:button="@null"
+            android:checked="true"
+            android:layout_width="match_parent"
+
+            android:layout_height="40dp"
+            android:background="@drawable/btn_click_change_color"
+            android:textColor="@color/bg_tab_text_color"
+            android:textSize="14dp"
+            />
     </LinearLayout>
 </LinearLayout>
 </LinearLayout>

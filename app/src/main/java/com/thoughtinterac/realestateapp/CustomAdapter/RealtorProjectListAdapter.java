@@ -67,7 +67,15 @@ public class RealtorProjectListAdapter extends BaseAdapter {
         project_location.setText(m.getProject_Location());
         project_date.setText(m.getProject_date());
         txt_project_no.setText(m.getProject_id());
-
+        ImageView img_project_icon= (ImageView)convertView.findViewById(R.id.img_project_icon);
+        ImageView img_new_project_icon= (ImageView)convertView.findViewById(R.id.img_new_project_icon);
+        if(m.getProject_id().toString().equalsIgnoreCase("1")||m.getProject_id().toString().equalsIgnoreCase("3"))
+        {
+            img_new_project_icon.setVisibility(View.GONE);
+        }else
+        {
+            img_new_project_icon.setVisibility(View.VISIBLE);
+        }
         li_realtor_project_list_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

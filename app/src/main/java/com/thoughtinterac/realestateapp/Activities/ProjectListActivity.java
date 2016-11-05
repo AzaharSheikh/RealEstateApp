@@ -61,17 +61,17 @@ public class ProjectListActivity extends AppCompatActivity {
         projectID.add("2");
         projectID.add("3");
 
-        projectName.add("Gemni");
-        projectName.add("Gemni");
-        projectName.add("Gemni");
+        projectName.add("Gemini Splendor");
+        projectName.add("Gemini Solitaire");
+        projectName.add("Gemini Orchids");
 
-        projectDate.add("1/2/16");
-        projectDate.add("2/2/16");
-        projectDate.add("3/2/16");
+        projectDate.add("1/2/3 BHK");
+        projectDate.add("2/3 BHK");
+        projectDate.add("1/2/3 BHK");
 
-        projectlocation.add("Dubai, Abu dhabi city");
-        projectlocation.add("Panvel, Navi Mumbai");
-        projectlocation.add("Thane, Navi Mumbai");
+        projectlocation.add("Dubai");
+        projectlocation.add("Wadala");
+        projectlocation.add("Vashi");
 
 
         ProjectDescription.add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");

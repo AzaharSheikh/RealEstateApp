@@ -341,7 +341,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.my_project_status:
                         navItemIndex = 4;
-                        CURRENT_TAG = TAG_MYDOC;
+                        CURRENT_TAG = TAG_PROJECT_STATUS;
                         break;
                     case R.id.my_gallery:
                         navItemIndex = 5;
