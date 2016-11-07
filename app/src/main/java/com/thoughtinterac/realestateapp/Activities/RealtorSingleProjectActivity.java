@@ -3,7 +3,9 @@ package com.thoughtinterac.realestateapp.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -45,6 +47,8 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.realtor_single_project_list_detail);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         edt_project_name = (EditText)findViewById(R.id.edt_project_name) ;
         edt_project_location= (EditText)findViewById(R.id.edt_project_location) ;
         edt_Project_Description= (EditText)findViewById(R.id.edt_Project_Description) ;
@@ -209,6 +213,11 @@ public class RealtorSingleProjectActivity extends AppCompatActivity {
         edt_3bhk_floor_area.setText(bhk3_FloorAreaSqFt);
         edt_3bhk_flat_available.setText(bhk3_NoofFloor);
         edt_3bhk_price.setText(bhk3_price);
+
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
 
     }
 }

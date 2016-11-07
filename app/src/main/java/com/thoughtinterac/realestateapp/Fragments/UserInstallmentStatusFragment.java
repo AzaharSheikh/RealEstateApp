@@ -40,7 +40,7 @@ public class UserInstallmentStatusFragment extends Fragment {
         installmentStatusID.add("4");
         installmentStatusID.add("5");
 
-        installmentStatusMsg.add("Your Token amount has received");
+        installmentStatusMsg.add("Token amount received");
         installmentStatusMsg.add("First Installment received");
         installmentStatusMsg.add("2nd Installment received");
         installmentStatusMsg.add("3rd Installment due after construction of first floor done");

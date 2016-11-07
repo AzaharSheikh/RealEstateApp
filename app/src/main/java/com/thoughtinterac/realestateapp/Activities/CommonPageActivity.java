@@ -106,7 +106,7 @@ public class CommonPageActivity extends AppCompatActivity {
     }
     private void loadNavHeader() {
         // name, website
-        txtName.setText("Hello Guest");
+        txtName.setText("Hello Guest!");
         txtWebsite.setText("Gemini@gmail.com");
 // showing dot next to notifications label
         //navigationView.getMenu().getItem(2).setActionView(R.layout.menu_dot);

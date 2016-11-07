@@ -3,8 +3,10 @@ package com.thoughtinterac.realestateapp.Activities;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -30,6 +32,8 @@ public class UserListActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_list);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         userName= new ArrayList();
         projectName= new ArrayList();
         userAddress = new ArrayList();
@@ -70,7 +74,11 @@ public class UserListActivity extends AppCompatActivity {
 
         listView.setAdapter(adapter);
     }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
 
+    }
     }
 
 

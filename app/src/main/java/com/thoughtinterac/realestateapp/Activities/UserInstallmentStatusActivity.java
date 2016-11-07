@@ -2,7 +2,9 @@ package com.thoughtinterac.realestateapp.Activities;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.widget.ListView;
 
 import com.thoughtinterac.realestateapp.CustomAdapter.InstallMentStatusAdapter;
@@ -23,6 +25,8 @@ public class UserInstallmentStatusActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_installment_status);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         installmentStatusID = new ArrayList();
         installmentStatusMsg = new ArrayList();
         installmentStatusDate = new ArrayList();
@@ -34,7 +38,7 @@ public class UserInstallmentStatusActivity extends AppCompatActivity {
         installmentStatusID.add("4");
         installmentStatusID.add("5");
 
-        installmentStatusMsg.add("Your Token amount has received");
+        installmentStatusMsg.add("Token amount received");
         installmentStatusMsg.add("First Installment received");
         installmentStatusMsg.add("2nd Installment received");
         installmentStatusMsg.add("3rd Installment due after construction of first floor done");
@@ -61,5 +65,10 @@ public class UserInstallmentStatusActivity extends AppCompatActivity {
         adapter= new InstallMentStatusAdapter(this,projectListMain);
 
         listView.setAdapter(adapter);
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
+
     }
 }

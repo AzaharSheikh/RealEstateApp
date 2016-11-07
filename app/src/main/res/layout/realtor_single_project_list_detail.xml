@@ -151,7 +151,7 @@
                     android:padding="10dp"
                     android:layout_margin="5dp"
                     android:textColor="@color/gold"
-                    android:textColorHint="@color/black"
+                    android:textColorHint="@color/offwhite"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
@@ -240,6 +240,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="1 BHK"
+                        android:textColor="@color/gold"
                         android:layout_gravity="center"
                         android:layout_height="wrap_content" />
                     <LinearLayout

@@ -32,7 +32,7 @@ public class UserListFragment extends Fragment {
         projectName= new ArrayList();
         userAddress = new ArrayList();
         projectDate = new ArrayList();
-        userName.add("Azahar S.");
+        userName.add("Azahar Sheikh");
         userName.add("Ashwini B.");
         userName.add("Krishna G.");
         userName.add("Dadoos B.");

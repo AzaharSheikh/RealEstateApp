@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -68,6 +69,7 @@ public class CommonPageProjectListAdapter extends BaseAdapter {
         txt_project_no.setText(m.getProject_id());
         ImageView img_project_icon= (ImageView)convertView.findViewById(R.id.img_project_icon);
         ImageView img_new_project_icon= (ImageView)convertView.findViewById(R.id.img_new_project_icon);
+        Button btn_view = (Button)convertView.findViewById(R.id.btn_view);
         if(m.getProject_id().toString().equalsIgnoreCase("1")||m.getProject_id().toString().equalsIgnoreCase("3"))
         {
             img_new_project_icon.setVisibility(View.GONE);
@@ -81,6 +83,28 @@ public class CommonPageProjectListAdapter extends BaseAdapter {
                 /*Toast toast = Toast.makeText(activity,m.getProject_Name(), Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();*/
+                Intent i = new Intent(activity, CommonPageSingleProjectActivity.class);
+                i.putExtra("Project_id", m.getProject_id());
+                i.putExtra("Project_Name", m.getProject_Name());
+                i.putExtra("Project_date", m.getProject_date());
+                i.putExtra("Project_Location", m.getProject_Location());
+                i.putExtra("ProjectDescription", m.getProjectDescription());
+                i.putExtra("bhk1_FloorAreaSqFt", m.getBhk1_FloorAreaSqFt());
+                i.putExtra("bhk1_NoofFloor", m.getBhk1_NoofFloor());
+                i.putExtra("bhk1_price", m.getBhk1_price());
+                i.putExtra("bhk2_FloorAreaSqFt", m.getBhk2_FloorAreaSqFt());
+                i.putExtra("bhk2_NoofFloor", m.getBhk2_NoofFloor());
+                i.putExtra("bhk2_price", m.getBhk2_price());
+                i.putExtra("bhk3_FloorAreaSqFt", m.getBhk3_FloorAreaSqFt());
+                i.putExtra("bhk3_NoofFloor", m.getBhk3_NoofFloor());
+                i.putExtra("bhk3_price", m.getBhk3_price());
+
+                activity.startActivity(i);
+            }
+        });
+        btn_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent i = new Intent(activity, CommonPageSingleProjectActivity.class);
                 i.putExtra("Project_id", m.getProject_id());
                 i.putExtra("Project_Name", m.getProject_Name());

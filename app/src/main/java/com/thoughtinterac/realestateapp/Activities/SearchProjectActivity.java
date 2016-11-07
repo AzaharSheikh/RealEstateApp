@@ -1,5 +1,6 @@
 package com.thoughtinterac.realestateapp.Activities;
 
+
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -7,9 +8,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -25,7 +28,7 @@ import java.util.ArrayList;
 /**
  * Created by AzaharSheikh on 12-10-2016.
  */
-public class SearchProjectActivity extends Activity {
+public class SearchProjectActivity extends AppCompatActivity {
 
     ImageView img_back;
     EditText edt_search;
@@ -43,6 +46,8 @@ public class SearchProjectActivity extends Activity {
 //                finish();
 //            }
 //    });
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         btn_search_project=(Button)findViewById(R.id.btn_search_project) ;
         edt_search=(EditText)findViewById(R.id.edt_search);
 
@@ -71,7 +76,11 @@ public class SearchProjectActivity extends Activity {
 
 
 }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
 
+    }
     private void showResult(ArrayList<String> projrct_id_list) {
 
     }

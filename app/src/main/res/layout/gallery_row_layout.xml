@@ -7,7 +7,9 @@
         android:id="@+id/li_main"
         android:layout_height="wrap_content">
         <ImageView
-            android:padding="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
             android:id="@+id/img_single_image"
             android:adjustViewBounds="true"
             android:layout_width="wrap_content"

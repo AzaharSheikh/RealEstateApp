@@ -235,8 +235,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/layout_border"
             android:padding="5dp"
-            android:maxLength="16"
-
+            android:maxLength="10"
             android:textColor="@color/gold"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"

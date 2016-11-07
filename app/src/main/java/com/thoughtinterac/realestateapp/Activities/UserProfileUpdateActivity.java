@@ -5,8 +5,10 @@ import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -30,6 +32,8 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.user_profile_update);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         btn_update_submit_submit=(Button)findViewById(R.id.btn_update_submit_submit);
         edt_username=(EditText)findViewById(R.id.edt_username);
         edt_user_address=(EditText)findViewById(R.id.edt_user_address);
@@ -121,6 +125,10 @@ public class UserProfileUpdateActivity extends AppCompatActivity {
        }
 
     }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
 
+    }
 }
 

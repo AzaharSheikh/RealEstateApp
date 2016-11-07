@@ -169,7 +169,7 @@
         </activity>
         <activity
             android:name=".Activities.SearchProjectActivity"
-            android:label="Gemini Spplendor"
+            android:label="Gemini Splendor"
             android:windowSoftInputMode="stateHidden">
 
         </activity>
@@ -189,7 +189,7 @@
         </activity>
         <activity
             android:name=".Activities.CommonPageActivity"
-            android:label="Gemini Spplendor"
+            android:label="Gemini Splendor"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -268,10 +268,7 @@
         <activity
             android:label="Gemini Splendor"
             android:name=".Activities.Quick_Enqiry">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
+
         </activity>
 
 

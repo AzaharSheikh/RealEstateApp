@@ -6,8 +6,10 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -43,6 +45,8 @@ public class RegisterActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.register);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         rg_gender = (RadioGroup)findViewById(R.id.rg_gender);
         Bundle bundle = getIntent().getExtras();
         if(bundle!=null) {
@@ -232,7 +236,11 @@ public class RegisterActivity extends AppCompatActivity{
         if (pDialog.isShowing())
             pDialog.dismiss();
     }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
 
+    }
     private void init() {
         btn_register_submit=(Button)findViewById(R.id.btn_register_submit);
         edt_username=(EditText)findViewById(R.id.edt_username);

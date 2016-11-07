@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/offwhite"
+    android:background="@drawable/dashbd_bgp"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -227,6 +227,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="1 BHK"
+                        android:textColor="@color/gold"
                         android:layout_gravity="center"
                         android:layout_height="wrap_content" />
                     <LinearLayout
@@ -394,6 +395,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="2 BHK"
+                        android:textColor="@color/gold"
                         android:layout_gravity="center"
                         android:layout_height="wrap_content" />
                     <LinearLayout
@@ -560,6 +562,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="3 BHK"
+                        android:textColor="@color/gold"
                         android:layout_gravity="center"
                         android:layout_height="wrap_content" />
                     <LinearLayout

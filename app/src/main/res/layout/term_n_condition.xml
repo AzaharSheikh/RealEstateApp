@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="15dp"
     android:background="@drawable/dashbd_bgp">
 
     <ScrollView
@@ -12,17 +13,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >
-    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Terms and Conditions"
-        android:id="@+id/textView2"
-        android:textSize="15dp"
-        android:textStyle="bold"
-        android:paddingLeft="15dp"
-        android:paddingTop="15dp"
-        android:textColor="@color/gold"
-        />
+
 
 <LinearLayout
 android:orientation="vertical" android:layout_width="match_parent"
@@ -37,7 +28,7 @@ Please read the terms below carefully before using this Website. By using or vis
 
 Terms of Use
 This notice is issued by Gemini splendor"
-        android:textSize="12dp"
+        android:textSize="15sp"
         android:paddingLeft="12dp"
         android:paddingTop="15dp"
         android:textColor="@color/gold"
@@ -49,7 +40,7 @@ This notice is issued by Gemini splendor"
 Gemini splendor may revise this legal notice at any time by updating this posting. You should check this Website from time to time to review the current legal notice, because it is binding on you. Certain provisions of this legal notice may be superseded by expressly designated legal notices or terms located on particular pages at this Website."
 
         android:id="@+id/textView2"
-        android:textSize="12dp"
+        android:textSize="15sp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:textColor="@color/gold"
@@ -69,7 +60,7 @@ Gemini splendor may revise this legal notice at any time by updating this postin
         android:layout_height="wrap_content"
         android:text="2.1 The contents of this Website are protected by international copyright laws and other intellectual property rights. The owner of these rights is Gemini Splendor, its affiliates or other third party licensors."
         android:id="@+id/textView2"
-        android:textSize="12dp"
+        android:textSize="15sp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:textColor="@color/gold"
@@ -79,7 +70,7 @@ Gemini splendor may revise this legal notice at any time by updating this postin
         android:layout_height="wrap_content"
         android:text="2.2 All product and Gemini Splendor names and logos mentioned on this Website are the trade marks, service marks or trading names of their respective owners, including us."
         android:id="@+id/textView2"
-        android:textSize="12dp"
+        android:textSize="15sp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:textColor="@color/gold"
@@ -89,7 +80,7 @@ Gemini splendor may revise this legal notice at any time by updating this postin
         android:layout_height="wrap_content"
         android:text="2.3 You are permitted to print and download extracts from this Website only for your personal, non-commercial use. Otherwise, no part of this Website may be reproduced or stored, modified, copied, republished, uploaded, posted, transmitted or distributed, by any means or in any manner, or included in any other website or in any public or private electronic retrieval system or service including but not limited to text, graphics, video, messages, code and/or software without our express prior written consent."
         android:id="@+id/textView2"
-        android:textSize="12dp"
+        android:textSize="15sp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:textColor="@color/gold"
@@ -99,7 +90,7 @@ Gemini splendor may revise this legal notice at any time by updating this postin
         android:layout_height="wrap_content"
         android:text="2.4 Any commercial use or exploitation of this Website or its content is strictly prohibited."
         android:id="@+id/textView2"
-        android:textSize="12dp"
+        android:textSize="15sp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:textColor="@color/gold"
@@ -109,7 +100,7 @@ Gemini splendor may revise this legal notice at any time by updating this postin
         android:layout_height="wrap_content"
         android:text="2.5 If you breach any of the terms in this legal notice, your permission to use this Website automatically terminates and you must immediately destroy any downloaded or printed extracts from this Website."
         android:id="@+id/textView2"
-        android:textSize="12dp"
+        android:textSize="15sp"
         android:paddingLeft="15dp"
         android:paddingTop="15dp"
         android:textColor="@color/gold"

@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="15dp"
     android:background="@drawable/dashbd_bgp">
 
 
@@ -10,68 +11,70 @@
             android:layout_height="match_parent">
 
 
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Details"
-                android:textColor="@color/gold"
-                android:textSize="20dp"
-                />
 <LinearLayout
     android:orientation="horizontal"
+    android:padding="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
         android:layout_width="0dp"
         android:layout_weight="1"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:text="Loan Taken From :"
         android:textColor="@color/gold"
         android:textSize="15dp"
-        android:padding="10dp"
+
         />
     <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
         android:layout_weight="1"
         android:layout_width="0dp"
+        android:padding="7dp"
+        android:background="@drawable/border_btn"
         android:layout_height="wrap_content"
         android:id="@+id/loan_from_edt"/>
 </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
+            android:padding="5dp"
             android:layout_height="wrap_content">
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="0dp"
                 android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:text="Rate Of Interest :"
+                android:layout_height="match_parent"
+                android:text="Rate of Interest :"
                 android:textColor="@color/gold"
                 android:textSize="15dp"
-                android:padding="10dp"
+
 
                 />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                 android:layout_weight="1"
                 android:layout_width="0dp"
+                android:padding="7dp"
+                android:background="@drawable/border_btn"
                 android:layout_height="wrap_content"
                 android:id="@+id/rate_interest_edt"/>
         </LinearLayout>
            <LinearLayout
                android:layout_width="match_parent"
                android:orientation="horizontal"
+               android:padding="5dp"
                android:layout_height="wrap_content">
                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                    android:layout_weight="1"
                    android:layout_width="0dp"
-                   android:layout_height="wrap_content"
-                   android:text="Years Of Interest :"
+                   android:layout_height="match_parent"
+                   android:text="Years of Interest :"
                    android:textColor="@color/gold"
                    android:textSize="15dp"
-                   android:padding="10dp"
+
                    />
                <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                    android:layout_weight="1"
                    android:layout_width="0dp"
+                   android:background="@drawable/border_btn"
+                   android:padding="7dp"
                    android:layout_height="match_parent"
                    android:id="@+id/yr_interest_edt"/>
            </LinearLayout>
@@ -79,27 +82,31 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
+                android:padding="5dp"
                 android:layout_height="wrap_content">
 
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_weight="1"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:text="Loan Amount :"
                 android:textColor="@color/gold"
                 android:textSize="15dp"
-                android:padding="10dp"
+
                 />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:padding="7dp"
+                    android:background="@drawable/border_btn"
                     android:id="@+id/loan_amt_edt"/>
                 </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"
                 android:layout_height="wrap_content"
+
                 android:background="@drawable/table_border"
                 android:layout_marginTop="20dp"
               >

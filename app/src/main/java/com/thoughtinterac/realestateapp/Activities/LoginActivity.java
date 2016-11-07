@@ -8,8 +8,10 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -70,6 +72,7 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.login_activity);
+
         btn_login=(Button)findViewById(R.id.btn_login);
         loginButton = (LoginButton) findViewById(R.id.login_button);
         btn_register=(Button)findViewById(R.id.btn_register);
@@ -439,6 +442,11 @@ public class LoginActivity extends AppCompatActivity  implements View.OnClickLis
        // callbackManager.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
 
+
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
 
     }
 }

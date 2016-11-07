@@ -85,6 +85,10 @@ ScrollView sc_welcome_layout;
 
         sc_welcome_layout=(ScrollView)rootView.findViewById(R.id.sc_welcome_layout);
         iv_profile_pic = (ImageView)rootView.findViewById(R.id.iv_profile_pic);
+        if(MainActivity.str_male_female== null)
+        {
+            MainActivity.str_male_female="Male";
+        }
         if(MainActivity.str_male_female.toString().equalsIgnoreCase("Female"))
         {
 
@@ -106,7 +110,7 @@ ScrollView sc_welcome_layout;
         if(LoginActivity.imageurl!=null) {
             Picasso.with(getActivity()).load(LoginActivity.imageurl).into(iv_profile_pic);
         }
-         setData();
+         //setData();
 
 
 

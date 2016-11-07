@@ -76,8 +76,8 @@ public class GalleryFragment extends Fragment {
         List<GalleryImagesModel> imageList = new ArrayList<GalleryImagesModel>();
         Integer[] mThumbIds = {
                 R.drawable.gallary1, R.drawable.gallary2,
-                R.drawable.gallary3, R.drawable.gallary4,
-                R.drawable.gallary5, R.drawable.gallary6
+                R.drawable.gallary3, R.drawable.gallary4
+
 
         };
         for(int i =0 ; i<mThumbIds.length;i++)

@@ -3,8 +3,10 @@ package com.thoughtinterac.realestateapp.Activities;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
@@ -42,6 +44,8 @@ public class ProjectListActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.realtor_project_list);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         projectID = new ArrayList();
         projectName = new ArrayList();
         projectDate = new ArrayList();
@@ -130,6 +134,11 @@ public class ProjectListActivity extends AppCompatActivity {
         adapter = new RealtorProjectListAdapter(ProjectListActivity.this, projectListMain);
 
         listView.setAdapter(adapter);
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
+
     }
 }
 

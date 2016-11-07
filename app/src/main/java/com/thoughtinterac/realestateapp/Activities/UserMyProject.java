@@ -5,8 +5,10 @@ import android.app.ProgressDialog;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -57,7 +59,8 @@ public class UserMyProject extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.my_project_layout);
-
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayHomeAsUpEnabled(true);
         rg_myproject = (RadioGroup)findViewById(R.id.rg_myproject);
         rg_flat_type = (RadioGroup)findViewById(R.id.rg_flat_type);
         listView = (ListView)findViewById(R.id.list_place);
@@ -303,5 +306,10 @@ public class UserMyProject extends AppCompatActivity {
                 }
             }
         }
+    }
+    public boolean onOptionsItemSelected(MenuItem item){
+        finish();
+        return true;
+
     }
 }

@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:id="@+id/txt_name"
                     android:layout_height="wrap_content"
-                    android:text="User Name "
+                    android:text="Azahar Sheikh "
                     android:textColor="@color/gold"
                     android:textSize="@dimen/subheader"
                     android:padding="5dp"
@@ -77,21 +77,22 @@
 
              android:text="Project Name : "
              android:textColor="@color/gold"
-             android:layout_gravity="left"
-             android:textSize="@dimen/content"
+             android:gravity="right"
+
              android:padding="5dp"
-             android:layout_weight="4"
+             android:layout_weight="3.5"
              android:textStyle="bold"
              />
 
          <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
              android:layout_width="0dp"
-             android:layout_weight="6"
+             android:layout_weight="6.5"
              android:layout_height="wrap_content"
              android:text="Gemini Splendor"
              android:textColor="@color/gold"
-             android:layout_gravity="left"
-             android:textSize="@dimen/content"
+
+             android:gravity="left"
+
              android:padding="5dp" />
      </LinearLayout>
 
@@ -107,22 +108,23 @@
 
                 android:text="Job Description : "
                 android:textColor="@color/gold"
-                android:layout_gravity="left"
-                android:textSize="@dimen/content"
+                android:gravity="right"
+
                 android:padding="5dp"
-                android:layout_weight="4"
+                android:layout_weight="3.5"
                 android:textStyle="bold"
                 />
 
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="0dp"
-                android:layout_weight="6"
+                android:layout_weight="6.5"
                 android:layout_height="wrap_content"
                 android:id="@+id/txt_job_decs"
-                android:text="Android Deveopler"
+                android:text="Android Developer"
                 android:textColor="@color/gold"
-                android:layout_gravity="left"
-                android:textSize="@dimen/content"
+
+                android:gravity="left"
+
                 android:padding="5dp" />
             </LinearLayout>
 
@@ -138,12 +140,12 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:id="@+id/txt_project_name"
+                    android:layout_weight="3.5"
+
                     android:text="Email : "
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+                    android:gravity="right"
+
                     android:padding="5dp"
                     android:textStyle="bold"
 
@@ -151,13 +153,14 @@
 
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
-                    android:layout_weight="6"
+                    android:layout_weight="6.5"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_email"
                     android:text="Azahar.s@thoughtinteract.com"
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+
+                    android:gravity="left"
+
                     android:padding="5dp" />
             </LinearLayout>
 
@@ -170,12 +173,12 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:id="@+id/txt_project_name"
+                    android:layout_weight="3.5"
+
                     android:text="Phone : "
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+                    android:gravity="right"
+
                     android:padding="5dp"
                     android:textStyle="bold"
 
@@ -183,13 +186,14 @@
 
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
-                    android:layout_weight="6"
+                    android:layout_weight="6.5"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_mobile"
-                    android:text="1234567899"
+                    android:text="9821088867"
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+
+                    android:gravity="left"
+
                     android:padding="5dp" />
             </LinearLayout>
 
@@ -204,12 +208,12 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
-                    android:id="@+id/txt_project_name"
+                    android:layout_weight="3.5"
+
                     android:text="Address : "
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+                    android:gravity="right"
+
                     android:padding="5dp"
                     android:textStyle="bold"
 
@@ -217,13 +221,16 @@
 
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
-                    android:layout_weight="6"
+                    android:layout_weight="6.5"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_address"
-                    android:text="Dadar,Mumbai"
+                    android:text="Akbar Bhavan, 69-71,
+Janjikar Street, Near Crawford Market,
+Mumbai – 400 003"
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+
+                    android:gravity="left"
+
                     android:padding="5dp" />
 
 
@@ -237,12 +244,12 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
+                    android:layout_weight="3.5"
                     android:id="@+id/txt_pan_view"
                     android:text="PAN Number : "
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+                    android:gravity="right"
+
                     android:padding="5dp"
                     android:textStyle="bold"
 
@@ -250,13 +257,15 @@
 
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
-                    android:layout_weight="6"
+                    android:layout_weight="6.5"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_pan"
-                    android:text="Dadar,Mumbai"
+                    android:maxLength="10"
+                    android:text="SD68866D78"
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+
+                    android:gravity="left"
+
                     android:padding="5dp" />
 
 
@@ -270,12 +279,12 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="4"
+                    android:layout_weight="3.5"
                     android:id="@+id/txt_bank_view"
                     android:text="Bank Name : "
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+                    android:gravity="right"
+
                     android:padding="5dp"
                     android:textStyle="bold"
 
@@ -283,13 +292,14 @@
 
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="0dp"
-                    android:layout_weight="6"
+                    android:layout_weight="6.5"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_bank"
-                    android:text="Dadar,Mumbai"
+                    android:text="SBI Bank,Mumbai"
                     android:textColor="@color/gold"
-                    android:layout_gravity="left"
-                    android:textSize="@dimen/content"
+
+                    android:gravity="left"
+
                     android:padding="5dp" />
 
 
