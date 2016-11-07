@@ -9,6 +9,8 @@
     android:layout_width="match_parent"
     android:id="@+id/grid_gallery"
     android:numColumns="1"
+  android:paddingTop="15dp"
+
     android:layout_height="match_parent">
 
 </GridView>
