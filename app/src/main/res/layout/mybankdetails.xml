@@ -29,6 +29,7 @@
         android:layout_weight="1"
         android:layout_width="0dp"
         android:padding="7dp"
+        android:textColor="@color/gold"
         android:background="@drawable/border_btn"
         android:layout_height="wrap_content"
         android:id="@+id/loan_from_edt"/>
@@ -52,6 +53,7 @@
                 android:layout_weight="1"
                 android:layout_width="0dp"
                 android:padding="7dp"
+                android:textColor="@color/gold"
                 android:background="@drawable/border_btn"
                 android:layout_height="wrap_content"
                 android:id="@+id/rate_interest_edt"/>
@@ -75,6 +77,7 @@
                    android:layout_width="0dp"
                    android:background="@drawable/border_btn"
                    android:padding="7dp"
+                   android:textColor="@color/gold"
                    android:layout_height="match_parent"
                    android:id="@+id/yr_interest_edt"/>
            </LinearLayout>
@@ -99,6 +102,7 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:padding="7dp"
+                    android:textColor="@color/gold"
                     android:background="@drawable/border_btn"
                     android:id="@+id/loan_amt_edt"/>
                 </LinearLayout>
@@ -190,7 +194,8 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/gold"
                     android:id="@+id/fisrt_principal_edt"/>
                 <View
                     android:layout_width="1dp"
@@ -201,6 +206,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/gold"
                     android:id="@+id/fisrt_interest_edt"/>
                 <View
                     android:layout_width="1dp"
@@ -210,6 +216,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/gold"
                     android:id="@+id/fisrt_lumpsum_edt"/>
             </LinearLayout>
 
@@ -239,6 +246,7 @@
                     android:layout_weight="1"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
+                    android:textColor="@color/gold"
                     android:id="@+id/sec_principal_edt"/>
                 <View
                     android:layout_width="1dp"
@@ -247,6 +255,7 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:textColor="@color/gold"
                     android:layout_height="match_parent"
                     android:id="@+id/sec_interest_edt"/>
                 <View
@@ -256,6 +265,7 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:textColor="@color/gold"
                     android:layout_height="match_parent"
                     android:id="@+id/sec_lumpsum_edt"
                     />
