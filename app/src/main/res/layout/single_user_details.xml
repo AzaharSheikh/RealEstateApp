@@ -500,11 +500,12 @@ Selling Price: 650,000 Amount paid: 351,055"
                 <CheckBox
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:button="@drawable/checkbox_selector"
                     android:layout_height="wrap_content" />
                 <LinearLayout
                     android:layout_weight="9"
                     android:layout_width="0dp"
-                    android:padding="5dp"
+                    android:paddingLeft="5dp"
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <TextView
@@ -524,18 +525,18 @@ Selling Price: 650,000 Amount paid: 351,055"
                 <CheckBox
                     android:layout_weight="1"
                     android:layout_width="0dp"
+                    android:button="@drawable/checkbox_selector"
                     android:layout_height="wrap_content" />
                 <LinearLayout
                     android:layout_weight="9"
                     android:layout_width="0dp"
-                    android:padding="5dp"
+                    android:paddingLeft="5dp"
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <TextView
                         android:text="Phase 2\ndummy details"
                         android:layout_width="match_parent"
                         android:textColor="@color/gold"
-
                         android:layout_height="match_parent" />
 
                 </LinearLayout>
@@ -581,6 +582,7 @@ Selling Price: 650,000 Amount paid: 351,055"
                         android:id="@+id/txt_instl_name"
                         android:layout_margin="1dp"
                         android:layout_weight="3"
+                        android:textColor="@color/gold"
                         android:gravity="center_vertical"
                         android:text="Total(A)"
                         android:layout_width="0dp"
@@ -591,18 +593,21 @@ Selling Price: 650,000 Amount paid: 351,055"
                         android:gravity="right|center_vertical"
                         android:textSize="16dp"
                         android:text="000.0"
+                        android:textColor="@color/gold"
                         android:layout_weight="1.5"
                         android:layout_width="0dp"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:gravity="center"
+                        android:textColor="@color/gold"
                         android:layout_weight="0.5"
                         android:text="%"
                         android:layout_height="match_parent" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:text="@string/Rupee"
+                        android:textColor="@color/gold"
                         android:gravity="center"
                         android:layout_weight="0.5"
                         android:layout_height="match_parent" />
@@ -610,6 +615,7 @@ Selling Price: 650,000 Amount paid: 351,055"
                         android:id="@+id/txt_total_amount"
                         android:text="000000000.0"
                         android:textSize="16dp"
+                        android:textColor="@color/gold"
                         android:textStyle="bold"
                         android:gravity="right|center_vertical"
                         android:layout_weight="3.5"

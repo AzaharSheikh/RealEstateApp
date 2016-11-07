@@ -19,7 +19,7 @@ import java.util.List;
  * Created by AzaharSheikh on 10-10-2016.
  */
 public class UserListFragment extends Fragment {
-    ArrayList<String> userName,projectName, userAddress,projectDate;
+    ArrayList<String> userName,projectName, userAddress,projectDate,gender;
     private UserListCustomAdapter adapter;
     public UserListFragment() {
     }
@@ -32,11 +32,17 @@ public class UserListFragment extends Fragment {
         projectName= new ArrayList();
         userAddress = new ArrayList();
         projectDate = new ArrayList();
+        gender = new ArrayList();
         userName.add("Azahar Sheikh");
+        gender.add("Male");
         userName.add("Ashwini B.");
+        gender.add("Female");
         userName.add("Krishna G.");
-        userName.add("Dadoos B.");
+        gender.add("Female");
+        userName.add("Dadaso B.");
+        gender.add("Male");
         userName.add("Anuradha R.");
+        gender.add("Female");
         projectName.add("Gemini Mumbai");
         projectName.add("Gemini Vashi");
         projectName.add("Gemini Panvel");
@@ -60,6 +66,7 @@ public class UserListFragment extends Fragment {
             list.setProjectName(projectName.get(i).toString());
             list.setUserAddr(userAddress.get(i).toString());
             list.setDate(projectDate.get(i).toString());
+            list.setGender(gender.get(i).toString());
             userListMain.add(list);
         }
         ListView listView = (ListView)rootView.findViewById(R.id.user_list_view);
