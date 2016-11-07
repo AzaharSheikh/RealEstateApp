@@ -11,6 +11,7 @@ public class UserModel {
     private  String UserAddr="";
     private  String Date="";
     private  String ImageName="";
+    String gender;
 
     public String getUserName() {
         return UserName;
@@ -52,8 +53,12 @@ public class UserModel {
         ImageName = imageName;
     }
 
-
-
-
+    public String getGender() {
+        return gender;
     }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+}
 

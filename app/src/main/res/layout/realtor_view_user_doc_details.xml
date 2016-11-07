@@ -2,19 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/offwhite">
+    android:background="@drawable/dashbd_bgp">
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="10dp">
-        android:layout_height="match_parent">
+        >
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -72,146 +70,143 @@
                         android:layout_height="wrap_content" />
 
            </RadioGroup>
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:background="@drawable/layout_border"
                 android:orientation="vertical"
+                android:background="@drawable/border_btn"
+                android:layout_margin="10dp"
                 android:layout_height="match_parent">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+
                         android:orientation="vertical"
-                        android:paddingLeft="10dp">
+                        >
 
                             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                                 android:layout_width="match_parent"
-                                android:layout_weight="2"
-
+                                android:paddingTop="5dp"
                                 android:gravity="center_vertical"
                                 android:textColor="@color/gold"
-                                android:background="@color/offwhite"
+
                                 android:paddingLeft="10dp"
                                 android:paddingRight="10dp"
                                 android:text="1. Sale Deed/Title deed /Conveyance Deed"
-                                android:layout_height="0dp"
+                                android:layout_height="wrap_content"
                                 android:id="@+id/txt_project_desc" />
 
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
-
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="2. RTC Extracts"
-                            android:layout_height="0dp"
-                            android:id="@+id/txt_project_desc" />
+                            android:layout_height="wrap_content"
+                            />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
-
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="3. Katha Certificate and Extracts"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
 
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="4. Mutation Register Extracts"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="5. Joint Development Agreement"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="6. General Power of Attorney"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="7. Building plan sanctioned by statutory authority"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="8. NOC from Electricity Deptt/Pollution Control Board/Water Works/ Air Port Authority"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="9. Supplementary agreement/Ratification Deed"
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
-                            android:layout_weight="2"
                             android:gravity="center_vertical"
                             android:textColor="@color/gold"
-                            android:background="@color/offwhite"
+
                             android:paddingLeft="10dp"
                             android:paddingRight="10dp"
+                            android:paddingTop="5dp"
                             android:text="10. Allotment Letter from the builder/co-operativesociety/Housing Board/BDA."
-                            android:layout_height="0dp"
+                            android:layout_height="wrap_content"
                             android:id="@+id/txt_project_desc" />
-
-
-
-
-
-
-
-
 
                     </LinearLayout>
+                </ScrollView>
                 </LinearLayout>
+
                 </LinearLayout>
         </LinearLayout>
-        </ScrollView>
+
 
     </LinearLayout>
 

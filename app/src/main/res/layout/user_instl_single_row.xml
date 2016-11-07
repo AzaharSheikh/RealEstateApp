@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dashbd_bgp">
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="horizontal"
@@ -13,6 +13,8 @@
             android:id="@+id/chk_instl_status"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:layout_marginLeft="3dp"
+            android:button="@drawable/checkbox_selector"
             android:layout_height="match_parent" />
         <TextView
             android:id="@+id/txt_instl_name"
@@ -26,7 +28,10 @@
         <EditText
             android:id="@+id/edt_instl_percentage"
             android:inputType="number"
+            android:textColor="@color/gold"
+            android:background="@drawable/border_btn"
             android:gravity="right"
+            android:padding="7dp"
             android:layout_weight="1.5"
             android:layout_width="0dp"
             android:layout_height="match_parent" />
@@ -47,10 +52,13 @@
         <EditText
             android:id="@+id/edt_amount"
             android:gravity="right"
+            android:textColor="@color/gold"
             android:inputType="number"
             android:layout_weight="3.5"
+            android:padding="7dp"
             android:layout_width="0dp"
-
+            android:layout_marginRight="3dp"
+            android:background="@drawable/border_btn"
             android:layout_height="match_parent" />
 
     </LinearLayout>

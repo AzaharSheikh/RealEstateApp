@@ -15,6 +15,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.thoughtinterac.realestateapp.Activities.MainActivity;
 import com.thoughtinterac.realestateapp.Activities.Single_User_Details;
 import com.thoughtinterac.realestateapp.Activities.Single_User_Task_Popup;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
@@ -63,6 +64,7 @@ public class UserListCustomAdapter extends BaseAdapter {
         TextView project_name = (TextView) convertView.findViewById(R.id.project_name);
         TextView user_address = (TextView) convertView.findViewById(R.id.user_address);
         TextView project_date = (TextView) convertView.findViewById(R.id.project_date);
+        ImageView img_user_dp= (ImageView)convertView.findViewById(R.id.img_user_dp);
         LinearLayout lv_main=(LinearLayout)convertView.findViewById(R.id.lv_main);
 
         final UserModel m = userListItems.get(position);
@@ -70,6 +72,14 @@ public class UserListCustomAdapter extends BaseAdapter {
         project_name.setText(m.getProjectName());
         user_address.setText(m.getUserAddr());
         project_date.setText(m.getDate());
+        if(m.getGender().equalsIgnoreCase("Female"))
+        {
+
+            img_user_dp.setImageResource(R.drawable.femaledp);
+        }else
+        {
+            img_user_dp.setImageResource(R.drawable.user);
+        }
         lv_main.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {

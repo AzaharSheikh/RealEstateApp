@@ -26,7 +26,7 @@ import java.util.List;
  * Created by AshwiniBadgujar on 07-10-2016.
  */
 public class UserListActivity extends AppCompatActivity {
-    ArrayList<String> userName,projectName, userAddress,projectDate;
+    ArrayList<String> userName,projectName, userAddress,projectDate,gender;
     private UserListCustomAdapter adapter;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,11 +38,17 @@ public class UserListActivity extends AppCompatActivity {
         projectName= new ArrayList();
         userAddress = new ArrayList();
         projectDate = new ArrayList();
-        userName.add("Azahar S.");
+        gender = new ArrayList();
+        userName.add("Azahar Sheikh");
+        gender.add("Male");
         userName.add("Ashwini B.");
+        gender.add("Female");
         userName.add("Krishna G.");
+        gender.add("Female");
         userName.add("Dadoos B.");
+        gender.add("Male");
         userName.add("Anuradha R.");
+        gender.add("Female");
         projectName.add("Gemini Mumbai");
         projectName.add("Gemini Vashi");
         projectName.add("Gemini Panvel");
@@ -66,6 +72,7 @@ public class UserListActivity extends AppCompatActivity {
             list.setProjectName(projectName.get(i).toString());
             list.setUserAddr(userAddress.get(i).toString());
             list.setDate(projectDate.get(i).toString());
+            list.setGender(gender.get(i).toString());
             userListMain.add(list);
         }
         ListView listView = (ListView)findViewById(R.id.user_list_view);
