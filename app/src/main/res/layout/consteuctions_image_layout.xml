@@ -8,7 +8,7 @@
     android:orientation="horizontal"
     android:layout_height="wrap_content">
     <ImageView
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:id="@+id/img_back"
         android:layout_margin="5dp"
         android:src="@drawable/back_arrow"

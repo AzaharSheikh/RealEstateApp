@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:padding="15dp"
     android:background="@drawable/dashbd_bgp"
     >
 <RadioGroup
@@ -82,6 +82,7 @@
                     android:layout_gravity="center"
                     android:src="@drawable/photo_camera"
                     android:layout_weight="2"
+                    android:padding="5dp"
                     android:layout_width="wrap_content"
                     android:layout_height="0dp" />
 
@@ -133,6 +134,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/user_img1"
+                                android:padding="5dp"
                                 android:adjustViewBounds="true"
                                 />
                             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -150,6 +152,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/user_img2"
+                                android:padding="5dp"
                                 android:adjustViewBounds="true"
                                 />
                             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -167,6 +170,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/user_img3"
+                                android:padding="5dp"
                                 android:adjustViewBounds="true"
                                 />
                             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -184,6 +188,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/user_img4"
+                                android:padding="5dp"
                                 android:adjustViewBounds="true"
                                 />
 
@@ -208,6 +213,7 @@
                         android:layout_weight="2"
                         android:layout_width="wrap_content"
                         android:layout_height="0dp"
+                        android:padding="5dp"
                         android:visibility="gone"/>
 
                 </LinearLayout>
@@ -258,6 +264,7 @@
                             android:layout_height="wrap_content"
                             android:src="@drawable/realator_img1"
                             android:adjustViewBounds="true"
+                            android:padding="5dp"
                             />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_width="match_parent"
@@ -274,6 +281,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:src="@drawable/hall"
+                            android:padding="5dp"
                             android:adjustViewBounds="true"
                             />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -291,6 +299,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:src="@drawable/studyroom1"
+                            android:padding="5dp"
                             android:adjustViewBounds="true"
                             />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -308,6 +317,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:src="@drawable/kidsroom1"
+                            android:padding="5dp"
                             android:adjustViewBounds="true"
                             />
 
@@ -358,6 +368,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/overview_image"
+                    android:padding="5dp"
                     android:adjustViewBounds="true"
                     />
             </LinearLayout>
@@ -459,6 +470,7 @@ Metro Station"
                         android:id="@+id/txt_view_area_sq_ft"
                         android:text="Floor Area in sq. ft :"
                         android:layout_width="0dp"
+                        android:paddingTop="5dp"
                         android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:text="500"
@@ -477,6 +489,7 @@ Metro Station"
                             android:id="@+id/txt_view_flat_available"
                             android:text="No. of flats available :"
                             android:layout_width="0dp"
+                            android:paddingTop="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:text="500"
@@ -509,7 +522,8 @@ Metro Station"
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_weight="7.5"
                             android:id="@+id/txt_view_construction_stage"
@@ -519,18 +533,28 @@ Metro Station"
                             android:paddingLeft="0dp"
                             android:paddingTop="5dp"
                             android:layout_height="wrap_content" />
+
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:text="50%"
-                            android:layout_weight="2.5"
                             android:id="@+id/txt_value_construction_stage"
-                            android:textColor="@color/gold"
-                            android:layout_width="0dp"
+                        android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:padding="2.5dp"
+                        android:text="View"
                             android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
+                        android:button="@null"
+                        android:checked="true"
+                        android:layout_width="0dp"
+                        android:layout_weight="2.5"
+                        android:layout_height="25dp"
+                        android:background="@drawable/btn_click_change_color"
+                        android:textColor="@color/bg_tab_text_color"
+                        android:textSize="14dp"/>
+
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_weight="7.5"
                             android:id="@+id/txt_view_amenities"
@@ -542,16 +566,25 @@ Metro Station"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
 
-                            android:layout_weight="2.5"
                             android:id="@+id/txt_value_amenities"
-                            android:textColor="@color/gold"
-                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:text="View"
                             android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
+                            android:padding="2.5dp"
+                            android:button="@null"
+                            android:checked="true"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.5"
+                            android:layout_height="25dp"
+                            android:background="@drawable/btn_click_change_color"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:textSize="14dp"/>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_weight="7.5"
                             android:id="@+id/txt_view_extra_feature"
@@ -562,12 +595,20 @@ Metro Station"
                             android:paddingTop="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="2.5"
                             android:id="@+id/txt_value_extra_feature"
-                            android:textColor="@color/gold"
-                            android:layout_width="0dp"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"
+                            android:text="View"
+                            android:padding="2.5dp"
+                            android:button="@null"
                             android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
+                            android:checked="true"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.5"
+                            android:layout_height="25dp"
+                            android:background="@drawable/btn_click_change_color"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:textSize="14dp"/>
                     </LinearLayout>
 
                 </LinearLayout>
