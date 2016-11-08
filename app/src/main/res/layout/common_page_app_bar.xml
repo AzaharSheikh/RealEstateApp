@@ -39,5 +39,5 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         app:backgroundTint="@color/gold"
-        app:srcCompat="@drawable/pen" />
+        app:srcCompat="@drawable/search_icon" />
 </android.support.design.widget.CoordinatorLayout>

@@ -39,7 +39,7 @@ public class ProjectListFragment extends Fragment {
         projectType.add("1BHK");
 
         projectName.add("Gemini");
-        projectLocation.add("Panvel");
+        projectLocation.add("Dubai");
         projectDate.add("22/04/2016");
         projectType.add("2BHK");
 

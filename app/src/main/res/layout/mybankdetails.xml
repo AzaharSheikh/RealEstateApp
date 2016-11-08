@@ -108,6 +108,7 @@
                 </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
+
                 android:orientation="horizontal"
                 android:layout_height="wrap_content"
 
@@ -121,9 +122,10 @@
                 android:layout_height="wrap_content"
                 android:text="Installments"
                 android:textColor="@color/gold"
-                android:textSize="15dp"
-               android:paddingTop="10dp"
-                android:paddingLeft="10dp"
+                android:textSize="12dp"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:gravity="center"
                 />
                 <View
                     android:layout_width="1dp"
@@ -136,8 +138,9 @@
                     android:layout_height="wrap_content"
                     android:text="Principal"
                     android:textColor="@color/gold"
-                    android:textSize="15dp"
-                    android:padding="3dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:padding="5dp"
                     />
                 <View
                     android:layout_width="1dp"
@@ -150,8 +153,9 @@
                     android:text="Interest"
                     android:gravity="center"
                     android:textColor="@color/gold"
-                    android:textSize="15dp"
-                    android:padding="3dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:padding="5dp"
                     />
                 <View
                     android:layout_width="1dp"
@@ -164,8 +168,9 @@
                     android:text="LumpSum"
                     android:gravity="center"
                     android:textColor="@color/gold"
-                    android:textSize="15dp"
-                    android:padding="3dp"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:padding="5dp"
                     />
 
 
@@ -182,8 +187,8 @@
                     android:layout_height="match_parent"
                     android:text="First Yr :"
                     android:textColor="@color/gold"
-                    android:textSize="15dp"
-
+                    android:textSize="12dp"
+                    android:textStyle="bold"
                     android:paddingTop="10dp"
                     android:paddingLeft="10dp"
                     />
@@ -196,6 +201,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/gold"
+                    android:textSize="12dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
                     android:id="@+id/fisrt_principal_edt"/>
                 <View
                     android:layout_width="1dp"
@@ -205,8 +213,11 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:textColor="@color/gold"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
                     android:id="@+id/fisrt_interest_edt"/>
                 <View
                     android:layout_width="1dp"
@@ -215,8 +226,11 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                     android:layout_weight="1"
                     android:layout_width="0dp"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
                     android:textColor="@color/gold"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
                     android:id="@+id/fisrt_lumpsum_edt"/>
             </LinearLayout>
 
@@ -233,8 +247,8 @@
                     android:layout_height="match_parent"
                     android:text="Sec Yr :"
                     android:textColor="@color/gold"
-                    android:textSize="15dp"
-
+                    android:textSize="12dp"
+                    android:textStyle="bold"
                     android:paddingTop="10dp"
                     android:paddingLeft="10dp"
                     />
@@ -247,6 +261,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:textColor="@color/gold"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
                     android:id="@+id/sec_principal_edt"/>
                 <View
                     android:layout_width="1dp"
@@ -257,6 +274,9 @@
                     android:layout_width="0dp"
                     android:textColor="@color/gold"
                     android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
                     android:id="@+id/sec_interest_edt"/>
                 <View
                     android:layout_width="1dp"
@@ -267,6 +287,9 @@
                     android:layout_width="0dp"
                     android:textColor="@color/gold"
                     android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:gravity="center"
                     android:id="@+id/sec_lumpsum_edt"
                     />
 

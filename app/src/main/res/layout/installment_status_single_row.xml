@@ -5,9 +5,12 @@
     <LinearLayout
         android:orientation="horizontal"
         android:id="@+id/li_installationStatus_main"
-        android:padding="7dp"
+        android:padding="10dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_border"
+
+       >
 
  <TextView
             android:id="@+id/txtInstallmentStatusId"
