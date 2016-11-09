@@ -359,6 +359,7 @@
                 android:padding="5dp"
                 android:gravity="center"
                 android:textStyle="bold"
+                android:visibility="gone"
                 />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -473,7 +474,7 @@ Metro Station"
                         android:paddingTop="5dp"
                         android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:text="500"
+                            android:text="800"
                             android:id="@+id/txt_value_area_sq_ft"
                             android:layout_weight="2.5"
                             android:textColor="@color/gold"

@@ -49,8 +49,8 @@ public class UserInstallmentStatusFragment extends Fragment {
         installmentStatusDate.add("01/02/2016");
         installmentStatusDate.add("02/03/2016");
         installmentStatusDate.add("07/05/2016");
-        installmentStatusDate.add("");
-        installmentStatusDate.add("12/12/2016");
+        installmentStatusDate.add("Pending...");
+        installmentStatusDate.add("Pending...");
 
 
         List<InstallMentStatusModel> projectListMain = new ArrayList<InstallMentStatusModel>();

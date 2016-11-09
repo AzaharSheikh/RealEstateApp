@@ -33,12 +33,12 @@ public class ProjectListFragment extends Fragment {
         projectDate = new ArrayList<>();
         projectType = new ArrayList<>();
 
-        projectName.add("Gemini Splendor");
+        projectName.add("Gemini");
         projectLocation.add("Dubai");
         projectDate.add("20/04/2016");
         projectType.add("1BHK");
 
-        projectName.add("Gemini Splendor");
+        projectName.add("Gemini");
         projectLocation.add("Dubai");
         projectDate.add("22/04/2016");
         projectType.add("2BHK");

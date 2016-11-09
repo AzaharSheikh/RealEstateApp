@@ -111,29 +111,29 @@ public class MyProjectFragment extends Fragment {
                 switch (checkedId)
                 {
                     case R.id.rbt_one_bhk_details:
-                        txt_value_area_sq_ft.setText("550");
+                        txt_value_area_sq_ft.setText("850");
                         txt_value_flat_available.setText("10");
                         txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");
                         txt_value_extra_feature.setText("Click Here");
-                        txt_value_price.setText("50 Lac");
+                        txt_value_price.setText("29.5 Lacs");
                         break;
                     case R.id.rbt_two_bhk_list:
-                        txt_value_area_sq_ft.setText("1550");
+                        txt_value_area_sq_ft.setText("900");
                         txt_value_flat_available.setText("5");
                         txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");
                         txt_value_extra_feature.setText("Click Here");
-                        txt_value_price.setText("90 Lac");
+                        txt_value_price.setText("48 Lacs");
                         break;
                     case R.id.rbt_three_bhk:
 
-                        txt_value_area_sq_ft.setText("2550");
+                        txt_value_area_sq_ft.setText("1150");
                         txt_value_flat_available.setText("7");
                         txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");
                         txt_value_extra_feature.setText("Click Here");
-                        txt_value_price.setText("2 Cr");
+                        txt_value_price.setText("90 Lacs");
                         break;
                 }
             }
@@ -183,7 +183,7 @@ public class MyProjectFragment extends Fragment {
         txt_value_extra_feature=(TextView)rootView.findViewById(R.id.txt_value_extra_feature);
         txt_value_amenities=(TextView)rootView.findViewById(R.id.txt_value_amenities);
         txt_value_price=(TextView)rootView.findViewById(R.id.txt_value_price);
-        txt_value_area_sq_ft.setText("550");
+        txt_value_area_sq_ft.setText("850");
         txt_value_flat_available.setText("10");
         txt_value_amenities.setText("Click Here");
         txt_value_construction_stage.setText("Click Here");
