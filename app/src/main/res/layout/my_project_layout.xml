@@ -455,13 +455,23 @@ Metro Station"
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_margin="5dp"
-                android:background="@drawable/layout_border"
-                android:layout_height="wrap_content">
+                android:orientation="vertical"
+
+                android:layout_height="wrap_content"
+                >
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:layout_margin="5dp"
                     android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:padding="5dp"
+                        android:id="@+id/li_one_bhk"
+                        android:background="@drawable/layout_border"
+                        android:orientation="vertical"
+                        android:layout_margin="5dp"
+                        android:layout_height="wrap_content">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
@@ -521,10 +531,23 @@ Metro Station"
                             android:paddingTop="5dp"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingTop="5dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:padding="5dp"
+                            android:id="@+id/li_one_bhkll"
+                            android:background="@drawable/layout_border"
+                            android:orientation="vertical"
+                            android:layout_margin="5dp"
+                            android:layout_height="wrap_content">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:layout_weight="7.5"
                             android:id="@+id/txt_view_construction_stage"
@@ -611,10 +634,12 @@ Metro Station"
                             android:textColor="@color/bg_tab_text_color"
                             android:textSize="14dp"/>
                     </LinearLayout>
+                    </LinearLayout>
 
                 </LinearLayout>
 
-            </LinearLayout>
+
+           </LinearLayout>
 
 
         </LinearLayout>
