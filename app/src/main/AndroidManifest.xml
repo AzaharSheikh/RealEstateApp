@@ -52,8 +52,17 @@
             >
 
         </activity>
+
         <activity
             android:name=".Activities.CommonPageSingleProjectActivity"
+            android:label="Project"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+
+        </activity>
+        <activity
+            android:name=".Activities.UserSingleProjectActivity"
             android:label="Project"
             android:windowSoftInputMode="stateHidden"
 

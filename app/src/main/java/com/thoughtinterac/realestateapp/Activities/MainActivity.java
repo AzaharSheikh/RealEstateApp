@@ -40,6 +40,7 @@ import com.thoughtinterac.realestateapp.Fragments.ProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.RealtorProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.TermNConditionFragment;
 import com.thoughtinterac.realestateapp.Fragments.UserInstallmentStatusFragment;
+import com.thoughtinterac.realestateapp.Fragments.UserProjectListFragment;
 import com.thoughtinterac.realestateapp.Fragments.User_Welcome_Page;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.Utility;
@@ -279,7 +280,7 @@ public class MainActivity extends AppCompatActivity {
             case 10:
                 fab_edit_user.setVisibility(View.GONE);
                 img_share.setVisibility(View.GONE);
-                RealtorProjectListFragment ProjectList = new RealtorProjectListFragment();
+                UserProjectListFragment ProjectList = new UserProjectListFragment();
                return ProjectList;
 
             case 11:
