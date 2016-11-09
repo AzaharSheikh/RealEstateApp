@@ -119,7 +119,8 @@
             android:textColor="@color/gold"
             android:layout_width="match_parent"
             android:text="1048 sq ft"
-            android:layout_height="0dp" />
+            android:layout_height="0dp"
+            android:visibility="gone"/>
         <TextView
             android:layout_weight="1"
             android:visibility="invisible"
