@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_gravity="fill_horizontal"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp">
-        />
+        android:padding="15dp">
+
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -52,11 +52,12 @@
         android:layout_width="match_parent"
         android:id="@+id/sc_new_project_details"
         android:visibility="visible"
+        android:padding="15dp"
         android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:layout_margin="15dp"
+
             android:layout_height="wrap_content">
 
             <LinearLayout
@@ -239,22 +240,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_area_sq_ft"
                             android:text="Floor Area in sq. ft :"
                             android:layout_width="0dp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
 
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                             android:layout_width="0dp"
-                            android:layout_margin="2dp"
+
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
                             android:textSize="14sp"
-
+                            android:layout_margin="3dp"
                             android:padding="5dp"
-                            android:layout_weight="2.5"
+                            android:layout_weight="3"
                             android:id="@+id/edt_1bhk_floor_area"
                             />
                     </LinearLayout>
@@ -262,9 +265,11 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_flat_available"
+                            android:padding="5dp"
+                            android:layout_margin="3dp"
                             android:text="No. of flats available :"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content" />
@@ -274,9 +279,10 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
                             android:textSize="14sp"
+                            android:layout_margin="3dp"
                             android:padding="5dp"
-                            android:layout_margin="2dp"
-                            android:layout_weight="2.5"
+
+                            android:layout_weight="3"
                             android:id="@+id/edt_1bhk_flat_available"
                             />
                     </LinearLayout>
@@ -284,22 +290,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_price"
                             android:textColor="@color/gold"
                             android:text="@string/PriceRs"
+                            android:layout_margin="3dp"
                             android:layout_width="0dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
                             android:textSize="14sp"
+                            android:layout_margin="3dp"
                             android:padding="5dp"
-                            android:layout_margin="2dp"
-                            android:layout_weight="2.5"
+
+                            android:layout_weight="3"
                             android:id="@+id/edt_1bhk_price"
                             />
                     </LinearLayout>
@@ -307,25 +315,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_construction_stage"
                             android:textColor="@color/gold"
                             android:text="Construction Stage :"
                             android:layout_width="0dp"
+                            android:layout_margin="3dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:id="@+id/txt_value_construction_stage"
                             android:layout_width="0dp"
-                            android:layout_margin="2dp"
+
                             android:layout_height="wrap_content"
-                            android:textColor="@color/gold"
+                            android:textColor="@color/bg_tab_text_color"
                             android:background="@drawable/layout_border"
                             android:padding="5dp"
+                            android:layout_margin="3dp"
                             android:gravity="center"
-                            android:layout_weight="2.5"
-                            android:text="View"
+                            android:layout_weight="3"
+                            android:text="VIEW"
                             />
                     </LinearLayout>
 
@@ -333,24 +343,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_amenities"
                             android:textColor="@color/gold"
                             android:text="Amenities :"
+                            android:layout_margin="3dp"
                             android:layout_width="0dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:id="@+id/txt_value_amenities"
                             android:layout_width="0dp"
-                            android:layout_margin="2dp"
+
                             android:layout_height="wrap_content"
-                            android:textColor="@color/gold"
+                            android:textColor="@color/bg_tab_text_color"
                             android:background="@drawable/layout_border"
                             android:padding="5dp"
-                            android:layout_weight="2.5"
-                            android:text="View"
+                            android:layout_margin="3dp"
+                            android:layout_weight="3"
+                            android:text="VIEW"
                             android:gravity="center"
                             />
                     </LinearLayout>
@@ -359,24 +371,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_extra_feature"
                             android:textColor="@color/gold"
                             android:text="Extra Features :"
+                            android:layout_margin="3dp"
                             android:layout_width="0dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                             android:id="@+id/txt_value_extra_feature"
                             android:layout_width="0dp"
-                            android:layout_margin="2dp"
+
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
                             android:background="@drawable/layout_border"
                             android:padding="5dp"
-                            android:layout_weight="2.5"
-                            android:text="View"
+                            android:layout_margin="3dp"
+                            android:layout_weight="3"
+                            android:text="VIEW"
                             android:gravity="center"/>
                     </LinearLayout>
 
@@ -419,21 +433,23 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
+                            android:layout_margin="3dp"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_area_sq_ft"
                             android:text="Floor Area in sq. ft :"
                             android:layout_width="0dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
 
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                             android:layout_width="0dp"
-                            android:layout_margin="2dp"
+                            android:layout_margin="3dp"
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
                             android:textSize="14sp"
                             android:padding="5dp"
-                            android:layout_weight="2.5"
+                            android:layout_weight="3"
                             android:id="@+id/edt_2bhk_floor_area"
                             />
                     </LinearLayout>
@@ -441,11 +457,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_flat_available"
                             android:text="No. of flats available :"
                             android:layout_width="0dp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
 
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -454,101 +472,118 @@
                             android:textColor="@color/gold"
                             android:textSize="14sp"
                             android:padding="5dp"
-                            android:layout_margin="2dp"
-                            android:layout_weight="2.5"
+
+                            android:layout_margin="3dp"
+                            android:layout_weight="3"
                             android:id="@+id/edt_2bhk_flat_available"
                             />
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
-                            android:id="@+id/txt_view_construction_stage"
-                            android:textColor="@color/gold"
-                            android:text="Construction Stage :"
-                            android:layout_width="0dp"
-                            android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:text="View"
-                            android:layout_weight="2.5"
-                            android:id="@+id/txt_value_construction_stage"
-                            android:textColor="@color/gold"
-                            android:layout_width="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
-                            android:id="@+id/txt_view_amenities"
-                            android:textColor="@color/gold"
-                            android:text="Amenities :"
-                            android:layout_width="0dp"
-                            android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:text="View"
-                            android:layout_weight="2.5"
-                            android:id="@+id/txt_value_amenities"
-                            android:textColor="@color/gold"
-                            android:layout_width="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
-                            android:id="@+id/txt_view_extra_feature"
-                            android:textColor="@color/gold"
-                            android:text="Extra Features :"
-                            android:layout_width="0dp"
-                            android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="2.5"
-                            android:text="View"
-                            android:id="@+id/txt_value_extra_feature"
-                            android:textColor="@color/gold"
-                            android:layout_width="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_price"
                             android:textColor="@color/gold"
                             android:text="@string/PriceRs"
                             android:layout_width="0dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
+
                             android:textSize="14sp"
                             android:padding="5dp"
-                            android:layout_margin="2dp"
-                            android:layout_weight="2.5"
+
+                            android:layout_margin="3dp"
+                            android:layout_weight="3"
                             android:id="@+id/edt_2bhk_price"
                             />
                     </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_weight="7"
+                            android:id="@+id/txt_view_construction_stage"
+                            android:textColor="@color/gold"
+                            android:text="Construction Stage :"
+                            android:layout_width="0dp"
+                            android:paddingLeft="0dp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:text="VIEW"
+                            android:layout_weight="3"
+                            android:id="@+id/txt_value_construction_stage"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:background="@drawable/border_btn"
+                            android:layout_width="0dp"
+
+                            android:layout_margin="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_weight="7"
+                            android:id="@+id/txt_view_amenities"
+                            android:textColor="@color/gold"
+                            android:text="Amenities :"
+                            android:layout_width="0dp"
+                            android:layout_margin="3dp"
+                            android:paddingLeft="0dp"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:text="VIEW"
+                            android:layout_weight="3"
+                            android:id="@+id/txt_value_amenities"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:background="@drawable/border_btn"
+                            android:layout_width="0dp"
+                            android:layout_margin="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_weight="7"
+                            android:id="@+id/txt_view_extra_feature"
+                            android:textColor="@color/gold"
+                            android:text="Extra Features :"
+                            android:layout_width="0dp"
+                            android:paddingLeft="0dp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_weight="3"
+                            android:text="VIEW"
+                            android:id="@+id/txt_value_extra_feature"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:background="@drawable/border_btn"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -587,21 +622,24 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
+                            android:layout_margin="3dp"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_area_sq_ft"
                             android:text="Floor Area in sq. ft :"
                             android:layout_width="0dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
 
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
                             android:layout_width="0dp"
-                            android:layout_margin="2dp"
+
+                            android:layout_margin="3dp"
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
                             android:textSize="14sp"
                             android:padding="5dp"
-                            android:layout_weight="2.5"
+                            android:layout_weight="3"
                             android:id="@+id/edt_3bhk_floor_area"
                             />
                     </LinearLayout>
@@ -609,11 +647,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:textColor="@color/gold"
+                            android:layout_margin="3dp"
                             android:id="@+id/txt_view_flat_available"
                             android:text="No. of flats available :"
                             android:layout_width="0dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
 
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
@@ -621,32 +661,61 @@
                             android:layout_height="wrap_content"
                             android:textColor="@color/gold"
                             android:textSize="14sp"
+                            android:layout_margin="3dp"
                             android:padding="5dp"
-                            android:layout_margin="2dp"
-                            android:layout_weight="2.5"
+
+                            android:layout_weight="3"
                             android:id="@+id/edt_3bhk_flat_available"
                             />
                     </LinearLayout>
-
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
+                            android:id="@+id/txt_view_price"
+                            android:textColor="@color/gold"
+                            android:text="@string/PriceRs"
+                            android:layout_width="0dp"
+                            android:layout_margin="3dp"
+                            android:paddingLeft="0dp"
+                            android:padding="5dp"
+                            android:layout_height="wrap_content" />
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/gold"
+                            android:textSize="14sp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
+
+                            android:layout_weight="3"
+                            android:id="@+id/edt_3bhk_price"
+                            />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_construction_stage"
                             android:textColor="@color/gold"
                             android:text="Construction Stage :"
                             android:layout_width="0dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:text="View"
-                            android:layout_weight="2.5"
+                            android:text="VIEW"
+                            android:layout_weight="3"
                             android:id="@+id/txt_value_construction_stage"
-                            android:textColor="@color/gold"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:background="@drawable/border_btn"
                             android:layout_width="0dp"
-                            android:paddingTop="5dp"
+                            android:layout_margin="3dp"
+                            android:gravity="center"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
 
@@ -654,21 +723,26 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_amenities"
                             android:textColor="@color/gold"
+                            android:layout_margin="3dp"
                             android:text="Amenities :"
                             android:layout_width="0dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:text="View"
-                            android:layout_weight="2.5"
+                            android:text="VIEW"
+                            android:layout_weight="3"
+                            android:layout_margin="3dp"
                             android:id="@+id/txt_value_amenities"
-                            android:textColor="@color/gold"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:background="@drawable/border_btn"
                             android:layout_width="0dp"
-                            android:paddingTop="5dp"
+
+                            android:gravity="center"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
 
@@ -676,47 +750,30 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
+                            android:layout_weight="7"
                             android:id="@+id/txt_view_extra_feature"
                             android:textColor="@color/gold"
                             android:text="Extra Features :"
                             android:layout_width="0dp"
                             android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="2.5"
-                            android:text="View"
+                            android:layout_weight="3"
+                            android:text="VIEW"
                             android:id="@+id/txt_value_extra_feature"
-                            android:textColor="@color/gold"
+                            android:textColor="@color/bg_tab_text_color"
+                            android:background="@drawable/border_btn"
                             android:layout_width="0dp"
-                            android:paddingTop="5dp"
+                            android:gravity="center"
+
+                            android:layout_margin="3dp"
+                            android:padding="5dp"
                             android:layout_height="wrap_content" />
                     </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                            android:layout_weight="7.5"
-                            android:id="@+id/txt_view_price"
-                            android:textColor="@color/gold"
-                            android:text="@string/PriceRs"
-                            android:layout_width="0dp"
-                            android:paddingLeft="0dp"
-                            android:paddingTop="5dp"
-                            android:layout_height="wrap_content" />
-                        <com.thoughtinterac.realestateapp.Fonts.TypefacedEditText
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:textColor="@color/gold"
-                            android:textSize="14sp"
-                            android:padding="5dp"
-                            android:layout_margin="2dp"
-                            android:layout_weight="2.5"
-                            android:id="@+id/edt_3bhk_price"
-                            />
-                    </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -747,120 +804,7 @@
         android:layout_margin="2dp"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:weightSum="10"
-            android:visibility="gone"
-            android:orientation="vertical"
-            android:layout_height="wrap_content">
-            <GridView
-                android:id="@+id/list_photo"
-                android:layout_weight="7"
-                android:visibility="gone"
-                android:numColumns="2"
-                android:layout_width="match_parent"
-                android:layout_height="0dp">
 
-            </GridView>
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:id="@+id/txt_location"
-                android:visibility="gone"
-                android:text="Users Images"
-                android:background="@color/gold"
-                android:textColor="@color/offwhite"
-                android:textSize="16dp"
-                android:gravity="center"
-                android:textStyle="bold"
-                />
-
-            <ImageView
-                android:layout_gravity="center"
-                android:src="@drawable/photo_camera"
-                android:adjustViewBounds="true"
-                android:visibility="gone"
-                android:layout_weight="2"
-                android:layout_width="wrap_content"
-                android:layout_height="0dp" />
-            <ScrollView
-                android:layout_width="match_parent"
-                android:id="@+id/li_my_project_photos"
-                android:visibility="visible"
-                android:layout_height="match_parent">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:orientation="vertical"
-                    android:weightSum="10"
-                    android:layout_height="wrap_content">
-
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/user_img1"
-                        android:adjustViewBounds="true"
-                        />
-                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txt_location"
-                        android:text="Image 1"
-                        android:textColor="@color/gold"
-                        android:textSize="16dp"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        />
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/user_img2"
-                        android:adjustViewBounds="true"
-                        />
-                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txt_location"
-                        android:text="Image 2"
-                        android:textColor="@color/gold"
-                        android:textSize="16dp"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        />
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/user_img3"
-                        android:adjustViewBounds="true"
-                        />
-                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txt_location"
-                        android:text="Image 3"
-                        android:textColor="@color/gold"
-                        android:textSize="16dp"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        />
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/user_img4"
-                        android:adjustViewBounds="true"
-                        />
-
-                </LinearLayout>
-            </ScrollView>
-
-
-        </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
@@ -875,6 +819,7 @@
                     android:layout_width="match_parent"
                     android:orientation="vertical"
                     android:weightSum="10"
+
                     android:layout_height="wrap_content">
 
 
@@ -882,57 +827,31 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/user_img1"
+                        android:padding="5dp"
                         android:adjustViewBounds="true"
                         />
-                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txt_location"
-                        android:text="Image 1"
-                        android:textColor="@color/gold"
-                        android:textSize="16dp"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/user_img2"
+                        android:padding="5dp"
                         android:adjustViewBounds="true"
                         />
-                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txt_location"
-                        android:text="Image 2"
-                        android:textColor="@color/gold"
-                        android:textSize="16dp"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/user_img3"
+                        android:padding="5dp"
                         android:adjustViewBounds="true"
                         />
-                    <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txt_location"
-                        android:text="Image 3"
-                        android:textColor="@color/gold"
-                        android:textSize="16dp"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:textStyle="bold"
-                        />
+
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:src="@drawable/user_img4"
+                        android:padding="5dp"
                         android:adjustViewBounds="true"
                         />
 
