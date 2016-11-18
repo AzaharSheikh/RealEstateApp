@@ -89,10 +89,11 @@ ScrollView sc_welcome_layout;
         {
             MainActivity.str_male_female="Male";
         }
+        iv_profile_pic.setImageResource(R.drawable.user);
         if(MainActivity.str_male_female.toString().equalsIgnoreCase("Female"))
         {
 
-            iv_profile_pic.setImageResource(R.drawable.femaledp);
+            //iv_profile_pic.setImageResource(R.drawable.femaledp);
         }else
         {
             iv_profile_pic.setImageResource(R.drawable.user);
