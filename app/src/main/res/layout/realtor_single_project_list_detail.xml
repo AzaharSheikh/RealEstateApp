@@ -553,6 +553,7 @@
 
                         <LinearLayout
                             android:layout_width="match_parent"
+                            android:visibility="gone"
                             android:layout_height="wrap_content">
                             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                                 android:layout_weight="7.5"
