@@ -62,6 +62,22 @@
 
         </activity>
         <activity
+            android:name=".Activities.MyDocActivity"
+            android:label="My Document"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+
+        </activity>
+        <activity
+            android:name=".Activities.UserProjectStatusActivity"
+            android:label="My Project Status"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+
+        </activity>
+        <activity
             android:name=".Activities.UserSingleProjectActivity"
             android:label="Project"
             android:windowSoftInputMode="stateHidden"
@@ -78,8 +94,23 @@
 
         </activity>
         <activity
+            android:name=".Activities.CommonQuick_Enqiry"
+            android:label="Quick Enqiry"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+
+        </activity>
+        <activity
             android:name=".Activities.RealtorSoldFlatsListActivity"
             android:label="Sold Details"
+            android:windowSoftInputMode="stateHidden"
+
+            >
+        </activity>
+        <activity
+            android:name=".Activities.UserFlatsAvailableListActivity"
+            android:label="Available Details"
             android:windowSoftInputMode="stateHidden"
 
             >

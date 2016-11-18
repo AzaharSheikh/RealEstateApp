@@ -18,7 +18,7 @@ import java.util.List;
  * Created by AzaharSheikh on 29-10-2016.
  */
 public class UserInstallmentStatusActivity extends AppCompatActivity {
-    ArrayList<String> installmentStatusID, installmentStatusMsg, installmentStatusDate;
+    ArrayList<String> installmentStatusID, installmentStatusMsg, installmentStatusDate,installmentStatusAmt;
 
     InstallMentStatusAdapter adapter;
     @Override
@@ -30,6 +30,7 @@ public class UserInstallmentStatusActivity extends AppCompatActivity {
         installmentStatusID = new ArrayList();
         installmentStatusMsg = new ArrayList();
         installmentStatusDate = new ArrayList();
+        installmentStatusAmt = new ArrayList();
 
 
         installmentStatusID.add("1");
@@ -38,17 +39,25 @@ public class UserInstallmentStatusActivity extends AppCompatActivity {
         installmentStatusID.add("4");
         installmentStatusID.add("5");
 
-        installmentStatusMsg.add("Token amount received");
-        installmentStatusMsg.add("First Installment received");
-        installmentStatusMsg.add("2nd Installment received");
-        installmentStatusMsg.add("3rd Installment due after construction of first floor done");
+        installmentStatusMsg.add("Token amount");
+        installmentStatusMsg.add("First Installment");
+        installmentStatusMsg.add("2nd Installment");
+        installmentStatusMsg.add("3rd Installment");
         installmentStatusMsg.add("Final Installment due after");
+
 
         installmentStatusDate.add("01/02/2016");
         installmentStatusDate.add("02/03/2016");
         installmentStatusDate.add("07/05/2016");
-        installmentStatusDate.add("Pending...");
-        installmentStatusDate.add("Pending...");
+        installmentStatusDate.add("Pending.");
+        installmentStatusDate.add("Pending.");
+
+
+        installmentStatusAmt.add("15000");
+        installmentStatusAmt.add("25000");
+        installmentStatusAmt.add("5000");
+        installmentStatusAmt.add("5000");
+        installmentStatusAmt.add("5000");
 
 
         List<InstallMentStatusModel> projectListMain = new ArrayList<InstallMentStatusModel>();
@@ -58,6 +67,7 @@ public class UserInstallmentStatusActivity extends AppCompatActivity {
             list.setInstallMentStatusId(installmentStatusID.get(i).toString());
             list.setInstallMentStatusMessage(installmentStatusMsg.get(i).toString());
             list.setInstallMentStatusDate( installmentStatusDate.get(i).toString());
+            list.setInstallMentStatusAmt(installmentStatusAmt.get(i).toString());
             projectListMain.add(list);
         }
         ListView listView = (ListView)findViewById(R.id.listview_userinstallment);

@@ -2,6 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
     <LinearLayout
         android:orientation="horizontal"
         android:id="@+id/li_installationStatus_main"
@@ -9,33 +11,52 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/layout_border"
-
        >
 
- <TextView
+         <TextView
             android:id="@+id/txtInstallmentStatusId"
             android:layout_weight="1"
             android:textColor="@color/gold"
             android:text="1"
             android:textSize="15sp"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
         <TextView
             android:id="@+id/txtInstallmentStatusMsg"
-            android:text="Your Token Amount has Recived on"
+            android:text="Token Amount"
+            android:textStyle="bold"
             android:layout_weight="6"
-            android:textSize="15sp"
+            android:textSize="14sp"
             android:textColor="@color/gold"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:id="@+id/txtInstallmentStatusDate"
             android:text="12-12-2016"
+            android:gravity="right"
             android:textColor="@color/gold"
-            android:layout_weight="3"
-            android:textSize="15sp"
+            android:inputType="number"
+            android:layout_weight="5"
+            android:padding="7dp"
             android:layout_width="0dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/border_btn"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/txtInstallmentStatusAmt"
+            android:gravity="right"
+            android:textColor="@color/gold"
+            android:inputType="number"
+            android:layout_weight="3.5"
+            android:padding="7dp"
+            android:text="150000"
+            android:layout_width="0dp"
+            android:layout_marginRight="3dp"
+            android:background="@drawable/border_btn"
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-</LinearLayout>
+
+    </LinearLayout>

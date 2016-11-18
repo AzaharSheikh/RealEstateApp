@@ -12,7 +12,10 @@
         android:layout_width="match_parent"
         android:padding="5dp"
         android:orientation="horizontal"
+        android:background="@drawable/layout_border"
+        android:layout_margin="5dp"
         android:layout_height="wrap_content">
+
         <ImageView
             android:id="@+id/img_user_dp"
             android:layout_gravity="center"
@@ -29,7 +32,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <TextView
-                    android:layout_weight="3"
+                    android:layout_weight="5"
                     android:textColor="@color/gold"
                     android:id="@+id/txt_view_user_name"
                     android:textStyle="bold"
@@ -49,7 +52,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <TextView
-                    android:layout_weight="3"
+                    android:layout_weight="5"
                     android:textStyle="bold"
                     android:textColor="@color/gold"
                     android:id="@+id/project_name_view"
@@ -69,7 +72,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp">
                 <TextView
-                    android:layout_weight="3"
+                    android:layout_weight="5"
                     android:id="@+id/user_address_view"
                     android:textColor="@color/gold"
                     android:layout_width="0dp"
@@ -83,16 +86,22 @@
                     android:layout_width="0dp"
                     android:text="Address"
                     android:layout_height="wrap_content" />
+                </LinearLayout>
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+
+                <TextView
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textColor="@color/gold"
+                    android:id="@+id/project_date"
+                    android:layout_width="0dp"
+                    android:text="Date"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
 
-            <TextView
-                android:layout_weight="1"
-                android:textStyle="bold"
-                android:textColor="@color/gold"
-                android:id="@+id/project_date"
-                android:layout_width="match_parent"
-                android:text="Date"
-                android:layout_height="0dp" />
 
         </LinearLayout>
     </LinearLayout>

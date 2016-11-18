@@ -98,7 +98,7 @@ public class UserSingleProjectActivity  extends AppCompatActivity {
         txt_set_value_no_of_flats_view_details.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(UserSingleProjectActivity.this,RealtorFlatsAvailableListActivity.class);
+                Intent i = new Intent(UserSingleProjectActivity.this,UserFlatsAvailableListActivity.class);
                 startActivity(i);
 
 

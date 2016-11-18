@@ -55,20 +55,20 @@ public class UserProjectListFragment extends Fragment {
         bhk3_price= new ArrayList<>();
 
         projectID.add("1");
-        projectID.add("2");
-        projectID.add("3");
+       // projectID.add("2");
+       // projectID.add("3");
 
         projectName.add("Gemini Splendor");
-        projectName.add("Gemini Solitaire");
-        projectName.add("Gemini Orchids");
+       // projectName.add("Gemini Solitaire");
+       // projectName.add("Gemini Orchids");
 
         projectDate.add("1/2/3 BHK");
-        projectDate.add("2/3 BHK");
-        projectDate.add("1/2/3 BHK");
+       // projectDate.add("2/3 BHK");
+       // projectDate.add("1/2/3 BHK");
 
         projectlocation.add("Dubai");
-        projectlocation.add("Wadala");
-        projectlocation.add("Vashi");
+       // projectlocation.add("Wadala");
+       // projectlocation.add("Vashi");
 
 
         ProjectDescription.add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
@@ -82,7 +82,7 @@ public class UserProjectListFragment extends Fragment {
         bhk3_NoofFloor.add("6");
         bhk3_price.add("48Lacs");
 
-        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
+        /*ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
         bhk1_FloorAreaSqFt.add("900");
         bhk1_NoofFloor.add("6");
         bhk1_price.add("50Lacs");
@@ -102,7 +102,7 @@ public class UserProjectListFragment extends Fragment {
         bhk2_price.add("36Lacs");
         bhk3_FloorAreaSqFt.add("1200");
         bhk3_NoofFloor.add("6");
-        bhk3_price.add("80Lacs");
+        bhk3_price.add("80Lacs");*/
         List<RealtorProjectListModel> projectListMain = new ArrayList<RealtorProjectListModel>();
         for(int i =0 ; i<projectName.size();i++)
         {

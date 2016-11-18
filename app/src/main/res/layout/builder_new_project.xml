@@ -318,9 +318,23 @@
                     android:id="@+id/edt_1bhk_price"
                     />
             </LinearLayout>
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
+                android:padding="5dp"
+                android:id="@+id/li_one_bhk"
+                android:background="@drawable/layout_border"
+                android:orientation="vertical"
                 android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_weight="7.5"
                     android:id="@+id/txt_view_construction_stage"
@@ -407,11 +421,20 @@
                     android:padding="5dp"
                     android:layout_height="35dp"
                     android:text="Save"
-
                     android:background="@color/gold"
                     android:textColor="@color/white" />
             </LinearLayout>
         </LinearLayout>
+</LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:id="@+id/li_two_bhk"
@@ -495,6 +518,22 @@
                     android:id="@+id/edt_2bhk_price"
                     />
             </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_margin="5dp"
+                android:orientation="vertical"
+
+                android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/li_two_bhk"
+                android:padding="5dp"
+                android:visibility="gone"
+                android:orientation="vertical"
+                android:background="@drawable/layout_border"
+                android:layout_margin="5dp"
+                android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -586,6 +625,9 @@
                     android:background="@color/gold"
                     android:textColor="@color/white" />
             </LinearLayout>
+                </LinearLayout>
+                </LinearLayout>
+        </LinearLayout>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

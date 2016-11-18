@@ -74,10 +74,10 @@ public class MyDocFragment extends Fragment {
         docList= new ArrayList();
         docStatusList= new ArrayList();
         docDetails = new ArrayList();
-        docList.add("PAN");
-        docList.add("AADHAR");
-        docList.add("OC");
-        docList.add("NOC");
+        docList.add("Sale Deed/Title deed /Conveyance Deed");
+        docList.add("RTC Extracts");
+        docList.add("NOC from Electricity Deptt/Pollution Control Board/Water Works/ Air Port Authority");
+        docList.add("Supplementary agreement/Ratification Deed");
         docStatusList.add("true");
         docStatusList.add("true");
         docStatusList.add("false");

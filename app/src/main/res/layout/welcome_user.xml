@@ -2,13 +2,13 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/dashbd_bgp"
+    android:background="@color/black"
 
     >
     <LinearLayout
         android:layout_width="match_parent"
-        android:weightSum="10"
         android:orientation="vertical"
+        android:background="@color/black"
         android:layout_height="match_parent">
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:orientation="horizontal"
                 android:background="@color/black"
                 >
@@ -54,21 +54,22 @@
 
                      />
             </LinearLayout>
+
             <ImageView
-                android:layout_weight="4"
+                android:layout_weight="1"
                 android:id="@+id/iv_profile_pic"
                 android:layout_width="match_parent"
-                android:background="@drawable/nav_back"
-                android:layout_height="0dp"
+                android:background="@drawable/user_nav_back"
+                android:layout_height="130dp"
                 android:adjustViewBounds="true"
                 />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="vertical"
-            android:weightSum="10"
+
             android:background="@color/gold"
-            android:layout_weight="6"
+            android:layout_weight="5.6"
             android:layout_height="0dp">
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
@@ -81,66 +82,132 @@
                 android:paddingRight="10dp"
                 android:text="With two international schools, retail stores, hotels and spa, parks and entertainment centres,  "
                 android:layout_height="0dp"
+                android:visibility="gone"
                 android:id="@+id/txt_project_desc" />
             <TextView
                 android:layout_width="match_parent"
                 android:background="@color/black"
-                android:layout_weight="0.5"
-                android:layout_height="0dp" />
+
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/gold"
+
+                android:layout_height="wrap_content" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:id="@+id/li_overview"
-                android:layout_weight="3.5"
                 android:gravity="center_horizontal"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
+
+
                 android:orientation="horizontal"
                 android:background="@color/gold"
                 >
 
                 <ImageView
-                    android:layout_width="0dp"
-                    android:id="@+id/img_project"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/status"
-                    android:padding="5dp"
-                    android:layout_marginTop="10dp"
                     android:layout_gravity="center_vertical"
-                    />
+                    android:layout_weight="0.3"
+                    android:text="User"
+                    android:background="@color/gold"
+                    android:adjustViewBounds="true"
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/img_myproject"
+                    android:src="@drawable/img_myproject"/>
                 <ImageView
-                    android:layout_width="0dp"
-                    android:id="@+id/img_user_installment_paid"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/installment"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginTop="10dp"
-                    android:padding="5dp"/>
+                    android:layout_weight="0.3"
+                    android:text="User"
+                    android:background="@color/gold"
+                    android:adjustViewBounds="true"
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/img_mydocuments"
+                    android:src="@drawable/img_mydocuments"/>
+                </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="0.5"
+                android:visibility="gone"
+                android:layout_height="0dp" />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:background="@color/gold"
+
+
+                    android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text="User"
+                    android:background="@color/gold"
+                    android:adjustViewBounds="true"
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/img_installmentpaid"
+                    android:id="@+id/img_user_installment_paid"/>
+                <ImageView
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.1"
+                    android:text="User"
+                    android:background="@color/gold"
+                    android:adjustViewBounds="true"
+                    android:padding="3dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/projectstatus"
+                    android:id="@+id/img_project_status"
+
+                    />
+
 
             </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:background="@color/colorPrimaryDark"
+                android:layout_weight="0.5"
+                android:layout_height="0dp"
+                android:visibility="gone"/>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_weight="4"
+
                 android:orientation="vertical"
-                android:padding="5dp"
-                android:layout_height="0dp"
+
+
+                android:layout_height="wrap_content"
                 >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:background="@color/gold"
+                    android:layout_weight="0.5"
+                    android:layout_height="0dp"
+                    android:visibility="gone"/>
                 <ImageView
                     android:layout_width="match_parent"
                     android:id="@+id/img_user"
-                    android:gravity="top"
-                    android:layout_weight="1"
+
+
+
+                    android:background="@color/gold"
                     android:src="@drawable/tollfree"
                     android:layout_height="wrap_content"
                     android:adjustViewBounds="true"
-                    android:padding="5dp"
                     />
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="match_parent"
-                    android:layout_weight="1"
+
+
                     android:gravity="bottom|center"
+                    android:textColor="@color/black"
+                    android:background="@color/gold"
                     android:text="\u00a9 2012-2016 GEMINI GROUP"
                     android:layout_height="wrap_content" />
             </LinearLayout>

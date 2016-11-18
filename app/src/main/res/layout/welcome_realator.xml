@@ -71,28 +71,91 @@
             android:weightSum="10"
             android:background="@color/gold"
             android:layout_weight="6"
-            android:layout_height="0dp">
+            android:layout_height="0dp"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+               >
+
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_width="match_parent"
                 android:layout_weight="2"
-
-                android:gravity="center_vertical"
+                android:text="AVAILABLE FLATS  BOOKED FLATS "
+                android:visibility="gone"
+                android:textSize="15sp"
+                android:textStyle="bold"
                 android:textColor="@color/gold"
-                android:background="@color/offwhite"
+                android:background="@color/black"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:text="With two international schools, retail stores, hotels and spa, parks and entertainment centres, "
                 android:layout_height="0dp"
                 android:id="@+id/txt_project_desc" />
-            <TextView
-                android:layout_width="match_parent"
-                android:background="@color/black"
-                android:layout_weight="0.5"
-                android:layout_height="0dp" />
+
+            </LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/black"
+        android:paddingTop="2dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:padding="5dp"
+        android:text="FLATS BOOKED"
+        android:textSize="15sp"
+        android:textColor="@color/gold"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:background="@color/black"
+      android:padding="5dp"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:text="FLATS UNBOOKED"
+        android:textSize="15sp"
+        android:textColor="@color/gold"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:orientation="horizontal"
+               android:layout_height="wrap_content">
+               <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView2
+                   android:layout_width="match_parent"
+                   android:background="@color/black"
+                   android:layout_weight="1"
+                   android:gravity="center|top"
+                   android:text="25"
+                   android:textSize="35sp"
+                   android:paddingTop="5dp"
+                   android:textStyle="bold"
+                   android:textColor="@color/gold"
+                   android:layout_height="wrap_content" />
+               <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView2
+                   android:layout_width="match_parent"
+                   android:background="@color/black"
+                   android:layout_weight="1"
+                   android:gravity="center"
+                   android:text="15 "
+                android:paddingTop="5dp"
+                   android:textSize="35sp"
+                   android:textStyle="bold"
+                   android:textColor="@color/gold"
+                   android:layout_height="wrap_content" />
+           </LinearLayout>
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:id="@+id/li_overview"
-                android:layout_weight="3"
+                android:layout_weight="5"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_height="0dp"
@@ -108,7 +171,6 @@
                     android:layout_gravity="center_vertical"
                     android:src="@drawable/listofusers"
                     android:padding="5dp"
-                    android:layout_marginTop="10dp"
 
                     />
                 <ImageView
@@ -119,7 +181,7 @@
                     android:src="@drawable/newupdates"
                     android:padding="5dp"
                     android:layout_gravity="center_vertical"
-                    android:layout_marginTop="10dp"/>
+                    />
 
             </LinearLayout>
             <LinearLayout
@@ -139,13 +201,14 @@
                     android:layout_weight="1"
                     android:padding="5dp"
                     />
-                <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                    android:layout_width="match_parent"
-                    android:layout_weight="1"
-                    android:gravity="bottom|center"
-                    android:text="\u00a9 2012-2016 GEMINI GROUP"
-                    android:layout_height="wrap_content" />
+
             </LinearLayout>
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="\u00a9 2012-2016 GEMINI GROUP"
+                android:layout_height="wrap_content" />
 
         </LinearLayout>
 
@@ -155,3 +218,4 @@
 </LinearLayout>
 
 
+   

@@ -73,7 +73,7 @@ public class MyDocListAdapter extends BaseAdapter {
             public void onClick(View v) {
                 Toast toast = Toast.makeText(activity,m.getDoc_deatils(), Toast.LENGTH_LONG);
                 toast.setGravity(Gravity.CENTER, 0, 0);
-                toast.show();
+                //toast.show();
             }
         });
 

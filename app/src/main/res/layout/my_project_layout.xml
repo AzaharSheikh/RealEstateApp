@@ -258,6 +258,7 @@
                             android:padding="5dp"
                             android:gravity="center"
                             android:textStyle="bold"
+                            android:visibility="gone"
                             />
                         <ImageView
                             android:layout_width="match_parent"
@@ -470,7 +471,7 @@ Metro Station"
                         android:id="@+id/li_one_bhk"
                         android:background="@drawable/layout_border"
                         android:orientation="vertical"
-                        android:layout_margin="5dp"
+
                         android:layout_height="wrap_content">
                     <LinearLayout
                         android:layout_width="match_parent"

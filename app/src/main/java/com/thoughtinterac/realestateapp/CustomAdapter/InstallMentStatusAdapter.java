@@ -55,12 +55,14 @@ public class InstallMentStatusAdapter extends BaseAdapter {
         TextView txtInstallmentStatusId = (TextView) convertView.findViewById(R.id.txtInstallmentStatusId);
         TextView txtInstallmentStatusMsg = (TextView) convertView.findViewById(R.id.txtInstallmentStatusMsg);
         TextView txtInstallmentStatusDate = (TextView) convertView.findViewById(R.id.txtInstallmentStatusDate);
+        TextView txtInstallmentStatusAmt = (TextView) convertView.findViewById(R.id.txtInstallmentStatusAmt);
 
 
         final InstallMentStatusModel m = statusListItems.get(position);
         txtInstallmentStatusId.setText(m.getInstallMentStatusId());
         txtInstallmentStatusMsg.setText(m.getInstallMentStatusMessage());
         txtInstallmentStatusDate.setText(m.getInstallMentStatusDate());
+        txtInstallmentStatusAmt.setText(m.getInstallMentStatusAmt());
 
 
 

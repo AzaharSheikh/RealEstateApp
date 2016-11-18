@@ -534,7 +534,7 @@ Selling Price: 650,000 Amount paid: 351,055"
                     android:orientation="vertical"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:text="Phase 2\ndummy details"
+                        android:text="Phase 2\nUnder Contruction"
                         android:layout_width="match_parent"
                         android:textColor="@color/gold"
                         android:layout_height="match_parent" />

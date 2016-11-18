@@ -59,16 +59,16 @@ public class RealtorProjectListFragment extends Fragment {
         bhk3_price= new ArrayList<>();
 
         projectID.add("1");
-        projectID.add("2");
-        projectID.add("3");
+//        projectID.add("2");
+//        projectID.add("3");
 
         projectName.add("Gemini Splendor");
-        projectName.add("Gemini Solitaire");
-        projectName.add("Gemini Orchids");
+//        projectName.add("Gemini Solitaire");
+//        projectName.add("Gemini Orchids");
 
         projectDate.add("1/2/3 BHK");
-        projectDate.add("2/3 BHK");
-        projectDate.add("1/2/3 BHK");
+//        projectDate.add("2/3 BHK");
+//        projectDate.add("1/2/3 BHK");
 
         projectlocation.add("Dubai");
         projectlocation.add("Dubai");
@@ -86,27 +86,27 @@ public class RealtorProjectListFragment extends Fragment {
         bhk3_NoofFloor.add("6");
         bhk3_price.add("48Lacs");
 
-        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
-        bhk1_FloorAreaSqFt.add("850");
-        bhk1_NoofFloor.add("6");
-        bhk1_price.add("27.5Lacs");
-        bhk2_FloorAreaSqFt.add("900");
-        bhk2_NoofFloor.add("4");
-        bhk2_price.add("32Lacs");
-        bhk3_FloorAreaSqFt.add("950");
-        bhk3_NoofFloor.add("6");
-        bhk3_price.add("50Lacs");
-
-        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
-        bhk1_FloorAreaSqFt.add("750");
-        bhk1_NoofFloor.add("6");
-        bhk1_price.add("29Lacs");
-        bhk2_FloorAreaSqFt.add("950");
-        bhk2_NoofFloor.add("4");
-        bhk2_price.add("46.5Lacs");
-        bhk3_FloorAreaSqFt.add("1100");
-        bhk3_NoofFloor.add("6");
-        bhk3_price.add("55Lacs");
+//        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
+//        bhk1_FloorAreaSqFt.add("850");
+//        bhk1_NoofFloor.add("6");
+//        bhk1_price.add("27.5Lacs");
+//        bhk2_FloorAreaSqFt.add("900");
+//        bhk2_NoofFloor.add("4");
+//        bhk2_price.add("32Lacs");
+//        bhk3_FloorAreaSqFt.add("950");
+//        bhk3_NoofFloor.add("6");
+//        bhk3_price.add("50Lacs");
+//
+//        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
+//        bhk1_FloorAreaSqFt.add("750");
+//        bhk1_NoofFloor.add("6");
+//        bhk1_price.add("29Lacs");
+//        bhk2_FloorAreaSqFt.add("950");
+//        bhk2_NoofFloor.add("4");
+//        bhk2_price.add("46.5Lacs");
+//        bhk3_FloorAreaSqFt.add("1100");
+//        bhk3_NoofFloor.add("6");
+//        bhk3_price.add("55Lacs");
         List<RealtorProjectListModel> projectListMain = new ArrayList<RealtorProjectListModel>();
         for(int i =0 ; i<projectName.size();i++)
         {

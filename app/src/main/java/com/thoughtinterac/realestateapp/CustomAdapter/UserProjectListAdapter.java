@@ -67,9 +67,10 @@ public class UserProjectListAdapter extends BaseAdapter{
         project_date.setText(m.getProject_date());
         txt_project_no.setText(m.getProject_id());
         ImageView img_project_icon= (ImageView)convertView.findViewById(R.id.img_project_icon);
+
         ImageView img_new_project_icon= (ImageView)convertView.findViewById(R.id.img_new_project_icon);
         Button btn_view = (Button)convertView.findViewById(R.id.btn_view);
-        if(m.getProject_id().toString().equalsIgnoreCase("1")||m.getProject_id().toString().equalsIgnoreCase("3"))
+        if(m.getProject_id().toString().equalsIgnoreCase("1"))
         {
             img_new_project_icon.setVisibility(View.GONE);
         }else

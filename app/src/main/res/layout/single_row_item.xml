@@ -1,27 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+  >
     <LinearLayout
         android:layout_width="match_parent"
         android:id="@+id/li_main"
         android:orientation="vertical"
-        android:layout_height="wrap_content">
+       android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+
+        android:background="@drawable/layout_border">
         <LinearLayout
             android:layout_width="match_parent"
             android:orientation="horizontal"
-            android:layout_margin="5dp"
+
             android:layout_height="wrap_content">
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_weight="2"
+                android:layout_weight="1"
                 android:text="Name :"
                 android:layout_margin="2dp"
                 android:textStyle="bold"
                 android:layout_width="0dp"
                 android:textColor="@color/gold"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_weight="6"
+                android:layout_weight="2"
                 android:id="@+id/txt_place_name"
                 android:text="vashi,gym"
                 android:layout_width="0dp"
@@ -29,7 +34,7 @@
                 android:textColor="@color/gold"
                 android:layout_height="wrap_content" />
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_weight="2"
+                android:layout_weight="0.5"
                 android:id="@+id/txt_place_distance"
                 android:gravity="center"
                 android:text="3 km"
@@ -37,28 +42,7 @@
                 android:textStyle="bold"
                 android:layout_margin="2dp"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_margin="5dp"
-            android:layout_height="wrap_content">
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_weight="2"
-                android:text="Address :"
-                android:layout_margin="2dp"
-                android:textStyle="bold"
-                android:textColor="@color/gold"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content" />
-            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_weight="8"
-                android:id="@+id/txt_place_address"
-                android:text="vashi, navi mumbai, maharashtra, india"
-                android:textColor="@color/gold"
-                android:layout_width="0dp"
-                android:layout_margin="2dp"
+
                 android:layout_height="wrap_content" />
 
         </LinearLayout>
@@ -68,23 +52,75 @@
             android:layout_margin="5dp"
             android:layout_height="wrap_content">
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_weight="1"
+                android:text="Address :"
+                android:layout_margin="2dp"
+                android:textStyle="bold"
+                android:textColor="@color/gold"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                 android:layout_weight="2"
+                android:id="@+id/txt_place_address"
+                android:text="vashi, navi mumbai,
+maharashtra, india"
+                android:textColor="@color/gold"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:src="@mipmap/mapicon"
+                android:layout_weight="0.5"
+                android:layout_gravity="end"
+
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_margin="5dp"
+            android:layout_height="wrap_content">
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:layout_weight="1"
                 android:text="Type :"
                 android:layout_margin="2dp"
                 android:textStyle="bold"
                 android:textColor="@color/gold"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:visibility="gone"/>
             <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-                android:layout_weight="8"
+                android:layout_weight="4"
                 android:id="@+id/txt_place_type"
                 android:text="Gym"
                 android:textColor="@color/gold"
                 android:layout_width="0dp"
                 android:layout_margin="2dp"
                 android:layout_height="wrap_content" />
+            <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
+                android:id="@+id/txt_value_construction_stage"
+                android:layout_gravity="center"
+                android:textAlignment="center"
+
+                android:text="View"
+                android:paddingTop="5dp"
+                android:button="@null"
+                android:checked="true"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="25dp"
+                android:background="@drawable/btn_click_change_color"
+                android:textColor="@color/bg_tab_text_color"
+                android:textSize="14dp"/>
+
 
         </LinearLayout>
+
     </LinearLayout>
 
 </LinearLayout>

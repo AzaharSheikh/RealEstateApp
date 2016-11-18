@@ -10,7 +10,7 @@
         <item
             android:id="@+id/m_projects"
             android:icon="@mipmap/myproject"
-            android:title="Projects" />
+            android:title="Project List" />
 
         <item
             android:id="@+id/m_photos"

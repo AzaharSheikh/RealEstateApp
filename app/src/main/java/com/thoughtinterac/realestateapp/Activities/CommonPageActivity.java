@@ -20,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.thoughtinterac.realestateapp.Fragments.CommonContactFragment;
 import com.thoughtinterac.realestateapp.Fragments.CommonPageHomeFragment;
 import com.thoughtinterac.realestateapp.Fragments.CommonPagePhotosFragment;
 import com.thoughtinterac.realestateapp.Fragments.CommonPageProjectFragment;
@@ -175,7 +176,7 @@ public class CommonPageActivity extends AppCompatActivity {
                 return commonPagePhotosFragment;
             case 3:
                 //flag=1;
-                ContactFragment contactFragment = new ContactFragment();
+                CommonContactFragment contactFragment = new CommonContactFragment();
                 return contactFragment;
             case 4:
                 //flag=1;

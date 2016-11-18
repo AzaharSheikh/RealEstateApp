@@ -59,20 +59,20 @@ public class CommonPageProjectFragment extends Fragment {
         bhk3_price= new ArrayList<>();
 
         projectID.add("1");
-        projectID.add("2");
-        projectID.add("3");
+//        projectID.add("2");
+//        projectID.add("3");
 
         projectName.add("Gemini Splendor");
-        projectName.add("Gemini Solitaire");
-        projectName.add("Gemini Orchids");
+//        projectName.add("Gemini Solitaire");
+//        projectName.add("Gemini Orchids");
 
         projectDate.add("1/2/3 BHK");
-        projectDate.add("2/3 BHK");
-        projectDate.add("1/2/3 BHK");
+//        projectDate.add("2/3 BHK");
+//        projectDate.add("1/2/3 BHK");
 
         projectlocation.add("Dubai");
-        projectlocation.add("Wadala");
-        projectlocation.add("Vashi");
+//        projectlocation.add("Wadala");
+//        projectlocation.add("Vashi");
 
 
         ProjectDescription.add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
@@ -86,27 +86,27 @@ public class CommonPageProjectFragment extends Fragment {
         bhk3_NoofFloor.add("6");
         bhk3_price.add("48Lacs");
 
-        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
-        bhk1_FloorAreaSqFt.add("50");
-        bhk1_NoofFloor.add("6");
-        bhk1_price.add("1000000");
-        bhk2_FloorAreaSqFt.add("100");
-        bhk2_NoofFloor.add("4");
-        bhk2_price.add("200000");
-        bhk3_FloorAreaSqFt.add("200");
-        bhk3_NoofFloor.add("6");
-        bhk3_price.add("300000");
-
-        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
-        bhk1_FloorAreaSqFt.add("50");
-        bhk1_NoofFloor.add("6");
-        bhk1_price.add("1000000");
-        bhk2_FloorAreaSqFt.add("100");
-        bhk2_NoofFloor.add("4");
-        bhk2_price.add("200000");
-        bhk3_FloorAreaSqFt.add("200");
-        bhk3_NoofFloor.add("6");
-        bhk3_price.add("300000");
+//        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
+//        bhk1_FloorAreaSqFt.add("50");
+//        bhk1_NoofFloor.add("6");
+//        bhk1_price.add("1000000");
+//        bhk2_FloorAreaSqFt.add("100");
+//        bhk2_NoofFloor.add("4");
+//        bhk2_price.add("200000");
+//        bhk3_FloorAreaSqFt.add("200");
+//        bhk3_NoofFloor.add("6");
+//        bhk3_price.add("300000");
+//
+//        ProjectDescription .add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
+//        bhk1_FloorAreaSqFt.add("50");
+//        bhk1_NoofFloor.add("6");
+//        bhk1_price.add("1000000");
+//        bhk2_FloorAreaSqFt.add("100");
+//        bhk2_NoofFloor.add("4");
+//        bhk2_price.add("200000");
+//        bhk3_FloorAreaSqFt.add("200");
+//        bhk3_NoofFloor.add("6");
+//        bhk3_price.add("300000");
         List<RealtorProjectListModel> projectListMain = new ArrayList<RealtorProjectListModel>();
         //
         DatabaseHandler handler= new DatabaseHandler(getActivity());
