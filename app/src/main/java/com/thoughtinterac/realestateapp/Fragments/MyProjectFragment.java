@@ -119,7 +119,7 @@ public class MyProjectFragment extends Fragment {
                         txt_value_price.setText("29.5 Lacs");
                         break;
                     case R.id.rbt_two_bhk_list:
-                        txt_value_area_sq_ft.setText("900");
+                        txt_value_area_sq_ft.setText("1200");
                         txt_value_flat_available.setText("5");
                         txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");
@@ -128,7 +128,7 @@ public class MyProjectFragment extends Fragment {
                         break;
                     case R.id.rbt_three_bhk:
 
-                        txt_value_area_sq_ft.setText("1150");
+                        txt_value_area_sq_ft.setText("1525");
                         txt_value_flat_available.setText("7");
                         txt_value_construction_stage.setText("Click Here");
                         txt_value_amenities.setText("Click Here");

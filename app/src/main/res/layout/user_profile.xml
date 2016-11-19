@@ -156,7 +156,7 @@
                     android:layout_weight="6.5"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_email"
-                    android:text="Azahar.s@thoughtinteract.com"
+                    android:text="azahar@gmail.com"
                     android:textColor="@color/gold"
 
                     android:gravity="left"

@@ -35,7 +35,7 @@
                 <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="Ash"
+                    android:text="Rajeev Sharma"
                     android:gravity="center_vertical"
                     android:textStyle="bold"
                     android:textColor="@color/white"

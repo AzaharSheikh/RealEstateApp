@@ -84,10 +84,10 @@ public class MyProjectList_Fragment extends Fragment {
         project_img.add("true");
         projDetails.add("Gemini Splendor\n" +
                 "1 BHK Apt.\n" +
-                "1045 sq.ft.gross area           \"");
+                "850 sq.ft.gross area           \"");
         projDetails.add("Gemini Splendor\n" +
                 "2 BHK Apt.\n" +
-                "1045 sq.ft.gross area           ");
+                "1200 sq.ft.gross area           ");
 
         for(int i =0 ; i<project_list.size();i++)
         {

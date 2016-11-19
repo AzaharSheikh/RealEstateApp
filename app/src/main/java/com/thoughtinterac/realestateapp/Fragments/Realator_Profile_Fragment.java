@@ -36,9 +36,9 @@ public class Realator_Profile_Fragment extends Fragment {
 //        user_name = (TextView) rootView.findViewById(R.id.user_name);
 //        user_name.setText(RealtorMainPage.str_user_name);
         name_text=(TextView)rootView.findViewById(R.id.realator_name);
-        name_text.setText(MainActivity.str_user_name);
+        //name_text.setText(MainActivity.str_user_name);
         if(MainActivity.str_user_name.equalsIgnoreCase("")) {
-            name_text.setText(RealtorMainPage.str_user_name);
+           // name_text.setText(RealtorMainPage.str_user_name);
         }
         ImageView img_userlist = (ImageView)rootView.findViewById(R.id.img_userlist);
         img_userlist.setOnClickListener(new View.OnClickListener() {

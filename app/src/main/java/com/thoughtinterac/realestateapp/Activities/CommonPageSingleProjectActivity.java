@@ -1,5 +1,6 @@
 package com.thoughtinterac.realestateapp.Activities;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
@@ -7,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 import com.thoughtinterac.realestateapp.R;
 
@@ -39,6 +42,7 @@ public class CommonPageSingleProjectActivity extends AppCompatActivity {
     LinearLayout li_one_bhk,li_two_bhk,li_three_bhk;
     LinearLayout li_main_photo_list;
     ScrollView sc_new_project_details;
+    TextView txt_value_construction_stage,txt_value_amenities;
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -64,6 +68,40 @@ public class CommonPageSingleProjectActivity extends AppCompatActivity {
         li_three_bhk=(LinearLayout)findViewById(R.id.li_three_bhk);
         li_main_photo_list=(LinearLayout)findViewById(R.id.li_main_photo_list);
         sc_new_project_details=(ScrollView)findViewById(R.id.sc_new_project_details);
+        txt_value_construction_stage=(TextView)findViewById(R.id.txt_value_construction_stage);
+        txt_value_amenities=(TextView)findViewById(R.id.txt_value_amenities);
+        txt_value_amenities.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(CommonPageSingleProjectActivity.this);
+                dialog.setContentView(R.layout.amenities_layout);
+                ImageView img_back= (ImageView) dialog.findViewById(R.id.img_back);
+                if(img_back!=null) {
+                    img_back.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.dismiss();
+                        }
+                    });
+                }
+                dialog.show();
+            }
+        });
+        txt_value_construction_stage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final Dialog dialog = new Dialog(CommonPageSingleProjectActivity.this);
+                dialog.setContentView(R.layout.consteuctions_image_layout);
+                ImageView img_back= (ImageView) dialog.findViewById(R.id.img_back);
+                img_back.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        dialog.dismiss();
+                    }
+                });
+                dialog.show();
+            }
+        });
         checkUserFlag();
         Bundle extras = getIntent().getExtras();
         if (extras != null) {

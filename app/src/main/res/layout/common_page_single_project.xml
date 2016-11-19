@@ -246,7 +246,7 @@
                             android:layout_weight="7"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_area_sq_ft"
-                            android:text="Floor Area in sq. ft :"
+                            android:text="Builtup Area:"
                             android:layout_width="0dp"
                             android:layout_margin="3dp"
                             android:padding="5dp"
@@ -342,7 +342,7 @@
                             android:layout_margin="3dp"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_area_sq_ft"
-                            android:text="Floor Area in sq. ft :"
+                            android:text="Builtup Area:"
                             android:layout_width="0dp"
                             android:padding="5dp"
                             android:layout_height="wrap_content" />
@@ -454,7 +454,7 @@
                             android:layout_margin="3dp"
                             android:textColor="@color/gold"
                             android:id="@+id/txt_view_area_sq_ft"
-                            android:text="Floor Area in sq. ft :"
+                            android:text="Builtup Area:"
                             android:layout_width="0dp"
                             android:padding="5dp"
                             android:layout_height="wrap_content" />

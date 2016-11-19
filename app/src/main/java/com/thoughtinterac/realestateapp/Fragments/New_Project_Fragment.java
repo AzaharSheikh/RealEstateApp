@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -45,6 +46,8 @@ public class New_Project_Fragment extends Fragment {
             li_main_photo_list=(LinearLayout)rootView.findViewById(R.id.li_main_photo_list);
             sc_new_project_details=(ScrollView)rootView.findViewById(R.id.sc_new_project_details);
             li_main_project_status=(LinearLayout)rootView.findViewById(R.id.li_main_project_status);
+            RadioButton rbt_project_status = (RadioButton)rootView.findViewById(R.id.rbt_project_status) ;
+            rbt_project_status.setVisibility(View.GONE);
             rg_myproject.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
                 @Override
                 public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -81,14 +84,14 @@ public class New_Project_Fragment extends Fragment {
                             li_one_bhk.setVisibility(View.VISIBLE);
                             break;
                         case R.id.rbt_two_bhk_list:
-                            li_three_bhk.setVisibility(View.GONE);
-                            li_one_bhk.setVisibility(View.GONE);
-                            li_two_bhk.setVisibility(View.VISIBLE);
+//                            li_three_bhk.setVisibility(View.GONE);
+//                            li_one_bhk.setVisibility(View.GONE);
+//                            li_two_bhk.setVisibility(View.VISIBLE);
                             break;
                         case R.id.rbt_three_bhk:
-                            li_two_bhk.setVisibility(View.GONE);
-                            li_one_bhk.setVisibility(View.GONE);
-                            li_three_bhk.setVisibility(View.VISIBLE);
+//                            li_two_bhk.setVisibility(View.GONE);
+//                            li_one_bhk.setVisibility(View.GONE);
+//                            li_three_bhk.setVisibility(View.VISIBLE);
                             break;
                     }
                 }

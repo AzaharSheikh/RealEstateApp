@@ -19,6 +19,7 @@ import android.widget.ImageView;
 
 import com.thoughtinterac.realestateapp.Activities.LoginActivity;
 import com.thoughtinterac.realestateapp.Activities.MainActivity;
+import com.thoughtinterac.realestateapp.Activities.ViewSingleAmenitiesActivity;
 import com.thoughtinterac.realestateapp.Database.DatabaseHandler;
 import com.thoughtinterac.realestateapp.R;
 import com.thoughtinterac.realestateapp.Util.Utility;
@@ -29,6 +30,7 @@ import com.thoughtinterac.realestateapp.Util.Utility;
 public class CommonPageHomeFragment extends Fragment {
     WebView  webHome;
     ImageView img_user_login, img_realtor_login;
+    ImageView img_ameniti1,img_ameniti2,img_ameniti3,img_ameniti4;
     public CommonPageHomeFragment() {
     }
     @Nullable
@@ -51,7 +53,50 @@ public class CommonPageHomeFragment extends Fragment {
         webHome.loadUrl("file:///android_asset/www/index.html");
         img_user_login = (ImageView)rootView.findViewById(R.id.img_user_login);
         img_realtor_login = (ImageView) rootView.findViewById(R.id.img_realtor_login);
-
+        img_ameniti1=(ImageView)rootView.findViewById(R.id.img_ameniti1);
+        img_ameniti2=(ImageView)rootView.findViewById(R.id.img_ameniti2);
+        img_ameniti3=(ImageView)rootView.findViewById(R.id.img_ameniti3);
+        img_ameniti4=(ImageView)rootView.findViewById(R.id.img_ameniti4);
+        img_ameniti1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("id", "1");
+                Intent i = new Intent(getActivity(), ViewSingleAmenitiesActivity.class);
+                i.putExtras(bundle);
+                startActivity(i);
+            }
+        });
+        img_ameniti2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("id", "2");
+                Intent i = new Intent(getActivity(), ViewSingleAmenitiesActivity.class);
+                i.putExtras(bundle);
+                startActivity(i);
+            }
+        });
+        img_ameniti3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("id", "3");
+                Intent i = new Intent(getActivity(), ViewSingleAmenitiesActivity.class);
+                i.putExtras(bundle);
+                startActivity(i);
+            }
+        });
+        img_ameniti4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle = new Bundle();
+                bundle.putString("id", "4");
+                Intent i = new Intent(getActivity(), ViewSingleAmenitiesActivity.class);
+                i.putExtras(bundle);
+                startActivity(i);
+            }
+        });
         img_user_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

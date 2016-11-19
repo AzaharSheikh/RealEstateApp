@@ -71,7 +71,7 @@ public class RealtorProjectListAdapter extends BaseAdapter {
         ImageView img_project_icon= (ImageView)convertView.findViewById(R.id.img_project_icon);
         ImageView img_new_project_icon= (ImageView)convertView.findViewById(R.id.img_new_project_icon);
         Button btn_view = (Button)convertView.findViewById(R.id.btn_view);
-        if(m.getProject_id().toString().equalsIgnoreCase("1")||m.getProject_id().toString().equalsIgnoreCase("3"))
+        if(m.getProject_id().toString().equalsIgnoreCase("1"))
         {
             img_new_project_icon.setVisibility(View.GONE);
         }else

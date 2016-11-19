@@ -43,7 +43,7 @@
         android:id="@+id/img_amemities"
         android:layout_margin="5dp"
         android:adjustViewBounds="true"
-        android:src="@drawable/amenities1"
+        android:src="@drawable/amenity41"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -60,7 +60,7 @@
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
             android:paddingTop="5dp"
-            android:src="@drawable/amenities2"
+            android:src="@drawable/amenity11"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:layout_height="wrap_content" />
@@ -76,7 +76,7 @@
             android:layout_margin="5dp"
             android:paddingTop="5dp"
             android:adjustViewBounds="true"
-            android:src="@drawable/amenities3"
+            android:src="@drawable/amenity31"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:layout_height="wrap_content" />
@@ -93,7 +93,7 @@
             android:layout_margin="5dp"
             android:paddingTop="5dp"
             android:layout_gravity="center"
-            android:src="@drawable/amenities4"
+            android:src="@drawable/amenity21"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
@@ -101,14 +101,14 @@
             android:layout_width="wrap_content"
             android:gravity="center"
             android:textColor="@color/gold"
-            android:text="Basket Ball\ncourt"
+            android:text="Squash"
             android:layout_height="wrap_content" />
         <ImageView
             android:id="@+id/img_amemities5"
             android:adjustViewBounds="true"
             android:layout_margin="5dp"
             android:paddingTop="5dp"
-            android:src="@drawable/amenities5"
+            android:src="@drawable/amenity51"
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:layout_height="wrap_content" />
@@ -117,40 +117,10 @@
             android:layout_width="wrap_content"
             android:gravity="center"
             android:textColor="@color/gold"
-            android:text="Open relaxation\narea"
+            android:text="Golf Course"
             android:layout_height="wrap_content" />
-        <ImageView
-            android:id="@+id/img_amemities6"
-            android:layout_margin="5dp"
-            android:paddingTop="5dp"
-            android:layout_gravity="center"
-            android:adjustViewBounds="true"
-            android:src="@drawable/amenities6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/gold"
-            android:text="Retail outlets on\nthe ground floor"
-            android:layout_height="wrap_content" />
-        <ImageView
-            android:id="@+id/img_amemities7"
-            android:adjustViewBounds="true"
-            android:layout_margin="5dp"
-            android:layout_gravity="center"
-            android:paddingTop="5dp"
-            android:src="@drawable/amenities7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <com.thoughtinterac.realestateapp.Fonts.TypefacedTextView
-            android:layout_gravity="center_horizontal"
-            android:layout_width="wrap_content"
-            android:gravity="center"
-            android:textColor="@color/gold"
-            android:text="Concierge services"
-            android:layout_height="wrap_content" />
+
+
     </LinearLayout>
     </ScrollView>
 

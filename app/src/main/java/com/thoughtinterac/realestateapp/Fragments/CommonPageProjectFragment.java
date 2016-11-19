@@ -76,13 +76,13 @@ public class CommonPageProjectFragment extends Fragment {
 
 
         ProjectDescription.add("Building Icons is a standard affair for Dubai, but Mohammed Bin Rashid Al Maktoum City is truly a breath-taking world icon.");
-        bhk1_FloorAreaSqFt.add("675");
+        bhk1_FloorAreaSqFt.add("850");
         bhk1_NoofFloor.add("6");
         bhk1_price.add("30Lacs");
-        bhk2_FloorAreaSqFt.add("950");
+        bhk2_FloorAreaSqFt.add("1200");
         bhk2_NoofFloor.add("4");
         bhk2_price.add("39.9Lacs");
-        bhk3_FloorAreaSqFt.add("1000");
+        bhk3_FloorAreaSqFt.add("1525");
         bhk3_NoofFloor.add("6");
         bhk3_price.add("48Lacs");
 
